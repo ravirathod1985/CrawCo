@@ -1,0 +1,19 @@
+{
+  "description": "Creates SamAccounts from first and last name",
+  "type": "AttributeGenerator",
+  "signature": {
+    "input": [],
+    "output": null
+  },
+  "sourceCode": {
+    "version": "2023-10-16 18:27:08",
+    "script": "\n    import java.util.ArrayList;\n    import java.util.Arrays;\n    import java.util.Iterator;\n    import java.util.List;\n    import java.util.regex.Pattern;\n    import java.text.Normalizer;\n    import java.text.Normalizer.Form;\n    import sailpoint.object.*;\n    import sailpoint.api.*;\n    import org.apache.commons.lang.StringUtils;\n    import java.util.*;\n    \n    int maxIteration = 100;\n    String sourceId = application.getId();\n    List SOURCE_IDS = new ArrayList(Arrays.asList(new String[]{sourceId}));\n    String PROMOTED_ATTR_NAME = \"promotedsAMAccountName\";\n    String SEARCH_OP = \"Equals\";\n    \n    private String generateUsername(String UserID, String countryCode, int iteration)\n    {\n        String username = null;\n\n        if ((null == UserID) || (countryCode == null)) {\n            return null;\n        }\n\n        if (iteration == 0) {\n            username = UserID;\n        } else {\n            username = makeUsernameUnique(UserID, countryCode, iteration);\n        }\n    \n        if(isUnique(username)){\n            return username;\n        } else if(iteration < maxIteration){\n            return generateUsername(UserID, countryCode, (iteration + 1));\n        } else{\n            return null;\n        }\n    }\n    \n    private String makeUsernameUnique(String UserID, String countryCode, int iteration){\n        String username = null;\n        switch (countryCode) {\n            case \"US\":\n                username = makeUsernameUnique_US(UserID, iteration);\n                break;\n            case \"CA\":\n                username = makeUsernameUnique_CA(UserID, iteration);\n                break;\n            default:\n                username = makeUsernameUnique_US(UserID, iteration);\n        }\n        return username;\n    }\n\n    private String makeUsernameUnique_US(String UserID, int iteration){\n        //Note: UserID is always 6 character long\n        //Example: UserID = FNLAST  >>  FNLAS1, FNLAS2, ... FNLA10, FNLA11, ...\n        int charactersToRemove = (int) (Math.log10(iteration) + 1);\n        return StringUtils.substring(UserID, 0, -charactersToRemove) + iteration;\n    }\n\n    private String makeUsernameUnique_CA(String UserID, int iteration){\n        //Note: UserID always have a number at the end\n        //Example: UserID = FNLAST0  >>  FNLAST1, FNLAST2, ... FNLAST10, FNLAST11, ...\n        return StringUtils.substring(UserID, 0, -1) + iteration;\n    }\n\n    public boolean isUnique(String username){\n        //updated to reflect Sailpoints new way to check uniqueness\n        List SEARCH_VALUES = new ArrayList(Arrays.asList(new String[]{username}));\n        int numberFound = idn.attrSearchCountAccounts(SOURCE_IDS, PROMOTED_ATTR_NAME, SEARCH_OP, SEARCH_VALUES);\n\n        if(numberFound != 0) return false;\n        return true;\n    }\n    \n    //Get Identity Attribute values\n    String UserID = identity.getAttribute(\"adUsername\");\n    String countryCode = identity.getAttribute(\"countryCode\");\n\n    return generateUsername(UserID,countryCode,0);\n"
+  },
+  "attributes": {
+    "sourceVersion": "2023-10-16 18:27:08"
+  },
+  "id": "1bc85a60dfc344739ec6f4069314858c",
+  "name": "Crawford - AD.sAMAccountName",
+  "created": "2023-10-06T17:26:24.426Z",
+  "modified": "2023-10-16T18:27:08.576Z"
+}
