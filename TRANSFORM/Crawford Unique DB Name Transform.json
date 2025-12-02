@@ -1,0 +1,23 @@
+{
+  "id": "d4efba7f-ba8a-48d9-9477-81428dca61a7",
+  "name": "Crawford Unique DB Name Transform",
+  "type": "firstValid",
+  "attributes": {
+    "values": [
+      {
+        "attributes": {
+          "sourceName": "Username Database",
+          "attributeName": "USERNAME"
+        },
+        "type": "accountAttribute"
+      },
+      {
+        "attributes": {
+          "value": "none"
+        },
+        "type": "static"
+      }
+    ]
+  },
+  "internal": false
+}

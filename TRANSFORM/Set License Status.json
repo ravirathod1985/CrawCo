@@ -1,0 +1,45 @@
+{
+  "id": "31df77cc-c0e4-4c45-be23-6570d196fa18",
+  "name": "Set License Status",
+  "type": "lookup",
+  "attributes": {
+    "input": {
+      "attributes": {
+        "name": "cloudLifecycleState"
+      },
+      "type": "identityAttribute"
+    },
+    "table": {
+      "active": "licensed",
+      "loaUsCatAdjusters": "licensed",
+      "loaUsContractorConnection": "licensed",
+      "activeAu": "licensed",
+      "activeCa": "licensed",
+      "activeCaOriginAndCauseInc": "licensed",
+      "activePh": "licensed",
+      "activeUk": "licensed",
+      "activeUs": "licensed",
+      "activeUsCatAdjusters": "licensed",
+      "activeUsContractorConnection": "licensed",
+      "leavePayrollEligibleCa": "licensed",
+      "loaAu": "licensed",
+      "loaCa": "licensed",
+      "loaPh": "licensed",
+      "loaUs": "licensed",
+      "ltdAu": "licensed",
+      "ltdCa": "licensed",
+      "ltdPh": "licensed",
+      "ltdUs": "licensed",
+      "ltdUsContractorConnection": "licensed",
+      "prehireAu": "licensed",
+      "prehireCa": "licensed",
+      "prehireCaOriginAndCauseInc": "licensed",
+      "prehirePh": "licensed",
+      "prehireUk": "licensed",
+      "prehireUs": "licensed",
+      "prehireUsContractorConnection": "licensed",
+      "default": "unlicensed"
+    }
+  },
+  "internal": false
+}

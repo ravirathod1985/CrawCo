@@ -1,0 +1,50 @@
+{
+  "id": "2a774e87-8f05-467b-90c6-757238f8d7e4",
+  "name": "UPN Domain Selection - AU",
+  "type": "lookup",
+  "attributes": {
+    "input": {
+      "attributes": {
+        "values": [
+          {
+            "attributes": {
+              "input": {
+                "attributes": {
+                  "attributeName": "DEPARTMENT_NAME",
+                  "sourceName": "Oracle HCM Employees"
+                },
+                "type": "accountAttribute"
+              }
+            },
+            "type": "trim"
+          },
+          {
+            "attributes": {
+              "input": {
+                "attributes": {
+                  "attributeName": "BASE_DEPARTMENT_NAME",
+                  "sourceName": "Oracle HCM Employees"
+                },
+                "type": "accountAttribute"
+              }
+            },
+            "type": "trim"
+          },
+          "<EMPTY>"
+        ]
+      },
+      "type": "firstValid"
+    },
+    "table": {
+      "CCMRP2 - Contractor Connection - Property Repair Team": "contractorconnection.com.au",
+      "BLD5A - CRD Building Consultants & Engineers - SA": "crdbce.com.au",
+      "BLD3A - CRD Building Consultants & Engineers - VIC": "crdbce.com.au",
+      "BLD6A - CRD Building Consultants & Engineers - WA": "crdbce.com.au",
+      "BLD2A - CRD Building Consultants & Engineers - NSW": "crdbce.com.au",
+      "BLD4A - CRD Building Consultants & Engineers - QLD": "crdbce.com.au",
+      "QBCC4 – CRD Building Consultants & Engineers – QBCC": "crdbce.com.au",
+      "default": "crawco.com.au"
+    }
+  },
+  "internal": false
+}

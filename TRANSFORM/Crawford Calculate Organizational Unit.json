@@ -1,0 +1,248 @@
+{
+  "id": "992a85db-48d3-4a08-9598-3c052d3db72d",
+  "name": "Crawford Calculate Organizational Unit",
+  "type": "lookup",
+  "attributes": {
+    "table": {
+      "US": {
+        "type": "lookup",
+        "attributes": {
+          "input": {
+            "type": "reference",
+            "attributes": {
+              "id": "Crawford Lifecycle State Transform"
+            }
+          },
+          "table": {
+            "active": {
+              "type": "reference",
+              "attributes": {
+                "id": "Organizational Unit - US"
+              }
+            },
+            "prehire": {
+              "type": "reference",
+              "attributes": {
+                "id": "Organizational Unit - US"
+              }
+            },
+            "inactive": {
+              "type": "reference",
+              "attributes": {
+                "id": "Organizational Unit - US"
+              }
+            },
+            "loainactive": "OU=Leave of Absence,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+            "ltd": "OU=Leave of Absence,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+            "default": "<invalid>"
+          }
+        }
+      },
+      "GB": {
+        "type": "lookup",
+        "attributes": {
+          "input": {
+            "type": "reference",
+            "attributes": {
+              "id": "Crawford Lifecycle State Transform"
+            }
+          },
+          "table": {
+            "prehire": "OU=Standard Users,OU=Users,OU=UK,DC=cc-emea,DC=local",
+            "active": "OU=Standard Users,OU=Users,OU=UK,DC=cc-emea,DC=local",
+            "inactive": "OU=Recently Disabled,DC=cc-emea,DC=local",
+            "default": "<invalid>"
+          }
+        }
+      },
+      "CA": {
+        "type": "lookup",
+        "attributes": {
+          "input": {
+            "type": "reference",
+            "attributes": {
+              "id": "Crawford Lifecycle State Transform"
+            }
+          },
+          "table": {
+            "prehire": "OU=Users,OU=Users and Computers OU,DC=cacrawco,DC=local",
+            "active": "OU=Users,OU=Users and Computers OU,DC=cacrawco,DC=local",
+            "inactive": "OU=Recently Disabled,DC=cacrawco,DC=local",
+            "suspended": "OU=Recently Disabled,DC=cacrawco,DC=local",
+            "loaactive": "OU=Users,OU=Users and Computers OU,DC=cacrawco,DC=local",
+            "loainactive": "OU=Leave of Absence,DC=cacrawco,DC=local",
+            "ltd": "OU=Leave of Absence,DC=cacrawco,DC=local",
+            "default": "<invalid>"
+          }
+        }
+      },
+      "PH": {
+        "type": "lookup",
+        "attributes": {
+          "input": {
+            "type": "reference",
+            "attributes": {
+              "id": "Crawford Lifecycle State Transform"
+            }
+          },
+          "table": {
+            "prehire": {
+              "type": "reference",
+              "attributes": {
+                "id": "Organizational Unit - US"
+              }
+            },
+            "active": {
+              "type": "reference",
+              "attributes": {
+                "id": "Organizational Unit - US"
+              }
+            },
+            "inactive": "OU=Recently Disabled,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+            "suspended": {
+              "type": "reference",
+              "attributes": {
+                "id": "Organizational Unit - US"
+              }
+            },
+            "default": "<invalid>"
+          }
+        }
+      },
+      "AU": {
+        "type": "lookup",
+        "attributes": {
+          "input": {
+            "type": "reference",
+            "attributes": {
+              "id": "Crawford Lifecycle State Transform"
+            }
+          },
+          "table": {
+            "prehire": {
+              "type": "reference",
+              "attributes": {
+                "id": "Organizational Unit - AU"
+              }
+            },
+            "active": {
+              "type": "reference",
+              "attributes": {
+                "id": "Organizational Unit - AU"
+              }
+            },
+            "inactive": "OU=Recently Disabled,DC=crawco,DC=com,DC=au",
+            "default": "<invalid>"
+          }
+        }
+      },
+      "AR": {
+        "type": "lookup",
+        "attributes": {
+          "input": {
+            "type": "reference",
+            "attributes": {
+              "id": "Crawford Lifecycle State Transform"
+            }
+          },
+          "table": {
+            "prehire": "OU=Crawford Argentina,DC=crawford,DC=local",
+            "active": "OU=Crawford Argentina,DC=crawford,DC=local",
+            "inactive": "OU=Disabled Users,DC=crawford,DC=local",
+            "default": "<invalid>"
+          }
+        }
+      },
+      "MX": {
+        "type": "lookup",
+        "attributes": {
+          "input": {
+            "type": "reference",
+            "attributes": {
+              "id": "Crawford Lifecycle State Transform"
+            }
+          },
+          "table": {
+            "prehire": "OU=Users CWM,DC=net,DC=cwm,DC=local",
+            "active": "OU=Users CWM,DC=net,DC=cwm,DC=local",
+            "inactive": "OU=Disabled Users CWM,DC=net,DC=cwm,DC=local",
+            "default": "<invalid>"
+          }
+        }
+      },
+      "CO": {
+        "type": "lookup",
+        "attributes": {
+          "input": {
+            "type": "reference",
+            "attributes": {
+              "id": "Crawford Lifecycle State Transform"
+            }
+          },
+          "table": {
+            "prehire": "OU=Colombia,OU=Paises,DC=crawford-chile,DC=cl",
+            "active": "OU=Colombia,OU=Paises,DC=crawford-chile,DC=cl",
+            "inactive": "OU=Bajas_COL,OU=Colombia,OU=Paises,DC=crawford-chile,DC=cl",
+            "default": "<invalid>"
+          }
+        }
+      },
+      "BR": {
+        "type": "lookup",
+        "attributes": {
+          "input": {
+            "type": "reference",
+            "attributes": {
+              "id": "Crawford Lifecycle State Transform"
+            }
+          },
+          "table": {
+            "prehire": {
+              "type": "reference",
+              "attributes": {
+                "id": "Organizational Unit - BR"
+              }
+            },
+            "active": {
+              "type": "reference",
+              "attributes": {
+                "id": "Organizational Unit - BR"
+              }
+            },
+            "inactive": "OU=Recently Disabled,DC=crawco,DC=com,DC=au",
+            "default": "<invalid>"
+          }
+        }
+      },
+      "CL": {
+        "type": "lookup",
+        "attributes": {
+          "input": {
+            "type": "reference",
+            "attributes": {
+              "id": "Crawford Lifecycle State Transform"
+            }
+          },
+          "table": {
+            "prehire": {
+              "type": "reference",
+              "attributes": {
+                "id": "Organizational Unit - CL"
+              }
+            },
+            "active": {
+              "type": "reference",
+              "attributes": {
+                "id": "Organizational Unit - CL"
+              }
+            },
+            "inactive": "OU=Desactivados,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+            "default": "<invalid>"
+          }
+        }
+      },
+      "default": "<invalid>"
+    }
+  },
+  "internal": false
+}

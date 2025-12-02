@@ -1,0 +1,54 @@
+{
+  "id": "a822d723-c41a-432a-b8bb-00a35b5ae66e",
+  "name": "AD Username Generator (new)",
+  "type": "lookup",
+  "attributes": {
+    "input": {
+      "attributes": {
+        "attributeName": "NAME_LEGISLATION_CODE",
+        "sourceName": "Oracle HCM Employees"
+      },
+      "type": "accountAttribute"
+    },
+    "table": {
+      "default": "invalid",
+      "GB": {
+        "attributes": {
+          "id": "AD Username - UK"
+        },
+        "type": "reference"
+      },
+      "CA": {
+        "attributes": {
+          "id": "AD Username - CA"
+        },
+        "type": "reference"
+      },
+      "US": {
+        "attributes": {
+          "id": "AD Username - US"
+        },
+        "type": "reference"
+      },
+      "AU": {
+        "attributes": {
+          "id": "AD Username - AU"
+        },
+        "type": "reference"
+      },
+      "PH": {
+        "attributes": {
+          "id": "AD Username - US"
+        },
+        "type": "reference"
+      },
+      "BR": {
+        "attributes": {
+          "id": "AD Username - US"
+        },
+        "type": "reference"
+      }
+    }
+  },
+  "internal": false
+}

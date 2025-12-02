@@ -1,0 +1,58 @@
+{
+  "id": "42b4fdd5-170c-4262-9f88-876a2f194afb",
+  "name": "AD Username - UK",
+  "type": "firstValid",
+  "attributes": {
+    "values": [
+      {
+        "attributes": {
+          "attributeName": "sAMAccountName",
+          "sourceName": "UK Active Directory"
+        },
+        "type": "accountAttribute"
+      },
+      {
+        "attributes": {
+          "values": [
+            {
+              "attributes": {
+                "input": {
+                  "type": "static",
+                  "attributes": {
+                    "last_name": {
+                      "type": "accountAttribute",
+                      "attributes": {
+                        "sourceName": "Oracle HCM Employees",
+                        "attributeName": "LAST_NAME"
+                      }
+                    },
+                    "value": "#if($last_name.length() <= 6)$last_name#{else}$last_name.substring(0,6)#end"
+                  }
+                },
+                "regex": "[^a-zA-Z]",
+                "replacement": ""
+              },
+              "type": "replace"
+            },
+            {
+              "attributes": {
+                "input": {
+                  "type": "accountAttribute",
+                  "attributes": {
+                    "sourceName": "Oracle HCM Employees",
+                    "attributeName": "FIRST_NAME"
+                  }
+                },
+                "end": 1,
+                "begin": -1
+              },
+              "type": "substring"
+            }
+          ]
+        },
+        "type": "concat"
+      }
+    ]
+  },
+  "internal": false
+}

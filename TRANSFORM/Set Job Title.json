@@ -1,0 +1,24 @@
+{
+  "id": "0bc38d1a-0c49-430f-9767-ec07abdf2dec",
+  "name": "Set Job Title",
+  "type": "firstValid",
+  "attributes": {
+    "values": [
+      {
+        "attributes": {
+          "attributeName": "ASSIGNMENT_NAME",
+          "sourceName": "Oracle HCM Employees"
+        },
+        "type": "accountAttribute"
+      },
+      {
+        "attributes": {
+          "attributeName": "BASE_ASSIGNMENT_NAME",
+          "sourceName": "Oracle HCM Employees"
+        },
+        "type": "accountAttribute"
+      }
+    ]
+  },
+  "internal": false
+}

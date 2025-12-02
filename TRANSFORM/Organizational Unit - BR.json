@@ -1,0 +1,45 @@
+{
+  "id": "5187b325-f789-4de0-8cfb-4756fec6bd43",
+  "name": "Organizational Unit - BR",
+  "type": "lookup",
+  "attributes": {
+    "input": {
+      "attributes": {
+        "values": [
+          {
+            "attributes": {
+              "attributeName": "BASE_DEPARTMENT_NAME",
+              "sourceName": "Oracle HCM Employees"
+            },
+            "type": "accountAttribute"
+          },
+          {
+            "attributes": {
+              "attributeName": "DEPARTMENT_NAME",
+              "sourceName": "Oracle HCM Employees"
+            },
+            "type": "accountAttribute"
+          }
+        ]
+      },
+      "type": "firstValid"
+    },
+    "table": {
+      "BR00007 - CI Brazil Finance": "OU=Users,OU=Controladoria,OU=MATRIZ,DC=crawfordbrasil,DC=com,DC=br",
+      "BR00003 - CI Brazil Affinity TPA": "OU=Users,OU=Affinity,OU=Property,OU=MATRIZ,DC=crawfordbrasil,DC=com,DC=br",
+      "BR00010 - CI Brazil Information Technology": "OU=Users,OU=TECNOLOGIA,OU=MATRIZ,DC=crawfordbrasil,DC=com,DC=br",
+      "BR00001 - CI Brazil Property": "OU=Users,OU=RE,OU=Property,OU=MATRIZ,DC=crawfordbrasil,DC=com,DC=br",
+      "BR00037 - CI Brazil GTS": "OU=Users,OU=GTS,OU=MATRIZ,DC=crawfordbrasil,DC=com,DC=br",
+      "BR00005 - CI Brazil Marine & Transportation": "OU=Users,OU=Marine,OU=MATRIZ,DC=crawfordbrasil,DC=com,DC=br",
+      "BR00002 - CI Brazil Casualty": "OU=Users,OU=Casualty,OU=Property,OU=MATRIZ,DC=crawfordbrasil,DC=com,DC=br",
+      "BR00012 - CI Brazil Country Manager": "OU=Users,OU=Diretoria,OU=MATRIZ,DC=crawfordbrasil,DC=com,DC=br",
+      "BR00008 - CI Brazil Billing & Collections": "OU=Users,OU=Controladoria,OU=MATRIZ,DC=crawfordbrasil,DC=com,DC=br",
+      "BR00009 - CI Brazil Human Resources": "OU=Users,OU=RH,OU=MATRIZ,DC=crawfordbrasil,DC=com,DC=br",
+      "BR00028 - CI LATAM Finance": "OU=Users,OU=Controladoria,OU=MATRIZ,DC=crawfordbrasil,DC=com,DC=br",
+      "BR00029 - CI LATAM Regional President": "OU=Users,OU=Diretoria,OU=MATRIZ,DC=crawfordbrasil,DC=com,DC=br",
+      "BR00030 - CI LATAM IT Infra": "OU=Users,OU=TECNOLOGIA,OU=MATRIZ,DC=crawfordbrasil,DC=com,DC=br",
+      "BR00027 - CI LATAM Information Technology": "OU=Users,OU=TECNOLOGIA,OU=MATRIZ,DC=crawfordbrasil,DC=com,DC=br"
+    }
+  },
+  "internal": false
+}

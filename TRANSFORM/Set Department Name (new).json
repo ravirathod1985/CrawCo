@@ -1,0 +1,53 @@
+{
+  "id": "871ea34b-d569-4f96-920b-837845372602",
+  "name": "Set Department Name (new)",
+  "type": "static",
+  "attributes": {
+    "countryCode": {
+      "attributes": {
+        "id": "Set Country Code (alpha2) (new)"
+      },
+      "type": "reference"
+    },
+    "department_name": {
+      "attributes": {
+        "values": [
+          {
+            "type": "trim"
+          },
+          {
+            "attributes": {
+              "input": {
+                "attributes": {
+                  "attributeName": "BASE_DEPARTMENT_NAME",
+                  "sourceName": "Oracle HCM Employees"
+                },
+                "type": "accountAttribute"
+              }
+            },
+            "type": "trim"
+          },
+          "<EMPTY>"
+        ]
+      },
+      "type": "firstValid"
+    },
+    "latam_department_name": {
+      "attributes": {
+        "input": {
+          "type": "accountAttribute",
+          "attributes": {
+            "attributeName": "BASE_DEPARTMENT_NAME",
+            "sourceName": "Oracle HCM Employees"
+          }
+        },
+        "delimiter": "-",
+        "index": 1,
+        "throws": false
+      },
+      "type": "split"
+    },
+    "value": "#if($countryCode=='BR' || $countryCode=='CL' || $countryCode=='CO' || $countryCode=='MX' || $countryCode=='AR')$latam_department_name#elseif($!department_name == '<EMPTY>')#elseif($!department_name == 'Conversion')$!department_name#elseif(($!department_name.length() >= 8) && ($!department_name.substring(5,8) == ' - '))$!department_name.substring(8)#elseif($!department_name.length() >= 6)$!department_name.substring(7)#end"
+  },
+  "internal": false
+}

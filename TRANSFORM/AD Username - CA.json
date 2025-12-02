@@ -1,0 +1,59 @@
+{
+  "id": "aa4f062b-d3f0-406f-8fa0-4ad57a481045",
+  "name": "AD Username - CA",
+  "type": "firstValid",
+  "attributes": {
+    "values": [
+      {
+        "attributes": {
+          "attributeName": "sAMAccountName",
+          "sourceName": "CA Active Directory"
+        },
+        "type": "accountAttribute"
+      },
+      {
+        "attributes": {
+          "values": [
+            {
+              "attributes": {
+                "input": {
+                  "type": "static",
+                  "attributes": {
+                    "last_name": {
+                      "type": "accountAttribute",
+                      "attributes": {
+                        "sourceName": "Oracle HCM Employees",
+                        "attributeName": "LAST_NAME"
+                      }
+                    },
+                    "value": "#if($last_name.length() <= 6)$last_name#{else}$last_name.substring(0,6)#end"
+                  }
+                },
+                "regex": "[^a-zA-Z]",
+                "replacement": ""
+              },
+              "type": "replace"
+            },
+            {
+              "attributes": {
+                "input": {
+                  "type": "accountAttribute",
+                  "attributes": {
+                    "sourceName": "Oracle HCM Employees",
+                    "attributeName": "FIRST_NAME"
+                  }
+                },
+                "end": 1,
+                "begin": -1
+              },
+              "type": "substring"
+            },
+            "0"
+          ]
+        },
+        "type": "concat"
+      }
+    ]
+  },
+  "internal": false
+}

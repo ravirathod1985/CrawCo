@@ -1,0 +1,86 @@
+{
+  "id": "469c5d34-3f5d-45b2-a84a-8938a07753e9",
+  "name": "Organizational Unit - US",
+  "type": "trim",
+  "attributes": {
+    "input": {
+      "type": "lookup",
+      "attributes": {
+        "input": {
+          "type": "reference",
+          "attributes": {
+            "id": "Legacy Company Number - US"
+          }
+        },
+        "table": {
+          "1": {
+            "type": "lookup",
+            "attributes": {
+              "input": {
+                "type": "reference",
+                "attributes": {
+                  "id": "Company Name"
+                }
+              },
+              "table": {
+                "Broadspire Services, Inc.": "OU=Broadspire,OU=Crawford,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "Crawford & Company": "OU=Crawford,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "Crawford & Company (PR)": "OU=Crawford,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "Crawford & Company Int'l, Inc.": "OU=Crawford,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "Crawford Catastrophe Services": "OU=Renovo,OU=CAT Adjusters,OU=Crawford,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "E-djuster USA Inc.": "OU=Crawford,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "Go Procurian": "OU=Crawford,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "Origin, Energy & Renewables": "OU=Crawford,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "Risk Sciences Group, Inc.": "OU=Crawford,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "WeGoLook, LLC": "OU=WeGoLook,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "Praxis Risk Services, Inc.": "OU=Crawford,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "default": "<invalid>"
+              }
+            }
+          },
+          "30": {
+            "type": "lookup",
+            "attributes": {
+              "input": {
+                "type": "reference",
+                "attributes": {
+                  "id": "Company Name"
+                }
+              },
+              "table": {
+                "Broadspire Services, Inc. - Philippine Branch": "OU=Philippines,OU=Crawford,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "Crawford & Company Broadspire (Philippines), Inc.": "OU=Philippines,OU=Crawford,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "Crawford & Company Broadspire (Philipines), Inc.": "OU=Philippines,OU=Crawford,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "Crawford & Company Logistics Inc.": "OU=Philippines,OU=Crawford,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "default": "<invalid>"
+              }
+            }
+          },
+          "99": {
+            "type": "lookup",
+            "attributes": {
+              "input": {
+                "type": "reference",
+                "attributes": {
+                  "id": "Company Name"
+                }
+              },
+              "table": {
+                "Broadspire Services, Inc.": "OU=Contractor,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "Crawford & Company": "OU=Contractor,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "Crawford & Company Int'l, Inc.": "OU=International Users,OU=Groups,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "Crawford Catastrophe Services": "OU=Contractor,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "E-djuster USA Inc.": "OU=Contractor,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "Origin, Energy & Renewables": "OU=Contractor,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "WeGoLook, LLC": "OU=Contractor,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "default": "<invalid>"
+              }
+            }
+          },
+          "default": "<invalid>"
+        }
+      }
+    }
+  },
+  "internal": false
+}

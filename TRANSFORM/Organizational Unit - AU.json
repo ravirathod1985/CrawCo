@@ -1,0 +1,70 @@
+{
+  "id": "6bfa80ee-994a-492d-bcd6-a5e385368952",
+  "name": "Organizational Unit - AU",
+  "type": "lookup",
+  "attributes": {
+    "input": {
+      "attributes": {
+        "values": [
+          {
+            "attributes": {
+              "attributeName": "ASSIGNMENT_LOCATION_ID",
+              "sourceName": "Oracle HCM Employees"
+            },
+            "type": "accountAttribute"
+          },
+          {
+            "attributes": {
+              "attributeName": "BASE_ASSIGNMENT_LOCATION_ID",
+              "sourceName": "Oracle HCM Employees"
+            },
+            "type": "accountAttribute"
+          }
+        ]
+      },
+      "type": "firstValid"
+    },
+    "table": {
+      "300000707054365": "OU=Users,OU=Adelaide,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054275": "OU=Users,OU=Albury,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054395": "OU=Users,OU=Ballarat,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054226": "OU=Users,OU=Bendigo,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054232": "OU=Users,OU=Brisbane,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054323": "OU=Users,OU=Bunbury,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054184": "OU=Users,OU=Byron Bay,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054347": "OU=Users,OU=Cairns,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707340931": "OU=Users,OU=Canberra,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054329": "OU=Users,OU=Darwin,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054238": "OU=Users,OU=Gosford,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054287": "OU=Users,OU=Clare,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054371": "OU=Users,OU=Coffs Harbour,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054214": "OU=Users,OU=Dubbo,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054166": "OU=Users,OU=Forster,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054377": "OU=Users,OU=Geelong,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054335": "OU=Users,OU=Gold Coast,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054220": "OU=Users,OU=Pialba,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054268": "OU=Users,OU=Hobart,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054293": "OU=Users,OU=Rockhampton,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054196": "OU=Users,OU=Kellerberrin,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054311": "OU=Users,OU=Launceston,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054281": "OU=Users,OU=Mackay,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054172": "OU=Users,OU=Melbourne (Southbank),OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054244": "OU=Users,OU=Mildura,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054299": "OU=Users,OU=Mt Gambier,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054317": "OU=Users,OU=Newcastle,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054190": "OU=Users,OU=Perth,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054160": "OU=Users,OU=Port Lincoln,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054256": "OU=Users,OU=Renmark,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054383": "OU=Users,OU=Shepparton,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054305": "OU=Users,OU=Sunshine Coast,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054208": "OU=Users,OU=Sydney,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054178": "OU=Users,OU=Tamworth,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054341": "OU=Users,OU=Toowoomba,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054250": "OU=Users,OU=Townsville,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054353": "OU=Users,OU=Traralgon,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "300000707054389": "OU=Users,OU=Wollongong,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au",
+      "default": "OU=Sailpoint,OU=AU Crawco Locations,DC=crawco,DC=com,DC=au"
+    }
+  },
+  "internal": false
+}

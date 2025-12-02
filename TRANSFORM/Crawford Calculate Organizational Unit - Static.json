@@ -1,0 +1,57 @@
+{
+  "id": "01c07009-9e11-4131-b739-648982abccb3",
+  "name": "Crawford Calculate Organizational Unit - Static",
+  "type": "static",
+  "attributes": {
+    "input": {
+      "type": "lookup",
+      "attributes": {
+        "input": {
+          "attributes": {
+            "id": "Set Country Code (alpha2) (new)"
+          },
+          "type": "reference"
+        },
+        "table": {
+          "US": {
+            "type": "lookup",
+            "attributes": {
+              "input": {
+                "type": "reference",
+                "attributes": {
+                  "id": "Lifecycle State Transform (new)"
+                }
+              },
+              "table": {
+                "active": {
+                  "type": "reference",
+                  "attributes": {
+                    "id": "Organizational Unit - US"
+                  }
+                },
+                "prehire": {
+                  "type": "reference",
+                  "attributes": {
+                    "id": "Organizational Unit - US"
+                  }
+                },
+                "inactive": {
+                  "type": "reference",
+                  "attributes": {
+                    "id": "Organizational Unit - US"
+                  }
+                },
+                "loa": "OU=Leave of Absence,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "ltd": "OU=Leave of Absence,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "E-djuster USA Inc.": "OU=Crawford,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+                "default": "<invalid>"
+              }
+            }
+          },
+          "default": "<invalid>"
+        }
+      }
+    }
+  },
+  "internal": false
+}

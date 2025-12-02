@@ -1,0 +1,25 @@
+{
+  "id": "07175ec4-4b4f-419b-b7a7-d85d76049dd8",
+  "name": "Worker Type",
+  "type": "firstValid",
+  "attributes": {
+    "values": [
+      {
+        "type": "accountAttribute",
+        "attributes": {
+          "sourceName": "Oracle HCM Employees",
+          "attributeName": "WORKER_TYPE"
+        }
+      },
+      {
+        "type": "accountAttribute",
+        "attributes": {
+          "sourceName": "Oracle HCM Employees",
+          "attributeName": "BASE_WORKER_TYPE"
+        }
+      },
+      ""
+    ]
+  },
+  "internal": false
+}

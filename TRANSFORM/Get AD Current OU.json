@@ -1,0 +1,78 @@
+{
+  "id": "b88caccb-b84b-410e-bffe-7216133b83f6",
+  "name": "Get AD Current OU",
+  "type": "substring",
+  "attributes": {
+    "input": {
+      "type": "replace",
+      "attributes": {
+        "input": {
+          "type": "replace",
+          "attributes": {
+            "input": {
+              "type": "firstValid",
+              "attributes": {
+                "values": [
+                  {
+                    "attributes": {
+                      "attributeName": "distinguishedName",
+                      "sourceName": {
+                        "attributes": {
+                          "id": "Get AD Source Name by Country"
+                        },
+                        "type": "reference"
+                      }
+                    },
+                    "type": "accountAttribute"
+                  },
+                  ", "
+                ]
+              }
+            },
+            "regex": "\\\\,",
+            "replacement": ""
+          }
+        },
+        "regex": {
+          "attributes": {
+            "input": {
+              "type": "replace",
+              "attributes": {
+                "input": {
+                  "type": "firstValid",
+                  "attributes": {
+                    "values": [
+                      {
+                        "attributes": {
+                          "attributeName": "distinguishedName",
+                          "sourceName": {
+                            "attributes": {
+                              "id": "Get AD Source Name by Country"
+                            },
+                            "type": "reference"
+                          }
+                        },
+                        "type": "accountAttribute"
+                      },
+                      ", "
+                    ]
+                  }
+                },
+                "regex": "\\\\,",
+                "replacement": ""
+              }
+            },
+            "delimiter": ",",
+            "index": 0,
+            "throws": true
+          },
+          "type": "split"
+        },
+        "replacement": ""
+      },
+      "internal": false
+    },
+    "begin": 1
+  },
+  "internal": false
+}

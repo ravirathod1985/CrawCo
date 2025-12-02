@@ -1,0 +1,64 @@
+{
+  "id": "6b711ae2-ea65-4b73-9ca3-01201ad0cae3",
+  "name": "Calculate Employee Status - PH",
+  "type": "static",
+  "attributes": {
+    "countryCode": "Ph",
+    "employeeStatus": {
+      "attributes": {
+        "input": {
+          "attributes": {
+            "input": {
+              "attributes": {
+                "values": [
+                  {
+                    "attributes": {
+                      "attributeName": "ASSIGNMENT_STATUS_TYPE_ID",
+                      "sourceName": "Oracle HCM Employees"
+                    },
+                    "type": "accountAttribute"
+                  },
+                  {
+                    "attributes": {
+                      "attributeName": "BASE_ASSIGNMENT_STATUS_TYPE_ID",
+                      "sourceName": "Oracle HCM Employees"
+                    },
+                    "type": "accountAttribute"
+                  }
+                ]
+              },
+              "type": "firstValid"
+            },
+            "table": {
+              "1": "active",
+              "2": "active",
+              "3": "inactive",
+              "4": "inactive",
+              "5": "suspended",
+              "6": "suspended",
+              "1001": "ltd",
+              "1002": "ltd",
+              "1003": "loa",
+              "1004": "loa",
+              "2001": "inactive",
+              "4001": "inactive",
+              "7001": "loa",
+              "none": "active",
+              "default": "invalid"
+            }
+          },
+          "type": "lookup"
+        }
+      },
+      "type": "lower"
+    },
+    "preHire": {
+      "attributes": {
+        "id": "Calculate Prehire"
+      },
+      "type": "reference"
+    },
+    "value": "#if(${employeeStatus} == 'active' && ${preHire} == 'True')prehire${countryCode}#{else}${employeeStatus}${countryCode}#end"
+  },
+  "internal": false
+}

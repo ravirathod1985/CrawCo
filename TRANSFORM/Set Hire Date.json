@@ -1,0 +1,24 @@
+{
+  "id": "611432a4-640a-4d12-8388-71c21fc8099e",
+  "name": "Set Hire Date",
+  "type": "firstValid",
+  "attributes": {
+    "values": [
+      {
+        "attributes": {
+          "attributeName": "ADJ_HIRE_DATE",
+          "sourceName": "Oracle HCM Employees"
+        },
+        "type": "accountAttribute"
+      },
+      {
+        "attributes": {
+          "attributeName": "BASE_ADJ_HIRE_DATE",
+          "sourceName": "Oracle HCM Employees"
+        },
+        "type": "accountAttribute"
+      }
+    ]
+  },
+  "internal": false
+}

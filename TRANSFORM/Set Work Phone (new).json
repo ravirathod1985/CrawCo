@@ -1,0 +1,35 @@
+{
+  "id": "9f932772-f25c-4e1c-b27e-11743fca448f",
+  "name": "Set Work Phone (new)",
+  "type": "e164phone",
+  "attributes": {
+    "input": {
+      "type": "concat",
+      "attributes": {
+        "values": [
+          {
+            "type": "accountAttribute",
+            "attributes": {
+              "sourceName": "Oracle HCM Employees",
+              "attributeName": "WORK_TELEPHONE_AREACODE"
+            }
+          },
+          {
+            "type": "accountAttribute",
+            "attributes": {
+              "sourceName": "Oracle HCM Employees",
+              "attributeName": "WORK_TELEPHONE"
+            }
+          }
+        ]
+      }
+    },
+    "defaultRegion": {
+      "attributes": {
+        "id": "Set Country Code (alpha2) (new)"
+      },
+      "type": "reference"
+    }
+  },
+  "internal": false
+}

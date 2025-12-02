@@ -1,0 +1,25 @@
+{
+  "id": "c9694a06-66e2-434b-b5dc-a66d3d7e0164",
+  "name": "Common Email (new)",
+  "type": "firstValid",
+  "attributes": {
+    "values": [
+      {
+        "attributes": {
+          "input": {
+            "type": "trim"
+          },
+          "table": {
+            "Rich_Sabel@invalid.com": "rich_sabel@us.crawco.com",
+            "default": {
+              "type": "trim"
+            }
+          }
+        },
+        "type": "lookup"
+      },
+      "none"
+    ]
+  },
+  "internal": false
+}

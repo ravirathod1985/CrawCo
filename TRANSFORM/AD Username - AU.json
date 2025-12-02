@@ -1,0 +1,77 @@
+{
+  "id": "b2d6a026-9166-4969-b44c-ad6f24c694c6",
+  "name": "AD Username - AU",
+  "type": "firstValid",
+  "attributes": {
+    "values": [
+      {
+        "attributes": {
+          "attributeName": "sAMAccountName",
+          "sourceName": "AU Active Directory"
+        },
+        "type": "accountAttribute"
+      },
+      {
+        "type": "replace",
+        "attributes": {
+          "regex": "[^a-zA-Z.-]",
+          "replacement": "",
+          "input": {
+            "type": "decomposeDiacriticalMarks",
+            "attributes": {
+              "input": {
+                "attributes": {
+                  "values": [
+                    {
+                      "type": "split",
+                      "attributes": {
+                        "delimiter": "-",
+                        "index": 0,
+                        "throw": true,
+                        "input": {
+                          "attributes": {
+                            "input": {
+                              "type": "accountAttribute",
+                              "attributes": {
+                                "sourceName": "Oracle HCM Employees",
+                                "attributeName": "FIRST_NAME"
+                              }
+                            }
+                          },
+                          "type": "lower"
+                        }
+                      }
+                    },
+                    ".",
+                    {
+                      "type": "split",
+                      "attributes": {
+                        "delimiter": "-",
+                        "index": 0,
+                        "throw": true,
+                        "input": {
+                          "attributes": {
+                            "input": {
+                              "type": "accountAttribute",
+                              "attributes": {
+                                "sourceName": "Oracle HCM Employees",
+                                "attributeName": "LAST_NAME"
+                              }
+                            }
+                          },
+                          "type": "lower"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "type": "concat"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "internal": false
+}

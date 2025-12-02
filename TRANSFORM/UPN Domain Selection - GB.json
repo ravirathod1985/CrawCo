@@ -1,0 +1,59 @@
+{
+  "id": "58286637-ba76-499a-9bd0-b7dd0ff9d3a8",
+  "name": "UPN Domain Selection - GB",
+  "type": "lookup",
+  "attributes": {
+    "input": {
+      "attributes": {
+        "values": [
+          {
+            "attributes": {
+              "input": {
+                "attributes": {
+                  "attributeName": "DEPARTMENT_NAME",
+                  "sourceName": "Oracle HCM Employees"
+                },
+                "type": "accountAttribute"
+              }
+            },
+            "type": "trim"
+          },
+          {
+            "attributes": {
+              "input": {
+                "attributes": {
+                  "attributeName": "BASE_DEPARTMENT_NAME",
+                  "sourceName": "Oracle HCM Employees"
+                },
+                "type": "accountAttribute"
+              }
+            },
+            "type": "trim"
+          },
+          "<EMPTY>"
+        ]
+      },
+      "type": "firstValid"
+    },
+    "table": {
+      "16020 SLS - Billericay": "slscrawco.co.uk",
+      "16030 SLS - Midlands": "slscrawco.co.uk",
+      "16040 SLS - Exeter": "slscrawco.co.uk",
+      "16050 SLS - Leeds": "slscrawco.co.uk",
+      "16060 SLS - Newcastle": "slscrawco.co.uk",
+      "16070 SLS - Nottingham": "slscrawco.co.uk",
+      "16080 SLS - Scotland": "slscrawco.co.uk",
+      "16090 SLS - North": "slscrawco.co.uk",
+      "16100 SLS - South East": "slscrawco.co.uk",
+      "16110 SLS - South West": "slscrawco.co.uk",
+      "16110 SLS -South West": "slscrawco.co.uk",
+      "16120 SLS - South Coast": "slscrawco.co.uk",
+      "16130 SLS - Management Team": "slscrawco.co.uk",
+      "16140 SLS - Operations Management": "slscrawco.co.uk",
+      "16150 SLS - Central Typists": "slscrawco.co.uk",
+      "16160 SLS - QBE Team": "slscrawco.co.uk",
+      "default": "crawco.co.uk"
+    }
+  },
+  "internal": false
+}

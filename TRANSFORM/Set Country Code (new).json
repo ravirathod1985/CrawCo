@@ -1,0 +1,26 @@
+{
+  "id": "b8af1745-5931-4f72-afba-9ed25c6a2889",
+  "name": "Set Country Code (new)",
+  "type": "iso3166",
+  "attributes": {
+    "format": "numeric",
+    "input": {
+      "attributes": {
+        "country": {
+          "type": "firstValid",
+          "attributes": {
+            "values": [
+              {
+                "type": "trim"
+              },
+              "<empty>"
+            ]
+          }
+        },
+        "value": "#if($country != '<empty>')$country.split(',')[0]#{else}#end"
+      },
+      "type": "static"
+    }
+  },
+  "internal": false
+}

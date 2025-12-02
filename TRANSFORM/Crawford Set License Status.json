@@ -1,0 +1,25 @@
+{
+  "id": "99da0167-98ad-4acd-90e6-85b4bd855f53",
+  "name": "Crawford Set License Status",
+  "type": "lookup",
+  "attributes": {
+    "input": {
+      "attributes": {
+        "name": "cloudLifecycleState"
+      },
+      "type": "identityAttribute"
+    },
+    "table": {
+      "prehire": "licensed",
+      "active": "licensed",
+      "loaActive": "licensed",
+      "loaInactive": "licensed",
+      "inactiveUsCatAdjusters": "licensed",
+      "inactive": "unlicensed",
+      "ltd": "licensed",
+      "suspended": "unlicensed",
+      "default": "unlicensed"
+    }
+  },
+  "internal": false
+}

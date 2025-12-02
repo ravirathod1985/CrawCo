@@ -1,0 +1,23 @@
+{
+  "id": "730c848b-1d65-4917-98ef-744e69c931dc",
+  "name": "UPN Domain Selection - US",
+  "type": "lookup",
+  "attributes": {
+    "input": {
+      "type": "reference",
+      "attributes": {
+        "id": "Company Name"
+      }
+    },
+    "table": {
+      "Broadspire Services, Inc.": "choosebroadspire.com",
+      "Broadspire Services, Inc. - Philippine Branch": "choosebroadspire.com",
+      "Crawford & Company Broadspire (Philippines), Inc.": "choosebroadspire.com",
+      "Crawford & Company Broadspire (Philipines), Inc.": "choosebroadspire.com",
+      "WeGoLook, LLC": "wegolook.com",
+      "Praxis Risk Services, Inc.": "praxisriskservices.com",
+      "default": "us.crawco.com"
+    }
+  },
+  "internal": false
+}

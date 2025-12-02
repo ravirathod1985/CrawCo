@@ -1,0 +1,11 @@
+{
+  "id": "b44c7beb-11ea-41c7-bd18-c2e741bb99bd",
+  "name": "Set Test User",
+  "type": "lookup",
+  "attributes": {
+    "table": {
+      "default": "false"
+    }
+  },
+  "internal": false
+}

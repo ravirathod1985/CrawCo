@@ -1,0 +1,116 @@
+{
+  "id": "50e431a8-d403-43d1-b052-668e72ec7124",
+  "name": "Calculate Employee Status - US",
+  "type": "static",
+  "attributes": {
+    "countryCode": "Us",
+    "employeeStatus": {
+      "attributes": {
+        "input": {
+          "attributes": {
+            "input": {
+              "attributes": {
+                "values": [
+                  {
+                    "attributes": {
+                      "attributeName": "ASSIGNMENT_STATUS_TYPE_ID",
+                      "sourceName": "Oracle HCM Employees"
+                    },
+                    "type": "accountAttribute"
+                  },
+                  {
+                    "attributes": {
+                      "attributeName": "BASE_ASSIGNMENT_STATUS_TYPE_ID",
+                      "sourceName": "Oracle HCM Employees"
+                    },
+                    "type": "accountAttribute"
+                  }
+                ]
+              },
+              "type": "firstValid"
+            },
+            "table": {
+              "1": "active",
+              "2": "active",
+              "3": "inactive",
+              "4": "inactive",
+              "5": "suspended",
+              "6": "suspended",
+              "1001": "ltd",
+              "1002": "ltd",
+              "1003": "loa",
+              "1004": "loa",
+              "2001": "inactive",
+              "4001": "inactive",
+              "7001": "loa",
+              "none": "active",
+              "default": "invalid"
+            }
+          },
+          "type": "lookup"
+        }
+      },
+      "type": "lower"
+    },
+    "preHire": {
+      "attributes": {
+        "id": "Calculate Prehire"
+      },
+      "type": "reference"
+    },
+    "sufix_department": {
+      "attributes": {
+        "input": {
+          "attributes": {
+            "values": [
+              {
+                "type": "reference",
+                "attributes": {
+                  "id": "Set Department Name (new)",
+                  "input": {
+                    "attributes": {
+                      "attributeName": "DEPARTMENT_NAME",
+                      "sourceName": "Oracle HCM Employees"
+                    },
+                    "type": "accountAttribute"
+                  }
+                }
+              },
+              "none"
+            ]
+          },
+          "type": "firstValid"
+        },
+        "table": {
+          "MB Cont Conn Parent": "ContractorConnection",
+          "MB Cont Conn Fld Ops": "ContractorConnection",
+          "MB Cont Conn Sale_Mk": "ContractorConnection",
+          "MB Cont Conn IT": "ContractorConnection",
+          "MB Consumer Services": "ContractorConnection",
+          "HO CAT Core Admin": "CatAdjusters",
+          "HO CAT Non Core": "CatAdjusters",
+          "none": "",
+          "default": ""
+        }
+      },
+      "type": "lookup"
+    },
+    "renovoEmailStatus": {
+      "attributes": {
+        "values": [
+          {
+            "attributes": {
+              "attributeName": "EmailStatus",
+              "sourceName": "Renovo (CAT Adjusters)"
+            },
+            "type": "accountAttribute"
+          },
+          "<null>"
+        ]
+      },
+      "type": "firstValid"
+    },
+    "value": "#set($sufix = '')#if($sufix_department=='CatAdjusters')#set($sufix=$sufix_department)#if($employeeStatus=='active'&&$renovoEmailStatus=='InActive')#set($employeeStatus='inactive')#elseif($employeeStatus=='loa'&&$renovoEmailStatus=='active')#set($employeeStatus='active')#elseif($employeeStatus=='inactive')#set($sufix='')#end#end#if($sufix_department!='')#set($sufix=$sufix_department)#end#if(${employeeStatus}=='active'&&${preHire}=='True')#set($employeeStatus='prehire')#end${employeeStatus}${countryCode}${sufix}"
+  },
+  "internal": false
+}

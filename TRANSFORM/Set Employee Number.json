@@ -1,0 +1,17 @@
+{
+  "id": "e8d59334-331e-4e81-a5f7-235f3c14d8e7",
+  "name": "Set Employee Number",
+  "type": "firstValid",
+  "attributes": {
+    "values": [
+      {
+        "attributes": {
+          "sourceName": "Oracle HCM Employees",
+          "attributeName": "PERSON_NUMBER"
+        },
+        "type": "accountAttribute"
+      }
+    ]
+  },
+  "internal": false
+}

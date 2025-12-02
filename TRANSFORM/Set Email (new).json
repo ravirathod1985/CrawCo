@@ -1,0 +1,43 @@
+{
+  "id": "7e38b2bc-0953-4bdf-9e0f-542c5f70fba3",
+  "name": "Set Email (new)",
+  "type": "firstValid",
+  "attributes": {
+    "values": [
+      {
+        "attributes": {
+          "eMail": {
+            "attributes": {
+              "values": [
+                {
+                  "attributes": {
+                    "input": {
+                      "attributes": {
+                        "sourceName": "Active Directory",
+                        "attributeName": "mail"
+                      },
+                      "type": "accountAttribute"
+                    },
+                    "delimiter": "@",
+                    "index": 0
+                  },
+                  "type": "split",
+                  "name": "Test Split Transform"
+                },
+                "null"
+              ]
+            },
+            "type": "firstValid"
+          },
+          "value": "#if($eMail=='none')#elseif($eMail!='null')$eMail@invalid.com#end"
+        },
+        "type": "static"
+      },
+      {
+        "type": "trim"
+      },
+      ""
+    ]
+  },
+  "internal": false
+}

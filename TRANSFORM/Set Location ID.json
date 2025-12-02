@@ -1,0 +1,24 @@
+{
+  "id": "d314ce08-2e38-4c34-930c-82c573540aab",
+  "name": "Set Location ID",
+  "type": "firstValid",
+  "attributes": {
+    "values": [
+      {
+        "attributes": {
+          "attributeName": "ASSIGNMENT_LOCATION_ID",
+          "sourceName": "Oracle HCM Employees"
+        },
+        "type": "accountAttribute"
+      },
+      {
+        "attributes": {
+          "attributeName": "BASE_ASSIGNMENT_LOCATION_ID",
+          "sourceName": "Oracle HCM Employees"
+        },
+        "type": "accountAttribute"
+      }
+    ]
+  },
+  "internal": false
+}

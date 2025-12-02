@@ -1,0 +1,34 @@
+{
+  "id": "bdacfd35-6883-4ef2-b755-3eca406d2757",
+  "name": "Set Known As (new)",
+  "type": "firstValid",
+  "attributes": {
+    "values": [
+      {
+        "attributes": {
+          "input": {
+            "attributes": {
+              "attributeName": "KNOWN_AS",
+              "sourceName": "Oracle HCM Employees"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        "type": "trim"
+      },
+      {
+        "attributes": {
+          "input": {
+            "attributes": {
+              "attributeName": "FIRST_NAME",
+              "sourceName": "Oracle HCM Employees"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        "type": "trim"
+      }
+    ]
+  },
+  "internal": false
+}

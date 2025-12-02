@@ -1,0 +1,96 @@
+{
+  "id": "bfcde9f4-67d4-4c5f-bca5-b68ddc370529",
+  "name": "Calculate Organizational Unit (new)",
+  "type": "lookup",
+  "attributes": {
+    "input": {
+      "type": "firstValid",
+      "attributes": {
+        "values": [
+          {
+            "attributes": {
+              "attributeName": "state",
+              "sourceName": "Test_HR_Source"
+            },
+            "type": "accountAttribute"
+          },
+          {
+            "attributes": {
+              "id": "Lifecycle State Transform (new)"
+            },
+            "type": "reference"
+          }
+        ]
+      }
+    },
+    "table": {
+      "default": "invalid",
+      "active": "OU=Crawford,OU=IQTest,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+      "prehireUk": "OU=Standard Users,OU=Users,OU=UK,DC=cc-emea,DC=local",
+      "activeUk": "OU=Standard Users,OU=Users,OU=UK,DC=cc-emea,DC=local",
+      "inactiveUk": "OU=Recently Disabled,DC=cc-emea,DC=local",
+      "prehireCa": "OU=Users,OU=Users and Computers OU,DC=cacrawco,DC=local",
+      "activeCa": "OU=Users,OU=Users and Computers OU,DC=cacrawco,DC=local",
+      "leavePayrollEligibleCa": "OU=Users,OU=Users and Computers OU,DC=cacrawco,DC=local",
+      "inactiveCa": "OU=Recently Disabled,DC=cacrawco,DC=local",
+      "suspendedCa": "OU=Recently Disabled,DC=cacrawco,DC=local",
+      "loaCa": "OU=Leave of Absence,DC=cacrawco,DC=local",
+      "ltdCa": "OU=Leave of Absence,DC=cacrawco,DC=local",
+      "loaUs": "OU=Leave of Absence,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+      "ltdUs": "OU=Leave of Absence,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+      "activeUs": {
+        "type": "reference",
+        "attributes": {
+          "id": "Organizational Unit - US"
+        }
+      },
+      "prehireUs": {
+        "type": "reference",
+        "attributes": {
+          "id": "Organizational Unit - US"
+        }
+      },
+      "activeUsCatAdjusters": {
+        "type": "reference",
+        "attributes": {
+          "id": "Organizational Unit - US"
+        }
+      },
+      "loaUsCatAdjusters": {
+        "type": "reference",
+        "attributes": {
+          "id": "Organizational Unit - US"
+        }
+      },
+      "inactiveUs": "OU=Recently Disabled,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+      "inactiveUsCatAdjusters": {
+        "type": "reference",
+        "attributes": {
+          "id": "Organizational Unit - US"
+        }
+      },
+      "prehirePh": {
+        "type": "reference",
+        "attributes": {
+          "id": "Organizational Unit - US"
+        }
+      },
+      "activePh": {
+        "type": "reference",
+        "attributes": {
+          "id": "Organizational Unit - US"
+        }
+      },
+      "inactivePh": "OU=Recently Disabled,OU=Accounts,DC=cdorav00,DC=crawco,DC=local",
+      "activeAu": {
+        "type": "reference",
+        "attributes": {
+          "id": "Organizational Unit - AU"
+        }
+      },
+      "inactiveAu": "OU=Recently Disabled,DC=crawco,DC=com,DC=au",
+      "inactiveAuTest": "OU=Recently Disabled,DC=crawco,DC=com,DC=au"
+    }
+  },
+  "internal": false
+}

@@ -1,0 +1,51 @@
+{
+  "id": "5efc2f76-d57b-4e0a-8976-37fb7e113c15",
+  "name": "Organizational Unit - CL",
+  "type": "lookup",
+  "attributes": {
+    "input": {
+      "attributes": {
+        "values": [
+          {
+            "attributes": {
+              "attributeName": "BASE_DEPARTMENT_NAME",
+              "sourceName": "Oracle HCM Employees"
+            },
+            "type": "accountAttribute"
+          },
+          {
+            "attributes": {
+              "attributeName": "DEPARTMENT_NAME",
+              "sourceName": "Oracle HCM Employees"
+            },
+            "type": "accountAttribute"
+          }
+        ]
+      },
+      "type": "firstValid"
+    },
+    "table": {
+      "CL00001 - CI Chile Property": "OU=Property,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+      "CL00002 - CI Chile Casualty": "OU=Casualty,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+      "CL00003 - CI Chile Affinity TPA": "OU=Affinity TPA,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+      "CL00004 - CI Chile Personal Lines": "OU=Personal Lines,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+      "CL00005 - CI Chile Marine & Transportation": "OU=Marine & Transportation,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+      "CL00007 - CI Chile Finance": "OU=Finance,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+      "CL00008 - CI Chile Billing & Collections": "OU=Billing & Collections,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+      "CL00009 - CI Chile Human Resources": "OU=Human Resources,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+      "CL00010 - CI Chile Information Technology": "OU=Information Technology,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+      "CL00011 - CI Chile Legal": "OU=Legal,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+      "CL00012 - CI Chile Country Manager": "OU=Country Manager,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+      "CL00013 - CI Chile Operations": "OU=Operations,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+      "CL00014 - CI Chile Sales / Account Management": "OU=Sales / Account Management,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+      "CL00019 - CI Chile Quality Surs": "OU=Quality Surs,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+      "CL00020 - CI Chile Estudio Carvallo": "OU=Estudio Carvallo,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+      "CL00021 - LATAM IT Network": "OU=LATAM IT Network,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+      "CL00022 - LATAM PM": "OU=LATAM PM,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+      "CL00024 - LATAM Internal Audit": "OU=LATAM Internal Audit,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+      "CL00025 - CI CONAN": "OU=LATAM IT Network,OU=Crawford Chile,DC=crawford-chile,DC=cl",
+      "CL00026 - LATAM Compliance": "OU=LATAM Compliance,OU=Crawford Chile,DC=crawford-chile,DC=cl"
+    }
+  },
+  "internal": false
+}

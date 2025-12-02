@@ -1,0 +1,23 @@
+{
+  "id": "183759e1-fec9-4873-b126-96657f51bdfd",
+  "name": "Get AD Source Name by Country",
+  "type": "lookup",
+  "attributes": {
+    "input": {
+      "attributes": {
+        "attributeName": "NAME_LEGISLATION_CODE",
+        "sourceName": "Oracle HCM Employees"
+      },
+      "type": "accountAttribute"
+    },
+    "table": {
+      "default": "invalid",
+      "GB": "Active Directory",
+      "CA": "CA Active Directory",
+      "US": "US Active Directory",
+      "AU": "AU Active Directory",
+      "PH": "PH Active Directory"
+    }
+  },
+  "internal": false
+}

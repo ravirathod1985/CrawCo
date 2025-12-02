@@ -1,0 +1,136 @@
+{
+  "id": "540ee47e-d3a8-4ed5-adbe-81d703db2783",
+  "name": "Set UPN Prefix",
+  "type": "concat",
+  "attributes": {
+    "values": [
+      {
+        "attributes": {
+          "values": [
+            {
+              "attributes": {
+                "begin": 0,
+                "end": {
+                  "attributes": {
+                    "substring": " ",
+                    "input": {
+                      "attributes": {
+                        "values": [
+                          {
+                            "attributes": {
+                              "input": {
+                                "attributes": {
+                                  "attributeName": "KNOWN_AS",
+                                  "sourceName": "Oracle HCM Employees"
+                                },
+                                "type": "accountAttribute"
+                              }
+                            },
+                            "type": "trim"
+                          },
+                          {
+                            "attributes": {
+                              "input": {
+                                "attributes": {
+                                  "attributeName": "FIRST_NAME",
+                                  "sourceName": "Oracle HCM Employees"
+                                },
+                                "type": "accountAttribute"
+                              }
+                            },
+                            "type": "trim"
+                          }
+                        ]
+                      },
+                      "type": "firstValid"
+                    }
+                  },
+                  "type": "indexOf"
+                },
+                "input": {
+                  "attributes": {
+                    "values": [
+                      {
+                        "attributes": {
+                          "input": {
+                            "attributes": {
+                              "attributeName": "KNOWN_AS",
+                              "sourceName": "Oracle HCM Employees"
+                            },
+                            "type": "accountAttribute"
+                          }
+                        },
+                        "type": "trim"
+                      },
+                      {
+                        "attributes": {
+                          "input": {
+                            "attributes": {
+                              "attributeName": "FIRST_NAME",
+                              "sourceName": "Oracle HCM Employees"
+                            },
+                            "type": "accountAttribute"
+                          }
+                        },
+                        "type": "trim"
+                      }
+                    ]
+                  },
+                  "type": "firstValid"
+                }
+              },
+              "type": "substring"
+            },
+            {
+              "attributes": {
+                "input": {
+                  "attributes": {
+                    "attributeName": "KNOWN_AS",
+                    "sourceName": "Oracle HCM Employees"
+                  },
+                  "type": "accountAttribute"
+                }
+              },
+              "type": "trim"
+            },
+            {
+              "attributes": {
+                "input": {
+                  "attributes": {
+                    "attributeName": "FIRST_NAME",
+                    "sourceName": "Oracle HCM Employees"
+                  },
+                  "type": "accountAttribute"
+                }
+              },
+              "type": "trim"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      ".",
+      {
+        "attributes": {
+          "input": {
+            "attributes": {
+              "input": {
+                "attributes": {
+                  "attributeName": "LAST_NAME",
+                  "sourceName": "Oracle HCM Employees"
+                },
+                "type": "accountAttribute"
+              }
+            },
+            "type": "trim"
+          },
+          "regex": " ",
+          "replacement": "-"
+        },
+        "type": "replace",
+        "name": "Replace Transform"
+      }
+    ]
+  },
+  "internal": false
+}

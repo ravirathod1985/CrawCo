@@ -1,0 +1,24 @@
+{
+  "id": "7def34a0-fabc-4aa6-80ab-9c98e50daa06",
+  "name": "Set Country Code (alpha2) (new)",
+  "type": "static",
+  "attributes": {
+    "country": {
+      "type": "firstValid",
+      "attributes": {
+        "values": [
+          {
+            "type": "accountAttribute",
+            "attributes": {
+              "sourceName": "Oracle HCM Employees",
+              "attributeName": "NAME_LEGISLATION_CODE"
+            }
+          },
+          "<empty>"
+        ]
+      }
+    },
+    "value": "#if($country != '<empty>')$country.split(',')[0]#{else}#end"
+  },
+  "internal": false
+}

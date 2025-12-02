@@ -1,0 +1,36 @@
+{
+  "id": "70360bea-4e90-4260-a8c2-a023e33ece5c",
+  "name": "Crawford_CheckCorrelatedAdUsername_transform",
+  "type": "firstValid",
+  "attributes": {
+    "values": [
+      {
+        "attributes": {
+          "name": "correlatedAdUsername"
+        },
+        "type": "identityAttribute"
+      },
+      {
+        "type": "accountAttribute",
+        "attributes": {
+          "sourceName": "Oracle HCM Employees",
+          "attributeName": "PERSON_NUMBER"
+        }
+      },
+      {
+        "attributes": {
+          "sourceName": "Username Database",
+          "attributeName": "USERNAME"
+        },
+        "type": "accountAttribute"
+      },
+      {
+        "attributes": {
+          "value": "none"
+        },
+        "type": "static"
+      }
+    ]
+  },
+  "internal": false
+}

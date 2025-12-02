@@ -1,0 +1,12 @@
+{
+  "id": "2e22bde4-ea9c-45e3-a3cf-4a137bb62db1",
+  "name": "Set Manager",
+  "type": "replaceAll",
+  "attributes": {
+    "table": {
+      "-.*$": "",
+      "[a-zA-Z]": ""
+    }
+  },
+  "internal": false
+}

@@ -1,0 +1,50 @@
+{
+  "id": "3116d201-bf1b-438d-a836-18f2c1061d02",
+  "name": "Legacy Company Number - US",
+  "type": "trim",
+  "attributes": {
+    "input": {
+      "type": "static",
+      "attributes": {
+        "country": {
+          "type": "accountAttribute",
+          "attributes": {
+            "sourceName": "Oracle HCM Employees",
+            "attributeName": "NAME_LEGISLATION_CODE"
+          }
+        },
+        "workerType": {
+          "type": "reference",
+          "attributes": {
+            "id": "Employee Type"
+          }
+        },
+        "company": {
+          "type": "reference",
+          "attributes": {
+            "id": "Company Name"
+          }
+        },
+        "companyGroupA": {
+          "type": "lookup",
+          "attributes": {
+            "input": {
+              "type": "reference",
+              "attributes": {
+                "id": "Company Name"
+              }
+            },
+            "table": {
+              "Crawford & Company Logistics Inc.": true,
+              "Broadspire Services, Inc. - Philippine Branch": true,
+              "Crawford & Company Broadspire (Philipines), Inc.": true,
+              "default": false
+            }
+          }
+        },
+        "value": "#if($country == 'US' && ($workerType == 'E' || $workerType == 'P'))1#elseif($country == 'PH' && $companyGroupA)30#{else}99#end"
+      }
+    }
+  },
+  "internal": false
+}

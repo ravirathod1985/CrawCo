@@ -1,0 +1,88 @@
+{
+  "id": "f45a13ab-57d4-473b-b512-52e5a90382a9",
+  "name": "Correlated AD Username Transform",
+  "type": "lookup",
+  "attributes": {
+    "input": {
+      "type": "static",
+      "attributes": {
+        "country": {
+          "type": "firstValid",
+          "attributes": {
+            "values": [
+              {
+                "type": "accountAttribute",
+                "attributes": {
+                  "sourceName": "Oracle HCM Employees",
+                  "attributeName": "NAME_LEGISLATION_CODE"
+                }
+              },
+              "<empty>"
+            ]
+          }
+        },
+        "value": "#if($country != '<empty>')$country.split(',')[0]#{else}#end"
+      }
+    },
+    "table": {
+      "GB": {
+        "attributes": {
+          "attributeName": "sAMAccountName",
+          "sourceName": "Active Directory"
+        },
+        "type": "accountAttribute"
+      },
+      "US": {
+        "attributes": {
+          "attributeName": "sAMAccountName",
+          "sourceName": "US Active Directory"
+        },
+        "type": "accountAttribute"
+      },
+      "PH": {
+        "attributes": {
+          "attributeName": "sAMAccountName",
+          "sourceName": "US Active Directory"
+        },
+        "type": "accountAttribute"
+      },
+      "CA": {
+        "attributes": {
+          "attributeName": "sAMAccountName",
+          "sourceName": "CA Active Directory"
+        },
+        "type": "accountAttribute"
+      },
+      "AU": {
+        "attributes": {
+          "attributeName": "sAMAccountName",
+          "sourceName": "AU Active Directory"
+        },
+        "type": "accountAttribute"
+      },
+      "BR": {
+        "attributes": {
+          "attributeName": "sAMAccountName",
+          "sourceName": "Brazil Active Directory"
+        },
+        "type": "accountAttribute"
+      },
+      "MX": {
+        "attributes": {
+          "attributeName": "sAMAccountName",
+          "sourceName": "Mexico Active Directory"
+        },
+        "type": "accountAttribute"
+      },
+      "AR": {
+        "attributes": {
+          "attributeName": "sAMAccountName",
+          "sourceName": "Argentina Active Directory"
+        },
+        "type": "accountAttribute"
+      },
+      "default": ""
+    }
+  },
+  "internal": false
+}

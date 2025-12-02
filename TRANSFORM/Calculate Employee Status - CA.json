@@ -1,0 +1,91 @@
+{
+  "id": "e79a5ff6-9397-40fa-ab5d-dc08732a0d24",
+  "name": "Calculate Employee Status - CA",
+  "type": "static",
+  "attributes": {
+    "countryCode": "Ca",
+    "employeeStatus": {
+      "attributes": {
+        "input": {
+          "attributes": {
+            "values": [
+              {
+                "attributes": {
+                  "attributeName": "ASSIGNMENT_STATUS_TYPE_ID",
+                  "sourceName": "Oracle HCM Employees"
+                },
+                "type": "accountAttribute"
+              },
+              {
+                "attributes": {
+                  "attributeName": "BASE_ASSIGNMENT_STATUS_TYPE_ID",
+                  "sourceName": "Oracle HCM Employees"
+                },
+                "type": "accountAttribute"
+              }
+            ]
+          },
+          "type": "firstValid"
+        },
+        "table": {
+          "1": "active",
+          "2": "active",
+          "3": "inactive",
+          "4": "inactive",
+          "5": "suspended",
+          "6": "suspended",
+          "1001": "ltd",
+          "1002": "ltd",
+          "1003": "loa",
+          "1004": "loa",
+          "2001": "inactive",
+          "4001": "leavePayrollEligible",
+          "7001": "loa",
+          "none": "active",
+          "default": "invalid"
+        }
+      },
+      "type": "lookup"
+    },
+    "preHire": {
+      "attributes": {
+        "id": "Calculate Prehire"
+      },
+      "type": "reference"
+    },
+    "sufix": {
+      "attributes": {
+        "input": {
+          "attributes": {
+            "values": [
+              {
+                "attributes": {
+                  "attributeName": "LEGAL_EMPLOYER_NAME",
+                  "sourceName": "Oracle HCM Employees"
+                },
+                "type": "accountAttribute"
+              },
+              {
+                "attributes": {
+                  "attributeName": "BASE_LEGAL_EMPLOYER_NAME",
+                  "sourceName": "Oracle HCM Employees"
+                },
+                "type": "accountAttribute"
+              },
+              "none"
+            ]
+          },
+          "type": "firstValid"
+        },
+        "table": {
+          "Origin & Cause Inc.": "OriginAndCauseInc",
+          "none": "",
+          "default": ""
+        }
+      },
+      "type": "lookup"
+    },
+    "value": "#if(${employeeStatus} == 'active' && ${preHire} == 'True')prehire${countryCode}${sufix}#elseif(${employeeStatus} == 'active')${employeeStatus}${countryCode}${sufix}#{else}${employeeStatus}${countryCode}#end"
+  },
+  "internal": false
+}

@@ -1,0 +1,24 @@
+{
+  "id": "fafa4bd7-c88f-4b07-a7f0-b536a963d642",
+  "name": "Set Assignment Manager Number",
+  "type": "firstValid",
+  "attributes": {
+    "values": [
+      {
+        "attributes": {
+          "attributeName": "ASSIGNMENT_MANAGER_NUMBER",
+          "sourceName": "Oracle HCM Employees"
+        },
+        "type": "accountAttribute"
+      },
+      {
+        "attributes": {
+          "attributeName": "BASE_ASSIGNMENT_MANAGER_NUMBER",
+          "sourceName": "Oracle HCM Employees"
+        },
+        "type": "accountAttribute"
+      }
+    ]
+  },
+  "internal": false
+}

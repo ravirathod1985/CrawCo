@@ -1,0 +1,42 @@
+{
+  "id": "c06a93eb-84c0-4c8f-a180-c8500c4e6c69",
+  "name": "Calculate Prehire",
+  "type": "dateCompare",
+  "attributes": {
+    "firstDate": {
+      "attributes": {
+        "values": [
+          {
+            "attributes": {
+              "values": [
+                {
+                  "attributes": {
+                    "attributeName": "BASE_ADJ_HIRE_DATE",
+                    "sourceName": "Oracle HCM Employees"
+                  },
+                  "type": "accountAttribute"
+                },
+                {
+                  "attributes": {
+                    "attributeName": "HIRE_DATE",
+                    "sourceName": "Oracle HCM Employees"
+                  },
+                  "type": "accountAttribute"
+                },
+                "2999-12-31"
+              ]
+            },
+            "type": "firstValid"
+          },
+          "T00:00:00.000Z"
+        ]
+      },
+      "type": "concat"
+    },
+    "secondDate": "now",
+    "operator": "gte",
+    "positiveCondition": "True",
+    "negativeCondition": "False"
+  },
+  "internal": false
+}

@@ -1,0 +1,26 @@
+{
+  "id": "796a7677-2371-4989-aff9-d4ef1efe0a9b",
+  "name": "Set Job Title (new)",
+  "type": "firstValid",
+  "attributes": {
+    "values": [
+      {
+        "type": "trim"
+      },
+      {
+        "attributes": {
+          "input": {
+            "attributes": {
+              "attributeName": "BASE_ASSIGNMENT_NAME",
+              "sourceName": "Oracle HCM Employees"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        "type": "trim"
+      },
+      "<EMPTY>"
+    ]
+  },
+  "internal": false
+}

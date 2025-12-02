@@ -1,0 +1,54 @@
+{
+  "id": "84f8c081-8345-4799-a5fc-8e1fca3aa29d",
+  "name": "Set Display Name (new)",
+  "type": "concat",
+  "attributes": {
+    "values": [
+      {
+        "attributes": {
+          "values": [
+            {
+              "attributes": {
+                "input": {
+                  "attributes": {
+                    "attributeName": "KNOWN_AS",
+                    "sourceName": "Oracle HCM Employees"
+                  },
+                  "type": "accountAttribute"
+                }
+              },
+              "type": "trim"
+            },
+            {
+              "attributes": {
+                "input": {
+                  "attributes": {
+                    "attributeName": "FIRST_NAME",
+                    "sourceName": "Oracle HCM Employees"
+                  },
+                  "type": "accountAttribute"
+                }
+              },
+              "type": "trim"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      " ",
+      {
+        "attributes": {
+          "input": {
+            "attributes": {
+              "attributeName": "LAST_NAME",
+              "sourceName": "Oracle HCM Employees"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        "type": "trim"
+      }
+    ]
+  },
+  "internal": false
+}

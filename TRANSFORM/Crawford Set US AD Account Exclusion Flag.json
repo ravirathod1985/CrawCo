@@ -1,0 +1,40 @@
+{
+  "id": "259593b5-e367-4bc9-8954-1f3469ed6149",
+  "name": "Crawford Set US AD Account Exclusion Flag",
+  "type": "lookup",
+  "attributes": {
+    "input": {
+      "attributes": {
+        "values": [
+          {
+            "attributes": {
+              "attributeName": "BASE_DEPARTMENT_NAME",
+              "sourceName": "Oracle HCM Employees"
+            },
+            "type": "accountAttribute"
+          },
+          {
+            "attributes": {
+              "attributeName": "DEPARTMENT_NAME",
+              "sourceName": "Oracle HCM Employees"
+            },
+            "type": "accountAttribute"
+          }
+        ]
+      },
+      "type": "firstValid"
+    },
+    "table": {
+      "02242 - MB Cont Conn Parent": "TRUE",
+      "08331 - MB Cont Conn Fld Ops": "TRUE",
+      "08310 - MB Cont Conn Sale_Mk": "TRUE",
+      "08311 - MB Cont Conn IT": "TRUE",
+      "08384 - HO CAT Core Admin": "TRUE",
+      "06283 - HO CAT Core Admin": "TRUE",
+      "06282 - HO CAT Non Core": "TRUE",
+      "02340 - MB Contractor Conn": "TRUE",
+      "default": "FALSE"
+    }
+  },
+  "internal": false
+}

@@ -1,0 +1,56 @@
+{
+  "id": "421bc27e-0992-4bd6-a865-59eddfbe6035",
+  "name": "Calculate Employee Status - UK",
+  "type": "static",
+  "attributes": {
+    "countryCode": "Uk",
+    "employeeStatus": {
+      "attributes": {
+        "input": {
+          "attributes": {
+            "input": {
+              "attributes": {
+                "values": [
+                  {
+                    "attributes": {
+                      "attributeName": "ASSIGNMENT_STATUS_TYPE_ID",
+                      "sourceName": "Oracle HCM Employees"
+                    },
+                    "type": "accountAttribute"
+                  },
+                  {
+                    "attributes": {
+                      "attributeName": "BASE_ASSIGNMENT_STATUS_TYPE_ID",
+                      "sourceName": "Oracle HCM Employees"
+                    },
+                    "type": "accountAttribute"
+                  }
+                ]
+              },
+              "type": "firstValid"
+            },
+            "table": {
+              "1": "active",
+              "2": "active",
+              "3": "inactive",
+              "4": "inactive",
+              "7001": "loa",
+              "none": "active",
+              "default": "invalid"
+            }
+          },
+          "type": "lookup"
+        }
+      },
+      "type": "lower"
+    },
+    "preHire": {
+      "attributes": {
+        "id": "Calculate Prehire"
+      },
+      "type": "reference"
+    },
+    "value": "#if(${employeeStatus} == 'active' && ${preHire} == 'True')prehire${countryCode}#{else}${employeeStatus}${countryCode}#end"
+  },
+  "internal": false
+}

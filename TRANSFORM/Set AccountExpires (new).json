@@ -1,0 +1,40 @@
+{
+  "id": "17394874-b86b-48a9-8779-2dbd137e8596",
+  "name": "Set AccountExpires (new)",
+  "type": "firstValid",
+  "attributes": {
+    "values": [
+      {
+        "type": "dateFormat",
+        "attributes": {
+          "inputFormat": "yyyy-MM-dd'T'HH:mm",
+          "outputFormat": "EPOCH_TIME_WIN32",
+          "input": {
+            "attributes": {
+              "expression": "+1d",
+              "roundUp": true,
+              "input": {
+                "type": "dateFormat",
+                "attributes": {
+                  "input": {
+                    "type": "trim"
+                  },
+                  "inputFormat": "yyyy-MM-dd",
+                  "outputFormat": "ISO8601"
+                }
+              }
+            },
+            "type": "dateMath"
+          }
+        }
+      },
+      {
+        "type": "static",
+        "attributes": {
+          "value": "157469183990000000"
+        }
+      }
+    ]
+  },
+  "internal": false
+}

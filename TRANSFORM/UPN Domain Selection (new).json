@@ -1,0 +1,65 @@
+{
+  "id": "6c1a59a8-c523-4712-81c0-8609cfba04d7",
+  "name": "UPN Domain Selection (new)",
+  "type": "lookup",
+  "attributes": {
+    "table": {
+      "16020 SLS - Billericay": "slscrawco.co.uk",
+      "16030 SLS - Birmingham": "slscrawco.co.uk",
+      "16050 SLS - Leeds": "slscrawco.co.uk",
+      "16060 SLS - Newcastle": "slscrawco.co.uk",
+      "16070 SLS - Nottingham": "slscrawco.co.uk",
+      "16080 SLS - Scotland": "slscrawco.co.uk",
+      "16090 SLS - Manchester": "slscrawco.co.uk",
+      "16100 SLS - Milton Keynes": "slscrawco.co.uk",
+      "16110 SLS - South West": "slscrawco.co.uk",
+      "16120 SLS - Southampton": "slscrawco.co.uk",
+      "16140 SLS - Operations Management": "slscrawco.co.uk",
+      "16150 SLS - Central Typists": "slscrawco.co.uk",
+      "16160 SLS - QBE Team": "slscrawco.co.uk",
+      "default": {
+        "attributes": {
+          "input": {
+            "type": "trim"
+          },
+          "table": {
+            "CA": "crawco.ca",
+            "AR": "crawco.local",
+            "BR": "crawfordbrasil.com.br",
+            "CL": "crawford-chile.cl",
+            "CO": "crawford-chile.cl",
+            "MX": "net.cwm.local",
+            "PE": "crawford.local",
+            "GB": {
+              "type": "reference",
+              "attributes": {
+                "id": "UPN Domain Selection - GB"
+              }
+            },
+            "US": {
+              "type": "reference",
+              "attributes": {
+                "id": "UPN Domain Selection - US"
+              }
+            },
+            "PH": {
+              "type": "reference",
+              "attributes": {
+                "id": "UPN Domain Selection - US"
+              }
+            },
+            "AU": {
+              "type": "reference",
+              "attributes": {
+                "id": "UPN Domain Selection - AU"
+              }
+            },
+            "default": "invalid"
+          }
+        },
+        "type": "lookup"
+      }
+    }
+  },
+  "internal": false
+}

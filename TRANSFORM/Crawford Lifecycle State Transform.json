@@ -1,0 +1,142 @@
+{
+  "id": "3392e3dc-e545-468f-884e-d637055be1e4",
+  "name": "Crawford Lifecycle State Transform",
+  "type": "static",
+  "attributes": {
+    "countryCode": {
+      "attributes": {
+        "id": "Set Country Code (alpha2) (new)"
+      },
+      "type": "reference"
+    },
+    "hcmAssignmentId": {
+      "attributes": {
+        "values": [
+          {
+            "type": "accountAttribute",
+            "attributes": {
+              "sourceName": "Oracle HCM Employees",
+              "attributeName": "ASSIGNMENT_STATUS_TYPE_ID"
+            }
+          },
+          {
+            "type": "accountAttribute",
+            "attributes": {
+              "sourceName": "Oracle HCM Employees",
+              "attributeName": "BASE_ASSIGNMENT_STATUS_TYPE_ID"
+            }
+          },
+          ""
+        ]
+      },
+      "type": "firstValid"
+    },
+    "sufix_department": {
+      "attributes": {
+        "input": {
+          "attributes": {
+            "values": [
+              {
+                "type": "reference",
+                "attributes": {
+                  "id": "Set Department Name (new)",
+                  "input": {
+                    "attributes": {
+                      "attributeName": "DEPARTMENT_NAME",
+                      "sourceName": "Oracle HCM Employees"
+                    },
+                    "type": "accountAttribute"
+                  }
+                }
+              },
+              "none"
+            ]
+          },
+          "type": "firstValid"
+        },
+        "table": {
+          "MB Cont Conn Parent": "ContractorConnection",
+          "MB Cont Conn Fld Ops": "ContractorConnection",
+          "MB Cont Conn Sale_Mk": "ContractorConnection",
+          "MB Cont Conn IT": "ContractorConnection",
+          "HO CAT Core Admin": "CatAdjusters",
+          "HO CAT Non Core": "CatAdjusters",
+          "none": "",
+          "default": ""
+        }
+      },
+      "type": "lookup"
+    },
+    "employeeStatus": {
+      "attributes": {
+        "input": {
+          "attributes": {
+            "input": {
+              "attributes": {
+                "values": [
+                  {
+                    "attributes": {
+                      "attributeName": "ASSIGNMENT_STATUS_TYPE_ID",
+                      "sourceName": "Oracle HCM Employees"
+                    },
+                    "type": "accountAttribute"
+                  },
+                  {
+                    "attributes": {
+                      "attributeName": "BASE_ASSIGNMENT_STATUS_TYPE_ID",
+                      "sourceName": "Oracle HCM Employees"
+                    },
+                    "type": "accountAttribute"
+                  }
+                ]
+              },
+              "type": "firstValid"
+            },
+            "table": {
+              "1": "active",
+              "2": "active",
+              "3": "inactive",
+              "4": "inactive",
+              "5": "suspended",
+              "6": "suspended",
+              "1001": "ltd",
+              "1002": "ltd",
+              "1003": "loainactive",
+              "1004": "loainactive",
+              "2001": "inactive",
+              "4001": "inactive",
+              "7001": "loainactive",
+              "none": "active",
+              "default": "invalid"
+            }
+          },
+          "type": "lookup"
+        }
+      },
+      "type": "lower"
+    },
+    "preHire": {
+      "attributes": {
+        "id": "Calculate Prehire"
+      },
+      "type": "reference"
+    },
+    "renovoEmailStatus": {
+      "attributes": {
+        "values": [
+          {
+            "attributes": {
+              "attributeName": "EmailStatus",
+              "sourceName": "Renovo (CAT Adjusters)"
+            },
+            "type": "accountAttribute"
+          },
+          "<null>"
+        ]
+      },
+      "type": "firstValid"
+    },
+    "value": "#if($sufix_department=='CatAdjusters')#if($employeeStatus=='active'&& $renovoEmailStatus=='InActive' && ${countryCode}=='US')#set($employeeStatus='inactiveUsCatAdjusters')#elseif($employeeStatus=='active'&& $renovoEmailStatus=='active' && ${countryCode}=='US')#set($employeeStatus='active')#elseif($employeeStatus=='inactive'&& ${countryCode}=='CA' && ${hcmAssignmentId}=='4001')#set($employeeStatus='loaactive')#elseif($employeeStatus=='loainactive'&& $renovoEmailStatus=='active' && ${countryCode}=='US')#set($employeeStatus='active')#elseif($employeeStatus=='inactive')#end#end#if(${employeeStatus}=='active'&& ${preHire}=='True')#set($employeeStatus='prehire')#elseif($employeeStatus=='inactive'&& ${countryCode}=='CA' && ${hcmAssignmentId}=='4001')#set($employeeStatus='loaactive')#end${employeeStatus}"
+  },
+  "internal": false
+}

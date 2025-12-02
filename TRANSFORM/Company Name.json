@@ -1,0 +1,25 @@
+{
+  "id": "9c0b189d-d02b-4128-bd57-9ecd0d4e2e1b",
+  "name": "Company Name",
+  "type": "firstValid",
+  "attributes": {
+    "values": [
+      {
+        "type": "accountAttribute",
+        "attributes": {
+          "sourceName": "Oracle HCM Employees",
+          "attributeName": "LEGAL_EMPLOYER_NAME"
+        }
+      },
+      {
+        "type": "accountAttribute",
+        "attributes": {
+          "sourceName": "Oracle HCM Employees",
+          "attributeName": "BASE_LEGAL_EMPLOYER_NAME"
+        }
+      },
+      ""
+    ]
+  },
+  "internal": false
+}
