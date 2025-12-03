@@ -1,0 +1,54 @@
+{
+  "description": "This rule is used by the JDBC connector to build a map representation of the Resultset",
+  "type": "JDBCBuildMap",
+  "signature": {
+    "input": [
+      {
+        "name": "log",
+        "description": "The log object associated with the SailPointContext.",
+        "type": null
+      },
+      {
+        "name": "context",
+        "description": "A sailpoint.api.SailPointContext object that can be used to query the database if necessary.",
+        "type": null
+      },
+      {
+        "name": "application",
+        "description": "The application whose data file is being processed.",
+        "type": null
+      },
+      {
+        "name": "state",
+        "description": "A Map containing state information.",
+        "type": null
+      },
+      {
+        "name": "result",
+        "description": "The ResultSet from database.",
+        "type": null
+      },
+      {
+        "name": "connection",
+        "description": "A connection object to connect to database.",
+        "type": null
+      }
+    ],
+    "output": {
+      "name": "map",
+      "description": "A Map of the resource object assembled from the data.",
+      "type": null
+    }
+  },
+  "sourceCode": {
+    "version": "1.0",
+    "script": "import sailpoint.connector.*;\r\n\t \r\n\t String objType = schema.getObjectType();\r\n\t Map map = JDBCConnector.buildMapFromResultSet(result, schema);\r\n\t if (objType.equals(\"account\")){\r\n       \r\n            String isActive = (String) map.get(\"IsActive\");\r\n            if(isActive.equals(\"Y\")) {\r\n                map.put(\"IIQDisabled\", false);\r\n            } else {\r\n                map.put(\"IIQDisabled\", true);\r\n            }\r\n\t\t\t}\r\n     return map;"
+  },
+  "attributes": {
+    "sourceVersion": "1.0"
+  },
+  "id": "73218c38acfd47f1965cc82b1d5dcc4d",
+  "name": "FSLS_JDBC_BuildMap",
+  "created": "2025-08-06T14:41:17.281Z",
+  "modified": "2025-08-13T17:24:31.788Z"
+}

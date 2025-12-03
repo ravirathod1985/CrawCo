@@ -1,0 +1,40 @@
+{
+  "description": "A BuildMap rule is used to manipulate the raw input data (provided via the rows and columns in the file) and build a map out of the incoming data.",
+  "type": "BuildMap",
+  "signature": {
+    "input": [
+      {
+        "name": "col",
+        "description": "An ordered list of the column names from the file’s header record or specified Columns list.",
+        "type": null
+      },
+      {
+        "name": "record",
+        "description": "An ordered list of the values for the current record (parsed based on the specified delimiter)",
+        "type": null
+      },
+      {
+        "name": "application",
+        "description": "The source object sent to the connector from IdentityNow.",
+        "type": null
+      },
+      {
+        "name": "schema",
+        "description": "A reference to the Schema object for the Delimited File source being read.",
+        "type": null
+      }
+    ],
+    "output": null
+  },
+  "sourceCode": {
+    "version": "1.0",
+    "script": "import sailpoint.connector.DelimitedFileConnector;\r\n\r\n     Map map = DelimitedFileConnector.defaultBuildMap(cols, record);\r\n     String deltaAdjuster = (String) map.get(\"Delta_Adjuster\");\r\n\t String canCreate = (String) map.get(\"Can_Create\");\r\n\t String userAdmin = (String) map.get(\"User_Admin\");\r\n\t String canViewAllCases = (String) map.get(\"Can_View_All_Cases\");\r\n\t List permList = new ArrayList();\r\n\t \r\n\t if (deltaAdjuster != null && deltaAdjuster.equals(\"Y\")) {\r\n\t permList.add(\"Delta_Adjuster\");\r\n     }\r\n\t \r\n\t if (canCreate != null && canCreate.equals(\"Y\")) {\r\n\t permList.add(\"Can_Create\");\r\n     }\r\n\t \r\n\t if (userAdmin != null && userAdmin.equals(\"Y\")) {\r\n\t permList.add(\"User_Admin\");\r\n     }\r\n\t \r\n\t if (canViewAllCases != null && canViewAllCases.equals(\"Y\")) {\r\n\t permList.add(\"Can_View_All_Cases\");\r\n     }\r\n\t \r\n\t map.put(\"permissions\", permList);\r\n\t \r\n     return map;"
+  },
+  "attributes": {
+    "sourceVersion": "1.0"
+  },
+  "id": "c670628992f94a769c7e98b3d5993969",
+  "name": "Intake BuildMap Rule",
+  "created": "2025-09-16T18:16:50.754Z",
+  "modified": "2025-09-16T18:16:50.754Z"
+}

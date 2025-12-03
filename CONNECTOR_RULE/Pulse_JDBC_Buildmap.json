@@ -1,0 +1,54 @@
+{
+  "description": "This rule is used by the JDBC connector to build a map representation of the Resultset",
+  "type": "JDBCBuildMap",
+  "signature": {
+    "input": [
+      {
+        "name": "log",
+        "description": "The log object associated with the SailPointContext.",
+        "type": null
+      },
+      {
+        "name": "context",
+        "description": "A sailpoint.api.SailPointContext object that can be used to query the database if necessary.",
+        "type": null
+      },
+      {
+        "name": "application",
+        "description": "The application whose data file is being processed.",
+        "type": null
+      },
+      {
+        "name": "state",
+        "description": "A Map containing state information.",
+        "type": null
+      },
+      {
+        "name": "result",
+        "description": "The ResultSet from database.",
+        "type": null
+      },
+      {
+        "name": "connection",
+        "description": "A connection object to connect to database.",
+        "type": null
+      }
+    ],
+    "output": {
+      "name": "map",
+      "description": "A Map of the resource object assembled from the data.",
+      "type": null
+    }
+  },
+  "sourceCode": {
+    "version": "1.0",
+    "script": "import sailpoint.connector.*;\r\n        Map map = JDBCConnector.buildMapFromResultSet(result, schema);\r\n        \r\n            String status = (String) map.get(\"Status\");\r\n            if(status.equals(\"ACTIVE\")) {\r\n                map.put(\"IIQDisabled\", false);\r\n            } else {\r\n                map.put(\"IIQDisabled\", true);\r\n            }\r\n     return map;"
+  },
+  "attributes": {
+    "sourceVersion": "1.0"
+  },
+  "id": "c1d868188f8b4977a864da3ec0642d4b",
+  "name": "Pulse_JDBC_Buildmap",
+  "created": "2025-08-11T20:59:11.084Z",
+  "modified": "2025-08-11T20:59:11.084Z"
+}

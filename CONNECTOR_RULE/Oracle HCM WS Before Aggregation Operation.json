@@ -1,0 +1,44 @@
+{
+  "description": "This rule is used by the  Web Services connector before performing any operation like testconnection, aggregation, etc.",
+  "type": "WebServiceBeforeOperationRule",
+  "signature": {
+    "input": [
+      {
+        "name": "application",
+        "description": "The application whose data file is being processed.",
+        "type": null
+      },
+      {
+        "name": "requestEndPoint",
+        "description": "The current request information contain header, body, context url, method type, response attribute map,\n          successful response code\n        ",
+        "type": null
+      },
+      {
+        "name": "oldResponseMap",
+        "description": "earlier response object ",
+        "type": null
+      },
+      {
+        "name": "restClient",
+        "description": "REST Client Object",
+        "type": null
+      }
+    ],
+    "output": {
+      "name": "EndPoint",
+      "description": "Updated EndPoint Object",
+      "type": null
+    }
+  },
+  "sourceCode": {
+    "version": "1.0",
+    "script": "import sailpoint.tools.Util;\r\nimport java.text.SimpleDateFormat;\r\nimport java.util.Date;\r\n\r\nSimpleDateFormat formatter = new SimpleDateFormat(\"yyyy-MM-dd\");\r\nDate date = new Date();\r\nString effectiveDate = formatter.format(date);\r\n\r\nrequestEndPoint.setFullUrl(requestEndPoint.getFullUrl().replaceAll(\"(?i)<effectiveDate>\",effectiveDate));\r\n\r\nreturn requestEndPoint;"
+  },
+  "attributes": {
+    "sourceVersion": "1.0"
+  },
+  "id": "271dce74d5fa4d1e8a491f6547a71300",
+  "name": "Oracle HCM WS Before Aggregation Operation",
+  "created": "2023-06-30T23:22:49.415Z",
+  "modified": "2023-06-30T23:27:11.309Z"
+}

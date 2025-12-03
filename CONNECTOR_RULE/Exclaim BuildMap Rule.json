@@ -1,0 +1,40 @@
+{
+  "description": "A BuildMap rule is used to manipulate the raw input data (provided via the rows and columns in the file) and build a map out of the incoming data.",
+  "type": "BuildMap",
+  "signature": {
+    "input": [
+      {
+        "name": "col",
+        "description": "An ordered list of the column names from the file’s header record or specified Columns list.",
+        "type": null
+      },
+      {
+        "name": "record",
+        "description": "An ordered list of the values for the current record (parsed based on the specified delimiter)",
+        "type": null
+      },
+      {
+        "name": "application",
+        "description": "The source object sent to the connector from IdentityNow.",
+        "type": null
+      },
+      {
+        "name": "schema",
+        "description": "A reference to the Schema object for the Delimited File source being read.",
+        "type": null
+      }
+    ],
+    "output": null
+  },
+  "sourceCode": {
+    "version": "1.0",
+    "script": "import sailpoint.connector.DelimitedFileConnector;\r\n\r\n     Map map = DelimitedFileConnector.defaultBuildMap( cols, record );\r\n     String surrogateaccess = (String) map.get( \"surrogateaccess\" );\r\n\t String personpermissiongrants = (String) map.get( \"personpermissiongrants\" );\r\n\t \r\n\t if (surrogateaccess != null) {\r\n\t String[] surrogateaccessArray = surrogateaccess.split(\",\");\r\n     \r\n\t List surrogateaccessList = Arrays.asList(surrogateaccessArray);\r\n\t map.put(\"surrogateaccess\", surrogateaccessList);\r\n  \r\n     }\r\n\t \r\n\t if (personpermissiongrants != null) {\r\n\t String[] personpermissiongrantsArray = personpermissiongrants.split(\",\");\r\n     \r\n\t List personpermissiongrantsList = Arrays.asList(personpermissiongrantsArray);\r\n\t map.put(\"personpermissiongrants\", personpermissiongrantsList);\r\n\t \r\n     }\r\n\t \r\n     return map;"
+  },
+  "attributes": {
+    "sourceVersion": "1.0"
+  },
+  "id": "9b65490f1d4f443b9cdc9d09f6bd40cb",
+  "name": "Exclaim BuildMap Rule",
+  "created": "2025-09-02T19:51:54.007Z",
+  "modified": "2025-09-02T20:22:42.475Z"
+}

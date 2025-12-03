@@ -1,0 +1,54 @@
+{
+  "description": "This JDBC rule can process account creation requests, deletion requests, and modification requests that pertain to the role attribute. It logs debug messages if other account request types are submitted.",
+  "type": "JDBCProvision",
+  "signature": {
+    "input": [
+      {
+        "name": "log",
+        "description": "The log object associated with the SailPointContext.",
+        "type": null
+      },
+      {
+        "name": "context",
+        "description": "A sailpoint.api.SailPointContext object that can be used to query the database if necessary.\n  ",
+        "type": null
+      },
+      {
+        "name": "application",
+        "description": "The application whose data file is being processed.",
+        "type": null
+      },
+      {
+        "name": "schema",
+        "description": "The Schema currently in use.",
+        "type": null
+      },
+      {
+        "name": "connection",
+        "description": "A connection object to connect to database.",
+        "type": null
+      },
+      {
+        "name": "plan",
+        "description": "The ProvisioningPlan created against the JDBC application.",
+        "type": null
+      }
+    ],
+    "output": {
+      "name": "result",
+      "description": "A Provisioning Result object is desirable to return the status.IT can be a new object or part of  Provisioning Plan",
+      "type": null
+    }
+  },
+  "sourceCode": {
+    "version": "1.0",
+    "script": "import java.sql.Connection;\r\nimport java.sql.DriverManager;\r\nimport java.sql.PreparedStatement;\r\nimport java.sql.SQLException;\r\nimport java.sql.Types;\r\nimport java.util.List;\r\nimport sailpoint.api.SailPointContext;\r\nimport sailpoint.connector.JDBCConnector;\r\nimport sailpoint.object.Application;\r\nimport sailpoint.object.ProvisioningPlan;\r\nimport sailpoint.object.ProvisioningPlan.AccountRequest;\r\nimport sailpoint.object.ProvisioningPlan.AttributeRequest;\r\nimport sailpoint.object.ProvisioningPlan.PermissionRequest;\r\nimport sailpoint.object.ProvisioningResult;\r\nimport sailpoint.object.Schema;\r\n\r\npublic String getAttributeRequestValue(AccountRequest acctReq, String attribute) {\r\n    if (acctReq != null) {\r\n        AttributeRequest attrReq = acctReq.getAttributeRequest(attribute);\r\n        if (attrReq != null) {\r\n            return attrReq.getValue();\r\n        }\r\n    }\r\n    return null;\r\n}\r\nProvisioningResult result = new ProvisioningResult();\r\nPreparedStatement statement;\r\nif (plan != null) {\r\n \r\n    List accounts = plan.getAccountRequests();\r\n    if ((accounts != null) && (accounts.size() > 0)) {\r\n        for (AccountRequest account : accounts ) {\r\n            try {\r\n \r\n                if (AccountRequest.Operation.Create.equals(account.getOperation())) {\r\n                   //--------------CREATE--------------------------------------------------------------------------------------          \r\n\t\t\t\t\t// Create not supported.                \r\n                }\r\n \r\n                else if (AccountRequest.Operation.Modify.equals(account.getOperation())) {\r\n \r\n                    AttributeRequest attrReq = account.getAttributeRequest(\"RoleId\");\r\n                    ArrayList gid = new ArrayList();\r\n           \r\n\t\t\t\t\t\tif(attrReq.getValue() != null){\r\n\t\t\t\t\t\t\t\r\n                            if (attrReq != null && ProvisioningPlan.Operation.Remove.equals(attrReq.getOperation())) {\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\tString updateSql = \"Update [dbo].[User] set IsActive='N' where UserId = ?\";\r\n\t\t\t\t\t\t\t\tstatement = connection.prepareStatement(updateSql);\r\n\t\t\t\t\t\t\t\tstatement.setString ( 1, account.getNativeIdentity() );\r\n\t\t\t\t\t\t\t\tstatement.executeUpdate();\r\n                            }\r\n                        \r\n                        result.setStatus(ProvisioningResult.STATUS_COMMITTED);\r\n                    }\r\n\t\t\t\t\t log.info(\" Modify attrReq.getValue() is null ==>\"+attrReq.getValue());\r\n\t\t\t\t}\r\n \r\n                else if (AccountRequest.Operation.Disable.equals(account.getOperation())) {\r\n\t\t\t\t\t\t\tString disableSql = \"Update [dbo].[User] set IsActive='N' where UserId = ?\";\r\n\t\t\t\t\t\t\t\tstatement = connection.prepareStatement(disableSql);\r\n\t\t\t\t\t\t\t\tstatement.setString ( 1, account.getNativeIdentity() );\r\n\t\t\t\t\t\t\t\tstatement.executeUpdate();\r\n                    result.setStatus(ProvisioningResult.STATUS_COMMITTED);\r\n \r\n                }\r\n\t\t\t\telse if (AccountRequest.Operation.Enable.equals(account.getOperation())) {\r\n\t\t\t\t\t\t\tString disableSql = \"Update [dbo].[User] set IsActive='Y' where UserId = ?\";\r\n\t\t\t\t\t\t\t\tstatement = connection.prepareStatement(disableSql);\r\n\t\t\t\t\t\t\t\tstatement.setString ( 1, account.getNativeIdentity() );\r\n\t\t\t\t\t\t\t\tstatement.executeUpdate();\r\n                    result.setStatus(ProvisioningResult.STATUS_COMMITTED);\r\n \r\n                }\r\n                else if (AccountRequest.Operation.Delete.equals(account.getOperation())) {\r\n                    //--------------DELETE--------------------------------------------------------------------------------------          \r\n\t\t\t\t\t//DELETE not supported.  \r\n                }\r\n                else {\r\n                    log.info(\"Unknown operation identified in the connector rule! \");\r\n                    \r\n                }\r\n \r\n \r\n            }\r\n \r\n            catch (SQLException e ) {\r\n                result.setStatus(ProvisioningResult.STATUS_FAILED);\r\n                result.addError(e);\r\n            }\r\n        finally {\r\n                if (statement != null) {\r\n                    statement.close();\r\n                }\r\n            }\r\n        }\r\n    }\r\n}\r\nreturn result;"
+  },
+  "attributes": {
+    "sourceVersion": "1.0"
+  },
+  "id": "be6639c223094086a41c3d3a70a74623",
+  "name": "FSLS JDBC Provision",
+  "created": "2025-08-06T20:15:03.325Z",
+  "modified": "2025-08-07T17:42:20.529Z"
+}

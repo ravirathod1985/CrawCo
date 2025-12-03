@@ -1,0 +1,40 @@
+{
+  "description": "A BuildMap rule is used to manipulate the raw input data (provided via the rows and columns in the file) and build a map out of the incoming data.",
+  "type": "BuildMap",
+  "signature": {
+    "input": [
+      {
+        "name": "col",
+        "description": "An ordered list of the column names from the file’s header record or specified Columns list.",
+        "type": null
+      },
+      {
+        "name": "record",
+        "description": "An ordered list of the values for the current record (parsed based on the specified delimiter)",
+        "type": null
+      },
+      {
+        "name": "application",
+        "description": "The source object sent to the connector from IdentityNow.",
+        "type": null
+      },
+      {
+        "name": "schema",
+        "description": "A reference to the Schema object for the Delimited File source being read.",
+        "type": null
+      }
+    ],
+    "output": null
+  },
+  "sourceCode": {
+    "version": "1.0",
+    "script": "import sailpoint.connector.DelimitedFileConnector;\r\n \r\n    Map map = DelimitedFileConnector.defaultBuildMap(cols, record);\r\n    String hasXactContents = (String) map.get(\"Has XactContents\");\r\n         String hasTimeandMaterials = (String) map.get(\"Has Time and Materials\");\r\n         String isAdmin = (String) map.get(\"Is Admin\");\r\n         List permList = new ArrayList();\r\n\t\t String securityGroups = (String) map.get(\"Security Groups\");\r\n\t \r\n\t \r\n\t if (securityGroups != null) {\r\n\t   String[] securityGroupsArray = securityGroups.split(\",\");\r\n     \r\n\t   List securityGroupsList = Arrays.asList(securityGroupsArray);\r\n\t   map.put(\"Security Groups\", securityGroupsList);\r\n  \r\n     }\r\n         \r\n         if (hasXactContents != null && hasXactContents.equals(\"yes\")) {\r\n         permList.add(\"Has XactContents\");\r\n    }\r\n         \r\n         if (hasTimeandMaterials != null && hasTimeandMaterials.equals(\"yes\")) {\r\n         permList.add(\"Has Time and Materials\");\r\n    }\r\n         \r\n         if (isAdmin != null && isAdmin.equals(\"yes\")) {\r\n         permList.add(\"Is Admin\");\r\n    }\r\n         \r\n         map.put(\"permissions\", permList);\r\n         \r\n    return map;"
+  },
+  "attributes": {
+    "sourceVersion": "1.0"
+  },
+  "id": "b31f82c8109c40c1bad7b926fc6095f8",
+  "name": "Xactimate UK BuildMap Rule",
+  "created": "2025-09-24T17:32:12.049Z",
+  "modified": "2025-09-24T19:25:41.610Z"
+}

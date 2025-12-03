@@ -1,0 +1,24 @@
+{
+  "description": "Rule to call the customer-developed PowerShell script after AD accounts are modified.",
+  "type": "ConnectorAfterModify",
+  "signature": {
+    "input": [],
+    "output": null
+  },
+  "sourceCode": {
+    "version": "0.1",
+    "script": "$configPath =\"D:\\Sailpoint\\IQService\\Scripts\\AD-AfterModifyConfig.json\"\n\t$configObject = Get-Content -Raw -Path $configPath | ConvertFrom-Json\n\n\t$logFile = $configObject.logFile\n\t$command = $configObject.command\n\t$enableDebug = $configObject.enableDebug\n\t$dateFormat = $configObject.dateFormat\n\t$utilsPath = $configObject.utilsPath\n\n#====================-------Helper functions-------====================\n\tfunction LogToFile([String] $info) {\n\t\t$timeStamp = Get-Date -UFormat $dateFormat\n\t\t$logMessage = $timeStamp+\": \"+$info\n\t\t$logMessage | Out-File $logFile -Append\n\t}\n\n\t#change the path to IQService here\n\tAdd-type -path $utilsPath;\n\t$sReader = New-Object System.IO.StringReader([System.String]$env:Request);\n\t$xmlReader = [System.xml.XmlTextReader]([Sailpoint.Utils.xml.XmlUtil]::getReader($sReader));\n\t$requestObject = New-Object sailpoint.utils.objects.AccountRequest($xmlReader);\n\t$resultObject = New-Object sailpoint.utils.objects.ServiceResult($xmlReader_Result);\n\t$requestAsString = $env:Request;\n\t$resultAsString = $env:Result;\n\n\n\tif ($enableDebug){\n\t\t$logMsg = \"Entering AD After Modify Script\"\n\t\tLogToFile($logMsg)\n\n\t\t$logMsg = \"Request: \" + $requestAsString\n\t\tLogToFile($logMsg)\n\n\t\t$logMsg = \"Result: \" + $resultAsString\n\t\tLogToFile($logMsg)\n\t}\n\n\tif ($enableDebug){\n\t\t$logMsg = \"Invoking script\"\n\t\tLogToFile($logMsg)\n\t}\n\n\ttry {\n\t\t$command = -join ($command, \" -strRequest `$requestAsString -strResult `$resultAsString\")\n\t\tInvoke-Expression $command\n\t}\n\tcatch {\n\t\t$ErrorMessage = $_.Exception.Message\n\t\tif ($enableDebug){\n\t\t\t$logMsg = \"ERROR!!! Error message:$($ErrorMessage)\"\n\t\t\tLogToFile($logMsg)\n\t\t}\n\t}\n\t"
+  },
+  "attributes": {
+    "ObjectOrientedScript": "true",
+    "extension": ".ps1",
+    "sourceVersion": "0.1",
+    "disabled": "false",
+    "program": "powershell.exe",
+    "timeout": "1500"
+  },
+  "id": "66d2f65b47924d0ca77f57ce6cf7c899",
+  "name": "AD-Powershell-After-Modify",
+  "created": "2023-01-11T18:31:49.044Z",
+  "modified": "2023-06-19T18:21:15.870Z"
+}

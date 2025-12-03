@@ -1,0 +1,44 @@
+{
+  "description": "This rule is used by the  Web Services connector before performing any operation like testconnection, aggregation, etc.",
+  "type": "WebServiceBeforeOperationRule",
+  "signature": {
+    "input": [
+      {
+        "name": "application",
+        "description": "The application whose data file is being processed.",
+        "type": null
+      },
+      {
+        "name": "requestEndPoint",
+        "description": "The current request information contain header, body, context url, method type, response attribute map,\n          successful response code\n        ",
+        "type": null
+      },
+      {
+        "name": "oldResponseMap",
+        "description": "earlier response object ",
+        "type": null
+      },
+      {
+        "name": "restClient",
+        "description": "REST Client Object",
+        "type": null
+      }
+    ],
+    "output": {
+      "name": "EndPoint",
+      "description": "Updated EndPoint Object",
+      "type": null
+    }
+  },
+  "sourceCode": {
+    "version": "1.0",
+    "script": "import sailpoint.tools.Util;\r\nimport java.text.SimpleDateFormat;\r\nimport java.util.Date;\r\nimport sailpoint.tools.GeneralException;\r\n\r\n//Map postBodyMap = (Map) requestEndPoint.getBody();\r\n//throw new GeneralException (\"postBodyMap: \" + postBodyMap.toString());\r\n\r\nMap theHeader = (Map) requestEndPoint.getHeader();\r\nthrow new GeneralException (\"theHeader: \" + theHeader.toString());"
+  },
+  "attributes": {
+    "sourceVersion": "1.0"
+  },
+  "id": "32ac5352e48d4e72be14bdbda73e53e0",
+  "name": "Troubleshooting SANDBOX TEMP",
+  "created": "2023-08-30T21:13:52.212Z",
+  "modified": "2023-10-06T15:17:10.202Z"
+}

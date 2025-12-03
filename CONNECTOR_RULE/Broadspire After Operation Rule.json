@@ -1,0 +1,49 @@
+{
+  "description": "This rule is used by the Web Services connector to update parsed resource object. Create List of Objects which will later converted to Resource object.",
+  "type": "WebServiceAfterOperationRule",
+  "signature": {
+    "input": [
+      {
+        "name": "application",
+        "description": "The application whose data file is being processed.",
+        "type": null
+      },
+      {
+        "name": "requestEndPoint",
+        "description": "The current request information contain header, body ,response object",
+        "type": null
+      },
+      {
+        "name": "processedResponseObject",
+        "description": "Response Object processed by the Web services connector",
+        "type": null
+      },
+      {
+        "name": "rawResponseObject",
+        "description": "Response Object returned from the end system",
+        "type": null
+      },
+      {
+        "name": "restClient",
+        "description": "REST Client Object",
+        "type": null
+      }
+    ],
+    "output": {
+      "name": "Update Account/Group List",
+      "description": "Update information Map contains parsed list of accounts",
+      "type": null
+    }
+  },
+  "sourceCode": {
+    "version": "1.0",
+    "script": "import java.util.*;\r\n\t  import connector.common.JsonUtil;\r\n\r\n      String tokenUrl = \"https://crawford-stage.auth0.com/oauth/token\";\r\n      String clientId = \"PzEHvu79tUoHlLiTw5m9BC99ED2PZqSd\";\r\n      String clientSecret = \"pq9W-jyB-bgBCo2u_tyRo7fhPvXtvDmdbtb9cI6m_JQmmwsu6BRKZ63KDaJqNPpX\";\r\n      String audience = \"https://api.ea.broadspire.com/\";\r\n\r\n      Map headers = new HashMap();\r\n      headers.put(\"Content-Type\", \"application/x-www-form-urlencoded\");\r\n\r\n      String body = \"grant_type=client_credentials\" + \"&client_id=\" + clientId + \"&client_secret=\" + clientSecret + \"&audience=\" + audience;\r\n\t\t\t\t \r\n\tList allowedStatuses = new ArrayList();\r\n\r\n      String tokenResponse = restClient.executePost(tokenUrl, body, headers, allowedStatuses);\r\n\t  Map response = JsonUtil.toMap(tokenResponse);\r\n      String accessToken = (String) response.get(\"access_token\");\r\n\r\n      Map result = new HashMap();\r\n      result.put(\"externalApiToken\", accessToken);\r\n      return result;"
+  },
+  "attributes": {
+    "sourceVersion": "1.0"
+  },
+  "id": "69fec5aba1b34967b74d2f5dbc350982",
+  "name": "Broadspire After Operation Rule",
+  "created": "2025-11-05T14:40:11.796Z",
+  "modified": "2025-11-05T20:18:57.172Z"
+}
