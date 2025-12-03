@@ -1,0 +1,164 @@
+{
+  "id": "ee7a19ee93854b28b857e502636e51c7",
+  "name": "Teleplus Claim Capture",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "Teleplus Claim Capture",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "ENABLE",
+    "DISCOVER_SCHEMA",
+    "SYNC_PROVISIONING",
+    "DIRECT_PERMISSIONS",
+    "UNLOCK"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "NAME",
+      "displayAttribute": "NAME",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "NAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "GROUP_NM",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "add04a1b1073407592c47a5f0d980040",
+            "name": "Group_NM"
+          },
+          "description": "GROUP_NM",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        }
+      ],
+      "id": "7088834ebece4306bbd6c53d875301ee",
+      "name": "account",
+      "created": "2023-12-19T17:20:20.783Z",
+      "modified": "2023-12-19T21:15:25.042Z"
+    },
+    {
+      "nativeObjectType": "Group_NM",
+      "identityAttribute": "GROUP_NM",
+      "displayAttribute": "GROUP_NM",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "GROUP_NM",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "GROUP_NM",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "add04a1b1073407592c47a5f0d980040",
+      "name": "Group_NM",
+      "created": "2023-12-19T17:28:32.915Z",
+      "modified": "2023-12-19T17:28:53.980Z"
+    }
+  ],
+  "connectorAttributes": {
+    "Group_NM.isPermissionEnabled": false,
+    "healthCheckTimeout": 30,
+    "mergeColumns": [
+      "GROUP_NM"
+    ],
+    "supportsDeltaAgg": "true",
+    "Group_NM.SQL": "select * from tccowner.accesspermissionsaudit_view\nOrder By Name ASC",
+    "deltaAggregationEnabled": false,
+    "useStoredProcedureTestConn": false,
+    "group.mergeRows": false,
+    "isAdvance": "false",
+    "mergeRows": true,
+    "Group_NM.useStoredProcedureSqlStmt": false,
+    "useStoredProcedureGetObject": false,
+    "Group_NM.user": "SA_CAM",
+    "connectionType": "direct",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "Group_NM.driverClass": "oracle.jdbc.driver.OracleDriver",
+    "driverClass": "oracle.jdbc.driver.OracleDriver",
+    "jdbcExceptionBucketing": true,
+    "hasFullAggregationCompleted": true,
+    "useExecuteQuery": false,
+    "connector_files": "ojdbc8.jar",
+    "Group_NM.useStoredProcedureGetObject": false,
+    "indexColumns": [
+      "NAME"
+    ],
+    "useQuery": false,
+    "testConnSQL": "select 1 from dual",
+    "sourceConnected": true,
+    "isPermissionEnabled": false,
+    "disableOrderingCheck": true,
+    "deleteThresholdPercentage": 10,
+    "url": "jdbc:oracle:thin:@10.129.190.141:1581:tccp",
+    "SQL": "select * from tccowner.accesspermissionsaudit_view\nOrder By Name ASC",
+    "cloudCacheUpdate": 1764580200266,
+    "templateApplication": "JDBC Template",
+    "group.isPermissionEnabled": false,
+    "encrypted": "password,group.password,Group_NM.password",
+    "healthy": true,
+    "cloudDisplayName": "Teleplus Claim Capture",
+    "connectorName": "JDBC",
+    "useStoredProcedureSqlStmt": false,
+    "Group_NM.url": "jdbc:oracle:thin:@10.129.190.141:1581:tccp",
+    "Group_NM.mergeRows": false,
+    "user": "SA_CAM",
+    "status": "SOURCE_STATE_HEALTHY",
+    "Group_NM.useExecuteQuery": false,
+    "since": "2025-09-21T05:08:58.576Z"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "correlatedAdUsername",
+        "operation": "EQ",
+        "value": "NAME",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "b8dc0aa8c34a4e978f2935316b771b97",
+    "name": "Teleplus Claim Capture Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

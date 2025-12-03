@@ -1,0 +1,299 @@
+{
+  "id": "8302f3de0ca7402d9a4a61bc6bad0239",
+  "name": "UserName Database",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "This is a source to collect all of the usernames in other sources for validation of uniqueness of AD accounts and generate new usernames.",
+  "deleteThreshold": 100,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "SYNC_PROVISIONING",
+    "DISCOVER_SCHEMA",
+    "UNLOCK",
+    "GROUP_PROVISIONING",
+    "DIRECT_PERMISSIONS",
+    "ENABLE",
+    "PROVISIONING"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "EMPLOYEE_NUMBER",
+      "displayAttribute": "EMPLOYEE_NUMBER",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "FIRST_NAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "FIRST NAME OF THE USER",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LAST_NAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "FAMILY NAME OF THE USER",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "COUNTRY_CODE",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "COUNTRY_CODE OF THE USER",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EMAIL",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "EMAIL OF THE USER",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EMPLOYEE_NUMBER",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "UNIQUE IDENTIFIER FOR EMPLOYEE",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "USERNAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "USERNAME OF THE USER",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "STATUS",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "STATUS OF THE USER",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": false
+        },
+        {
+          "name": "IIQDisabled",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Enable/Disable",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "9f3e4a85826d4a2d85e4a47042b97e76",
+      "name": "account",
+      "created": "2025-01-10T15:37:22.169Z",
+      "modified": "2025-02-05T10:18:42.685Z"
+    },
+    {
+      "nativeObjectType": "group",
+      "identityAttribute": "",
+      "displayAttribute": "",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [
+        "PROVISIONING"
+      ],
+      "configuration": {},
+      "attributes": [],
+      "id": "b0908563ab074dc68157bf367057ff54",
+      "name": "group",
+      "created": "2025-01-10T15:37:22.169Z",
+      "modified": "2025-02-05T10:18:42.686Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "supportsDeltaAgg": "true",
+    "deltaAggregationEnabled": false,
+    "useStoredProcedureTestConn": false,
+    "group.mergeRows": false,
+    "isAdvance": "false",
+    "mergeRows": false,
+    "useStoredProcedureGetObject": false,
+    "checkDeletedDisabled": false,
+    "connectionType": "direct",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "jdbcExceptionBucketing": true,
+    "hasFullAggregationCompleted": true,
+    "useExecuteQuery": false,
+    "connector_files": "sqljdbc42.jar",
+    "group.useExecuteQuery": false,
+    "useQuery": false,
+    "jdbcProvisionRule": "Crawford_JDBC_Username_Database_rule",
+    "testConnSQL": "select *  FROM [SailPoint_ISC_Dev].[dbo].[PrimaryUsernameTracking]",
+    "sourceConnected": true,
+    "connectorFileUploadHistory": {
+      "sqljdbc42.jar": "2025-01-13T19:10:49.893791Z",
+      "mssql-jdbc-12.8.1.jre8.jar": "2025-01-13T19:03:33.944158Z",
+      "mssql-jdbc-12.8.1.jre11.jar": "2025-01-13T19:00:59.154430Z"
+    },
+    "isPermissionEnabled": false,
+    "deleteThresholdPercentage": 100,
+    "group.useStoredProcedureSqlStmt": false,
+    "url": "jdbc:sqlserver://10.1.16.70:1433;databasename=sailpoint_isc_dev",
+    "labels": [
+      "standard"
+    ],
+    "SQL": "select * FROM [SailPoint_ISC_Dev].[dbo].[PrimaryUsernameTracking] where USERNAME !='' OR USERNAME is Not Null",
+    "group.useStoredProcedureGetObject": false,
+    "cloudCacheUpdate": 1764047036915,
+    "templateApplication": "JDBC Template",
+    "group.isPermissionEnabled": false,
+    "encrypted": "password,group.password",
+    "group.SQL": "select  STATUS FROM [SailPoint_ISC_Dev].[dbo].[EMPLOYEES]",
+    "healthy": true,
+    "cloudDisplayName": "UserName Database",
+    "connectorName": "JDBC",
+    "getObjectSQL": "select * FROM [SailPoint_ISC_Dev].[dbo].[PrimaryUsernameTracking] where EMPLOYEE_NUMBER='$(identity)'",
+    "useStoredProcedureSqlStmt": false,
+    "buildMapRule": "Crawford_Username_Database_buildmapRule",
+    "user": "sa_dev_sailpointdb",
+    "status": "SOURCE_STATE_HEALTHY",
+    "since": "2025-08-14T10:09:44.256Z"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "EMPLOYEE_NUMBER",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "2002e21949154e06b4a8388ad86cdb7e",
+    "name": "UserName Database Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [
+    {
+      "name": "",
+      "description": null,
+      "usageType": "CREATE",
+      "fields": [
+        {
+          "name": "FIRST_NAME",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "firstname"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "LAST_NAME",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "lastname"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "COUNTRY_CODE",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "countryCode"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "EMAIL",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "hcmEmail"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "EMPLOYEE_NUMBER",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "uid"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "STATUS",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "Active"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        }
+      ]
+    }
+  ],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

@@ -1,0 +1,394 @@
+{
+  "id": "69cbeab4b4c64561a35d18389ab6c380",
+  "name": "Replicon_WS",
+  "type": "Web Services",
+  "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+  "connectorScriptName": "web-services-angularsc",
+  "description": "Replicon Time Management",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c9180877f891589017f9e47d0ed2f8b",
+    "name": "Rich.Sabel"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "UNLOCK",
+    "PROVISIONING",
+    "AUTHENTICATE",
+    "PASSWORD",
+    "ENABLE"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "user",
+      "identityAttribute": "uri",
+      "displayAttribute": "email",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "email",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Email Login of User",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "displayName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "slug",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Replicon slug value",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "uri",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Replicon distinct user identifier",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "employeeId",
+          "nativeName": null,
+          "type": "INT",
+          "schema": null,
+          "description": "User EmployeeId",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "firstName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User First Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "lastName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User Last Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "supervisorEmail",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User Supervisor Email",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "roles",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User Roles",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "117043702efd40ff8d85d9d14e82d2e3",
+      "name": "account",
+      "created": "2025-08-07T19:25:35.886Z",
+      "modified": "2025-08-08T10:27:20.885Z"
+    },
+    {
+      "nativeObjectType": "group",
+      "identityAttribute": "",
+      "displayAttribute": "",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [],
+      "id": "5b1e99c68469448abe919759c6204e64",
+      "name": "group",
+      "created": "2025-08-07T19:25:35.886Z",
+      "modified": "2025-08-08T10:27:20.885Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "supportsDeltaAgg": "true",
+    "deltaAggregationEnabled": false,
+    "throwProvBeforeRuleException": true,
+    "connectionType": "direct",
+    "enableHasMore": false,
+    "isGetObjectRequiredForPTA": true,
+    "timeoutInSeconds": "60",
+    "genericWebServiceBaseUrl": "https://na6.replicon.com",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "connectionParameters": [
+      {
+        "contextUrl": "/services/UserAccessControlService1.svc/GetMyUserSecurityConfigurationDetails",
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "1",
+        "uniqueNameForEndPoint": "Testing ",
+        "curlEnabled": false,
+        "operationType": "Test Connection",
+        "body": {
+          "bodyFormat": "raw"
+        }
+      },
+      {
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "2",
+        "uniqueNameForEndPoint": "accounts1",
+        "rootPath": "$.d",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "200"
+        ],
+        "resMappingObj": {
+          "displayName": "displayText",
+          "uri": "uri",
+          "email": "loginName",
+          "slug": "slug"
+        },
+        "contextUrl": "/Services/UserService1.svc/GetEnabledUsers",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "X-Replicon-Application": "Sailpoint_UserAggregation_1.0"
+        },
+        "operationType": "Account Aggregation"
+      },
+      {
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "3",
+        "uniqueNameForEndPoint": "accounts2",
+        "rootPath": "$.d",
+        "body": {
+          "jsonBody": "{\n  \"userUri\": \"$response.uri$\"\n}",
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "200"
+        ],
+        "resMappingObj": {
+          "firstName": "firstName",
+          "lastName": "lastName",
+          "supervisorEmail": "supervisor.user.loginName",
+          "employeeId": "employeeId"
+        },
+        "contextUrl": "/Services/UserService1.svc/GetUserDetails",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "X-Replicon-Application": "Sailpoint_UserAggregation_1.0",
+          "Content-Type": "application/json"
+        },
+        "operationType": "Account Aggregation",
+        "parentEndpointName": "accounts1"
+      },
+      {
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "4",
+        "uniqueNameForEndPoint": "accounts3",
+        "rootPath": "$.d",
+        "body": {
+          "jsonBody": "{\n  \"userUri\": \"$response.uri\"\n}",
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "200"
+        ],
+        "resMappingObj": {
+          "roles": "permittedActionUris"
+        },
+        "contextUrl": "/Services/UserAccessControlService1.svc/GetActionsForObject",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "X-Replicon-Application": "Sailpoint_UserAggregation_1.0",
+          "content-type": "application/json"
+        },
+        "operationType": "Account Aggregation",
+        "parentEndpointName": "accounts1"
+      }
+    ],
+    "partitionAggregationEnabled": false,
+    "possibleHttpErrors": {},
+    "sourceConnected": true,
+    "throwProvAfterRuleException": true,
+    "lastAggregationDate_account": "2025-08-08T10:14:13Z",
+    "deleteThresholdPercentage": 10,
+    "fixedPlanMultivaluedAttribute": "true",
+    "version": "v2",
+    "labels": [
+      "standard"
+    ],
+    "cloudCacheUpdate": 1764047036567,
+    "templateApplication": "Web Services Template",
+    "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info",
+    "authenticationMethod": "OAuthLogin",
+    "httpCookieSpecsStandard": "true",
+    "healthy": false,
+    "cloudDisplayName": "Replicon_WS",
+    "connectorName": "Web Services",
+    "since": "2025-08-08T20:07:15.377Z",
+    "status": "SOURCE_STATE_FAILURE_SOURCE"
+  },
+  "crossTenantConnectorAttributes": {
+    "connectionParameters": [
+      {
+        "contextUrl": "/services/UserAccessControlService1.svc/GetMyUserSecurityConfigurationDetails",
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "1",
+        "uniqueNameForEndPoint": "Testing ",
+        "curlEnabled": false,
+        "operationType": "Test Connection",
+        "body": {
+          "bodyFormat": "raw"
+        }
+      },
+      {
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "2",
+        "uniqueNameForEndPoint": "accounts1",
+        "rootPath": "$.d",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "200"
+        ],
+        "resMappingObj": {
+          "displayName": "displayText",
+          "uri": "uri",
+          "email": "loginName",
+          "slug": "slug"
+        },
+        "contextUrl": "/Services/UserService1.svc/GetEnabledUsers",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "X-Replicon-Application": "Sailpoint_UserAggregation_1.0"
+        },
+        "operationType": "Account Aggregation"
+      },
+      {
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "3",
+        "uniqueNameForEndPoint": "accounts2",
+        "rootPath": "$.d",
+        "body": {
+          "jsonBody": "{\n  \"userUri\": \"$response.uri$\"\n}",
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "200"
+        ],
+        "resMappingObj": {
+          "firstName": "firstName",
+          "lastName": "lastName",
+          "supervisorEmail": "supervisor.user.loginName",
+          "employeeId": "employeeId"
+        },
+        "contextUrl": "/Services/UserService1.svc/GetUserDetails",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "X-Replicon-Application": "Sailpoint_UserAggregation_1.0",
+          "Content-Type": "application/json"
+        },
+        "operationType": "Account Aggregation",
+        "parentEndpointName": "accounts1"
+      },
+      {
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "4",
+        "uniqueNameForEndPoint": "accounts3",
+        "rootPath": "$.d",
+        "body": {
+          "jsonBody": "{\n  \"userUri\": \"$response.uri\"\n}",
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "200"
+        ],
+        "resMappingObj": {
+          "roles": "permittedActionUris"
+        },
+        "contextUrl": "/Services/UserAccessControlService1.svc/GetActionsForObject",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "X-Replicon-Application": "Sailpoint_UserAggregation_1.0",
+          "content-type": "application/json"
+        },
+        "operationType": "Account Aggregation",
+        "parentEndpointName": "accounts1"
+      }
+    ]
+  },
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "email",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "8864ec13d3944c12bf53fdc6000d6743",
+    "name": "Replicon [source] Account Correlation"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

@@ -1,0 +1,284 @@
+{
+  "id": "0cb269ca6a2744429a94c87f0d919896",
+  "name": "Broadspire Platform",
+  "type": "Web Services",
+  "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+  "connectorScriptName": "web-services-angularsc",
+  "description": "Broadspire",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "AUTHENTICATE",
+    "UNLOCK",
+    "ENABLE",
+    "PROVISIONING",
+    "PASSWORD"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "user",
+      "identityAttribute": "id",
+      "displayAttribute": "email",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "displayName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "displayName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "employeeId",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "employeeId",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "email",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "email",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "isExternal",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "isExternal",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "isExternalManaged",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "isExternalManaged",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "connection",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "connection",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "ec3f2b1c9fc5434eb7bfb6daed678ef0",
+      "name": "account",
+      "created": "2025-07-31T15:49:25.042Z",
+      "modified": "2025-10-31T19:58:50.447Z"
+    },
+    {
+      "nativeObjectType": "group",
+      "identityAttribute": "",
+      "displayAttribute": "",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [],
+      "id": "e7101919ee1e4cd0b86e352039d47dce",
+      "name": "group",
+      "created": "2025-07-31T15:49:25.042Z",
+      "modified": "2025-07-31T15:49:25.042Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "supportsDeltaAgg": "true",
+    "deltaAggregationEnabled": false,
+    "throwProvBeforeRuleException": true,
+    "connectionType": "direct",
+    "enableHasMore": false,
+    "client_id": "WLzukFFMxzr2MMXe26rRpJZ27GOd1UI4",
+    "isGetObjectRequiredForPTA": true,
+    "timeoutInSeconds": "60",
+    "genericWebServiceBaseUrl": "https://users-api.ea-uat.broadspire.com",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "connectionParameters": [
+      {
+        "contextUrl": "/graphql",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "1",
+        "uniqueNameForEndPoint": "Test Connection",
+        "curlEnabled": false,
+        "operationType": "Test Connection",
+        "body": {
+          "bodyFormat": "raw"
+        }
+      },
+      {
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "2",
+        "uniqueNameForEndPoint": "Account Aggregation",
+        "afterRule": "Broadspire After Operation Rule",
+        "rootPath": "$.data.users.items",
+        "body": {
+          "jsonBody": "{\n  \"query\": \"query { users(applications: [\\\"CCP\\\"]) { items { id displayName employeeId email isExternal isExternalManaged connection } pageInfo { hasPreviousPage hasNextPage } totalCount } }\"\n}",
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "isExternal": "isExternal",
+          "displayName": "displayName",
+          "connection": "connection",
+          "employeeId": "employeeId",
+          "id": "id",
+          "isExternalManaged": "isExternalManaged",
+          "email": "email"
+        },
+        "contextUrl": "/graphql",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "operationType": "Account Aggregation"
+      }
+    ],
+    "oauth_request_parameters": {
+      "audience": "https://api.ea.broadspire.com/"
+    },
+    "grant_type": "CLIENT_CREDENTIALS",
+    "partitionAggregationEnabled": false,
+    "token_url": "https://crawford-stage.auth0.com/oauth/token",
+    "possibleHttpErrors": {},
+    "sourceConnected": true,
+    "throwProvAfterRuleException": true,
+    "lastAggregationDate_account": "2025-11-05T13:26:35Z",
+    "deleteThresholdPercentage": 10,
+    "fixedPlanMultivaluedAttribute": "true",
+    "version": "v2",
+    "labels": [
+      "standard"
+    ],
+    "cloudCacheUpdate": 1764047035051,
+    "templateApplication": "Web Services Template",
+    "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info",
+    "authenticationMethod": "OAuth2Login",
+    "httpCookieSpecsStandard": "true",
+    "healthy": true,
+    "cloudDisplayName": "Broadspire Platform",
+    "connectorName": "Web Services",
+    "since": "2025-11-18T17:01:49.146Z",
+    "status": "SOURCE_STATE_HEALTHY"
+  },
+  "crossTenantConnectorAttributes": {
+    "connectionParameters": [
+      {
+        "contextUrl": "/graphql",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "1",
+        "uniqueNameForEndPoint": "Test Connection",
+        "curlEnabled": false,
+        "operationType": "Test Connection",
+        "body": {
+          "bodyFormat": "raw"
+        }
+      },
+      {
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "2",
+        "uniqueNameForEndPoint": "Account Aggregation",
+        "afterRule": "Broadspire After Operation Rule",
+        "rootPath": "$.data.users.items",
+        "body": {
+          "jsonBody": "{\n  \"query\": \"query { users(applications: [\\\"CCP\\\"]) { items { id displayName employeeId email isExternal isExternalManaged connection } pageInfo { hasPreviousPage hasNextPage } totalCount } }\"\n}",
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "isExternal": "isExternal",
+          "displayName": "displayName",
+          "connection": "connection",
+          "employeeId": "employeeId",
+          "id": "id",
+          "isExternalManaged": "isExternalManaged",
+          "email": "email"
+        },
+        "contextUrl": "/graphql",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "operationType": "Account Aggregation"
+      }
+    ]
+  },
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "email",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      },
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "employeeId",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 2
+      }
+    ],
+    "id": "0352532c6a5f45c687c4bdde1db74f58",
+    "name": "0cb269ca6a2744429a94c87f0d919896 Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

@@ -1,0 +1,1823 @@
+{
+  "id": "2c91808581497889018149e9197d0d9e",
+  "name": "Prime",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "Prime",
+  "deleteThreshold": 50,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "ENABLE",
+    "UNLOCK",
+    "DIRECT_PERMISSIONS",
+    "SYNC_PROVISIONING",
+    "DISCOVER_SCHEMA"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "Employee_code",
+      "displayAttribute": "CTHG_Employee_Code",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Employee_code",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Employee_last_updated_id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Employee_grade_code",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "2c918089838b1cd50183c27f24c63a1c",
+            "name": "gradeCode"
+          },
+          "description": "Employee_grade_code",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "Work_tel_no",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "CTHG_Employee_Code",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Employee_last_updated_time",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Charge_rate_time_period_code",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Job_title_code",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "2c918086838b1cd20183c281229e1513",
+            "name": "jobTitle"
+          },
+          "description": "Job_title_code",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "Work_fax_no",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Work_mobile_no",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Work_tel_IDC",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Work_email_addr",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Home_tel_no",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Work_fax_IDC",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Home_business_tel_no",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Home_fax_no",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Home_email_addr",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Home_tel_IDC",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Surname",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Forename",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Home_business_tel_IDC",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Charge_out_rate_ere_id",
+          "nativeName": null,
+          "type": "INT",
+          "schema": null,
+          "description": "Charge_out_rate_ere_id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Leaving_date",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Home_fax_IDC",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Specialised_knowledge",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Required_on_W6_ind",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Charge_out_rate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "2c91808783c7d8040183c901ad4e1ca4",
+            "name": "chargeOutRate"
+          },
+          "description": "Charge_out_rate",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "Start_Date",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Title_code",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Travel_charge_out_rate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "2c918089838b1cd50183c28352903a77",
+            "name": "travelChargeOutRate"
+          },
+          "description": "Travel_charge_out_rate",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "Accounting_centre_id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "2c918088838b1cce0183c28559473aa6",
+            "name": "accountingCentre"
+          },
+          "description": "Accounting_centre_id",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "Left_ind",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Travel_charge_out_rate_ere_id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Travel_charge_out_rate_time_period_code",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Qualifications",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "User_id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Profile_id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "2c918088838b1cce0183af2352157ef8",
+            "name": "profile"
+          },
+          "description": "Profile_id",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "User_status",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Creation_id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Logon_name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Application_user_last_updated_id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "User_name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Creation_time",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Application_user_last_updated_time",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Interactive_user",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Allow_Invoice_Ind",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "61a7ec76045340ddab248111afa7144e",
+            "name": "allowInvoiceInd"
+          },
+          "description": "Allow_Invoice_Ind",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "Allow_Credit_Note_Ind",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "a80164fd8c5049f180f0d4842425b443",
+            "name": "allowCreditNoteIdn"
+          },
+          "description": "Allow_Credit_Note_Ind",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "Must_View_VAT_Advisory_Ind",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "d871780abfbf449ea926a00fe1d90cf8",
+            "name": "mustViewVATAdvisortInd"
+          },
+          "description": "Must_View_VAT_Advisory_Ind",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "Payment_limit",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "2c918085838b1cd40183c28661b01244",
+            "name": "paymentLimit"
+          },
+          "description": "Payment_limit",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "IIQDisabled",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "IIQDisabled",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Team_id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "2c918088838b1cce0183af2158597e6c",
+            "name": "team"
+          },
+          "description": "Team_id",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": true
+        }
+      ],
+      "id": "2c91808581497889018149e9197d0d9f",
+      "name": "account",
+      "created": "2022-06-09T19:20:22.141Z",
+      "modified": "2024-04-30T15:12:23.585Z"
+    },
+    {
+      "nativeObjectType": "team",
+      "identityAttribute": "Team_id",
+      "displayAttribute": "Team_name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "description": "Team"
+      },
+      "attributes": [
+        {
+          "name": "Team_id",
+          "nativeName": null,
+          "type": "INT",
+          "schema": null,
+          "description": "Team ID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Team_name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Team name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "IDNid",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "IDN Id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "2c918088838b1cce0183af2158597e6c",
+      "name": "team",
+      "created": "2022-10-06T21:09:01.657Z",
+      "modified": "2022-10-06T21:10:54.144Z"
+    },
+    {
+      "nativeObjectType": "profile",
+      "identityAttribute": "Profile_id",
+      "displayAttribute": "Profile_name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "description": "Profile"
+      },
+      "attributes": [
+        {
+          "name": "Profile_id",
+          "nativeName": null,
+          "type": "INT",
+          "schema": null,
+          "description": "Profile ID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Profile_name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Profile name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "IDNid",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "IDN Id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "2c918088838b1cce0183af2352157ef8",
+      "name": "profile",
+      "created": "2022-10-06T21:11:11.125Z",
+      "modified": "2022-10-06T21:12:35.924Z"
+    },
+    {
+      "nativeObjectType": "gradeCode",
+      "identityAttribute": "Employee_grade_code",
+      "displayAttribute": "DisplayName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "description": "Employee grade code"
+      },
+      "attributes": [
+        {
+          "name": "Employee_grade_code",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Employee_grade_code",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DisplayName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Display Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "IDNid",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "IDN Id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "2c918089838b1cd50183c27f24c63a1c",
+      "name": "gradeCode",
+      "created": "2022-10-10T15:24:15.942Z",
+      "modified": "2022-10-10T15:25:32.219Z"
+    },
+    {
+      "nativeObjectType": "jobTitle",
+      "identityAttribute": "Job_title_code",
+      "displayAttribute": "DisplayName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "description": "Job titles"
+      },
+      "attributes": [
+        {
+          "name": "Job_title_code",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Job title code",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DisplayName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Display Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "IDNid",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "IDN Id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "2c918086838b1cd20183c281229e1513",
+      "name": "jobTitle",
+      "created": "2022-10-10T15:26:26.462Z",
+      "modified": "2022-10-10T15:27:06.314Z"
+    },
+    {
+      "nativeObjectType": "travelChargeOutRate",
+      "identityAttribute": "Travel_charge_out_rate",
+      "displayAttribute": "DisplayName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "description": "Travel_charge_out_rate"
+      },
+      "attributes": [
+        {
+          "name": "Travel_charge_out_rate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Travel_charge_out_rate",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DisplayName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Display Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "IDNid",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "IDN Id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "2c918089838b1cd50183c28352903a77",
+      "name": "travelChargeOutRate",
+      "created": "2022-10-10T15:28:49.809Z",
+      "modified": "2023-07-31T20:47:35.849Z"
+    },
+    {
+      "nativeObjectType": "accountingCentre",
+      "identityAttribute": "Accounting_centre_id",
+      "displayAttribute": "DisplayName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "description": "Accounting_centre_id"
+      },
+      "attributes": [
+        {
+          "name": "Accounting_centre_id",
+          "nativeName": null,
+          "type": "INT",
+          "schema": null,
+          "description": "Accounting_centre_id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DisplayName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Display Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "IDNid",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "IDN Id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "2c918088838b1cce0183c28559473aa6",
+      "name": "accountingCentre",
+      "created": "2022-10-10T15:31:02.599Z",
+      "modified": "2022-10-10T15:31:53.649Z"
+    },
+    {
+      "nativeObjectType": "paymentLimit",
+      "identityAttribute": "Payment_limit",
+      "displayAttribute": "DisplayName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "description": "Payment_limit"
+      },
+      "attributes": [
+        {
+          "name": "Payment_limit",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Payment_limit",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DisplayName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Display Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "IDNid",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "IDN Id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "2c918085838b1cd40183c28661b01244",
+      "name": "paymentLimit",
+      "created": "2022-10-10T15:32:10.288Z",
+      "modified": "2023-07-31T21:37:40.294Z"
+    },
+    {
+      "nativeObjectType": "chargeOutRate",
+      "identityAttribute": "Charge_out_rate",
+      "displayAttribute": "DisplayName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "description": "Charge Out Rate"
+      },
+      "attributes": [
+        {
+          "name": "Charge_out_rate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Charge_out_rate",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DisplayName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Display Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "IDNid",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "IDN Id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "2c91808783c7d8040183c901ad4e1ca4",
+      "name": "chargeOutRate",
+      "created": "2022-10-11T21:44:33.870Z",
+      "modified": "2023-07-31T21:38:54.023Z"
+    },
+    {
+      "nativeObjectType": "primePermission",
+      "identityAttribute": "id",
+      "displayAttribute": "DisplayName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "description": "Prime Permission"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "ID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DisplayName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Display Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "d4d9322965a042a2bbc5902b6cefe5f3",
+      "name": "primePermission",
+      "created": "2024-04-30T14:57:34.180Z",
+      "modified": "2024-04-30T14:58:41.280Z"
+    },
+    {
+      "nativeObjectType": "allowInvoiceInd",
+      "identityAttribute": "id",
+      "displayAttribute": "DisplayName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "description": "Allow Invoice Ind"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "ID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DisplayName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Display Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "61a7ec76045340ddab248111afa7144e",
+      "name": "allowInvoiceInd",
+      "created": "2024-04-30T15:03:44.918Z",
+      "modified": "2024-04-30T15:05:24.055Z"
+    },
+    {
+      "nativeObjectType": "allowCreditNoteIdn",
+      "identityAttribute": "id",
+      "displayAttribute": "DisplayName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "description": "Allow Credit Note IDN"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "ID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DisplayName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Display Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "a80164fd8c5049f180f0d4842425b443",
+      "name": "allowCreditNoteIdn",
+      "created": "2024-04-30T15:06:08.306Z",
+      "modified": "2024-04-30T15:06:57.988Z"
+    },
+    {
+      "nativeObjectType": "mustViewVATAdvisortInd",
+      "identityAttribute": "id",
+      "displayAttribute": "DisplayName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "description": "Must View VAT Advisory Ind"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "ID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DisplayName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Display Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "d871780abfbf449ea926a00fe1d90cf8",
+      "name": "mustViewVATAdvisortInd",
+      "created": "2024-04-30T15:08:06.554Z",
+      "modified": "2024-04-30T15:08:58.198Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "allowInvoiceInd.mergeRows": false,
+    "profile.useStoredProcedureSqlStmt": false,
+    "isAdvance": "false",
+    "description.mergeRows": false,
+    "travelChargeOutRate.isPermissionEnabled": false,
+    "DisplyName.mergeRows": false,
+    "paymentLimit.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "travelChargeOutRate.useStoredProcedureSqlStmt": false,
+    "Charge_out_rate.mergeRows": false,
+    "jobTitle.mergeRows": false,
+    "enableProvisioningFeature": true,
+    "gradeCode.SQL": "SELECT DISTINCT emp.[Employee_grade_code],\n\tDisplayName =  \n\t\tCASE Employee_grade_code\n\t\t\tWHEN 'AABB' THEN 'Employee Grade 1'\n\t\t\tWHEN 'AABC' THEN 'Employee Grade 2'\n\t\t\tWHEN 'AABD' THEN 'Employee Grade 3'\n\t\t\tELSE Employee_grade_code\n\t\tEND, CONCAT('Employee_grade_code:', emp.[Employee_grade_code]) AS IDNid, 'Grade Code' AS description\nFROM [dbo].[EMPLOYEE] emp",
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "paymentLimit.isPermissionEnabled": false,
+    "driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "paymentLimit.SQL": "SELECT\n    DISTINCT au.[Payment_limit],\n    au.[Payment_limit] AS DisplayName,\n    'Payment limit' AS description, CONCAT('Payment_limit:', au.[Payment_limit]) AS IDNid\nFROM\n    [dbo].[APPLICATION_USER] au\nWHERE\n    au.[Payment_limit] IS NOT NULL",
+    "useExecuteQuery": false,
+    "accountingCentre.url": "jdbc:sqlserver://TEGBBDBSVDOtst.cc-emea.local:62430;databaseName=nimbus;",
+    "gradeCode.isPermissionEnabled": false,
+    "chargeOutRateEre.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "travelChargeOutRate.SQL": "SELECT DISTINCT emp.[Travel_charge_out_rate],  emp.[Travel_charge_out_rate] AS DisplayName,  CONCAT('Travel_charge_out_rate:', emp.[Travel_charge_out_rate]) AS IDNid, 'Travel charge out rate' AS description\nFROM [dbo].[EMPLOYEE] emp WHERE emp.[Travel_charge_out_rate] IS NOT NULL",
+    "sourceConnected": true,
+    "accountingCentre.user": "SailPoint",
+    "isPermissionEnabled": false,
+    "team.isPermissionEnabled": false,
+    "team.url": "jdbc:sqlserver://TEGBBDBSVDOtst.cc-emea.local:62430;databaseName=nimbus;",
+    "team.useExecuteQuery": false,
+    "profile.url": "jdbc:sqlserver://TEGBBDBSVDOtst.cc-emea.local:62430;databaseName=nimbus;",
+    "profile.useExecuteQuery": false,
+    "group.useStoredProcedureGetObject": false,
+    "cloudCacheUpdate": 1764580195967,
+    "accountingCentre.isPermissionEnabled": false,
+    "jobTitle.SQL": "SELECT DISTINCT emp.[Job_title_code],\n\tDisplayName =  \n\t\tCASE Job_title_code\n\t\t\tWHEN 'ACCT' THEN 'Accountant'\n\t\t\tWHEN 'ADJU' THEN 'Adjuster'\n\t\t\tWHEN 'ADMI' THEN 'Administration Assistant'\n\t\t\tWHEN 'AFAA' THEN 'Account Manager'\n\t\t\tWHEN 'AFAH' THEN 'Team Leader'\n\t\t\tWHEN 'APMA' THEN 'Assistant Project Manager'\n\t\t\tWHEN 'ARCO' THEN 'Ariel Coordinator'\n\t\t\tWHEN 'ARTC' THEN 'Ariel Technician'\n\t\t\tWHEN 'ARTM' THEN 'Ariel Team Manager'\n\t\t\tWHEN 'BMGR' THEN 'Branch Manager'\n\t\t\tWHEN 'BSG1' THEN 'Ethics & Compliance Office'\n\t\t\tWHEN 'BUMA' THEN 'Business Unit Manager'\n\t\t\tWHEN 'CASE' THEN 'Rehabilitation Case Manager'\n\t\t\tWHEN 'CFSC' THEN 'CFS Co-ordinator'\n\t\t\tWHEN 'CLAD' THEN 'Corporate/Major Loss Adjuster'\n\t\t\tWHEN 'CLMH' THEN 'Claims Handling Technician'\n\t\t\tWHEN 'CMGR' THEN 'Regional Claims Centre Manager'\n\t\t\tWHEN 'COMP' THEN 'Complaints Manager'\n\t\t\tWHEN 'CONT' THEN 'Contracts Manager'\n\t\t\tWHEN 'CSAT' THEN 'Customer Service Assistant'\n\t\t\tWHEN 'CSSM' THEN 'CSS Regional Manager'\n\t\t\tWHEN 'CSSU' THEN 'CSS UK Operations Manager'\n\t\t\tWHEN 'CSUM' THEN 'CSU Manager'\n\t\t\tWHEN 'CURA' THEN 'Customer Relations Co-ordinator'\n\t\t\tWHEN 'CUSS' THEN 'Customer Support'\n\t\t\tWHEN 'ENGR' THEN 'Engineer'\n\t\t\tWHEN 'HRHB' THEN 'Head of Rehabilitation'\n\t\t\tWHEN 'OPSM' THEN 'Operations Manager'\n\t\t\tWHEN 'PRIM' THEN 'Systems Development'\n\t\t\tWHEN 'PROJ' THEN 'Project Manager'\n\t\t\tWHEN 'ROPS' THEN 'Regional Operations Manager'\n\t\t\tWHEN 'RSCO' THEN 'Rehabilitation Services Coordinator'\n\t\t\tWHEN 'SADM' THEN 'Senior Administrator'\n\t\t\tWHEN 'SURV' THEN 'Surveyor'\n\t\t\tWHEN 'TEAM' THEN 'Team Manager'\n\t\t\tWHEN 'TECD' THEN 'Technical Director'\n\t\t\tWHEN 'TECH' THEN 'Technical Manager'\n\t\t\tWHEN 'UCRM' THEN 'UK Customer Relations Manager'\n\t\t\tWHEN 'VOCC' THEN 'Vocational Consultant'\n\t\t\tELSE Job_title_code\n\t\tEND, CONCAT('Job_title_code:', emp.[Job_title_code]) AS IDNid, 'Job title' AS description\nFROM [dbo].[EMPLOYEE] emp",
+    "gradeCode.mergeRows": false,
+    "primePermission.mergeRows": false,
+    "jobTitle.useStoredProcedureSqlStmt": false,
+    "status": "SOURCE_STATE_HEALTHY",
+    "mergeColumns": [
+      "Team_id"
+    ],
+    "supportsDeltaAgg": "true",
+    "team.useStoredProcedureGetObject": false,
+    "team.useStoredProcedureSqlStmt": false,
+    "useStoredProcedureTestConn": false,
+    "gradeCode.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "travelChargeOutRate.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "chargeOutRate.useStoredProcedureSqlStmt": false,
+    "chargeOutRateEre.SQL": "SELECT DISTINCT emp.[Charge_out_rate_ere_id], emp.[Charge_out_rate_ere_id] AS DisplayName, CONCAT('COREI: ', emp.[Charge_out_rate_ere_id]) AS Description, CONCAT('Charge_out_rate_ere_id:', emp.[Charge_out_rate_ere_id]) AS IDNid\nFROM [dbo].[EMPLOYEE] emp",
+    "Profile_id.mergeRows": false,
+    "chargeOutRateEre.user": "SailPoint",
+    "jobTitle.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "paymentLimit.useExecuteQuery": false,
+    "jdbcExceptionBucketing": true,
+    "connector_files": "mssql-jdbc-9.2.1.jre8.jar",
+    "paymentLimit.useStoredProcedureSqlStmt": false,
+    "chargeOutRate.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "testConnSQL": "select 1 from [dbo].[EMPLOYEE]",
+    "travelChargeOutRate.url": "jdbc:sqlserver://TEGBBDBSVDOtst.cc-emea.local:62430;databaseName=nimbus;",
+    "jobTitle.useExecuteQuery": false,
+    "chargeOutRateEre.useStoredProcedureSqlStmt": false,
+    "team.user": "SailPoint",
+    "jobTitle.useStoredProcedureGetObject": false,
+    "paymentLimit.mergeRows": false,
+    "profile.SQL": "SELECT [Profile_id], [Profile_name], CONCAT('Profile_id:', [Profile_id]) AS IDNid, 'Profile' AS description\nFROM [dbo].[PROFILE]",
+    "profile.useStoredProcedureGetObject": false,
+    "url": "jdbc:sqlserver://TEGBBDBSVDOtst.cc-emea.local:62430;databaseName=nimbus;",
+    "primePermission.useStoredProcedureDirectPermission": false,
+    "templateApplication": "JDBC Template",
+    "group.isPermissionEnabled": false,
+    "jobTitle.url": "jdbc:sqlserver://TEGBBDBSVDOtst.cc-emea.local:62430;databaseName=nimbus;",
+    "chargeOutRate.SQL": "SELECT DISTINCT emp.[Charge_out_rate],  emp.[Charge_out_rate] AS DisplayName, 'Charge out rate' AS description, CONCAT('Charge_out_rate:', emp.[Charge_out_rate]) AS IDNid\nFROM [dbo].[EMPLOYEE] emp",
+    "mustViewVATAdvisoryInd.mergeRows": false,
+    "primePermission.useExecuteQuery": false,
+    "useStoredProcedureSqlStmt": false,
+    "jobTitle.user": "SailPoint",
+    "deltaAggregationEnabled": false,
+    "paymentLimit.user": "SailPoint",
+    "chargeOutRate.mergeRows": false,
+    "chargeOutRateEre.url": "jdbc:sqlserver://TEGBBDBSVDOtst.cc-emea.local:62430;databaseName=nimbus;",
+    "useStoredProcedureGetObject": false,
+    "paymentLimit.useStoredProcedureGetObject": false,
+    "connectionType": "direct",
+    "usePrepareCall": false,
+    "team.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "primePermission.useStoredProcedureGetObject": false,
+    "jobTitle.isPermissionEnabled": false,
+    "chargeOutRateEre.mergeRows": false,
+    "allowCreditNoteIdn.mergeRows": false,
+    "indexColumns": [
+      "Employee_code"
+    ],
+    "group": "[SQL:, getObjectSQL:]",
+    "chargeOutRate.user": "SailPoint",
+    "disableOrderingCheck": true,
+    "accountCreateNotification": {
+      "notifyAccountManager": false,
+      "accountIdAttribute": "Employee_code",
+      "notifyAccountOwner": true,
+      "enabled": true,
+      "notifyAccountOwnerAltEmail": false
+    },
+    "gradeCode.useExecuteQuery": false,
+    "travelChargeOutRate.mergeRows": false,
+    "chargeOutRateEre.isPermissionEnabled": false,
+    "SQL": "SELECT \n    FORMAT(emp.[Employee_code], '000000') AS [Employee_code],\n    emp.[Last_updated_id] AS [Employee_last_updated_id],\n    emp.[Employee_grade_code],\n    emp.[Work_tel_no],\n    emp.[CTHG_Employee_Code],\n    emp.[Last_updated_time] AS [Employee_last_updated_time],\n    emp.[Charge_rate_time_period_code],\n    emp.[Job_title_code],\n    emp.[Work_fax_no],\n    emp.[Work_mobile_no],\n    emp.[Work_tel_IDC],\n    emp.[Work_email_addr],\n    emp.[Home_tel_no],\n    emp.[Work_fax_IDC],\n    emp.[Home_business_tel_no],\n    emp.[Home_fax_no],\n    emp.[Home_email_addr],\n    emp.[Home_tel_IDC],\n    emp.[Surname],\n    emp.[Forename],\n    emp.[Home_business_tel_IDC],\n    emp.[Charge_out_rate_ere_id],\n    emp.[Leaving_date],\n    emp.[Home_fax_IDC],\n    emp.[Specialised_knowledge],\n    emp.[Required_on_W6_ind],\n    emp.[Charge_out_rate],\n    emp.[Start_Date],\n    emp.[Title_code],\n    emp.[Travel_charge_out_rate],\n    emp.[Accounting_centre_id],\n    emp.[Left_ind],\n    emp.[Travel_charge_out_rate_ere_id],\n    emp.[Travel_charge_out_rate_time_period_code],\n    emp.[Qualifications],\n    au.[User_id],\n    au.[Profile_id],\n    au.[User_status],\n    au.[Creation_id],\n    au.[Logon_name],\n    au.[Last_updated_id] AS [Application_user_last_updated_id],\n    au.[User_name],\n    au.[Creation_time],\n    au.[Last_updated_time] AS [Application_user_last_updated_time],\n    au.[Interactive_user],\n    CASE\n        WHEN au.[Allow_Invoice_Ind] = 'Y' THEN 'Allow_Invoice_Ind'\n        ELSE ''\n    END AS [Allow_Invoice_Ind],\n    CASE\n        WHEN au.[Allow_Credit_Note_Ind] = 'Y' THEN 'Allow_Credit_Note_Ind'\n        ELSE ''\n    END AS [Allow_Credit_Note_Ind],\n    CASE\n        WHEN au.[Must_View_VAT_Advisory_Ind] = 'Y' THEN 'Must_View_VAT_Advisory_Ind'\n        ELSE ''\n    END AS [Must_View_VAT_Advisory_Ind],\n    au.[Payment_limit],\n    CASE\n        WHEN User_status = 'DISB' THEN 'true'\n        ELSE 'false'\n    END AS [IIQDisabled],\n    tm.Team_id\nFROM\n    [dbo].[EMPLOYEE] emp\n    LEFT JOIN [dbo].[APPLICATION_USER] au ON au.[Employee_code] = emp.[Employee_code]\n    LEFT JOIN [dbo].[TEAM_MEMBER] tm ON tm.[Employee_code] = emp.[Employee_code]",
+    "profile.user": "SailPoint",
+    "chargeOutRate.useExecuteQuery": false,
+    "travelChargeOutRate.useExecuteQuery": false,
+    "accountingCentre.useStoredProcedureGetObject": false,
+    "accountingCentre.mergeRows": false,
+    "chargeOutRate.url": "jdbc:sqlserver://TEGBBDBSVDOtst.cc-emea.local:62430;databaseName=nimbus;",
+    "connectorName": "JDBC",
+    "since": "2025-11-19T03:06:25.222Z",
+    "gradeCode.useStoredProcedureSqlStmt": false,
+    "accountingCentre.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "group.mergeRows": false,
+    "travelChargeOutRate.useStoredProcedureGetObject": false,
+    "mergeRows": true,
+    "mustViewVATAdvidortyInd.mergeRows": false,
+    "chargeOutRateEre.useStoredProcedureDirectPermission": false,
+    "primePermission.isPermissionEnabled": false,
+    "gradeCode.url": "jdbc:sqlserver://TEGBBDBSVDOtst.cc-emea.local:62430;databaseName=nimbus;",
+    "gradeCode.user": "SailPoint",
+    "hasFullAggregationCompleted": true,
+    "testConnQuery": "SELECT TOP 10 FORMAT(emp.[Employee_code], '000000') AS [Employee_code],emp.[Last_updated_id] AS [Employee_last_updated_id],emp.[Employee_grade_code],emp.[Work_tel_no],emp.[CTHG_Employee_Code],emp.[Last_updated_time] AS [Employee_last_updated_time],emp.[Charge_rate_time_period_code],emp.[Job_title_code],emp.[Work_fax_no],emp.[Work_mobile_no],emp.[Work_tel_IDC],emp.[Work_email_addr],emp.[Home_tel_no],emp.[Work_fax_IDC],emp.[Home_business_tel_no],emp.[Home_fax_no],emp.[Home_email_addr],emp.[Home_tel_IDC],emp.[Surname],emp.[Forename],emp.[Home_business_tel_IDC],emp.[Charge_out_rate_ere_id],emp.[Leaving_date],emp.[Home_fax_IDC],emp.[Specialised_knowledge],emp.[Required_on_W6_ind],emp.[Charge_out_rate],emp.[Start_Date],emp.[Title_code],emp.[Travel_charge_out_rate],emp.[Accounting_centre_id],emp.[Left_ind],emp.[Travel_charge_out_rate_ere_id],emp.[Travel_charge_out_rate_time_period_code],emp.[Qualifications],au.[User_id],au.[Profile_id],au.[User_status],au.[Creation_id],au.[Logon_name],au.[Last_updated_id] AS [Application_user_last_updated_id],au.[User_name],au.[Creation_time],au.[Last_updated_time] AS [Application_user_last_updated_time],au.[Interactive_user],CASE WHEN au.[Allow_Invoice_Ind] = 'Y' THEN 'Allow_Invoice_Ind' ELSE '' END as [Allow_Invoice_Ind],CASE WHEN au.[Allow_Credit_Note_Ind] = 'Y' THEN 'Allow_Credit_Note_Ind' ELSE '' END as [Allow_Credit_Note_Ind],CASE WHEN au.[Must_View_VAT_Advisory_Ind] = 'Y' THEN 'Must_View_VAT_Advisory_Ind' ELSE '' END as [Must_View_VAT_Advisory_Ind],au.[Payment_limit],prf.[Profile_name],case when User_status='DISB' then 'true' else 'false' end as [IIQDisabled] FROM [dbo].[EMPLOYEE] emp LEFT JOIN [dbo].[APPLICATION_USER] au ON au.[Employee_code] = emp.[Employee_code] LEFT JOIN [dbo].[PROFILE] prf ON prf.[Profile_id] = au.[Profile_id]",
+    "paymentLimit.url": "jdbc:sqlserver://TEGBBDBSVDOtst.cc-emea.local:62430;databaseName=nimbus;",
+    "accountingCentre.SQL": "SELECT DISTINCT emp.[Accounting_centre_id], emp.[Accounting_centre_id] AS DisplayName, CONCAT('Accounting_centre_id:', emp.[Accounting_centre_id]) AS IDNid\nFROM [dbo].[EMPLOYEE] emp",
+    "useQuery": false,
+    "Charge_out_rate_ere.mergeRows": false,
+    "chargeOutRate.isPermissionEnabled": false,
+    "team.SQL": "SELECT [Team_id], [Team_name], CONCAT('Team_id:', [Team_id]) AS IDNid, 'Team' AS description\nFROM [dbo].[TEAM]",
+    "profile.isPermissionEnabled": false,
+    "deleteThresholdPercentage": 50,
+    "group.useStoredProcedureSqlStmt": false,
+    "travelChargeOutRate.user": "SailPoint",
+    "chargeOutRateEre.useExecuteQuery": false,
+    "mustViewVATAdvisortInd.mergeRows": false,
+    "team.mergeRows": false,
+    "chargeOutRateEre.useStoredProcedureGetObject": false,
+    "primePermission.useStoredProcedureSqlStmt": false,
+    "Must_View_VAT_Advisory_Ind.mergeRows": false,
+    "profile.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "profile.mergeRows": false,
+    "gradeCode.useStoredProcedureGetObject": false,
+    "encrypted": "password,team.password,profile.password,gradeCode.password,jobTitle.password,travelChargeOutRate.password,chargeOutRateEre.password,accountingCentre.password,paymentLimit.password,chargeOutRate.password,primePermission.password,allowInvoiceInd.password,allowCreditNoteIdn.password,mustViewVATAdvisortInd.password",
+    "accountingCentre.useExecuteQuery": false,
+    "healthy": true,
+    "accountingCentre.useStoredProcedureSqlStmt": false,
+    "cloudDisplayName": "Prime",
+    "getObjectSQL": "SELECT\n    FORMAT(emp.[Employee_code], '000000') AS [Employee_code],\n    emp.[Last_updated_id] AS [Employee_last_updated_id],\n    emp.[Employee_grade_code],\n    emp.[Work_tel_no],\n    emp.[CTHG_Employee_Code],\n    emp.[Last_updated_time] AS [Employee_last_updated_time],\n    emp.[Charge_rate_time_period_code],\n    emp.[Job_title_code],\n    emp.[Work_fax_no],\n    emp.[Work_mobile_no],\n    emp.[Work_tel_IDC],\n    emp.[Work_email_addr],\n    emp.[Home_tel_no],\n    emp.[Work_fax_IDC],\n    emp.[Home_business_tel_no],\n    emp.[Home_fax_no],\n    emp.[Home_email_addr],\n    emp.[Home_tel_IDC],\n    emp.[Surname],\n    emp.[Forename],\n    emp.[Home_business_tel_IDC],\n    emp.[Charge_out_rate_ere_id],\n    emp.[Leaving_date],\n    emp.[Home_fax_IDC],\n    emp.[Specialised_knowledge],\n    emp.[Required_on_W6_ind],\n    emp.[Charge_out_rate],\n    emp.[Start_Date],\n    emp.[Title_code],\n    emp.[Travel_charge_out_rate],\n    emp.[Accounting_centre_id],\n    emp.[Left_ind],\n    emp.[Travel_charge_out_rate_ere_id],\n    emp.[Travel_charge_out_rate_time_period_code],\n    emp.[Qualifications],\n    au.[User_id],\n    au.[Profile_id],\n    au.[User_status],\n    au.[Creation_id],\n    au.[Logon_name],\n    au.[Last_updated_id] AS [Application_user_last_updated_id],\n    au.[User_name],\n    au.[Creation_time],\n    au.[Last_updated_time] AS [Application_user_last_updated_time],\n    au.[Interactive_user],\n    CASE\n        WHEN au.[Allow_Invoice_Ind] = 'Y' THEN 'Allow_Invoice_Ind'\n        ELSE ''\n    END AS [Allow_Invoice_Ind],\n    CASE\n        WHEN au.[Allow_Credit_Note_Ind] = 'Y' THEN 'Allow_Credit_Note_Ind'\n        ELSE ''\n    END AS [Allow_Credit_Note_Ind],\n    CASE\n        WHEN au.[Must_View_VAT_Advisory_Ind] = 'Y' THEN 'Must_View_VAT_Advisory_Ind'\n        ELSE ''\n    END AS [Must_View_VAT_Advisory_Ind],\n    au.[Payment_limit],\n    CASE\n        WHEN User_status = 'DISB' THEN 'true'\n        ELSE 'false'\n    END AS [IIQDisabled],\n    tm.Team_id\nFROM\n    [dbo].[EMPLOYEE] emp\n    LEFT JOIN [dbo].[APPLICATION_USER] au ON au.[Employee_code] = emp.[Employee_code]\n    LEFT JOIN [dbo].[TEAM_MEMBER] tm ON tm.[Employee_code] = emp.[Employee_code] WHERE FORMAT(emp.[Employee_code], '000000') = '$(identity)'",
+    "chargeOutRate.useStoredProcedureGetObject": false,
+    "user": "SailPoint"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "CTHG_Employee_Code",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      },
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "Work_email_addr",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 2
+      },
+      {
+        "complex": false,
+        "property": "correlatedAdUsername",
+        "operation": "EQ",
+        "value": "Logon_name",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 3
+      }
+    ],
+    "id": "2c91808781a6c2b00181b059b15f71d4",
+    "name": "Prime Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [
+    {
+      "name": "Account",
+      "description": null,
+      "usageType": "CREATE",
+      "fields": [
+        {
+          "name": "Employee_code",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "identificationNumber"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "CTHG_Employee_Code",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "identificationNumber"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Forename",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "firstname"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Surname",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "lastname"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Work_email_addr",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "email"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Work_tel_no",
+          "transform": {
+            "attributes": {
+              "values": [
+                {
+                  "attributes": {
+                    "name": "workMobilePhoneNumber"
+                  },
+                  "type": "identityAttribute"
+                },
+                {
+                  "attributes": {
+                    "value": "0"
+                  },
+                  "type": "static"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "User_name",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "displayName"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Start_Date",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "startDate"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Charge_out_rate",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "80"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Charge_rate_time_period_code",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "HOUR"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Left_ind",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "N"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Required_on_W6_ind",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "N"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Title_code",
+          "transform": {
+            "attributes": {
+              "input": {
+                "type": "identityAttribute",
+                "attributes": {
+                  "name": "displayName"
+                }
+              },
+              "table": {
+                "MS.": "MSSS",
+                "MRS.": "MRSS",
+                "MR.": "MIST",
+                "MISS.": "MISS",
+                "DR.": "DOCT",
+                "default": "DOCT"
+              }
+            },
+            "type": "lookup"
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Travel_charge_out_rate_ere_id",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "<TBD>"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Charge_out_rate_ere_id",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "<TBD>"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Travel_charge_out_rate_time_period_code",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "HOUR"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Work_tel_IDC",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "44"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Last_updated_id",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "1"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Logon_name",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "adUsername"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "User_status",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "ACTV"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Logon_attempts",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "0"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Current_password",
+          "transform": {
+            "type": "rule",
+            "attributes": {
+              "name": "Create Password"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Change_password",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "N"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Interactive_user",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "Y"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Creation_id",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "1"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Creation_time",
+          "transform": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": false
+            },
+            "type": "dateMath"
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Last_updated_time",
+          "transform": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": false
+            },
+            "type": "dateMath"
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        }
+      ]
+    }
+  ],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

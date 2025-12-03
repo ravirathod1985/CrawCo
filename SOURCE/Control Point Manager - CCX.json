@@ -1,0 +1,329 @@
+{
+  "id": "d19d99ee4fc240de8f4295ef51775528",
+  "name": "Control Point Manager - CCX",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "Control Point Manager - CCX",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "SYNC_PROVISIONING",
+    "DISCOVER_SCHEMA",
+    "UNLOCK",
+    "GROUP_PROVISIONING",
+    "DIRECT_PERMISSIONS",
+    "ENABLE",
+    "PROVISIONING"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "UserName",
+      "displayAttribute": "Email",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "DeptName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "DeptName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FirstName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "FirstName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LastName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "LastName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "UserName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Email",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Email",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "CrawfordEmployeeID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "CrawfordEmployeeID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "AccessName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "AccessName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FeatureName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "FeatureName",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FeatureID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "58c25570a2b54e1887415a3441efecf4",
+            "name": "group"
+          },
+          "description": "FeatureID",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "AccessType",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "AccessType",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ManagerName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "ManagerName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "TerminationFlag",
+          "nativeName": null,
+          "type": "INT",
+          "schema": null,
+          "description": "TerminationFlag",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "795427e469e7495fbc9ec103a4065563",
+      "name": "account",
+      "created": "2025-09-19T17:01:05.775Z",
+      "modified": "2025-09-22T15:57:26.648Z"
+    },
+    {
+      "nativeObjectType": "group",
+      "identityAttribute": "SecurityFeatureListID",
+      "displayAttribute": "ControlName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [
+        "PROVISIONING"
+      ],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "SecurityFeatureListID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "SecurityFeatureListID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ApplicationNameID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "ApplicationNameID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ControlName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "ControlName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "58c25570a2b54e1887415a3441efecf4",
+      "name": "group",
+      "created": "2025-09-19T17:01:05.775Z",
+      "modified": "2025-09-22T16:00:42.114Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "deltaAggregationEnabled": false,
+    "isAdvance": "false",
+    "undefined.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "group.url": "jdbc:sqlserver://UKJAXSVRVDATA01.jaxcrawford.com;databasename=PrismData;;Encrypt=False;TrustServerCertificate=True;",
+    "useStoredProcedureGetObject": false,
+    "connectionType": "direct",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "undefined.SQL": "STP_UserAccesswithFeatures 0,47,'ALL'",
+    "driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "undefined.useStoredProcedureTestConn": false,
+    "useExecuteQuery": false,
+    "group.useExecuteQuery": false,
+    "undefined.isPermissionEnabled": false,
+    "indexColumns": [
+      "UserName"
+    ],
+    "sourceConnected": true,
+    "connectorFileUploadHistory": {
+      "sqljdbc42.jar": "2025-09-24T14:29:51.588901Z",
+      "mssql-jdbc-12.10.1.jre11.jar": "2025-09-24T14:34:57.236596Z",
+      "mssql-jdbc-12.10.1.jre11-sources.jar": "2025-09-24T14:34:55.101179Z"
+    },
+    "isPermissionEnabled": false,
+    "disableOrderingCheck": true,
+    "labels": [
+      "standard"
+    ],
+    "undefined.useStoredProcedureGetObject": false,
+    "SQL": "STP_UserAccesswithFeatures 0,47,'ALL'",
+    "group.useStoredProcedureGetObject": false,
+    "undefined.user": "Sailpoint",
+    "cloudCacheUpdate": 1764047038278,
+    "undefined.testConnSQL": "SELECT * FROM dbo.SecurityApplication;",
+    "group.SQL": "STP_ReadSecurityFeatureList  47",
+    "undefined.useExecuteQuery": false,
+    "undefined.deltaAggregationEnabled": false,
+    "connectorName": "JDBC",
+    "status": "SOURCE_STATE_HEALTHY",
+    "since": "2025-11-16T07:11:50.180Z",
+    "mergeColumns": [
+      "FeatureName",
+      "FeatureID"
+    ],
+    "supportsDeltaAgg": "true",
+    "useStoredProcedureTestConn": false,
+    "group.mergeRows": false,
+    "mergeRows": true,
+    "undefined.url": "jdbc:sqlserver://UKJAXSVRVDATA01.jaxcrawford.com;databasename=PrismData",
+    "jdbcExceptionBucketing": true,
+    "connector_files": "mssql-jdbc-12.10.1.jre11.jar,mssql-jdbc-12.10.1.jre11-sources.jar",
+    "useQuery": false,
+    "jdbcProvisionRule": "PrismData JDBC Provision",
+    "testConnSQL": "SELECT * FROM dbo.SecurityApplication;",
+    "group.user": "Sailpoint",
+    "undefined.useQuery": false,
+    "deleteThresholdPercentage": 10,
+    "group.useStoredProcedureSqlStmt": false,
+    "url": "jdbc:sqlserver://UKJAXSVRVDATA01.jaxcrawford.com;databasename=PrismData;;Encrypt=False;TrustServerCertificate=True;",
+    "templateApplication": "JDBC Template",
+    "group.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "group.isPermissionEnabled": false,
+    "encrypted": "password,group.password,undefined.password",
+    "healthy": true,
+    "cloudDisplayName": "Control Point Manager - CCX",
+    "useStoredProcedureSqlStmt": true,
+    "user": "Sailpoint",
+    "undefined.useStoredProcedureSqlStmt": true
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "CrawfordEmployeeID",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      },
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "Email",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 2
+      }
+    ],
+    "id": "710fea086489488d9ae892ed44e1d306",
+    "name": "Control Point Manager - CCX [source] Account Correlation"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

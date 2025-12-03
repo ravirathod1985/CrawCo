@@ -1,0 +1,338 @@
+{
+  "id": "f3a20ec03116480f85cbca805afbc499",
+  "name": "Easy Vista",
+  "type": "Web Services",
+  "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+  "connectorScriptName": "web-services-angularsc",
+  "description": "Easy Vista",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "PASSWORD",
+    "AUTHENTICATE",
+    "UNLOCK",
+    "PROVISIONING",
+    "ENABLE"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "user",
+      "identityAttribute": "E_MAIL",
+      "displayAttribute": "E_MAIL",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "BEGIN_OF_CONTRACT",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "BEGIN_OF_CONTRACT",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "CELLULAR_NUMBER",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "CELLULAR_NUMBER",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DEPARTMENT_PATH",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "DEPARTMENT_PATH",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DEPARTMENT_ID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "DEPARTMENT_ID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "E_MAIL",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "E_MAIL",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EMPLOYEE_ID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "EMPLOYEE_ID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LAST_NAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "LAST_NAME",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LOCATION_PATH",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "LOCATION_PATH",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LOCATION_ID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "LOCATION_ID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "PROFIL_ID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "PROFIL_ID",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": false
+        },
+        {
+          "name": "DEPARTMENT_CODE",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "DEPARTMENT_CODE",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DEPARTMENT_EN",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "DEPARTMENT_EN",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "MANAGER",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "MANAGER",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "cf0ae1c93b0b406c9fe2b69dbb93a3e2",
+      "name": "account",
+      "created": "2025-08-25T15:04:59.664Z",
+      "modified": "2025-08-27T18:00:03.792Z"
+    },
+    {
+      "nativeObjectType": "group",
+      "identityAttribute": "",
+      "displayAttribute": "",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [],
+      "id": "f8c9f598d1014b56969706e47c54fc40",
+      "name": "group",
+      "created": "2025-08-25T15:04:59.664Z",
+      "modified": "2025-08-25T15:04:59.664Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "supportsDeltaAgg": "true",
+    "deltaAggregationEnabled": false,
+    "throwProvBeforeRuleException": true,
+    "connectionType": "direct",
+    "enableHasMore": false,
+    "isGetObjectRequiredForPTA": true,
+    "timeoutInSeconds": "60",
+    "genericWebServiceBaseUrl": "https://crawco.easyvista.com/api/v1",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "connectionParameters": [
+      {
+        "contextUrl": "/50005/employees?max_rows=1",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "1",
+        "uniqueNameForEndPoint": "Test Connection",
+        "curlEnabled": false,
+        "operationType": "Test Connection",
+        "body": {
+          "bodyFormat": "raw"
+        }
+      },
+      {
+        "resMappingObj": {
+          "EMPLOYEE_ID": "EMPLOYEE_ID",
+          "DEPARTMENT_ID": "DEPARTMENT.DEPARTMENT_ID",
+          "LOCATION_PATH": "LOCATION_PATH",
+          "DEPARTMENT_PATH": "DEPARTMENT.DEPARTMENT_PATH",
+          "E_MAIL": "E_MAIL",
+          "LAST_NAME": "LAST_NAME",
+          "CELLULAR_NUMBER": "CELLULAR_NUMBER",
+          "DEPARTMENT_CODE": "DEPARTMENT.DEPARTMENT_CODE",
+          "BEGIN_OF_CONTRACT": "BEGIN_OF_CONTRACT",
+          "PROFIL_ID": "PROFIL_ID",
+          "MANAGER": "MANAGER.EMPLOYEE_ID",
+          "DEPARTMENT_EN": "DEPARTMENT.DEPARTMENT_EN",
+          "LOCATION_ID": "LOCATION.LOCATION_ID"
+        },
+        "contextUrl": "/50005/employees?max_rows=6500",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 100,
+        "sequenceNumberForEndpoint": "2",
+        "uniqueNameForEndPoint": "Account Aggregation",
+        "curlEnabled": false,
+        "operationType": "Account Aggregation",
+        "rootPath": "$.records",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ]
+      }
+    ],
+    "partitionAggregationEnabled": false,
+    "hasFullAggregationCompleted": true,
+    "possibleHttpErrors": {},
+    "sourceConnected": true,
+    "throwProvAfterRuleException": true,
+    "lastAggregationDate_account": "2025-11-30T08:10:16Z",
+    "deleteThresholdPercentage": 10,
+    "fixedPlanMultivaluedAttribute": "true",
+    "version": "v2",
+    "labels": [
+      "standard"
+    ],
+    "cloudCacheUpdate": 1764490216782,
+    "templateApplication": "Web Services Template",
+    "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info",
+    "authenticationMethod": "BasicLogin",
+    "httpCookieSpecsStandard": "true",
+    "healthy": true,
+    "cloudDisplayName": "Easy Vista",
+    "connectorName": "Web Services",
+    "since": "2025-10-25T21:17:12.761Z",
+    "status": "SOURCE_STATE_HEALTHY",
+    "username": "SPAPI@us.crawco.com"
+  },
+  "crossTenantConnectorAttributes": {
+    "connectionParameters": [
+      {
+        "contextUrl": "/50005/employees?max_rows=1",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "1",
+        "uniqueNameForEndPoint": "Test Connection",
+        "curlEnabled": false,
+        "operationType": "Test Connection",
+        "body": {
+          "bodyFormat": "raw"
+        }
+      },
+      {
+        "resMappingObj": {
+          "EMPLOYEE_ID": "EMPLOYEE_ID",
+          "DEPARTMENT_ID": "DEPARTMENT.DEPARTMENT_ID",
+          "LOCATION_PATH": "LOCATION_PATH",
+          "DEPARTMENT_PATH": "DEPARTMENT.DEPARTMENT_PATH",
+          "E_MAIL": "E_MAIL",
+          "LAST_NAME": "LAST_NAME",
+          "CELLULAR_NUMBER": "CELLULAR_NUMBER",
+          "DEPARTMENT_CODE": "DEPARTMENT.DEPARTMENT_CODE",
+          "BEGIN_OF_CONTRACT": "BEGIN_OF_CONTRACT",
+          "PROFIL_ID": "PROFIL_ID",
+          "MANAGER": "MANAGER.EMPLOYEE_ID",
+          "DEPARTMENT_EN": "DEPARTMENT.DEPARTMENT_EN",
+          "LOCATION_ID": "LOCATION.LOCATION_ID"
+        },
+        "contextUrl": "/50005/employees?max_rows=6500",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 100,
+        "sequenceNumberForEndpoint": "2",
+        "uniqueNameForEndPoint": "Account Aggregation",
+        "curlEnabled": false,
+        "operationType": "Account Aggregation",
+        "rootPath": "$.records",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ]
+      }
+    ]
+  },
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "E_MAIL",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "9a9fb7e271464b11b67bca9856c62050",
+    "name": "Easy Vista [source-1756134299388] Account Correlation"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

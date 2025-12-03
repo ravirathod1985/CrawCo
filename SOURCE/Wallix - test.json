@@ -1,0 +1,417 @@
+{
+  "id": "1b3c82c42f7844239091ff1dc7022929",
+  "name": "Wallix - test",
+  "type": "Web Services",
+  "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+  "connectorScriptName": "web-services-angularsc",
+  "description": "test connector for wallix",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "bd0530091e384b3c92fda26bf9b48a22",
+    "name": "Blain.Checkley"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "AUTHENTICATE",
+    "UNLOCK",
+    "ENABLE",
+    "PROVISIONING",
+    "PASSWORD"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "user",
+      "identityAttribute": "user_name",
+      "displayAttribute": "email",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "user_name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "user_name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "display_name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "display_name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "email",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "email",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "preferred_language",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "preferred_language",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "profile",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "profile",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "groups",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "groups",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": false
+        },
+        {
+          "name": "is_disabled",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "is_disabled",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "c112b835b8b64cf096199424757a9f15",
+      "name": "account",
+      "created": "2025-08-26T16:20:25.085Z",
+      "modified": "2025-10-14T16:30:22.946Z"
+    },
+    {
+      "nativeObjectType": "group",
+      "identityAttribute": "group_name",
+      "displayAttribute": "group_name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "group_name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "group_name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "users",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "users",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "profile",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "profile",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "email_list",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "email_list",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "restrictions",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "restrictions",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "3a5ea0a07582455786a374e1da75906d",
+      "name": "group",
+      "created": "2025-08-26T16:20:25.085Z",
+      "modified": "2025-10-21T16:11:40.176Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "supportsDeltaAgg": "true",
+    "lastAggregationDate_group": "2025-11-03T19:45:44Z",
+    "deltaAggregationEnabled": false,
+    "throwProvBeforeRuleException": true,
+    "connectionType": "direct",
+    "enableHasMore": false,
+    "isGetObjectRequiredForPTA": true,
+    "timeoutInSeconds": "60",
+    "genericWebServiceBaseUrl": "https://wlxmaster.crawco.co.uk/api",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "connectionParameters": [
+      {
+        "contextUrl": "/users",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "1",
+        "uniqueNameForEndPoint": "Test Connection",
+        "curlEnabled": false,
+        "header": {
+          "X-Auth-Key": "$application.accesstoken$",
+          "X-Auth-User": "admin"
+        },
+        "operationType": "Test Connection",
+        "body": {
+          "bodyFormat": "raw"
+        }
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "2",
+        "uniqueNameForEndPoint": "Account Aggregation",
+        "rootPath": "$",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "user_name": "user_name",
+          "is_disabled": "is_disabled",
+          "profile": "profile",
+          "groups": "groups",
+          "display_name": "display_name",
+          "email": "email",
+          "preferred_language": "preferred_language"
+        },
+        "contextUrl": "/users?offset=0&limit=-1",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "X-Auth-Key": "$application.accesstoken$",
+          "X-Auth-User": "admin"
+        },
+        "operationType": "Account Aggregation"
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "3",
+        "uniqueNameForEndPoint": "Group Aggregation",
+        "rootPath": "$",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "email_list": "email_list",
+          "group_name": "group_name",
+          "profile": "profile",
+          "description": "description",
+          "restrictions": "restrictions",
+          "language": "language",
+          "id": "id",
+          "users": "users"
+        },
+        "contextUrl": "/usergroups?offset=0&limit=-1",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "X-Auth-Key": "$application.accesstoken$",
+          "X-Auth-User": "admin"
+        },
+        "operationType": "Group Aggregation"
+      }
+    ],
+    "partitionAggregationEnabled": false,
+    "hasFullAggregationCompleted": true,
+    "possibleHttpErrors": {},
+    "sourceConnected": true,
+    "throwProvAfterRuleException": true,
+    "lastAggregationDate_account": "2025-11-03T19:46:51Z",
+    "deleteThresholdPercentage": 10,
+    "fixedPlanMultivaluedAttribute": "true",
+    "version": "v2",
+    "labels": [
+      "standard"
+    ],
+    "cloudCacheUpdate": 1764047035320,
+    "templateApplication": "Web Services Template",
+    "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info",
+    "authenticationMethod": "No Auth",
+    "httpCookieSpecsStandard": "true",
+    "healthy": true,
+    "cloudDisplayName": "Wallix - test",
+    "connectorName": "Web Services",
+    "since": "2025-10-23T09:01:57.582Z",
+    "status": "SOURCE_STATE_HEALTHY"
+  },
+  "crossTenantConnectorAttributes": {
+    "connectionParameters": [
+      {
+        "contextUrl": "/users",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "1",
+        "uniqueNameForEndPoint": "Test Connection",
+        "curlEnabled": false,
+        "header": {
+          "X-Auth-Key": "$application.accesstoken$",
+          "X-Auth-User": "admin"
+        },
+        "operationType": "Test Connection",
+        "body": {
+          "bodyFormat": "raw"
+        }
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "2",
+        "uniqueNameForEndPoint": "Account Aggregation",
+        "rootPath": "$",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "user_name": "user_name",
+          "is_disabled": "is_disabled",
+          "profile": "profile",
+          "groups": "groups",
+          "display_name": "display_name",
+          "email": "email",
+          "preferred_language": "preferred_language"
+        },
+        "contextUrl": "/users?offset=0&limit=-1",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "X-Auth-Key": "$application.accesstoken$",
+          "X-Auth-User": "admin"
+        },
+        "operationType": "Account Aggregation"
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "3",
+        "uniqueNameForEndPoint": "Group Aggregation",
+        "rootPath": "$",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "email_list": "email_list",
+          "group_name": "group_name",
+          "profile": "profile",
+          "description": "description",
+          "restrictions": "restrictions",
+          "language": "language",
+          "id": "id",
+          "users": "users"
+        },
+        "contextUrl": "/usergroups?offset=0&limit=-1",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "X-Auth-Key": "$application.accesstoken$",
+          "X-Auth-User": "admin"
+        },
+        "operationType": "Group Aggregation"
+      }
+    ]
+  },
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "email",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "9084dd6d095b4b818d4c83257dd46f72",
+    "name": "1b3c82c42f7844239091ff1dc7022929 Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

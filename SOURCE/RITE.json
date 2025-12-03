@@ -1,0 +1,321 @@
+{
+  "id": "7dfe9a2fd7774263bf68b61132e48165",
+  "name": "RITE",
+  "type": "DelimitedFile",
+  "connectorClass": "sailpoint.connector.delimitedfile.DelimitedFileConnector",
+  "connectorScriptName": "delimited-file-angularsc",
+  "description": "RITE",
+  "deleteThreshold": 10,
+  "provisionAsCsv": true,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "DISCOVER_SCHEMA",
+    "NO_RANDOM_ACCESS",
+    "DIRECT_PERMISSIONS"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "User",
+      "identityAttribute": "LoginId",
+      "displayAttribute": "LoginId",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "LoginId",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FirstName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LastName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "CrawfordUserID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "CrawfordNumber",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Role",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "484b919b3bd84ec4a9ed61e0dfed705a",
+            "name": "Role"
+          },
+          "description": "Role",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "Entitlement",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "6d5d6791da77455291f0ec0e00b7513d",
+      "name": "account",
+      "created": "2023-10-31T18:25:24.875Z",
+      "modified": "2023-11-03T13:26:10.707Z"
+    },
+    {
+      "nativeObjectType": "group ",
+      "identityAttribute": "Name",
+      "displayAttribute": "Name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "df0e361efdb14ec798179b418d9edb6f",
+      "name": "group ",
+      "created": "2023-11-03T13:22:15.099Z",
+      "modified": "2023-11-03T13:25:10.625Z"
+    },
+    {
+      "nativeObjectType": "Role",
+      "identityAttribute": "Name",
+      "displayAttribute": "Name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "484b919b3bd84ec4a9ed61e0dfed705a",
+      "name": "Role",
+      "created": "2023-11-03T13:24:33.219Z",
+      "modified": "2023-11-03T13:24:59.514Z"
+    }
+  ],
+  "connectorAttributes": {
+    "group.mergeRows": true,
+    "group.delimiter": ",",
+    "mergeRows": false,
+    "group.filetransport": "local",
+    "partitionMode": "disabled",
+    "connectionType": "file",
+    "group.host": "local",
+    "group.indexColumn": "id",
+    "Role.file": "/sweep-server/tmp/e7e6077cad7046a5bb511f5afe6dd7f9.csv",
+    "delimiter": ",",
+    "host": "local",
+    "group .columnNames": [
+      "Name"
+    ],
+    "commentCharacter": "#",
+    "group.mergeColumns": [
+      "entitlements",
+      "groups",
+      "permissions"
+    ],
+    "hasHeader": true,
+    "filterEmptyRecords": true,
+    "filetransport": "local",
+    "group.filterEmptyRecords": true,
+    "deleteThresholdPercentage": 10,
+    "group .mergeRows": false,
+    "group.hasHeader": true,
+    "group.partitionMode": "disabled",
+    "Role.columnNames": [
+      "Name",
+      "Description"
+    ],
+    "Role.mergeRows": false,
+    "group.columnNames": [
+      "id",
+      "name",
+      "displayName",
+      "created",
+      "description",
+      "modified",
+      "entitlements",
+      "groups",
+      "permissions"
+    ],
+    "templateApplication": "DelimitedFile Template",
+    "healthy": true,
+    "cloudDisplayName": "RITE",
+    "connectorName": "Delimited File",
+    "numberOfLinesToSkip": "0",
+    "since": "2024-02-16T18:13:03.454Z",
+    "status": "SOURCE_STATE_HEALTHY",
+    "cloudOriginalApplicationType": "Delimited File"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "CrawfordNumber",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "1abdd275d11442fe8282fec8a0f84cc5",
+    "name": "RITE Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [
+    {
+      "name": "Create Policy",
+      "description": "Create Policy",
+      "usageType": "CREATE",
+      "fields": [
+        {
+          "name": "id",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "name",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "givenName",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "familyName",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "e-mail",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "location",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "manager",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "groups",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        }
+      ]
+    }
+  ],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

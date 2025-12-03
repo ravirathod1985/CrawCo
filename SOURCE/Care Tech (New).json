@@ -1,0 +1,368 @@
+{
+  "id": "ebe07900e67144c49fad2099e0687639",
+  "name": "Care Tech (New)",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "Care Tech (New)",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "ENABLE",
+    "DISCOVER_SCHEMA",
+    "SYNC_PROVISIONING",
+    "DIRECT_PERMISSIONS",
+    "UNLOCK"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "User ID",
+      "displayAttribute": "User Name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "CMID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "User ID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EMPNUM",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Primary Branch Code",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "41af2924e9a844c4b3e85a246d42470c",
+            "name": "Primary Branch Code"
+          },
+          "description": "Primary Branch Code",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "DEPARTMENT",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "a36e68f543ca44729e074a64b3b5e77e",
+            "name": "Department"
+          },
+          "description": "DEPARTMENT",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "Primary Role",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "626d30697a974fa3ade779f1fb9d45a0",
+            "name": "Primary Role"
+          },
+          "description": "Primary Role",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "User Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Security Group",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "bc5be99c30d24500bc6e15278c04712b",
+            "name": "Security Group"
+          },
+          "description": "Security Group",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        }
+      ],
+      "id": "b0fafce7bb2f43f282015b7121597a96",
+      "name": "account",
+      "created": "2024-07-25T17:28:38.818Z",
+      "modified": "2024-07-25T18:07:18.010Z"
+    },
+    {
+      "nativeObjectType": "Primary Branch Code",
+      "identityAttribute": "Primary Branch Code",
+      "displayAttribute": "Primary Branch Code",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "Primary Branch Code",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Primary Branch Code",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": false
+        }
+      ],
+      "id": "41af2924e9a844c4b3e85a246d42470c",
+      "name": "Primary Branch Code",
+      "created": "2024-07-25T17:46:16.617Z",
+      "modified": "2024-07-25T18:30:21.001Z"
+    },
+    {
+      "nativeObjectType": "Department",
+      "identityAttribute": "Department",
+      "displayAttribute": "Department",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "Department",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Department",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": false
+        }
+      ],
+      "id": "a36e68f543ca44729e074a64b3b5e77e",
+      "name": "Department",
+      "created": "2024-07-25T17:48:53.706Z",
+      "modified": "2024-07-25T20:29:05.742Z"
+    },
+    {
+      "nativeObjectType": "Primary Role",
+      "identityAttribute": "Primary Role",
+      "displayAttribute": "Primary Role",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "Primary Role",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Primary Role",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": false
+        }
+      ],
+      "id": "626d30697a974fa3ade779f1fb9d45a0",
+      "name": "Primary Role",
+      "created": "2024-07-25T17:50:05.269Z",
+      "modified": "2024-07-25T18:31:05.126Z"
+    },
+    {
+      "nativeObjectType": "Security Group",
+      "identityAttribute": "Security Group",
+      "displayAttribute": "Security Group",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "Security Group",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Security Group",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": false
+        }
+      ],
+      "id": "bc5be99c30d24500bc6e15278c04712b",
+      "name": "Security Group",
+      "created": "2024-07-25T17:50:46.271Z",
+      "modified": "2024-07-25T20:29:27.088Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "Primary Branch Code.url": "jdbc:oracle:thin:@10.129.193.115:1545:CPAP",
+    "Department.useExecuteQuery": false,
+    "deltaAggregationEnabled": false,
+    "isAdvance": "false",
+    "Primary Role.mergeRows": false,
+    "Primary Role.SQL": "select cm.cmid, cm.loginid \"User ID\", cm.userreference \"EMPNUM\", b.branchcode \"Primary Branch Code\", b.department, crt.name \"Primary Role\", cm.namelast||', '||cm.namefirst \"User Name\", sg.secgroupname \"Security Group\"\nfrom ctech.casemanager cm, ctech.cmbranchassign cmb, ctech.branch b, ctech.cmrole cr, ctech.cmrolelut crt, ctech.groupmembership gm, ctech.securitygroup sg\nwhere cm.cmdeactivatedflag=0 and cm.cmid=cmb.cmid and cmb.branchid=b.branchid and cmb.primarybranchflag=1\nand cm.cmid=cr.cmid(+) and 1=cr.primaryroleflag(+) and cr.roleid=crt.roleid(+)\nand cm.cmid=gm.cmid(+) and gm.secgroupid=sg.secgroupid(+)",
+    "useStoredProcedureGetObject": false,
+    "connectionType": "direct",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "Department.useStoredProcedureSqlStmt": false,
+    "driverClass": "oracle.jdbc.driver.OracleDriver",
+    "useExecuteQuery": false,
+    "indexColumns": [
+      "User ID"
+    ],
+    "Security Group.mergeColumns": [
+      "Security Group"
+    ],
+    "Security Group.SQL": "select cm.cmid, cm.loginid \"User ID\", cm.userreference \"EMPNUM\", b.branchcode \"Primary Branch Code\", b.department, crt.name \"Primary Role\", cm.namelast||', '||cm.namefirst \"User Name\", sg.secgroupname \"Security Group\"\nfrom ctech.casemanager cm, ctech.cmbranchassign cmb, ctech.branch b, ctech.cmrole cr, ctech.cmrolelut crt, ctech.groupmembership gm, ctech.securitygroup sg\nwhere cm.cmdeactivatedflag=0 and cm.cmid=cmb.cmid and cmb.branchid=b.branchid and cmb.primarybranchflag=1\nand cm.cmid=cr.cmid(+) and 1=cr.primaryroleflag(+) and cr.roleid=crt.roleid(+)\nand cm.cmid=gm.cmid(+) and gm.secgroupid=sg.secgroupid(+)",
+    "Primary Role.useExecuteQuery": false,
+    "Department.driverClass": "oracle.jdbc.driver.OracleDriver",
+    "sourceConnected": true,
+    "Primary Role.user": "sa_cam",
+    "isPermissionEnabled": false,
+    "disableOrderingCheck": true,
+    "connectorFileUploadHistory": {
+      "ojdbc8.jar": "2024-07-25T17:29:00.419028Z"
+    },
+    "Department.useStoredProcedureGetObject": false,
+    "Department.SQL": "select cm.cmid, cm.loginid \"User ID\", cm.userreference \"EMPNUM\", b.branchcode \"Primary Branch Code\", cm.sitedef4 \"Department\", crt.name \"Primary Role\", cm.namelast||', '||cm.namefirst \"User Name\", sg.secgroupname \"Security Group\"\nfrom ctech.casemanager cm, ctech.cmbranchassign cmb, ctech.branch b, ctech.cmrole cr, ctech.cmrolelut crt, ctech.groupmembership gm, ctech.securitygroup sg\nwhere cm.cmdeactivatedflag=0 and cm.cmid=cmb.cmid and cmb.branchid=b.branchid and cmb.primarybranchflag=1\nand cm.cmid=cr.cmid(+) and 1=cr.primaryroleflag(+) and cr.roleid=crt.roleid(+)\nand cm.cmid=gm.cmid(+) and gm.secgroupid=sg.secgroupid(+)",
+    "labels": [
+      "standard"
+    ],
+    "SQL": "select cm.cmid, cm.loginid \"User ID\", cm.userreference \"EMPNUM\", b.branchcode \"Primary Branch Code\", b.department, crt.name \"Primary Role\", cm.namelast||', '||cm.namefirst \"User Name\", sg.secgroupname \"Security Group\"\nfrom ctech.casemanager cm, ctech.cmbranchassign cmb, ctech.branch b, ctech.cmrole cr, ctech.cmrolelut crt, ctech.groupmembership gm, ctech.securitygroup sg\nwhere cm.cmdeactivatedflag=0 and cm.cmid=cmb.cmid and cmb.branchid=b.branchid and cmb.primarybranchflag=1\nand cm.cmid=cr.cmid(+) and 1=cr.primaryroleflag(+) and cr.roleid=crt.roleid(+)\nand cm.cmid=gm.cmid(+) and gm.secgroupid=sg.secgroupid(+)",
+    "Primary Branch Code.mergeRows": false,
+    "cloudCacheUpdate": 1764580200197,
+    "Security Group.useStoredProcedureSqlStmt": false,
+    "connectorName": "JDBC",
+    "Department.mergeRows": false,
+    "Security Group.mergeRows": true,
+    "status": "SOURCE_STATE_HEALTHY",
+    "since": "2025-08-14T10:12:28.315Z",
+    "mergeColumns": [
+      "Security Group"
+    ],
+    "supportsDeltaAgg": "true",
+    "Security Group.indexColumns": [
+      "Security Group"
+    ],
+    "Primary Branch Code.useStoredProcedureSqlStmt": false,
+    "Primary Branch Code.SQL": "select cm.cmid, cm.loginid \"User ID\", cm.userreference \"EMPNUM\", b.branchcode \"Primary Branch Code\", b.department, crt.name \"Primary Role\", cm.namelast||', '||cm.namefirst \"User Name\", sg.secgroupname \"Security Group\"\nfrom ctech.casemanager cm, ctech.cmbranchassign cmb, ctech.branch b, ctech.cmrole cr, ctech.cmrolelut crt, ctech.groupmembership gm, ctech.securitygroup sg\nwhere cm.cmdeactivatedflag=0 and cm.cmid=cmb.cmid and cmb.branchid=b.branchid and cmb.primarybranchflag=1\nand cm.cmid=cr.cmid(+) and 1=cr.primaryroleflag(+) and cr.roleid=crt.roleid(+)\nand cm.cmid=gm.cmid(+) and gm.secgroupid=sg.secgroupid(+)",
+    "group.mergeRows": false,
+    "useStoredProcedureTestConn": false,
+    "Security Group.driverClass": "oracle.jdbc.driver.OracleDriver",
+    "Primary Role.isPermissionEnabled": false,
+    "Primary Role.url": "jdbc:oracle:thin:@10.129.193.115:1545:CPAP",
+    "mergeRows": true,
+    "Primary Role.driverClass": "oracle.jdbc.driver.OracleDriver",
+    "Security Group.isPermissionEnabled": false,
+    "Primary Branch Code.isPermissionEnabled": false,
+    "Security Group.useStoredProcedureGetObject": false,
+    "jdbcExceptionBucketing": true,
+    "hasFullAggregationCompleted": true,
+    "connector_files": "ojdbc8.jar",
+    "useQuery": false,
+    "Primary Role.useStoredProcedureSqlStmt": false,
+    "testConnSQL": "select 1 from dual",
+    "Primary Branch Code.user": "sa_cam",
+    "Primary Role.useStoredProcedureGetObject": false,
+    "Security Group.useExecuteQuery": false,
+    "Primary Branch Code.useStoredProcedureGetObject": false,
+    "Security Group.url": "jdbc:oracle:thin:@10.129.193.115:1545:CPAP",
+    "Department.user": "sa_cam",
+    "Department.url": "jdbc:oracle:thin:@10.129.193.115:1545:CPAP",
+    "deleteThresholdPercentage": 10,
+    "Security Group.user": "sa_cam",
+    "url": "jdbc:oracle:thin:@10.129.193.115:1545:CPAP",
+    "templateApplication": "JDBC Template",
+    "Primary Branch Code.driverClass": "oracle.jdbc.driver.OracleDriver",
+    "group.isPermissionEnabled": false,
+    "encrypted": "password,group.password,Primary Branch Code.password,Department.password,Primary Role.password,Security Group.password",
+    "Department.isPermissionEnabled": false,
+    "healthy": true,
+    "cloudDisplayName": "Care Tech (New)",
+    "Primary Branch Code.useExecuteQuery": false,
+    "useStoredProcedureSqlStmt": false,
+    "user": "sa_cam"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "EMPNUM",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      },
+      {
+        "complex": false,
+        "property": "correlatedAdUsername",
+        "operation": "EQ",
+        "value": "User ID",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 2
+      }
+    ],
+    "id": "4e5b6cb38692497dbb8e25c3541fb8a4",
+    "name": "Care Tech (New) Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

@@ -1,0 +1,538 @@
+{
+  "id": "65192b386396435dbc5a319075f659b9",
+  "name": "Blackline",
+  "type": "Web Services",
+  "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+  "connectorScriptName": "web-services-angularsc",
+  "description": "Blackline",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "AUTHENTICATE",
+    "UNLOCK",
+    "ENABLE",
+    "PROVISIONING",
+    "PASSWORD"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "user",
+      "identityAttribute": "id",
+      "displayAttribute": "email",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "firstName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "firstName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "lastName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "lastName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "email",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "email",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "defaultRoleId",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "905cc809388e4b45bd3a55d2bf13d2c8",
+            "name": "group"
+          },
+          "description": "defaultRoleId",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "created",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "created",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "isActive",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "isActive",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "jobId",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "jobId",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "jobTitle",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "jobTitle",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "loginId",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "loginId",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "requiresJournalReviewer",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "requiresJournalReviewer",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "supervisor",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "supervisor",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "timeZoneId",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "timeZoneId",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "allowUserToAccessJournalAnalyser",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "allowUserToAccessJournalAnalyser",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "9d5acc866b9c4780ad31a35dbf120bb8",
+      "name": "account",
+      "created": "2025-08-12T21:00:22.386Z",
+      "modified": "2025-08-20T20:05:24.952Z"
+    },
+    {
+      "nativeObjectType": "group",
+      "identityAttribute": "id",
+      "displayAttribute": "name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "isActive",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "isActive",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "status",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "status",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "visible",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "visible",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "required",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "required",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "905cc809388e4b45bd3a55d2bf13d2c8",
+      "name": "group",
+      "created": "2025-08-12T21:00:22.386Z",
+      "modified": "2025-08-20T20:05:24.952Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "supportsDeltaAgg": "true",
+    "lastAggregationDate_group": "2025-09-11T14:13:58Z",
+    "deltaAggregationEnabled": false,
+    "throwProvBeforeRuleException": true,
+    "connectionType": "direct",
+    "enableHasMore": false,
+    "isGetObjectRequiredForPTA": true,
+    "timeoutInSeconds": "60",
+    "genericWebServiceBaseUrl": "https://sbus.api.blackline.com",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "connectionParameters": [
+      {
+        "resMappingObj": {
+          "customaccesstoken": "access_token"
+        },
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "1",
+        "uniqueNameForEndPoint": "Custom Authentication",
+        "curlEnabled": false,
+        "header": {
+          "Authorization": "Basic aHhPbzZkKzYzX2t0TEIreDVxayckYy00LWNyYXdjbzpEY0hRLFhvK2V5T0FrSkhtKisyVncsdVc=",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "operationType": "Custom Authentication",
+        "body": {
+          "bodyFormData": {
+            "grant_type": "password",
+            "scope ": "DataIngestionAPI bl.users bl.mdm instance_7958895C-2801-418A-BA8A-E463C11FF5DC",
+            "username": "maureen_linehan@us.crawco.com"
+          },
+          "bodyFormat": "formData"
+        },
+        "customAuthUrl": "https://sbus.api.blackline.com/connect/token"
+      },
+      {
+        "contextUrl": "/v1/users",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "2",
+        "uniqueNameForEndPoint": "Test Connection",
+        "curlEnabled": false,
+        "header": {
+          "Authorization": "Bearer $application.customaccesstoken$"
+        },
+        "operationType": "Test Connection",
+        "body": {
+          "bodyFormat": "raw"
+        }
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "3",
+        "uniqueNameForEndPoint": "Account Aggregation",
+        "rootPath": "$.items",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "lastName": "lastName",
+          "loginId": "loginId",
+          "requiresJournalReviewer": "requiresJournalReviewer",
+          "created": "created",
+          "timeZoneId": "timeZoneId",
+          "jobTitle": "jobTitle",
+          "fullName": "fullName",
+          "isActive": "isActive",
+          "firstName": "firstName",
+          "jobId": "jobId",
+          "allowUserToAccessJournalAnalyser": "allowUserToAccessJournalAnalyser",
+          "id": "id",
+          "defaultRoleId": "defaultRoleId",
+          "email": "email",
+          "supervisor": "supervisor"
+        },
+        "contextUrl": "/v1/users?pageStartIndex=0&pageSize=500",
+        "pagingSize": 100,
+        "curlEnabled": false,
+        "header": {
+          "Authorization": "Bearer $application.customaccesstoken$"
+        },
+        "operationType": "Account Aggregation"
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "4",
+        "uniqueNameForEndPoint": "Group Aggregation",
+        "rootPath": "$.items",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "visible": "visible",
+          "name": "name",
+          "id": "id",
+          "isActive": "isActive",
+          "required": "required",
+          "status": "status"
+        },
+        "contextUrl": "/v1/roles",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "Authorization": "Bearer $application.customaccesstoken$"
+        },
+        "operationType": "Group Aggregation"
+      }
+    ],
+    "partitionAggregationEnabled": false,
+    "hasFullAggregationCompleted": true,
+    "possibleHttpErrors": {},
+    "sourceConnected": true,
+    "throwProvAfterRuleException": true,
+    "lastAggregationDate_account": "2025-11-30T05:11:33Z",
+    "deleteThresholdPercentage": 10,
+    "fixedPlanMultivaluedAttribute": "true",
+    "version": "v2",
+    "labels": [
+      "standard"
+    ],
+    "cloudCacheUpdate": 1764479496279,
+    "templateApplication": "Web Services Template",
+    "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info",
+    "authenticationMethod": "No Auth",
+    "httpCookieSpecsStandard": "true",
+    "healthy": true,
+    "cloudDisplayName": "Blackline",
+    "connectorName": "Web Services",
+    "enableStatus": "isActive=true",
+    "since": "2025-11-05T06:15:06.789Z",
+    "status": "SOURCE_STATE_HEALTHY"
+  },
+  "crossTenantConnectorAttributes": {
+    "connectionParameters": [
+      {
+        "resMappingObj": {
+          "customaccesstoken": "access_token"
+        },
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "1",
+        "uniqueNameForEndPoint": "Custom Authentication",
+        "curlEnabled": false,
+        "header": {
+          "Authorization": "Basic aHhPbzZkKzYzX2t0TEIreDVxayckYy00LWNyYXdjbzpEY0hRLFhvK2V5T0FrSkhtKisyVncsdVc=",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "operationType": "Custom Authentication",
+        "body": {
+          "bodyFormData": {
+            "grant_type": "password",
+            "scope ": "DataIngestionAPI bl.users bl.mdm instance_7958895C-2801-418A-BA8A-E463C11FF5DC",
+            "username": "maureen_linehan@us.crawco.com"
+          },
+          "bodyFormat": "formData"
+        },
+        "customAuthUrl": "https://sbus.api.blackline.com/connect/token"
+      },
+      {
+        "contextUrl": "/v1/users",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "2",
+        "uniqueNameForEndPoint": "Test Connection",
+        "curlEnabled": false,
+        "header": {
+          "Authorization": "Bearer $application.customaccesstoken$"
+        },
+        "operationType": "Test Connection",
+        "body": {
+          "bodyFormat": "raw"
+        }
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "3",
+        "uniqueNameForEndPoint": "Account Aggregation",
+        "rootPath": "$.items",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "lastName": "lastName",
+          "loginId": "loginId",
+          "requiresJournalReviewer": "requiresJournalReviewer",
+          "created": "created",
+          "timeZoneId": "timeZoneId",
+          "jobTitle": "jobTitle",
+          "fullName": "fullName",
+          "isActive": "isActive",
+          "firstName": "firstName",
+          "jobId": "jobId",
+          "allowUserToAccessJournalAnalyser": "allowUserToAccessJournalAnalyser",
+          "id": "id",
+          "defaultRoleId": "defaultRoleId",
+          "email": "email",
+          "supervisor": "supervisor"
+        },
+        "contextUrl": "/v1/users?pageStartIndex=0&pageSize=500",
+        "pagingSize": 100,
+        "curlEnabled": false,
+        "header": {
+          "Authorization": "Bearer $application.customaccesstoken$"
+        },
+        "operationType": "Account Aggregation"
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "4",
+        "uniqueNameForEndPoint": "Group Aggregation",
+        "rootPath": "$.items",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "visible": "visible",
+          "name": "name",
+          "id": "id",
+          "isActive": "isActive",
+          "required": "required",
+          "status": "status"
+        },
+        "contextUrl": "/v1/roles",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "Authorization": "Bearer $application.customaccesstoken$"
+        },
+        "operationType": "Group Aggregation"
+      }
+    ]
+  },
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "email",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "a317adb15c964fcb826149af53c8561c",
+    "name": "Blackline [source] Account Correlation"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

@@ -1,0 +1,176 @@
+{
+  "id": "5c4e1cd622f14ebe9a573307a00e9565",
+  "name": "RMA Admin Access",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "RiskTech/RMA Admin Access",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "SYNC_PROVISIONING",
+    "DIRECT_PERMISSIONS",
+    "DISCOVER_SCHEMA",
+    "GROUP_PROVISIONING",
+    "PROVISIONING",
+    "UNLOCK",
+    "ENABLE"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "LOGIN_NAME",
+      "displayAttribute": "LOGIN_NAME",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "LOGIN_NAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FIRST_NAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LAST_NAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ROLE",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "ROLE",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": false
+        }
+      ],
+      "id": "7ccecbcea01345808b893c9a48025a4f",
+      "name": "account",
+      "created": "2023-12-06T21:21:17.710Z",
+      "modified": "2025-09-02T11:05:40.703Z"
+    },
+    {
+      "nativeObjectType": "ROLE",
+      "identityAttribute": "ROLE",
+      "displayAttribute": "ROLE",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "ROLE",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "ROLE",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "a8eb8818881944079e126b3a4f472413",
+      "name": "ROLE",
+      "created": "2023-12-07T20:40:58.771Z",
+      "modified": "2025-09-02T11:05:40.703Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 60,
+    "supportsDeltaAgg": "true",
+    "deltaAggregationEnabled": false,
+    "useStoredProcedureTestConn": false,
+    "group.mergeRows": false,
+    "isAdvance": "false",
+    "ROLE.url": "jdbc:oracle:thin:@10.1.30.209:1550:rtdp",
+    "mergeRows": false,
+    "useStoredProcedureGetObject": false,
+    "checkDeletedDisabled": false,
+    "connectionType": "direct",
+    "ROLE.driverClass": "oracle.jdbc.driver.OracleDriver",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "driverClass": "oracle.jdbc.driver.OracleDriver",
+    "jdbcExceptionBucketing": true,
+    "hasFullAggregationCompleted": true,
+    "ROLE.getObjectSQL": "select ud.login_name as LOGIN_NAME, ut.first_name as FIRST_NAME, ut.last_name as LAST_NAME,\ncase when ut.is_chief_admin is not null\nthen\ndecode(ut.is_chief_admin,-1,'CHIEF_ADMIN','nada')\nelse\ndecode(ut.role_id,1,'IT Global Security','nada')\nend as role\nfrom user_details_table ud, user_table ut\nwhere ud.user_id = ut.user_id and ud.dsnid = '31' and nvl(ut.is_sms_user,0) <> 0 and manager_id > 0",
+    "useExecuteQuery": false,
+    "connector_files": "ojdbc8.jar",
+    "ROLE.useExecuteQuery": false,
+    "useQuery": false,
+    "testConnSQL": "select 1 from dual",
+    "sourceConnected": true,
+    "isPermissionEnabled": false,
+    "deleteThresholdPercentage": 10,
+    "ROLE.isPermissionEnabled": false,
+    "url": "jdbc:oracle:thin:@10.1.30.209:1550:rtdp",
+    "SQL": "select ud.login_name as LOGIN_NAME, ut.first_name as FIRST_NAME, ut.last_name as LAST_NAME,\ncase when ut.is_chief_admin is not null\nthen\ndecode(ut.is_chief_admin,-1,'CHIEF_ADMIN','nada')\nelse\ndecode(ut.role_id,1,'IT Global Security','nada')\nend as role\nfrom user_details_table ud, user_table ut\nwhere ud.user_id = ut.user_id and ud.dsnid = '31' and nvl(ut.is_sms_user,0) <> 0 and manager_id > 0",
+    "cloudCacheUpdate": 1764047036268,
+    "templateApplication": "JDBC Template",
+    "group.isPermissionEnabled": false,
+    "ROLE.useStoredProcedureSqlStmt": false,
+    "encrypted": "password,group.password,ROLE.password",
+    "healthy": true,
+    "cloudDisplayName": "RMA Admin Access",
+    "connectorName": "JDBC",
+    "useStoredProcedureSqlStmt": false,
+    "ROLE.user": "aveksa",
+    "user": "aveksa",
+    "status": "SOURCE_STATE_HEALTHY",
+    "ROLE.mergeRows": false,
+    "ROLE.useStoredProcedureGetObject": false,
+    "since": "2025-09-20T15:05:29.257Z"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "correlatedAdUsername",
+        "operation": "EQ",
+        "value": "LOGIN_NAME",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "9c67933e009b45e39e1fb8a55c62004b",
+    "name": "RMA Admin Access Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

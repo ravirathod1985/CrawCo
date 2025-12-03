@@ -1,0 +1,427 @@
+{
+  "id": "7a8ecc30de9d47479f5c2374b528bb7a",
+  "name": "Nexus",
+  "type": "Web Services",
+  "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+  "connectorScriptName": "web-services-angularsc",
+  "description": "Nexus",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "ENABLE",
+    "PROVISIONING",
+    "PASSWORD",
+    "AUTHENTICATE",
+    "UNLOCK"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "user",
+      "identityAttribute": "_id",
+      "displayAttribute": "normalizedEmail",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "_id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "_id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "firstName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "firstName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "lastName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "lastName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "email",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "email",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "phone",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "phone",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "address.line1",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "address.line1",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "address.line2",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "address.line2",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "address.city",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "address.city",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "address.state",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "address.state",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "address.zip",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "address.zip",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "address.country",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "address.country",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "normalizedEmail",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "normalizedEmail",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "roles",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "roles",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": false
+        },
+        {
+          "name": "scopes",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "scopes",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "countries",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "countries",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "accounting_id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "accounting_id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "d3a273dfc34042f5b3593bb8ae73023e",
+      "name": "account",
+      "created": "2025-09-26T20:28:11.426Z",
+      "modified": "2025-09-29T12:39:57.189Z"
+    },
+    {
+      "nativeObjectType": "group",
+      "identityAttribute": "",
+      "displayAttribute": "",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [],
+      "id": "d41c88eb98de4cb2842d9fd18bfda5bd",
+      "name": "group",
+      "created": "2025-09-26T20:28:11.426Z",
+      "modified": "2025-09-26T20:28:11.426Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "supportsDeltaAgg": "true",
+    "deltaAggregationEnabled": false,
+    "throwProvBeforeRuleException": true,
+    "connectionType": "direct",
+    "enableHasMore": false,
+    "isGetObjectRequiredForPTA": true,
+    "timeoutInSeconds": "60",
+    "genericWebServiceBaseUrl": "https://apistaging.wegolook.com",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "connectionParameters": [
+      {
+        "resMappingObj": {
+          "customaccesstoken": "token"
+        },
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "1",
+        "uniqueNameForEndPoint": "Custom Authentication",
+        "curlEnabled": false,
+        "header": {
+          "Authorization": "Basic aHhPbzZkKzYzX2t0TEIreDVxayckYy00LWNyYXdjbzpEY0hRLFhvK2V5T0FrSkhtKisyVncsdVc",
+          "Content-Type": "application/json"
+        },
+        "operationType": "Custom Authentication",
+        "body": {
+          "jsonBody": "{\n    \"email\": \"IdentityAccessManagement@crawford.com\",\n    \"password\": \"eDg8RauaZt\"\n}",
+          "bodyFormat": "raw"
+        },
+        "customAuthUrl": "https://apistaging.wegolook.com/tokens"
+      },
+      {
+        "contextUrl": "/users?role=csr&limit=1&page=0",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "2",
+        "uniqueNameForEndPoint": "Test Connection",
+        "curlEnabled": false,
+        "header": {
+          "Authorization": "Bearer $application.customaccesstoken$"
+        },
+        "operationType": "Test Connection",
+        "body": {
+          "bodyFormat": "raw"
+        }
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "3",
+        "uniqueNameForEndPoint": "Account Aggregation",
+        "rootPath": "$",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "lastName": "lastName",
+          "accounting_id": "accounting_id",
+          "address.city": "address.city",
+          "address.state": "address.state",
+          "roles": "roles[*]",
+          "address.line1": "address.line1",
+          "normalizedEmail": "normalizedEmail",
+          "countries": "countries[*]",
+          "address.line2": "address.line2",
+          "address.country": "address.country",
+          "address.zip": "address.zip",
+          "firstName": "firstName",
+          "phone": "phone[0]",
+          "_id": "_id",
+          "scopes": "scopes[*]",
+          "email": "email"
+        },
+        "contextUrl": "/users?role=csr&limit=2000&page=0",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "Authorization": "Bearer $application.customaccesstoken$"
+        },
+        "operationType": "Account Aggregation"
+      }
+    ],
+    "partitionAggregationEnabled": false,
+    "hasFullAggregationCompleted": true,
+    "possibleHttpErrors": {},
+    "sourceConnected": true,
+    "throwProvAfterRuleException": true,
+    "lastAggregationDate_account": "2025-11-30T16:02:32Z",
+    "deleteThresholdPercentage": 10,
+    "fixedPlanMultivaluedAttribute": "true",
+    "version": "v2",
+    "labels": [
+      "standard"
+    ],
+    "cloudCacheUpdate": 1764518552901,
+    "templateApplication": "Web Services Template",
+    "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info",
+    "authenticationMethod": "No Auth",
+    "httpCookieSpecsStandard": "true",
+    "healthy": true,
+    "cloudDisplayName": "Nexus",
+    "connectorName": "Web Services",
+    "since": "2025-11-18T15:07:12.435Z",
+    "status": "SOURCE_STATE_HEALTHY"
+  },
+  "crossTenantConnectorAttributes": {
+    "connectionParameters": [
+      {
+        "resMappingObj": {
+          "customaccesstoken": "token"
+        },
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "1",
+        "uniqueNameForEndPoint": "Custom Authentication",
+        "curlEnabled": false,
+        "header": {
+          "Authorization": "Basic aHhPbzZkKzYzX2t0TEIreDVxayckYy00LWNyYXdjbzpEY0hRLFhvK2V5T0FrSkhtKisyVncsdVc",
+          "Content-Type": "application/json"
+        },
+        "operationType": "Custom Authentication",
+        "body": {
+          "jsonBody": "{\n    \"email\": \"IdentityAccessManagement@crawford.com\",\n    \"password\": \"eDg8RauaZt\"\n}",
+          "bodyFormat": "raw"
+        },
+        "customAuthUrl": "https://apistaging.wegolook.com/tokens"
+      },
+      {
+        "contextUrl": "/users?role=csr&limit=1&page=0",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "2",
+        "uniqueNameForEndPoint": "Test Connection",
+        "curlEnabled": false,
+        "header": {
+          "Authorization": "Bearer $application.customaccesstoken$"
+        },
+        "operationType": "Test Connection",
+        "body": {
+          "bodyFormat": "raw"
+        }
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "3",
+        "uniqueNameForEndPoint": "Account Aggregation",
+        "rootPath": "$",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "lastName": "lastName",
+          "accounting_id": "accounting_id",
+          "address.city": "address.city",
+          "address.state": "address.state",
+          "roles": "roles[*]",
+          "address.line1": "address.line1",
+          "normalizedEmail": "normalizedEmail",
+          "countries": "countries[*]",
+          "address.line2": "address.line2",
+          "address.country": "address.country",
+          "address.zip": "address.zip",
+          "firstName": "firstName",
+          "phone": "phone[0]",
+          "_id": "_id",
+          "scopes": "scopes[*]",
+          "email": "email"
+        },
+        "contextUrl": "/users?role=csr&limit=2000&page=0",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "Authorization": "Bearer $application.customaccesstoken$"
+        },
+        "operationType": "Account Aggregation"
+      }
+    ]
+  },
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "normalizedEmail",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "60e1ea982b6f410ab127dc4430fdb3d2",
+    "name": "Nexus [source] Account Correlation"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

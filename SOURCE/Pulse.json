@@ -1,0 +1,256 @@
+{
+  "id": "0f5890a0050c463bbc102179236bbb2c",
+  "name": "Pulse",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "Pulse",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "DISCOVER_SCHEMA",
+    "UNLOCK",
+    "DIRECT_PERMISSIONS",
+    "PROVISIONING",
+    "ENABLE",
+    "SYNC_PROVISIONING"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "UserName",
+      "displayAttribute": "UserName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Active",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Status",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FirstName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LastName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "eMailAddress",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Entitlement",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Entitlement",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": false
+        },
+        {
+          "name": "Access_FileTransfer",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Access_ClaimReview",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Access_Dashboard",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Access_AddNote",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "CrawfordEmpID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "0510eb5912a042ff8bb3e1e8d5988c0c",
+      "name": "account",
+      "created": "2023-11-28T22:03:45.442Z",
+      "modified": "2025-09-02T09:11:13.324Z"
+    },
+    {
+      "nativeObjectType": "Entitlement",
+      "identityAttribute": "Entitlement",
+      "displayAttribute": "Entitlement",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Entitlement",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Entitlement",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "eca0e512b0e8423591a71decc9775fba",
+      "name": "Entitlement",
+      "created": "2023-11-28T22:07:28.371Z",
+      "modified": "2025-09-02T09:11:13.324Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "supportsDeltaAgg": "true",
+    "deltaAggregationEnabled": false,
+    "useStoredProcedureTestConn": false,
+    "group.mergeRows": false,
+    "isAdvance": "false",
+    "Entitlement.useExecuteQuery": false,
+    "mergeRows": false,
+    "useStoredProcedureGetObject": false,
+    "connectionType": "direct",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "jdbcExceptionBucketing": true,
+    "hasFullAggregationCompleted": true,
+    "useExecuteQuery": false,
+    "connector_files": "sqljdbc42.jar",
+    "useQuery": false,
+    "jdbcProvisionRule": "Pulse JDBC Provision",
+    "testConnSQL": "select 1",
+    "Entitlement.useStoredProcedureSqlStmt": false,
+    "sourceConnected": true,
+    "Entitlement.url": "jdbc:sqlserver://10.3.0.36:48300;databasename=PraxisDB;;Encrypt=False;TrustServerCertificate=True;",
+    "isPermissionEnabled": false,
+    "Entitlement.SQL": "use PraxisDB\nEXEC rpt_AccessAudit_PulseUsers 1;",
+    "deleteThresholdPercentage": 10,
+    "Entitlement.user": "IA_CAMuser",
+    "url": "jdbc:sqlserver://10.3.0.36:48300;databasename=PraxisDB;;Encrypt=False;TrustServerCertificate=True;",
+    "SQL": "use PraxisDB\nEXEC rpt_AccessAudit_PulseUsers 1;",
+    "cloudCacheUpdate": 1764047035139,
+    "templateApplication": "JDBC Template",
+    "Entitlement.mergeRows": false,
+    "group.isPermissionEnabled": false,
+    "encrypted": "password,group.password,Entitlement.password",
+    "healthy": true,
+    "cloudDisplayName": "Pulse",
+    "connectorName": "JDBC",
+    "useStoredProcedureSqlStmt": false,
+    "buildMapRule": "Pulse_JDBC_Buildmap",
+    "Entitlement.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "Entitlement.isPermissionEnabled": false,
+    "user": "IA_CAMuser",
+    "status": "SOURCE_STATE_HEALTHY",
+    "Entitlement.useStoredProcedureGetObject": false,
+    "since": "2025-11-16T23:58:33.921Z"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "CrawfordEmpID",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "93c2bc6338f24d98a7e11b2d9fdada5a",
+    "name": "Pulse Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

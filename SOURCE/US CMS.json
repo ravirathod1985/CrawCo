@@ -1,0 +1,569 @@
+{
+  "id": "02e4188cef1e4170ac5b5172044e1790",
+  "name": "US CMS",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "US CMS",
+  "deleteThreshold": 100,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "SYNC_PROVISIONING",
+    "DISCOVER_SCHEMA",
+    "UNLOCK",
+    "DIRECT_PERMISSIONS",
+    "ENABLE"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "Userid",
+      "displayAttribute": "Userid",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Applicationid",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Source",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Role",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "c9a3a9debbb54542a680c91e00163d28",
+            "name": "Role"
+          },
+          "description": "Role",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "RoleDescription",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserRoleInactive",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserRoleFeatureDenied",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FeatureCode",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "d7b53bfa43e74e6795959a112e463565",
+            "name": "feature"
+          },
+          "description": "FeatureCode",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "FeatureDescription",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FeatureInactive",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Userid",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EmailAddress",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EmployeeNumber",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserTypeCode",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "29727c5d59154da7b8fd51d65d076d5e",
+            "name": "user type"
+          },
+          "description": "UserTypeCode",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "UserInactive",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "approvalthreshold",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "af601ad4541740b48f744ba1905da8d8",
+            "name": "approval threshold"
+          },
+          "description": "Approval Threshold",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "HomeBranch",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "c5400ce8dc7048809e305ff40fe09ca0",
+            "name": "home branch"
+          },
+          "description": "Home Branch",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        }
+      ],
+      "id": "ce1f337d89b942be9d509b0c36666859",
+      "name": "account",
+      "created": "2023-08-28T17:45:15.819Z",
+      "modified": "2025-08-20T18:54:22.369Z"
+    },
+    {
+      "nativeObjectType": "feature",
+      "identityAttribute": "name",
+      "displayAttribute": "name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Feature",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "d7b53bfa43e74e6795959a112e463565",
+      "name": "feature",
+      "created": "2023-08-28T18:01:16.882Z",
+      "modified": "2025-08-20T18:54:22.369Z"
+    },
+    {
+      "nativeObjectType": "user type",
+      "identityAttribute": "name",
+      "displayAttribute": "name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User Type",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "29727c5d59154da7b8fd51d65d076d5e",
+      "name": "user type",
+      "created": "2023-08-28T18:01:29.647Z",
+      "modified": "2025-08-20T18:54:22.369Z"
+    },
+    {
+      "nativeObjectType": "approval threshold",
+      "identityAttribute": "name",
+      "displayAttribute": "name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "ApprovalThreshold",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "af601ad4541740b48f744ba1905da8d8",
+      "name": "approval threshold",
+      "created": "2023-08-28T18:01:40.334Z",
+      "modified": "2025-08-20T18:54:22.369Z"
+    },
+    {
+      "nativeObjectType": "Role",
+      "identityAttribute": "name",
+      "displayAttribute": "name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "Description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Role Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Role",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "c9a3a9debbb54542a680c91e00163d28",
+      "name": "Role",
+      "created": "2025-06-30T15:25:46.072Z",
+      "modified": "2025-08-20T18:54:22.369Z"
+    },
+    {
+      "nativeObjectType": "home branch",
+      "identityAttribute": "name",
+      "displayAttribute": "name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "c5400ce8dc7048809e305ff40fe09ca0",
+      "name": "home branch",
+      "created": "2025-08-11T20:50:42.450Z",
+      "modified": "2025-08-20T18:54:22.369Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 75,
+    "feature.url": "jdbc:sqlserver://VIRSQL189P.crawco.com:1433;databasename=CMSUSPROD",
+    "Assigned Role.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "isAdvance": "false",
+    "group.url": "jdbc:sqlserver://DKATLDBSVCMS003.cdorav00.crawco.local:1433;databasename=CMSUAT1",
+    "checkDeletedDisabled": false,
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "Role.useStoredProcedureSqlStmt": false,
+    "undefined.SQL": "Select\t\t\t\nur.Applicationid\t\t\t\n,Source = 'Assigned Role'\t\t\t\n,Role = ur.Code\t\t\t\n,RoleDescription = ur.Description\t\t\t\n,UserRoleInactive = ur.Inactive\t\t\t\n--,urf.featureid\t\t\t\n,UserRoleFeatureDenied =urf.denied\t\t\t\n,FeatureCode = f.code\t\t\t\n,FeatureDescription = f.description\t\t\t\n,FeatureInactive = f.Inactive\t\t\t\n,uru.Userid\t\t\t\n,UserName = isnull(u.lastname + ', ','') + isnull(firstname,'')\t\t\t\n,u.EmailAddress\t\t\n,u.EmployeeNumber\n,UserTypeCode = \t\t\t\n\t\t\t\tcase when usertypecode = 'A' then 'Adjuster'\n\t\t\t\twhen usertypecode = 'B' then 'Broker'\n\t\t\t\twhen usertypecode = 'C' then 'Clerical'\n\t\t\t\twhen usertypecode = 'I' then 'Insurer'\n\t\t\t\twhen usertypecode = 'N' then 'Insured'\n\t\t\t\twhen usertypecode = 'X' then 'Administrator'\n\t\t\t\tELSE '?'\n\t\t\t\tEND\n,UserInactive = u.inactive\t\t\t\t\t\nfrom userrolefeature as urf\t\t\t\nleft join userrole as ur on urf.userroleid = ur.id\t\t\t\n\tleft join userroleuser as uru on ur.id = uru.userroleid\t\t\nleft join feature as f on urf.featureid = f.id\t\t\t\nleft join [user] as u on uru.userid = u.id\t\t\t\nwhere \t\t\t\n\tur.ApplicationID = 'cms2'\t\t\n\tand u.Inactive = 0\t\t\n\tand u.UserTypeCode in ('a','c','x')\t\t\n\t\t\t--#NAME?\n\t\t\t--#NAME?\n\t\t\t---- C\n\t\t\t--#NAME?\n\t\t\t--#VALUE!\n\t\t\t--#NAME?\nUNION\t\t\t\nSelect\t\t\t\t\nur.Applicationid\t\t\t\t\n,Source = 'Assigned Role'\t\t\t\t\n,Role = ur.Code\t\t\t\t\n,RoleDescription = ur.Description\t\t\t\t\n,UserRoleInactive = ur.Inactive\t\t\t\t\n--,urf.featureid\t\t\t\t\n,UserRoleFeatureDenied =urf.denied\t\t\t\t\n,FeatureCode = f.code\t\t\t\t\n,FeatureDescription = f.description\t\t\t\t\n,FeatureInactive = f.Inactive\t\t\t\t\n,uru.Userid\t\t\t\t\n,UserName = isnull(u.lastname + ', ','') + isnull(firstname,'')\t\t\t\t\n,u.EmailAddress\t\t\t\t\n,u.EmployeeNumber\n,UserTypeCode =\n\t\t\tcase when usertypecode = 'A' then 'Adjuster'\n\t\t\t\twhen usertypecode = 'B' then 'Broker'\n\t\t\t\twhen usertypecode = 'C' then 'Clerical'\n\t\t\t\twhen usertypecode = 'I' then 'Insurer'\n\t\t\t\twhen usertypecode = 'N' then 'Insured'\n\t\t\t\twhen usertypecode = 'X' then 'Administrator'\n\t\t\t\telse '?'\n\t\t\t\tend\n,UserInactive = u.inactive\t\t\t\t\t\t\t\t\nfrom userrolefeature as urf\t\t\t\t\nleft join userrole as ur on urf.userroleid = ur.id\t\t\t\t\n\tleft join userroleuser as uru on ur.id = uru.userroleid\t\t\t\nleft join feature as f on urf.featureid = f.id\t\t\t\t\nleft join [user] as u on uru.userid = u.id\t\t\t\t\nwhere \t\t\t\t\n\tur.ApplicationID = 'cms2'\t\t\t\n\tand u.Inactive = 0\t\t\t\n\tand u.UserTypeCode in ('a','c','x')\t\t\t\n\t\t\t--#NAME?\tAdjuster\n\t\t\t--#NAME?\tBroker\n\t\t\t---- C\tClerical\n\t\t\t--#NAME?\tInsurer\n\t\t\t--#VALUE!\tInsured\n\t\t\t--#NAME?\tAdministrator\nUNION\t\t\t\t\nselect\t\t\nApplicationID\t\t\t\t\n,Source = 'Assigned Feature'\t\t\t\t\n,Role = ''\t\t\t\t\n,RoleDescripton = ''\t\t\t\t\n,UserRoleInactive = ''\t\t\t\t\n,UserRoleFeatureDenied = ''\t\t\t\t\n,FeaturCode =  code\t\t\t\t\n,FeatureDescription = Description\t\t\t\t\n,FeatureInactive = f.Inactive\t\t\t\t\n,Userid\t\t\t\t\n,UserName = isnull(u.lastname + ', ','') + isnull(firstname,'')\t\t\t\t\n,u.EmailAddress\t\n,u.EmployeeNumber\n,UserTypeCode =\t\t\t\t\n\t\t\tcase when usertypecode = 'A' then 'Adjuster'\n\t\t\t\twhen usertypecode = 'B' then 'Broker'\n\t\t\t\twhen usertypecode = 'C' then 'Clerical'\n\t\t\t\twhen usertypecode = 'I' then 'Insurer'\n\t\t\t\twhen usertypecode = 'N' then 'Insured'\n\t\t\t\twhen usertypecode = 'X' then 'Administrator'\n\t\t\t\telse '?'\n\t\t\t\tend\n,UserInactive = u.inactive\t\t\t\t\nfrom UserFeature as  uf\t\t\t\t\nright join feature as f on uf.featureid = f.id\t\t\t\t\nleft join userrolefeature as urf on uf.featureid = urf.featureid\t\t\t\t\nleft join [user] as u on uf.userid = u.id\t\t\t\t\nwhere applicationid = 'cms2' \t\t\t\t\n\tand urf.userroleid is null\t\t\t\n\t\t\tand u.Inactive = 0\t\n\tand u.UserTypeCode in ('a','c','x')\t\t\t\n\t\t\t--#NAME?\tAdjuster\n\t\t\t--#NAME?\tBroker\n\t\t\t---- C\tClerical\n\t\t\t--#NAME?\tInsurer\n\t\t\t--#VALUE!\tInsured\n\t\t\t--#NAME?\tAdministrator\n\tOrder By UserID ASC, Role ASC",
+    "driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "role.user": "SA_Sailpoint_CMS_Prod",
+    "role.useExecuteQuery": false,
+    "home branch.isPermissionEnabled": false,
+    "useExecuteQuery": false,
+    "group.useExecuteQuery": false,
+    "undefined.isPermissionEnabled": false,
+    "home branch.SQL": "SELECT DISTINCT name = CONCAT (bm.id\n\t,' - '\n\t,bm.name)\nFROM [user] AS u\nLEFT JOIN userbranch AS ub ON u.id = ub.userid\n\tAND homebranch = 1\nLEFT JOIN branch bm ON bm.id = ub.branchid\n\tAND ub.homebranch = 1\nWHERE u.inactive = 0\n\tAND u.usertypecode IN (\n\t\t'A'\n\t\t,'C'\n\t\t,'X'\n\t\t)",
+    "Assigned Role.useStoredProcedureSqlStmt": false,
+    "sourceConnected": true,
+    "connectorFileUploadHistory": {
+      "mssql-jdbc-12.10.0.jre11.jar": "2025-06-30T16:30:58.607593Z"
+    },
+    "approval threshold.SQL": "SELECT DISTINCT name = CONCAT (\n\t\tb.Name\n\t\t,' - '\n\t\t,ub.ApprovalThreshold\n\t\t)\nFROM [dbo].[User] u\nINNER JOIN [dbo].[UserBranch] ub ON u.ID = ub.UserID\nINNER JOIN [dbo].[Branch] b ON ub.BranchID = b.ID\nLEFT OUTER JOIN [dbo].[UserTypeCode] utc ON u.UserTypeCode = utc.Code\nLEFT OUTER JOIN [dbo].[EmployeeGroupClass] egc ON u.EmployeeGroupClassCode = egc.Code\nLEFT OUTER JOIN [dbo].[User] u2 ON b.ManagerID = u2.ID\nWHERE u.Inactive = 0\n\tAND ub.Inactive = 0\n\tAND b.Inactive = 0",
+    "isPermissionEnabled": false,
+    "user type.mergeRows": false,
+    "home branch.useStoredProcedureGetObject": false,
+    "undefined.useStoredProcedureGetObject": false,
+    "group.useStoredProcedureGetObject": false,
+    "undefined.user": "SA_Sailpoint_CMS_Prod",
+    "cloudCacheUpdate": 1764580195117,
+    "undefined.testConnSQL": "SELECT top 1 *\n  FROM \n [User]\n  WHERE inactive = '0'\n  and UserTypeCode in('A','C','X')",
+    "Role.isPermissionEnabled": false,
+    "undefined.useExecuteQuery": false,
+    "undefined.deltaAggregationEnabled": false,
+    "home branch.user": "SA_Sailpoint_CMS_Prod",
+    "role.SQL": "Select distinct --top 1 \t\t\t\nur.Applicationid\t\t\t\n,Source = 'Assigned Role'\t\t\t\n,Role = ur.Code\t\t\t\n,RoleDescription = ur.Description\t\t\t\n,UserRoleInactive = ur.Inactive\t\t\t\n--,urf.featureid\t\t\t\n,UserRoleFeatureDenied =urf.denied\t\t\t\n,FeatureCode = f.code\t\t\t\n,FeatureDescription = f.description\t\t\t\n,FeatureInactive = f.Inactive\t\t\t\n,uru.Userid\t\t\t\n,UserName = isnull(u.lastname + ', ','') + isnull(firstname,'')\t\t\t\n,u.EmailAddress\t\t\n,u.EmployeeNumber\n,UserTypeCode = \t\t\t\n\t\t\t\tcase when usertypecode = 'A' then 'Adjuster'\n\t\t\t\twhen usertypecode = 'B' then 'Broker'\n\t\t\t\twhen usertypecode = 'C' then 'Clerical'\n\t\t\t\twhen usertypecode = 'I' then 'Insurer'\n\t\t\t\twhen usertypecode = 'N' then 'Insured'\n\t\t\t\twhen usertypecode = 'X' then 'Administrator'\n\t\t\t\tELSE '?'\n\t\t\t\tEND\n,UserInactive = u.inactive\t\t\t\t\t\nfrom userrolefeature as urf\t\t\t\nleft join userrole as ur on urf.userroleid = ur.id\t\t\t\n\tleft join userroleuser as uru on ur.id = uru.userroleid\t\t\nleft join feature as f on urf.featureid = f.id\t\t\t\nleft join [user] as u on uru.userid = u.id\t\t\t\nwhere \t\t\t\n\tur.ApplicationID = 'cms2'\t\t\n\tand u.Inactive = 0\t\t\n\tand u.UserTypeCode in ('a','c','x')\t\t\n\t\t\t--#NAME?\n\t\t\t--#NAME?\n\t\t\t---- C\n\t\t\t--#NAME?\n\t\t\t--#VALUE!\n\t\t\t--#NAME?\nUNION\t\t\t\nSelect distinct--top 1 \t\t\t\t\nur.Applicationid\t\t\t\t\n,Source = 'Assigned Role'\t\t\t\t\n,Role = ur.Code\t\t\t\t\n,RoleDescription = ur.Description\t\t\t\t\n,UserRoleInactive = ur.Inactive\t\t\t\t\n--,urf.featureid\t\t\t\t\n,UserRoleFeatureDenied =urf.denied\t\t\t\t\n,FeatureCode = f.code\t\t\t\t\n,FeatureDescription = f.description\t\t\t\t\n,FeatureInactive = f.Inactive\t\t\t\t\n,uru.Userid\t\t\t\t\n,UserName = isnull(u.lastname + ', ','') + isnull(firstname,'')\t\t\t\t\n,u.EmailAddress\t\t\t\t\n,u.EmployeeNumber\n,UserTypeCode =\n\t\t\tcase when usertypecode = 'A' then 'Adjuster'\n\t\t\t\twhen usertypecode = 'B' then 'Broker'\n\t\t\t\twhen usertypecode = 'C' then 'Clerical'\n\t\t\t\twhen usertypecode = 'I' then 'Insurer'\n\t\t\t\twhen usertypecode = 'N' then 'Insured'\n\t\t\t\twhen usertypecode = 'X' then 'Administrator'\n\t\t\t\telse '?'\n\t\t\t\tend\n,UserInactive = u.inactive\t\t\t\t\t\t\t\t\nfrom userrolefeature as urf\t\t\t\t\nleft join userrole as ur on urf.userroleid = ur.id\t\t\t\t\n\tleft join userroleuser as uru on ur.id = uru.userroleid\t\t\t\nleft join feature as f on urf.featureid = f.id\t\t\t\t\nleft join [user] as u on uru.userid = u.id\t\t\t\t\nwhere \t\t\t\t\n\tur.ApplicationID = 'cms2'\t\t\t\n\tand u.Inactive = 0\t\t\t\n\tand u.UserTypeCode in ('a','c','x')\t\t\t\n\t\t\t--#NAME?\tAdjuster\n\t\t\t--#NAME?\tBroker\n\t\t\t---- C\tClerical\n\t\t\t--#NAME?\tInsurer\n\t\t\t--#VALUE!\tInsured\n\t\t\t--#NAME?\tAdministrator\nUNION\t\t\t\t\nselect distinct \t\t\t\t\nApplicationID\t\t\t\t\n,Source = 'Assigned Feature'\t\t\t\t\n,Role = ''\t\t\t\t\n,RoleDescripton = ''\t\t\t\t\n,UserRoleInactive = ''\t\t\t\t\n,UserRoleFeatureDenied = ''\t\t\t\t\n,FeaturCode =  code\t\t\t\t\n,FeatureDescription = Description\t\t\t\t\n,FeatureInactive = f.Inactive\t\t\t\t\n,Userid\t\t\t\t\n,UserName = isnull(u.lastname + ', ','') + isnull(firstname,'')\t\t\t\t\n,u.EmailAddress\t\n,u.EmployeeNumber\n,UserTypeCode =\t\t\t\t\n\t\t\tcase when usertypecode = 'A' then 'Adjuster'\n\t\t\t\twhen usertypecode = 'B' then 'Broker'\n\t\t\t\twhen usertypecode = 'C' then 'Clerical'\n\t\t\t\twhen usertypecode = 'I' then 'Insurer'\n\t\t\t\twhen usertypecode = 'N' then 'Insured'\n\t\t\t\twhen usertypecode = 'X' then 'Administrator'\n\t\t\t\telse '?'\n\t\t\t\tend\n,UserInactive = u.inactive\t\t\t\t\nfrom UserFeature as  uf\t\t\t\t\nright join feature as f on uf.featureid = f.id\t\t\t\t\nleft join userrolefeature as urf on uf.featureid = urf.featureid\t\t\t\t\nleft join [user] as u on uf.userid = u.id\t\t\t\t\nwhere applicationid = 'cms2' \t\t\t\t\n\tand urf.userroleid is null\t\t\t\n\t\t\tand u.Inactive = 0\t\n\tand u.UserTypeCode in ('a','c','x')\t\t\t\n\t\t\t--#NAME?\tAdjuster\n\t\t\t--#NAME?\tBroker\n\t\t\t---- C\tClerical\n\t\t\t--#NAME?\tInsurer\n\t\t\t--#VALUE!\tInsured\n\t\t\t--#NAME?\tAdministrator\n\tOrder By UserName ASC, Role ASC",
+    "group.useStoredProcedureDirectPermission": false,
+    "status": "SOURCE_STATE_HEALTHY",
+    "mergeColumns": [
+      "Role",
+      "FeatureCode",
+      "approvalthreshold"
+    ],
+    "supportsDeltaAgg": "true",
+    "home branch.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "useStoredProcedureTestConn": false,
+    "home branch.mergeRows": false,
+    "user type.useStoredProcedureGetObject": false,
+    "role.mergeRows": false,
+    "approval threshold.user": "SA_Sailpoint_CMS_Prod",
+    "jdbcExceptionBucketing": true,
+    "connector_files": "sqljdbc42.jar",
+    "testConnSQL": "SELECT top 1 *\n  FROM \n [User]\n  WHERE inactive = '0'\n  and UserTypeCode in('A','C','X')",
+    "home branch.url": "jdbc:sqlserver://VIRSQL189P.crawco.com:1433;databasename=CMSUSPROD",
+    "group.user": "sa_sailpointro",
+    "user type.SQL": "SELECT DISTINCT name = utc.description\n\t,Description\nFROM [user] AS u\nLEFT JOIN usertypecode AS utc ON u.UserTypeCode = utc.Code\nWHERE\n\tu.inactive = 0\n   and u.UserTypeCode in ('A','C','X')",
+    "undefined.useQuery": false,
+    "home branch.useStoredProcedureSqlStmt": false,
+    "url": "jdbc:sqlserver://VIRSQL189P.crawco.com:1433;databasename=CMSUSPROD",
+    "user type.user": "SA_Sailpoint_CMS_Prod",
+    "templateApplication": "JDBC Template",
+    "group.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "group.isPermissionEnabled": false,
+    "feature.mergeRows": false,
+    "useStoredProcedureSqlStmt": false,
+    "undefined.useStoredProcedureSqlStmt": false,
+    "deltaAggregationEnabled": false,
+    "undefined.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "useStoredProcedureGetObject": false,
+    "connectionType": "direct",
+    "feature.isPermissionEnabled": false,
+    "feature.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "user type.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "feature.useStoredProcedureSqlStmt": false,
+    "Assigned Role.url": "jdbc:sqlserver://VIRSQL189P.crawco.com:1433;databasename=CMSUSPROD",
+    "undefined.useStoredProcedureTestConn": false,
+    "indexColumns": [
+      "Userid"
+    ],
+    "feature.user": "SA_Sailpoint_CMS_Prod",
+    "role.useStoredProcedureSqlStmt": false,
+    "disableOrderingCheck": true,
+    "role.isPermissionEnabled": false,
+    "user type.useExecuteQuery": false,
+    "SQL": "Select\t\t\t\nur.Applicationid\t\t\t\n,Source = 'Assigned Role'\t\t\t\n,Role = ur.Code\t\t\t\n,RoleDescription = ur.Description\t\t\t\n,UserRoleInactive = ur.Inactive\t\t\t\n--,urf.featureid\t\t\t\n,UserRoleFeatureDenied =urf.denied\t\t\t\n,FeatureCode = f.code\t\t\t\n,FeatureDescription = f.description\t\t\t\n,FeatureInactive = f.Inactive\t\t\t\n,uru.Userid\t\t\t\n,UserName = isnull(u.lastname + ', ','') + isnull(firstname,'')\t\t\t\n,u.EmailAddress\t\t\n,u.EmployeeNumber\n,UserTypeCode = \t\t\t\n\t\t\t\tcase when usertypecode = 'A' then 'Adjuster'\n\t\t\t\twhen usertypecode = 'B' then 'Broker'\n\t\t\t\twhen usertypecode = 'C' then 'Clerical'\n\t\t\t\twhen usertypecode = 'I' then 'Insurer'\n\t\t\t\twhen usertypecode = 'N' then 'Insured'\n\t\t\t\twhen usertypecode = 'X' then 'Administrator'\n\t\t\t\tELSE '?'\n\t\t\t\tEND\n,UserInactive = u.inactive\t\t\t\t\t\nfrom userrolefeature as urf\t\t\t\nleft join userrole as ur on urf.userroleid = ur.id\t\t\t\n\tleft join userroleuser as uru on ur.id = uru.userroleid\t\t\nleft join feature as f on urf.featureid = f.id\t\t\t\nleft join [user] as u on uru.userid = u.id\t\t\t\nwhere \t\t\t\n\tur.ApplicationID = 'cms2'\t\t\n\tand u.Inactive = 0\t\t\n\tand u.UserTypeCode in ('a','c','x')\t\t\n\t\t\t--#NAME?\n\t\t\t--#NAME?\n\t\t\t---- C\n\t\t\t--#NAME?\n\t\t\t--#VALUE!\n\t\t\t--#NAME?\nUNION\t\t\t\nSelect\t\t\t\t\nur.Applicationid\t\t\t\t\n,Source = 'Assigned Role'\t\t\t\t\n,Role = ur.Code\t\t\t\t\n,RoleDescription = ur.Description\t\t\t\t\n,UserRoleInactive = ur.Inactive\t\t\t\t\n--,urf.featureid\t\t\t\t\n,UserRoleFeatureDenied =urf.denied\t\t\t\t\n,FeatureCode = f.code\t\t\t\t\n,FeatureDescription = f.description\t\t\t\t\n,FeatureInactive = f.Inactive\t\t\t\t\n,uru.Userid\t\t\t\t\n,UserName = isnull(u.lastname + ', ','') + isnull(firstname,'')\t\t\t\t\n,u.EmailAddress\t\t\t\t\n,u.EmployeeNumber\n,UserTypeCode =\n\t\t\tcase when usertypecode = 'A' then 'Adjuster'\n\t\t\t\twhen usertypecode = 'B' then 'Broker'\n\t\t\t\twhen usertypecode = 'C' then 'Clerical'\n\t\t\t\twhen usertypecode = 'I' then 'Insurer'\n\t\t\t\twhen usertypecode = 'N' then 'Insured'\n\t\t\t\twhen usertypecode = 'X' then 'Administrator'\n\t\t\t\telse '?'\n\t\t\t\tend\n,UserInactive = u.inactive\t\t\t\t\t\t\t\t\nfrom userrolefeature as urf\t\t\t\t\nleft join userrole as ur on urf.userroleid = ur.id\t\t\t\t\n\tleft join userroleuser as uru on ur.id = uru.userroleid\t\t\t\nleft join feature as f on urf.featureid = f.id\t\t\t\t\nleft join [user] as u on uru.userid = u.id\t\t\t\t\nwhere \t\t\t\t\n\tur.ApplicationID = 'cms2'\t\t\t\n\tand u.Inactive = 0\t\t\t\n\tand u.UserTypeCode in ('a','c','x')\t\t\t\n\t\t\t--#NAME?\tAdjuster\n\t\t\t--#NAME?\tBroker\n\t\t\t---- C\tClerical\n\t\t\t--#NAME?\tInsurer\n\t\t\t--#VALUE!\tInsured\n\t\t\t--#NAME?\tAdministrator\nUNION\t\t\t\t\nselect\t\t\nApplicationID\t\t\t\t\n,Source = 'Assigned Feature'\t\t\t\t\n,Role = ''\t\t\t\t\n,RoleDescripton = ''\t\t\t\t\n,UserRoleInactive = ''\t\t\t\t\n,UserRoleFeatureDenied = ''\t\t\t\t\n,FeaturCode =  code\t\t\t\t\n,FeatureDescription = Description\t\t\t\t\n,FeatureInactive = f.Inactive\t\t\t\t\n,Userid\t\t\t\t\n,UserName = isnull(u.lastname + ', ','') + isnull(firstname,'')\t\t\t\t\n,u.EmailAddress\t\n,u.EmployeeNumber\n,UserTypeCode =\t\t\t\t\n\t\t\tcase when usertypecode = 'A' then 'Adjuster'\n\t\t\t\twhen usertypecode = 'B' then 'Broker'\n\t\t\t\twhen usertypecode = 'C' then 'Clerical'\n\t\t\t\twhen usertypecode = 'I' then 'Insurer'\n\t\t\t\twhen usertypecode = 'N' then 'Insured'\n\t\t\t\twhen usertypecode = 'X' then 'Administrator'\n\t\t\t\telse '?'\n\t\t\t\tend\n,UserInactive = u.inactive\t\t\t\t\nfrom UserFeature as  uf\t\t\t\t\nright join feature as f on uf.featureid = f.id\t\t\t\t\nleft join userrolefeature as urf on uf.featureid = urf.featureid\t\t\t\t\nleft join [user] as u on uf.userid = u.id\t\t\t\t\nwhere applicationid = 'cms2' \t\t\t\t\n\tand urf.userroleid is null\t\t\t\n\t\t\tand u.Inactive = 0\t\n\tand u.UserTypeCode in ('a','c','x')\t\t\t\n\t\t\t--#NAME?\tAdjuster\n\t\t\t--#NAME?\tBroker\n\t\t\t---- C\tClerical\n\t\t\t--#NAME?\tInsurer\n\t\t\t--#VALUE!\tInsured\n\t\t\t--#NAME?\tAdministrator\n\tOrder By UserID ASC, Role ASC",
+    "Role.SQL": "SELECT DISTINCT name = ur.code\n\t,Description\nFROM userroleuser AS uru\nLEFT JOIN userrole AS ur ON uru.userroleid = ur.id\nLEFT JOIN [user] as u on u.id = uru. userid\nWHERE\n\tu.inactive = 0\n   and u.UserTypeCode in ('A','C','X')",
+    "user type.useStoredProcedureSqlStmt": false,
+    "Assigned Role.useExecuteQuery": false,
+    "approval threshold.useStoredProcedureGetObject": false,
+    "Assigned Role.user": "SA_Sailpoint_CMS_Prod",
+    "approval threshold.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "connectorName": "JDBC",
+    "user type.url": "jdbc:sqlserver://VIRSQL189P.crawco.com:1433;databasename=CMSUSPROD",
+    "since": "2025-11-22T06:58:58.312Z",
+    "approval threshold.mergeRows": false,
+    "feature.useExecuteQuery": false,
+    "approval threshold.isPermissionEnabled": false,
+    "feature.SQL": "SELECT DISTINCT name = f.code\n\t,Description\nFROM [user] AS u\nLEFT JOIN userfeature AS uf ON u.id = uf.userid\nLEFT JOIN feature AS f ON uf.featureid = f.id\nWHERE\n\tu.inactive = 0\n   and u.UserTypeCode in ('A','C','X')",
+    "group.mergeRows": false,
+    "mergeRows": true,
+    "role.useStoredProcedureGetObject": false,
+    "timeout": 75,
+    "Assigned Role.SQL": "SELECT DISTINCT name = ur.code\n\t,Description\nFROM userroleuser AS uru\nLEFT JOIN userrole AS ur ON uru.userroleid = ur.id\nLEFT JOIN [user] as u on u.id = uru. userid\nWHERE\n\tu.inactive = 0\n   and u.UserTypeCode in ('A','C','X')",
+    "undefined.url": "jdbc:sqlserver://VIRSQL189P.crawco.com:1433;databasename=CMSUSPROD",
+    "role.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "hasFullAggregationCompleted": true,
+    "useQuery": false,
+    "approval threshold.useStoredProcedureSqlStmt": false,
+    "Assigned Role.isPermissionEnabled": false,
+    "Role.useStoredProcedureGetObject": false,
+    "Role.user": "SA_Sailpoint_CMS_Prod",
+    "approval threshold.url": "jdbc:sqlserver://VIRSQL189P.crawco.com:1433;databasename=CMSUSPROD",
+    "home branch.useExecuteQuery": false,
+    "deleteThresholdPercentage": 100,
+    "Role.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "group.useStoredProcedureSqlStmt": false,
+    "Role.mergeRows": false,
+    "user type.isPermissionEnabled": false,
+    "Role.url": "jdbc:sqlserver://VIRSQL189P.crawco.com:1433;databasename=CMSUSPROD",
+    "encrypted": "password,group.password,role.password,feature.password,user type.password,approval threshold.password,home branch.password,undefined.password,Assigned Role.password,Role.password",
+    "healthy": true,
+    "feature.useStoredProcedureGetObject": false,
+    "cloudDisplayName": "US CMS",
+    "Assigned Role.useStoredProcedureGetObject": false,
+    "role.url": "jdbc:sqlserver://VIRSQL189P.crawco.com:1433;databasename=CMSUSPROD",
+    "Role.useExecuteQuery": false,
+    "user": "SA_Sailpoint_CMS_Prod",
+    "approval threshold.useExecuteQuery": false
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "EmailAddress",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      },
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "EmployeeNumber",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 2
+      },
+      {
+        "complex": false,
+        "property": "correlatedAdUsername",
+        "operation": "EQ",
+        "value": "Userid",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 3
+      },
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "Userid",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 4
+      }
+    ],
+    "id": "c96beb7c7bc4491d96c92853829a9712",
+    "name": "US CMS [source] Account Correlation"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

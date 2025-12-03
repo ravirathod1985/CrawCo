@@ -1,0 +1,717 @@
+{
+  "id": "157dc4d779cc46bead51f8f55ef43298",
+  "name": "Test Crowdstrike (Bhavdip)",
+  "type": "Web Services",
+  "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+  "connectorScriptName": "web-services-angularsc",
+  "description": "Test Crowdstrike (Bhavdip)",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "ENABLE",
+    "AUTHENTICATE",
+    "PROVISIONING",
+    "UNLOCK",
+    "PASSWORD"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "user",
+      "identityAttribute": "UUID",
+      "displayAttribute": "uid",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "UUID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The Crowdstrike UUID field for the user record",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "firstName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "firstName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "lastName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "lastName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "uid",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "uid",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "customer",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "customer",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "status",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "status",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "roles",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "df95d23d5f854511b215c7c8a249745a",
+            "name": "group"
+          },
+          "description": "roles",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        }
+      ],
+      "id": "c3ddc2c8eb57460caa7dbdd06151b43a",
+      "name": "account",
+      "created": "2025-09-04T11:54:51.677Z",
+      "modified": "2025-10-02T13:04:43.046Z"
+    },
+    {
+      "nativeObjectType": "group",
+      "identityAttribute": "",
+      "displayAttribute": "",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [],
+      "id": "df95d23d5f854511b215c7c8a249745a",
+      "name": "group",
+      "created": "2025-09-04T11:54:51.677Z",
+      "modified": "2025-10-02T12:55:25.554Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "supportsDeltaAgg": "true",
+    "lastAggregationDate_group": "2025-06-08T09:58:18Z",
+    "deltaAggregationEnabled": false,
+    "throwProvBeforeRuleException": true,
+    "checkDeletedDisabled": false,
+    "connectionType": "direct",
+    "enableHasMore": false,
+    "client_id": "923675b6068c414a8a1281047a82a0e9",
+    "isGetObjectRequiredForPTA": true,
+    "timeoutInSeconds": "60",
+    "genericWebServiceBaseUrl": "https://api.crowdstrike.com",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "connectionParameters": [
+      {
+        "contextUrl": "/user-management/queries/users/v1",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "1",
+        "uniqueNameForEndPoint": "Test Connection",
+        "curlEnabled": false,
+        "operationType": "Test Connection",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ]
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "2",
+        "uniqueNameForEndPoint": "Account Aggregation - UUID",
+        "rootPath": "$",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "paginationSteps": "TERMINATE_IF $nextOffset$ >= $response.meta.pagination.total$ - 1\n$nextOffset$ = $nextOffset$+1\n$endpoint.fullUrl$ = $application.baseUrl$ + \"/user-management/queries/users/v1?limit=1&offset=\" + $nextOffset$",
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "UUID": "resources[0]"
+        },
+        "contextUrl": "/user-management/queries/users/v1?limit=1",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "Content-Type": "application/json"
+        },
+        "operationType": "Account Aggregation"
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "3",
+        "uniqueNameForEndPoint": "Account Aggregation - Users",
+        "rootPath": "$.resources[*]",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "firstName": "firstName",
+          "lastName": "lastName",
+          "uid": "uid",
+          "UUID": "uuid",
+          "customer": "customer",
+          "status": "status"
+        },
+        "contextUrl": "/users/entities/users/v1?ids=$response.UUID$",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "Content-Type": "application/json"
+        },
+        "operationType": "Account Aggregation",
+        "parentEndpointName": "Account Aggregation - UUID"
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "4",
+        "uniqueNameForEndPoint": "Get User Groups",
+        "rootPath": "$",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "roles": "resources[*]"
+        },
+        "contextUrl": "/user-roles/queries/user-role-ids-by-user-uuid/v1?user_uuid=$response.UUID$",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "operationType": "Account Aggregation",
+        "parentEndpointName": "Account Aggregation - UUID"
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "5",
+        "uniqueNameForEndPoint": "Entitlement Aggregation",
+        "rootPath": "$",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "roles": "resources[*]"
+        },
+        "contextUrl": "/user-roles/queries/user-role-ids-by-cid/v1",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "Content-Type": "application/json"
+        },
+        "operationType": "Group Aggregation"
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "6",
+        "uniqueNameForEndPoint": "Entitlement Aggregation - Details",
+        "rootPath": "$.resources[*]",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "description": "description",
+          "display_name": "display_name"
+        },
+        "contextUrl": "/user-roles/entities/user-roles/v1?ids=$response.roles$",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "Content-Type": "application/json"
+        },
+        "operationType": "Get Object-Group",
+        "parentEndpointName": "Entitlement Aggregation"
+      },
+      {
+        "resMappingObj": {
+          "firstName": "firstName",
+          "lastName": "lastName",
+          "uid": "uid",
+          "uuid": "uuid",
+          "customer": "customer",
+          "status": "status"
+        },
+        "contextUrl": "/users/entities/users/v1?ids=$getObject.nativeIdentity$",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "7",
+        "uniqueNameForEndPoint": "Single Account Aggregation",
+        "curlEnabled": false,
+        "operationType": "Get Object",
+        "rootPath": "$.resources[*]",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ]
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "8",
+        "uniqueNameForEndPoint": "Single Account Aggregation - Get User Groups",
+        "rootPath": "$",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "roles": "resources[*]"
+        },
+        "contextUrl": "/user-roles/queries/user-role-ids-by-user-uuid/v1?user_uuid=$response.uuid$",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "operationType": "Get Object",
+        "parentEndpointName": "Single Account Aggregation"
+      },
+      {
+        "resMappingObj": {
+          "uid": "uid",
+          "last_name": "last_name",
+          "first_name": "first_name",
+          "uuid": "uuid",
+          "cid": "cid",
+          "status": "status"
+        },
+        "contextUrl": "/user-management/entities/users/v1",
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "9",
+        "uniqueNameForEndPoint": "Create Account",
+        "curlEnabled": false,
+        "operationType": "Create Account",
+        "rootPath": "$.resources[*]",
+        "body": {
+          "jsonBody": "{\n    \"first_name\": \"$plan.firstName$\",\n    \"last_name\":\"$plan.lastName$\",\n    \"uid\":\"$plan.uid$\"\n}",
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ]
+      },
+      {
+        "contextUrl": "/user-roles/entities/user-roles/v1?user_uuid=$plan.nativeIdentity$",
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "10",
+        "uniqueNameForEndPoint": "Add Entitlement",
+        "curlEnabled": false,
+        "operationType": "Add Entitlement",
+        "body": {
+          "jsonBody": "{\n    \"roleIds\": [\n        \"$plan.roles$\"\n    ]\n}",
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ]
+      },
+      {
+        "contextUrl": "/user-roles/entities/user-roles/v1?user_uuid=$plan.nativeIdentity$&ids=$plan.roles$",
+        "httpMethodType": "DELETE",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "11",
+        "uniqueNameForEndPoint": "Remove Entitlement",
+        "curlEnabled": false,
+        "operationType": "Remove Entitlement",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ]
+      },
+      {
+        "contextUrl": "/user-management/entities/user-actions/v1",
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "12",
+        "uniqueNameForEndPoint": "Disable Account - Reset Password",
+        "curlEnabled": false,
+        "operationType": "Disable Account",
+        "body": {
+          "jsonBody": "{\n    \"action\": {\n        \"action_name\": \"reset_password\",\n        \"action_name\": \"reset_2fa\"\n    },\n    \"ids\": [\n        \"$getObject.nativeIdentity$\"\n    ]\n}",
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ]
+      }
+    ],
+    "grant_type": "CLIENT_CREDENTIALS",
+    "partitionAggregationEnabled": false,
+    "hasFullAggregationCompleted": true,
+    "token_url": "https://api.crowdstrike.com/oauth2/token",
+    "possibleHttpErrors": {},
+    "sourceConnected": true,
+    "throwProvAfterRuleException": true,
+    "lastAggregationDate_account": "2025-10-03T18:41:23Z",
+    "deleteThresholdPercentage": 10,
+    "fixedPlanMultivaluedAttribute": "true",
+    "version": "v2",
+    "labels": [
+      "standard"
+    ],
+    "cloudCacheUpdate": 1764047035201,
+    "templateApplication": "Web Services Template",
+    "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info",
+    "authenticationMethod": "OAuth2Login",
+    "httpCookieSpecsStandard": "true",
+    "healthy": true,
+    "cloudDisplayName": "Test Crowdstrike (Bhavdip)",
+    "connectorName": "Web Services",
+    "enableStatus": "status = active",
+    "since": "2025-10-01T18:12:26.096Z",
+    "status": "SOURCE_STATE_HEALTHY"
+  },
+  "crossTenantConnectorAttributes": {
+    "connectionParameters": [
+      {
+        "contextUrl": "/user-management/queries/users/v1",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "1",
+        "uniqueNameForEndPoint": "Test Connection",
+        "curlEnabled": false,
+        "operationType": "Test Connection",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ]
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "2",
+        "uniqueNameForEndPoint": "Account Aggregation - UUID",
+        "rootPath": "$",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "paginationSteps": "TERMINATE_IF $nextOffset$ >= $response.meta.pagination.total$ - 1\n$nextOffset$ = $nextOffset$+1\n$endpoint.fullUrl$ = $application.baseUrl$ + \"/user-management/queries/users/v1?limit=1&offset=\" + $nextOffset$",
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "UUID": "resources[0]"
+        },
+        "contextUrl": "/user-management/queries/users/v1?limit=1",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "Content-Type": "application/json"
+        },
+        "operationType": "Account Aggregation"
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "3",
+        "uniqueNameForEndPoint": "Account Aggregation - Users",
+        "rootPath": "$.resources[*]",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "firstName": "firstName",
+          "lastName": "lastName",
+          "uid": "uid",
+          "UUID": "uuid",
+          "customer": "customer",
+          "status": "status"
+        },
+        "contextUrl": "/users/entities/users/v1?ids=$response.UUID$",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "Content-Type": "application/json"
+        },
+        "operationType": "Account Aggregation",
+        "parentEndpointName": "Account Aggregation - UUID"
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "4",
+        "uniqueNameForEndPoint": "Get User Groups",
+        "rootPath": "$",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "roles": "resources[*]"
+        },
+        "contextUrl": "/user-roles/queries/user-role-ids-by-user-uuid/v1?user_uuid=$response.UUID$",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "operationType": "Account Aggregation",
+        "parentEndpointName": "Account Aggregation - UUID"
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "5",
+        "uniqueNameForEndPoint": "Entitlement Aggregation",
+        "rootPath": "$",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "roles": "resources[*]"
+        },
+        "contextUrl": "/user-roles/queries/user-role-ids-by-cid/v1",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "Content-Type": "application/json"
+        },
+        "operationType": "Group Aggregation"
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "6",
+        "uniqueNameForEndPoint": "Entitlement Aggregation - Details",
+        "rootPath": "$.resources[*]",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "description": "description",
+          "display_name": "display_name"
+        },
+        "contextUrl": "/user-roles/entities/user-roles/v1?ids=$response.roles$",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "Content-Type": "application/json"
+        },
+        "operationType": "Get Object-Group",
+        "parentEndpointName": "Entitlement Aggregation"
+      },
+      {
+        "resMappingObj": {
+          "firstName": "firstName",
+          "lastName": "lastName",
+          "uid": "uid",
+          "uuid": "uuid",
+          "customer": "customer",
+          "status": "status"
+        },
+        "contextUrl": "/users/entities/users/v1?ids=$getObject.nativeIdentity$",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "7",
+        "uniqueNameForEndPoint": "Single Account Aggregation",
+        "curlEnabled": false,
+        "operationType": "Get Object",
+        "rootPath": "$.resources[*]",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ]
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "8",
+        "uniqueNameForEndPoint": "Single Account Aggregation - Get User Groups",
+        "rootPath": "$",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "roles": "resources[*]"
+        },
+        "contextUrl": "/user-roles/queries/user-role-ids-by-user-uuid/v1?user_uuid=$response.uuid$",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "operationType": "Get Object",
+        "parentEndpointName": "Single Account Aggregation"
+      },
+      {
+        "resMappingObj": {
+          "uid": "uid",
+          "last_name": "last_name",
+          "first_name": "first_name",
+          "uuid": "uuid",
+          "cid": "cid",
+          "status": "status"
+        },
+        "contextUrl": "/user-management/entities/users/v1",
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "9",
+        "uniqueNameForEndPoint": "Create Account",
+        "curlEnabled": false,
+        "operationType": "Create Account",
+        "rootPath": "$.resources[*]",
+        "body": {
+          "jsonBody": "{\n    \"first_name\": \"$plan.firstName$\",\n    \"last_name\":\"$plan.lastName$\",\n    \"uid\":\"$plan.uid$\"\n}",
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ]
+      },
+      {
+        "contextUrl": "/user-roles/entities/user-roles/v1?user_uuid=$plan.nativeIdentity$",
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "10",
+        "uniqueNameForEndPoint": "Add Entitlement",
+        "curlEnabled": false,
+        "operationType": "Add Entitlement",
+        "body": {
+          "jsonBody": "{\n    \"roleIds\": [\n        \"$plan.roles$\"\n    ]\n}",
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ]
+      },
+      {
+        "contextUrl": "/user-roles/entities/user-roles/v1?user_uuid=$plan.nativeIdentity$&ids=$plan.roles$",
+        "httpMethodType": "DELETE",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "11",
+        "uniqueNameForEndPoint": "Remove Entitlement",
+        "curlEnabled": false,
+        "operationType": "Remove Entitlement",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ]
+      },
+      {
+        "contextUrl": "/user-management/entities/user-actions/v1",
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "12",
+        "uniqueNameForEndPoint": "Disable Account - Reset Password",
+        "curlEnabled": false,
+        "operationType": "Disable Account",
+        "body": {
+          "jsonBody": "{\n    \"action\": {\n        \"action_name\": \"reset_password\",\n        \"action_name\": \"reset_2fa\"\n    },\n    \"ids\": [\n        \"$getObject.nativeIdentity$\"\n    ]\n}",
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ]
+      }
+    ]
+  },
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "uid",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "aa8582c8844b4e989a3ddcd63ff246c2",
+    "name": "Test Crowdstrike (Bhavdip) [source-1756986891540] Account Correlation"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

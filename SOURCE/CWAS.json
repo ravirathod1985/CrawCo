@@ -1,0 +1,314 @@
+{
+  "id": "26e0d8b1fc2a440d890d1ba395557b0a",
+  "name": "CWAS",
+  "type": "DelimitedFile",
+  "connectorClass": "sailpoint.connector.delimitedfile.DelimitedFileConnector",
+  "connectorScriptName": "delimited-file-angularsc",
+  "description": "CWAS",
+  "deleteThreshold": 10,
+  "provisionAsCsv": true,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "DISCOVER_SCHEMA",
+    "NO_RANDOM_ACCESS",
+    "DIRECT_PERMISSIONS"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "User",
+      "identityAttribute": "UserName",
+      "displayAttribute": "UserName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "UserName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserLastName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserFirstName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserEmail",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "RoleName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "RoleName",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": false
+        },
+        {
+          "name": "RoleDescription",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LastLogon",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "d27b1468de3d4728863c7222cbb10d0c",
+      "name": "account",
+      "created": "2024-06-13T20:31:57.027Z",
+      "modified": "2024-06-13T20:32:44.841Z"
+    },
+    {
+      "nativeObjectType": "RoleName",
+      "identityAttribute": "RoleName",
+      "displayAttribute": "RoleName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "RoleName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "RoleName",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": false
+        },
+        {
+          "name": "RoleDescription",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "RoleDescription",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "abd7f7f92606463293b9a44ab6a60da9",
+      "name": "RoleName",
+      "created": "2024-06-13T20:33:43.663Z",
+      "modified": "2024-06-13T20:44:18.036Z"
+    }
+  ],
+  "connectorAttributes": {
+    "mergeColumns": [
+      "RoleName"
+    ],
+    "group.mergeRows": true,
+    "group.delimiter": ",",
+    "mergeRows": true,
+    "group.filetransport": "local",
+    "RoleName.columnNames": [
+      "RoleName",
+      "RoleDescription"
+    ],
+    "partitionMode": "disabled",
+    "RoleName.mergeColumns": [
+      "RoleName"
+    ],
+    "checkDeletedDisabled": false,
+    "connectionType": "file",
+    "group.host": "local",
+    "group.indexColumn": "id",
+    "delimiter": ",",
+    "host": "local",
+    "indexColumns": [
+      "UserName"
+    ],
+    "commentCharacter": "#",
+    "group.mergeColumns": [
+      "entitlements",
+      "groups",
+      "permissions"
+    ],
+    "hasHeader": true,
+    "filterEmptyRecords": true,
+    "filetransport": "local",
+    "group.filterEmptyRecords": true,
+    "deleteThresholdPercentage": 10,
+    "group.hasHeader": true,
+    "group.partitionMode": "disabled",
+    "labels": [
+      "standard"
+    ],
+    "group.columnNames": [
+      "id",
+      "name",
+      "displayName",
+      "created",
+      "description",
+      "modified",
+      "entitlements",
+      "groups",
+      "permissions"
+    ],
+    "templateApplication": "DelimitedFile Template",
+    "RoleName.indexColumns": [
+      "RoleName"
+    ],
+    "indexColumn": "UserName",
+    "healthy": true,
+    "cloudDisplayName": "CWAS",
+    "connectorName": "Delimited File",
+    "RoleName.mergeRows": true,
+    "RoleName.indexColumn": "RoleName",
+    "since": "2024-06-13T20:35:08.138Z",
+    "status": "SOURCE_STATE_HEALTHY",
+    "cloudOriginalApplicationType": "Delimited File"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "correlatedAdUsername",
+        "operation": "EQ",
+        "value": "UserName",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      },
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "UserEmail",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 2
+      }
+    ],
+    "id": "5dfb6ba0a4b946da9be51e496306ae34",
+    "name": "CWAS Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [
+    {
+      "name": "Create Policy",
+      "description": "Create Policy",
+      "usageType": "CREATE",
+      "fields": [
+        {
+          "name": "id",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "name",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "givenName",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "familyName",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "e-mail",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "location",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "manager",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "groups",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        }
+      ]
+    }
+  ],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

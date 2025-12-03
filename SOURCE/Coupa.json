@@ -1,0 +1,554 @@
+{
+  "id": "e96541760cca450ba6bea3d791117f45",
+  "name": "Coupa",
+  "type": "Coupa",
+  "connectorClass": "sailpoint.connector.OpenConnectorAdapter",
+  "connectorScriptName": "coupa",
+  "description": "Coupa",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "SYNC_PROVISIONING",
+    "SEARCH",
+    "ENABLE",
+    "PROVISIONING"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "id",
+      "displayAttribute": "login",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Coupa unique user identifier",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "login",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The user's login name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "firstname",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The user's first name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "lastname",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The user's last name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "middlename",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The user's middle name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "fullname",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The user's full name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "email",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The user's email address",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "active",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": "The user's active status",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "employee-payment-channel",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The user's expense payment channel. For example: ERP, CoupaPay, etc.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "authentication-method",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The user's authentication method. For example: coupa_credentials or SAML",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "employee-number",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The user's employee number",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "manager",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The user's manager's login name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "purchasing-user",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": "Indicates if the user has a purchasing license",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "expense-user",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": "Indicates if the user has an expense license",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "sourcing-user",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": "Indicates if the user has a sourcing license",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "inventory-user",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": "Indicates if the user has an inventory license",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "contracts-user",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": "Indicates if the user has a contracts license",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "sso-identifier",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The user's Single Sign-on ID (SSO ID)",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "api-user",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": "Indicates if the user is an API User",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "default-currency",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The user's default currency code",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "roles",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "dcbfeee1afd343a9821de3111310524e",
+            "name": "role"
+          },
+          "description": "List of roles associated with the user",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "user-groups",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "List of user groups associated with the user",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": false
+        },
+        {
+          "name": "content-groups",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "List of content groups associated with the user",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": false
+        },
+        {
+          "name": "account-groups",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "List of account groups associated with the user",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": false
+        }
+      ],
+      "id": "06e86bcd58744dc6bd1873e52003d401",
+      "name": "account",
+      "created": "2025-08-19T14:16:35.257Z",
+      "modified": "2025-08-26T18:18:43.132Z"
+    },
+    {
+      "nativeObjectType": "role",
+      "identityAttribute": "id",
+      "displayAttribute": "name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Coupa unique role identifier",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The role's name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description of the role",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "omnipotent",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": "Indicates if the role is an administrative role",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "created-at",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The role's initial creation timestamp",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "updated-at",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Timestamp for the last time the role received an update.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "system-role",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": "Indicates if the role is a system role",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "dcbfeee1afd343a9821de3111310524e",
+      "name": "role",
+      "created": "2025-08-19T14:16:35.257Z",
+      "modified": "2025-08-26T18:18:43.132Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "supportsDeltaAgg": "true",
+    "deltaAggregationEnabled": "false",
+    "tokenURL": "https://crawford-test.coupahost.com/oauth2/token",
+    "generatedOauthHash": "60f52d0eea95fc4a810fcaaa8bd21c4d249155253034eb0d8d0442238f159224",
+    "pageSize": "50",
+    "connectionType": "direct",
+    "connectorClass": "openconnector.connector.coupa.CoupaConnector",
+    "client_id": "3759b0592d22f88fe641c4c2513b0804",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "grant_type": "CLIENT_CREDENTIALS",
+    "hasFullAggregationCompleted": true,
+    "scope": "core.user.read, core.user.write, core.user_group.read, core.common.read",
+    "sourceConnected": true,
+    "lastRoleAggregationTS": "2025-08-26T18:23:00.620Z",
+    "lastAccountAggregationTS": "2025-11-30T05:11:24.163Z",
+    "deleteThresholdPercentage": 10,
+    "accountFilter": "type[blank]=true",
+    "baseURL": "https://crawford-test.coupahost.com",
+    "cloudCacheUpdate": 1764479515391,
+    "templateApplication": "Coupa",
+    "encrypted": "client_secret, oauth_token_info",
+    "healthy": true,
+    "cloudDisplayName": "Coupa",
+    "connectorName": "Coupa",
+    "userObjectMapping": {
+      "content-groups": "content-groups[*].name",
+      "manager": "manager.login",
+      "roles": "roles[*].id",
+      "user-groups": "user-groups[*].name",
+      "default-currency": "default-currency.code",
+      "account-groups": "account-groups[*].name",
+      "approval-groups": "approval-groups[*].name"
+    },
+    "since": "2025-08-22T13:31:31.337Z",
+    "status": "SOURCE_STATE_HEALTHY"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "email",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "19bcee78790747dfa0ea3706efb75030",
+    "name": "Coupa Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [
+    {
+      "name": "Create account",
+      "description": null,
+      "usageType": "CREATE",
+      "fields": [
+        {
+          "name": "login",
+          "transform": {
+            "type": "rule",
+            "attributes": {
+              "name": "Create Unique Account ID"
+            }
+          },
+          "attributes": {
+            "template": "$(firstname).$(lastname)$(uniqueCounter)",
+            "cloudMaxUniqueChecks": "50",
+            "cloudRequired": "true"
+          },
+          "isRequired": true,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "firstname",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "firstname"
+            }
+          },
+          "attributes": {},
+          "isRequired": true,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "middlename",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "middlename"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "lastname",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "lastname"
+            }
+          },
+          "attributes": {},
+          "isRequired": true,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "authentication-method",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "coupa_credentials"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "sso-identifier",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "email",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "email"
+            }
+          },
+          "attributes": {},
+          "isRequired": true,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "generate-password-and-notify",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "YES"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "active",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "true"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "boolean",
+          "isMultiValued": false
+        }
+      ]
+    }
+  ],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

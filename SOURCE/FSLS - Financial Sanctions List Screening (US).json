@@ -1,0 +1,271 @@
+{
+  "id": "8e8a021a2f0d4058abc2279011467728",
+  "name": "FSLS - Financial Sanctions List Screening (US)",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "FSLS - Financial Sanctions List Screening (US)",
+  "deleteThreshold": 100,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "DISCOVER_SCHEMA",
+    "UNLOCK",
+    "DIRECT_PERMISSIONS",
+    "ENABLE",
+    "PROVISIONING",
+    "SYNC_PROVISIONING",
+    "GROUP_PROVISIONING"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "UserId",
+      "displayAttribute": "Email",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "UserId",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FirstName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LastName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Email",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "IsActive",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "CreatedDate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LastLoginDate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "RoleId",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "1ce0ea63a84345caaa350b37e1284e95",
+            "name": "group"
+          },
+          "description": "RoleId",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "RoleName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "PageNames",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "2bda4ef2826747acaeb09b106b2dd9ec",
+      "name": "account",
+      "created": "2025-08-06T14:25:31.969Z",
+      "modified": "2025-08-13T17:21:58.990Z"
+    },
+    {
+      "nativeObjectType": "group",
+      "identityAttribute": "RoleId",
+      "displayAttribute": "RoleName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [
+        "PROVISIONING"
+      ],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "RoleId",
+          "nativeName": null,
+          "type": "INT",
+          "schema": null,
+          "description": "RoleId",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "RoleName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "RoleName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "RoleDescription",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "RoleDescription",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "1ce0ea63a84345caaa350b37e1284e95",
+      "name": "group",
+      "created": "2025-08-06T14:25:31.969Z",
+      "modified": "2025-08-13T17:21:58.990Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "supportsDeltaAgg": "true",
+    "deltaAggregationEnabled": false,
+    "useStoredProcedureTestConn": false,
+    "group.mergeRows": false,
+    "isAdvance": "false",
+    "mergeRows": false,
+    "group.url": "jdbc:sqlserver://dkatldbsvshrd04.CDORAV00.crawco.local;databasename=FSLS_DEV_V2;;Encrypt=False;TrustServerCertificate=True;",
+    "useStoredProcedureGetObject": false,
+    "checkDeletedDisabled": false,
+    "connectionType": "direct",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "jdbcExceptionBucketing": true,
+    "hasFullAggregationCompleted": true,
+    "useExecuteQuery": false,
+    "connector_files": "mssql-jdbc-12.10.1.jre11.jar,mssql-jdbc-12.10.1.jre11-sources.jar",
+    "group.useExecuteQuery": false,
+    "useQuery": false,
+    "jdbcProvisionRule": "FSLS JDBC Provision",
+    "testConnSQL": "SELECT @@VERSION AS SQLServerVersion;",
+    "sourceConnected": true,
+    "connectorFileUploadHistory": {
+      "mssql-jdbc-12.10.1.jre11-sources.jar": "2025-08-06T14:25:46.452295Z"
+    },
+    "isPermissionEnabled": false,
+    "group.user": "sailpoint_dev_v2",
+    "deleteThresholdPercentage": 100,
+    "group.useStoredProcedureSqlStmt": false,
+    "url": "jdbc:sqlserver://dkatldbsvshrd04.CDORAV00.crawco.local;databasename=FSLS_DEV_V2;;Encrypt=False;TrustServerCertificate=True;",
+    "labels": [
+      "standard"
+    ],
+    "SQL": "SELECT \n  u.UserId,\n  u.FirstName,\n  u.LastName,\n  u.Email,\n  u.IsActive,\n  u.CreatedDate,\n  u.LastLoginDate,\n  r.RoleId,\n  r.RoleName,\n  STRING_AGG(pp.PageName, ', ') AS PageNames\nFROM dbo.[User] u\nJOIN Roles r ON u.RoleId = r.RoleId\nJOIN RolePagepermission rpp ON rpp.RoleId = r.RoleId\nJOIN PagePermission pp ON pp.PageId = rpp.PageId\nGROUP BY \n  u.UserId, u.FirstName, u.LastName, u.Email, u.IsActive, u.CreatedDate, u.LastLoginDate, r.RoleId, r.RoleName\nORDER BY u.UserId;",
+    "group.useStoredProcedureGetObject": false,
+    "cloudCacheUpdate": 1764047037055,
+    "templateApplication": "JDBC Template",
+    "group.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "group.isPermissionEnabled": false,
+    "encrypted": "password,group.password",
+    "group.SQL": "Select * from dbo.Roles",
+    "healthy": true,
+    "cloudDisplayName": "FSLS - Financial Sanctions List Screening (US)",
+    "connectorName": "JDBC",
+    "getObjectSQL": "SELECT * FROM dbo.[User] WHERE UserId = '$(identity)'",
+    "useStoredProcedureSqlStmt": false,
+    "buildMapRule": "FSLS_JDBC_BuildMap",
+    "user": "sailpoint_dev_v2",
+    "status": "SOURCE_STATE_HEALTHY",
+    "since": "2025-09-26T07:13:32.849Z"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "Email",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "2a879ca5ba5848c6814babaeb953d747",
+    "name": "Financial Sanctions List Screening (FSLS) [source] Account Correlation"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

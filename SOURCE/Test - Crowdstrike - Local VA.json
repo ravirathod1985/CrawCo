@@ -1,0 +1,255 @@
+{
+  "id": "72036a4bff4d4d8db94c172c59c58a49",
+  "name": "Test - Crowdstrike - Local VA",
+  "type": "Web Services",
+  "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+  "connectorScriptName": "web-services-angularsc",
+  "description": "Crowdstrike User and Role management",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "bd0530091e384b3c92fda26bf9b48a22",
+    "name": "Blain.Checkley"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "ENABLE",
+    "AUTHENTICATE",
+    "PROVISIONING",
+    "UNLOCK",
+    "PASSWORD"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "user",
+      "identityAttribute": "UUID",
+      "displayAttribute": "UUID",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "UUID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The Crowdstrike UUID field for the user record",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "44641ce4f1ce4bbc8954bf9cee422588",
+      "name": "account",
+      "created": "2025-06-26T16:15:31.644Z",
+      "modified": "2025-06-26T16:29:35.362Z"
+    },
+    {
+      "nativeObjectType": "group",
+      "identityAttribute": "",
+      "displayAttribute": "",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [],
+      "id": "0e60d452d85449cda51acc438298c67f",
+      "name": "group",
+      "created": "2025-06-26T16:15:31.644Z",
+      "modified": "2025-06-26T16:29:35.362Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "supportsDeltaAgg": "true",
+    "deltaAggregationEnabled": false,
+    "throwProvBeforeRuleException": true,
+    "connectionType": "direct",
+    "enableHasMore": false,
+    "client_id": "923675b6068c414a8a1281047a82a0e9",
+    "isGetObjectRequiredForPTA": true,
+    "timeoutInSeconds": "60",
+    "genericWebServiceBaseUrl": "https://api.crowdstrike.com",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "connectionParameters": [
+      {
+        "contextUrl": "/user-management/queries/users/v1",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "1",
+        "uniqueNameForEndPoint": "Test Connection",
+        "curlEnabled": false,
+        "operationType": "Test Connection",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ]
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "2",
+        "uniqueNameForEndPoint": "Get User UUIDs",
+        "rootPath": "$",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "paginationSteps": "TERMINATE_IF $nextOffset$ >= $response.meta.pagination.total$ - 1\n$nextOffset$ = $nextOffset$+1\n$endpoint.fullUrl$ = $application.baseUrl$ + \"/user-management/queries/users/v1?limit=1&offset=\" + $nextOffset$",
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "UUID": "resources[0]"
+        },
+        "contextUrl": "/user-management/queries/users/v1?limit=1",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "Content-Type": "application/json"
+        },
+        "operationType": "Account Aggregation"
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "3",
+        "uniqueNameForEndPoint": "Get User Details by UUID",
+        "rootPath": "$.resources[*]",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "Status": "$.status",
+          "UID": "$.uid",
+          "First Name": "$.first_name",
+          "Last Name": "$.last_name",
+          "UUID": "$.uuid"
+        },
+        "contextUrl": "/users/entities/users/v1?ids=$response.UUID$",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "Content-Type": "application/json"
+        },
+        "operationType": "Account Aggregation",
+        "parentEndpointName": "Get User UUIDs"
+      }
+    ],
+    "grant_type": "CLIENT_CREDENTIALS",
+    "partitionAggregationEnabled": false,
+    "hasFullAggregationCompleted": true,
+    "token_url": "https://api.crowdstrike.com/oauth2/token",
+    "possibleHttpErrors": {},
+    "sourceConnected": true,
+    "throwProvAfterRuleException": true,
+    "lastAggregationDate_account": "2025-10-01T18:24:29Z",
+    "deleteThresholdPercentage": 10,
+    "fixedPlanMultivaluedAttribute": "true",
+    "version": "v2",
+    "labels": [
+      "standard"
+    ],
+    "cloudCacheUpdate": 1764047036646,
+    "templateApplication": "Web Services Template",
+    "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info",
+    "authenticationMethod": "OAuth2Login",
+    "httpCookieSpecsStandard": "true",
+    "healthy": true,
+    "cloudDisplayName": "Test - Crowdstrike - Local VA",
+    "connectorName": "Web Services",
+    "since": "2025-10-21T05:12:03.772Z",
+    "status": "SOURCE_STATE_HEALTHY"
+  },
+  "crossTenantConnectorAttributes": {
+    "connectionParameters": [
+      {
+        "contextUrl": "/user-management/queries/users/v1",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "1",
+        "uniqueNameForEndPoint": "Test Connection",
+        "curlEnabled": false,
+        "operationType": "Test Connection",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ]
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "2",
+        "uniqueNameForEndPoint": "Get User UUIDs",
+        "rootPath": "$",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "paginationSteps": "TERMINATE_IF $nextOffset$ >= $response.meta.pagination.total$ - 1\n$nextOffset$ = $nextOffset$+1\n$endpoint.fullUrl$ = $application.baseUrl$ + \"/user-management/queries/users/v1?limit=1&offset=\" + $nextOffset$",
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "UUID": "resources[0]"
+        },
+        "contextUrl": "/user-management/queries/users/v1?limit=1",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "Content-Type": "application/json"
+        },
+        "operationType": "Account Aggregation"
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "3",
+        "uniqueNameForEndPoint": "Get User Details by UUID",
+        "rootPath": "$.resources[*]",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "Status": "$.status",
+          "UID": "$.uid",
+          "First Name": "$.first_name",
+          "Last Name": "$.last_name",
+          "UUID": "$.uuid"
+        },
+        "contextUrl": "/users/entities/users/v1?ids=$response.UUID$",
+        "pagingSize": 50,
+        "curlEnabled": false,
+        "header": {
+          "Content-Type": "application/json"
+        },
+        "operationType": "Account Aggregation",
+        "parentEndpointName": "Get User UUIDs"
+      }
+    ]
+  },
+  "correlationConfigDetails": {
+    "attributeAssignments": null,
+    "id": null,
+    "name": null
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

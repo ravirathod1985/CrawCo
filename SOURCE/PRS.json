@@ -1,0 +1,300 @@
+{
+  "id": "a227c9de8abd484aa93d37da7c5744ef",
+  "name": "PRS",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "PRS System",
+  "deleteThreshold": 90,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "bd0530091e384b3c92fda26bf9b48a22",
+    "name": "Blain.Checkley"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "DISCOVER_SCHEMA",
+    "UNLOCK",
+    "DIRECT_PERMISSIONS",
+    "PROVISIONING",
+    "ENABLE",
+    "SYNC_PROVISIONING",
+    "GROUP_PROVISIONING"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "User_id",
+      "displayAttribute": "Email",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "User_id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FirstName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LastName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "MiddleInitial",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Employee_id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Email",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DropDownRole_id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "702bfc0fba6f470998bde069aae4db97",
+            "name": "group"
+          },
+          "description": "Role assignment value to map to entitlements.",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "IsActive_ind",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Actor",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Active",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "886375b49aad46499357dcfbc2230478",
+      "name": "account",
+      "created": "2025-06-19T17:10:08.161Z",
+      "modified": "2025-08-06T11:57:16.646Z"
+    },
+    {
+      "nativeObjectType": "group",
+      "identityAttribute": "entitlement_id",
+      "displayAttribute": "entitlement_name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [
+        "PROVISIONING"
+      ],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "entitlement_name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The entitlement name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "entitlement_id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The entitlement id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "702bfc0fba6f470998bde069aae4db97",
+      "name": "group",
+      "created": "2025-06-19T17:10:08.161Z",
+      "modified": "2025-06-24T16:23:15.942Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "deltaAggregationEnabled": false,
+    "isAdvance": "false",
+    "undefined.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "group.url": "jdbc:sqlserver://10.1.17.131:1433;databasename=PRS_PROD",
+    "useStoredProcedureGetObject": false,
+    "checkDeletedDisabled": false,
+    "connectionType": "direct",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "undefined.SQL": "SELECT*,\nPRS_DropDownDetails.DetailsName As Actor,\t\t  \t  \nCase when PRS_User.IsActive_ind = 1 then 'Yes' END AS Active \nFROM dbo.PRS_User \nINNER JOIN PRS_DropDownDetails ON PRS_User.DropDownRole_id = PRS_DropDownDetails.DropDowndetails_ID \nWhere Email IS NOT NULL order by User_id",
+    "driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "undefined.useStoredProcedureTestConn": false,
+    "useExecuteQuery": false,
+    "group.useExecuteQuery": false,
+    "undefined.isPermissionEnabled": false,
+    "sourceConnected": true,
+    "connectorFileUploadHistory": {
+      "mssql-jdbc-12.10.1.jre11.jar": "2025-06-19T17:10:30.182378Z",
+      "mssql-jdbc-12.10.1.jre11-sources.jar": "2025-06-19T17:10:29.877850Z"
+    },
+    "isPermissionEnabled": false,
+    "labels": [
+      "standard"
+    ],
+    "undefined.useStoredProcedureGetObject": false,
+    "SQL": "SELECT\nUser_id,\nUserName,\nFirstName,\nLastName,\nMiddleInitial,\nLastName,\nEmployee_id,\nEmail,\nDropDownRole_id,\nPRS_User.IsActive_ind,\nPRS_DropDownDetails.DetailsName As Actor,\t\t  \t  \nCase when PRS_User.IsActive_ind = 1 then 'Yes' END AS Active \nFROM dbo.PRS_User \nINNER JOIN PRS_DropDownDetails ON PRS_User.DropDownRole_id = PRS_DropDownDetails.DropDowndetails_ID \nORDER BY User_id",
+    "group.useStoredProcedureGetObject": false,
+    "undefined.user": "sa_IscPrsDb",
+    "cloudCacheUpdate": 1764047037462,
+    "undefined.testConnSQL": "select 1 from dbo.PRS_User",
+    "group.SQL": "SELECT \n    e.DropDowndetails_id as entitlement_id,\n    e.DropDownAdminData_id,\n    e.DetailsName as entitlement_name\nFROM \n    PRS_DropDownDetails e\nWHERE\n    e.DropDownAdminData_id = 17\nORDER BY \n    e.DropDownDetails_id",
+    "undefined.useExecuteQuery": false,
+    "undefined.deltaAggregationEnabled": false,
+    "connectorName": "JDBC",
+    "buildMapRule": "PRS_JDBC_BuildMap",
+    "status": "SOURCE_STATE_HEALTHY",
+    "since": "2025-09-24T04:04:19.592Z",
+    "supportsDeltaAgg": "true",
+    "useStoredProcedureTestConn": false,
+    "group.mergeRows": false,
+    "mergeRows": false,
+    "undefined.additionalConnProperties": [
+      "TrustServerCertificate=True",
+      "Encrypt=True"
+    ],
+    "undefined.url": "jdbc:sqlserver://10.1.17.131:1433;databasename=PRS_PROD",
+    "jdbcExceptionBucketing": true,
+    "hasFullAggregationCompleted": true,
+    "additionalConnProperties": [
+      "TrustServerCertificate=True",
+      "Encrypt=True"
+    ],
+    "connector_files": "mssql-jdbc-12.10.1.jre11.jar,mssql-jdbc-12.10.1.jre11-sources.jar",
+    "useQuery": false,
+    "testConnSQL": "select 1 from dbo.PRS_User",
+    "group.user": "sa_IscPrsDb",
+    "undefined.useQuery": false,
+    "deleteThresholdPercentage": 90,
+    "group.useStoredProcedureSqlStmt": false,
+    "url": "jdbc:sqlserver://10.1.17.131:1433;databasename=PRS_PROD",
+    "templateApplication": "JDBC Template",
+    "group.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "group.isPermissionEnabled": false,
+    "encrypted": "password,group.password,undefined.password",
+    "healthy": true,
+    "cloudDisplayName": "PRS",
+    "useStoredProcedureSqlStmt": false,
+    "user": "sa_IscPrsDb",
+    "undefined.useStoredProcedureSqlStmt": false
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "Employee_id",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      },
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "Email",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 2
+      }
+    ],
+    "id": "77447018b5bd4a9299c1d8c00acde296",
+    "name": "PRS Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

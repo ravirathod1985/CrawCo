@@ -1,0 +1,183 @@
+{
+  "id": "97fbeaf123894ba1a389f00c7bb811eb",
+  "name": "CrowdStrike SaaS",
+  "type": "dfbdcd84-3d5d-4934-af34-7e15654e009c",
+  "connectorClass": "",
+  "connectorScriptName": "crowdstrike-saas",
+  "description": "CrowdStrike SaaS",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [],
+  "schemas": [
+    {
+      "nativeObjectType": "User",
+      "identityAttribute": "entityId",
+      "displayAttribute": "primaryDisplayName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "primaryDisplayName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Display name of the account",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "secondaryDisplayName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The entity type, which also determines the specialized Entity subclass",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "entityId",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Unique identifier of the account",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "isHuman",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": "True for only entities classified as humans.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "isProgrammatic",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": "Programmatic User Account Role.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "email",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Email Address of the account.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "riskScore",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Attacked Risk Score of the account.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "riskScoreSeverity",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The entity's risk score severity, derived from their riskScore value.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "riskFactors",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "A list of risk factors contributing to the overall risk of this entity.",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "70eb72ca0ff04e17b22eaee06c2cb747",
+      "name": "account",
+      "created": "2025-08-22T16:28:35.432Z",
+      "modified": "2025-08-22T16:28:35.432Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 90,
+    "spConnectorSupportsCustomSchemas": true,
+    "idnProxyType": "sp-connect",
+    "spConnectorSpecId": "dfbdcd84-3d5d-4934-af34-7e15654e009c",
+    "deleteThresholdPercentage": 10,
+    "connectionType": "direct",
+    "spConnectorInstanceId": "cc27f8ca-65da-44e7-b960-625b0a4178d5",
+    "cloudCacheUpdate": 1755880115791,
+    "templateApplication": "CrowdStrike",
+    "healthy": false,
+    "cloudDisplayName": "CrowdStrike SaaS",
+    "connectorName": "CrowdStrike",
+    "since": "2025-08-22T17:02:14.324Z",
+    "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "uid",
+        "operation": "EQ",
+        "value": "entityId",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      },
+      {
+        "complex": false,
+        "property": "displayName",
+        "operation": "EQ",
+        "value": "primaryDisplayName",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 2
+      },
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "email",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 3
+      }
+    ],
+    "id": "18f021bb14314304893a69cdfbc45757",
+    "name": "CrowdStrike SaaS Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

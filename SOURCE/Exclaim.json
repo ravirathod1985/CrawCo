@@ -1,0 +1,478 @@
+{
+  "id": "5ad697a2615e4b7e863cafe5e96d1b13",
+  "name": "Exclaim",
+  "type": "DelimitedFile",
+  "connectorClass": "sailpoint.connector.delimitedfile.DelimitedFileConnector",
+  "connectorScriptName": "delimited-file-angularsc",
+  "description": "Exclaim",
+  "deleteThreshold": 10,
+  "provisionAsCsv": true,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "DISCOVER_SCHEMA",
+    "DIRECT_PERMISSIONS",
+    "NO_RANDOM_ACCESS"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "User",
+      "identityAttribute": "loginid",
+      "displayAttribute": "name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "personid",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "employeeid",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "loginid",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "role",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "ee0d125a83c84cada4a4e0e740164cdd",
+            "name": "Role"
+          },
+          "description": "role",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "department",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "44ee749442ad4664aaadb57633ca1364",
+            "name": "Department"
+          },
+          "description": "department",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "organization",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "supervisorname",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "authtype",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "tfasubscribed",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "expiredate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "surrogateaccess",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "4e7131eea27149208f775d3b0f7b86e1",
+            "name": "Surrogate Access"
+          },
+          "description": "surrogateaccess",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "personpermissiongrants",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "45e02bf95a7f44768292ac223188f693",
+            "name": "Person Permission Grants"
+          },
+          "description": "personpermissiongrants",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "lastlogin",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "dayssince",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "ee68f74bcba546b6b5c2341ff182f922",
+      "name": "account",
+      "created": "2025-09-02T19:29:08.843Z",
+      "modified": "2025-09-05T17:10:16.330Z"
+    },
+    {
+      "nativeObjectType": "Role",
+      "identityAttribute": "Role",
+      "displayAttribute": "Role",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "Role",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Role",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "ee0d125a83c84cada4a4e0e740164cdd",
+      "name": "Role",
+      "created": "2025-09-02T19:32:41.476Z",
+      "modified": "2025-09-02T19:33:07.338Z"
+    },
+    {
+      "nativeObjectType": "Department",
+      "identityAttribute": "Department",
+      "displayAttribute": "Department",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "Department",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Department",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "44ee749442ad4664aaadb57633ca1364",
+      "name": "Department",
+      "created": "2025-09-02T19:33:21.107Z",
+      "modified": "2025-09-02T19:33:38.986Z"
+    },
+    {
+      "nativeObjectType": "Surrogate Access",
+      "identityAttribute": "surrogateaccess",
+      "displayAttribute": "surrogateaccess",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "surrogateaccess",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Surrogate Access",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "4e7131eea27149208f775d3b0f7b86e1",
+      "name": "Surrogate Access",
+      "created": "2025-09-02T19:34:08.691Z",
+      "modified": "2025-09-02T19:34:28.432Z"
+    },
+    {
+      "nativeObjectType": "Person Permission Grants",
+      "identityAttribute": "personpermissiongrants",
+      "displayAttribute": "personpermissiongrants",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "personpermissiongrants",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Person Permission Grants",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "45e02bf95a7f44768292ac223188f693",
+      "name": "Person Permission Grants",
+      "created": "2025-09-02T19:35:14.049Z",
+      "modified": "2025-09-02T19:35:32.049Z"
+    }
+  ],
+  "connectorAttributes": {
+    "Person Permission Grants.mergeRows": false,
+    "mergeColumns": [
+      "surrogateaccess",
+      "personpermissiongrants"
+    ],
+    "group.mergeRows": true,
+    "group.delimiter": ",",
+    "mergeRows": true,
+    "group.filetransport": "local",
+    "partitionMode": "disabled",
+    "connectionType": "file",
+    "group.host": "local",
+    "group.indexColumn": "id",
+    "Surrogate Access.columnNames": [
+      "surrogateaccess"
+    ],
+    "delimiter": ",",
+    "Surrogate Access.mergeRows": false,
+    "host": "local",
+    "indexColumns": [
+      "loginid"
+    ],
+    "commentCharacter": "#",
+    "Department.columnNames": [
+      "Department"
+    ],
+    "group.mergeColumns": [
+      "entitlements",
+      "groups",
+      "permissions"
+    ],
+    "hasHeader": true,
+    "filterEmptyRecords": true,
+    "filetransport": "local",
+    "group.filterEmptyRecords": true,
+    "deleteThresholdPercentage": 10,
+    "group.hasHeader": true,
+    "group.partitionMode": "disabled",
+    "Role.columnNames": [
+      "Role"
+    ],
+    "Role.mergeRows": false,
+    "labels": [
+      "standard"
+    ],
+    "Person Permission Grants.columnNames": [
+      "personpermissiongrants"
+    ],
+    "group.columnNames": [
+      "id",
+      "name",
+      "displayName",
+      "created",
+      "description",
+      "modified",
+      "entitlements",
+      "groups",
+      "permissions"
+    ],
+    "templateApplication": "DelimitedFile Template",
+    "indexColumn": "loginid",
+    "healthy": true,
+    "cloudDisplayName": "Exclaim",
+    "connectorName": "Delimited File",
+    "buildMapRule": "Exclaim BuildMap Rule",
+    "Department.mergeRows": false,
+    "since": "2025-09-02T20:21:31.730Z",
+    "status": "SOURCE_STATE_HEALTHY",
+    "cloudOriginalApplicationType": "Delimited File"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "employeeid",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "e05b7ab75cb64322a3941c36a740be7d",
+    "name": "Exclaim [source-1756841348786] Account Correlation"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [
+    {
+      "name": "Create Policy",
+      "description": "Create Policy",
+      "usageType": "CREATE",
+      "fields": [
+        {
+          "name": "id",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "name",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "givenName",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "familyName",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "e-mail",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "location",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "manager",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "groups",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        }
+      ]
+    }
+  ],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

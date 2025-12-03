@@ -1,0 +1,203 @@
+{
+  "id": "9de5144be7724772ae32b1b3633121fe",
+  "name": "Deltek Replicon",
+  "type": "6aafb222-ec2a-4361-abbc-e2ef30a8731e",
+  "connectorClass": "",
+  "connectorScriptName": "6aafb222-ec2a-4361-abbc-e2ef30a8731e",
+  "description": "Replicon Custom Connector",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c9180877f891589017f9e47d0ed2f8b",
+    "name": "Rich.Sabel"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [],
+  "schemas": [
+    {
+      "nativeObjectType": "User",
+      "identityAttribute": "id",
+      "displayAttribute": "emailAddress",
+      "hierarchyAttribute": null,
+      "includePermissions": true,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "UserUri",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "firstName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Account first name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "lastName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Account last name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "emailAddress",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Account email",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "loginName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Account login name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "isEnabled",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": "Account is enabled",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "supervisor",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Account supervisor",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "employeeId",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Account employee Id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "entitlements",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "b4aa496e48b84ddc9b251b6558de1eec",
+            "name": "group"
+          },
+          "description": "Account entitlements",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        }
+      ],
+      "id": "4ba01c5632f4433f9838ce1220416882",
+      "name": "account",
+      "created": "2025-11-11T17:48:28.021Z",
+      "modified": "2025-11-11T19:45:07.062Z"
+    },
+    {
+      "nativeObjectType": "Group",
+      "identityAttribute": "uri",
+      "displayAttribute": "name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "uri",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Unique ID of the group",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Name of the group",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "displayText",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Display Text of the group",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "b4aa496e48b84ddc9b251b6558de1eec",
+      "name": "group",
+      "created": "2025-11-11T17:48:28.021Z",
+      "modified": "2025-11-11T17:48:28.021Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "idnProxyType": "sp-connect",
+    "spConnectorSpecId": "6aafb222-ec2a-4361-abbc-e2ef30a8731e",
+    "deleteThresholdPercentage": 10,
+    "checkDeletedDisabled": true,
+    "connectionType": "direct",
+    "token": "lZ40OC4aLUSTFWRxo1+b3wEAZWJhNTg4ZWFjNDVjNDgzYThkNjdiNTQ2Y2YxNWE1NGI",
+    "spConnectorInstanceId": "d81e2e82-674b-4c14-bcba-4b93d7a223a5",
+    "baseUrl": "https://na6.replicon.com",
+    "cloudCacheUpdate": 1762938298680,
+    "templateApplication": "replicon (tag: latest)",
+    "healthy": false,
+    "cloudDisplayName": "Deltek Replicon",
+    "connectorName": "replicon (tag: latest)",
+    "since": "2025-11-12T09:04:58.660Z",
+    "status": "SOURCE_STATE_FAILURE_SOURCE"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": null,
+    "id": null,
+    "name": null
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

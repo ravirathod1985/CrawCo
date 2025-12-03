@@ -1,0 +1,409 @@
+{
+  "id": "2ed2f4eacc82403681fa071b86a6ea8b",
+  "name": "Auth0",
+  "type": "Web Services",
+  "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+  "connectorScriptName": "web-services-angularsc",
+  "description": "Auth0",
+  "deleteThreshold": 100,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c9180877f891589017f9e47d0ed2f8b",
+    "name": "Rich.Sabel"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "AUTHENTICATE",
+    "UNLOCK",
+    "ENABLE",
+    "PROVISIONING",
+    "PASSWORD"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "user",
+      "identityAttribute": "email",
+      "displayAttribute": "email",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "nickname",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "nickname",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "authenticationmethod",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "authenticationmethod",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "email",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "email",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "windowsaccountname",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "windowsaccountname",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "created_at",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "created_at",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "employeeid",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "employeeid",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "displayname",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "displayname",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "groups",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "groups",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": false
+        },
+        {
+          "name": "objectidentifier",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "objectidentifier",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "user_id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "user_id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "given_name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "given_name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "tenantid",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "tenantid",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "family_name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "family_name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "last_login",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "last_login",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "last_ip",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "last_ip",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "logins_count",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "logins_count",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "88f630cebe314bef9c481aa29600e11e",
+      "name": "account",
+      "created": "2024-10-21T12:42:45.776Z",
+      "modified": "2024-10-24T19:38:30.601Z"
+    },
+    {
+      "nativeObjectType": "group",
+      "identityAttribute": "",
+      "displayAttribute": "",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [],
+      "id": "b49d7181d5ba447e9d73424fd2a1787b",
+      "name": "group",
+      "created": "2024-10-21T12:42:45.776Z",
+      "modified": "2024-10-21T12:42:45.776Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "supportsDeltaAgg": "true",
+    "deltaAggregationEnabled": false,
+    "throwProvBeforeRuleException": true,
+    "checkDeletedDisabled": false,
+    "connectionType": "direct",
+    "enableHasMore": false,
+    "client_id": "hM5vSxLerIqOqolU1tHLU5aHjDcFLYQt",
+    "isGetObjectRequiredForPTA": true,
+    "timeoutInSeconds": "60",
+    "genericWebServiceBaseUrl": "https://crawford-stage.auth0.com/api/v2",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "connectionParameters": [
+      {
+        "contextUrl": "/users?page=1&per_page=1",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "1",
+        "uniqueNameForEndPoint": "Test Connection",
+        "curlEnabled": false,
+        "operationType": "Test Connection",
+        "body": {
+          "bodyFormat": "raw"
+        }
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "2",
+        "uniqueNameForEndPoint": "Account Aggregation",
+        "rootPath": "$",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "paginationSteps": "$per_page$ = 100\n\nTERMINATE_IF $NO_RECORDS$\n$page$ = $page$ + 1\n$endpoint.fullUrl$ = $application.baseUrl$ + \"/users\" + \"?per_page\" + $per_page$ + \"&page=\" + $page$",
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "last_ip": "last_ip",
+          "last_login": "last_login",
+          "created_at": "created_at",
+          "groups": "groups",
+          "objectidentifier": "objectidentifier",
+          "given_name": "given_name",
+          "employeeid": "employeeid",
+          "logins_count": "logins_count",
+          "user_id": "user_id",
+          "displayname": "displayname",
+          "name": "name",
+          "nickname": "nickname",
+          "tenantid": "tenantid",
+          "family_name": "family_name",
+          "authenticationmethod": "authenticationmethod",
+          "email": "email",
+          "windowsaccountname": "windowsaccountname"
+        },
+        "contextUrl": "/users?per_page=100&page=0",
+        "pagingSize": 100,
+        "curlEnabled": false,
+        "header": {
+          "Accept": "application/json"
+        },
+        "operationType": "Account Aggregation"
+      }
+    ],
+    "oauth_request_parameters": {
+      "audience": "https://crawford-stage.auth0.com/api/v2/"
+    },
+    "grant_type": "CLIENT_CREDENTIALS",
+    "partitionAggregationEnabled": false,
+    "token_url": "https://crawford-stage.auth0.com/oauth/token",
+    "possibleHttpErrors": {},
+    "sourceConnected": true,
+    "throwProvAfterRuleException": true,
+    "lastAggregationDate_account": "2024-10-29T17:22:59Z",
+    "deleteThresholdPercentage": 100,
+    "fixedPlanMultivaluedAttribute": "true",
+    "version": "v2",
+    "labels": [
+      "standard"
+    ],
+    "cloudCacheUpdate": 1764047035793,
+    "templateApplication": "Web Services Template",
+    "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info",
+    "authenticationMethod": "OAuth2Login",
+    "httpCookieSpecsStandard": "true",
+    "healthy": true,
+    "cloudDisplayName": "Auth0",
+    "connectorName": "Web Services",
+    "since": "2025-08-14T10:08:41.200Z",
+    "status": "SOURCE_STATE_HEALTHY"
+  },
+  "crossTenantConnectorAttributes": {
+    "connectionParameters": [
+      {
+        "contextUrl": "/users?page=1&per_page=1",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "sequenceNumberForEndpoint": "1",
+        "uniqueNameForEndPoint": "Test Connection",
+        "curlEnabled": false,
+        "operationType": "Test Connection",
+        "body": {
+          "bodyFormat": "raw"
+        }
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "sequenceNumberForEndpoint": "2",
+        "uniqueNameForEndPoint": "Account Aggregation",
+        "rootPath": "$",
+        "body": {
+          "bodyFormat": "raw"
+        },
+        "paginationSteps": "$per_page$ = 100\n\nTERMINATE_IF $NO_RECORDS$\n$page$ = $page$ + 1\n$endpoint.fullUrl$ = $application.baseUrl$ + \"/users\" + \"?per_page\" + $per_page$ + \"&page=\" + $page$",
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "last_ip": "last_ip",
+          "last_login": "last_login",
+          "created_at": "created_at",
+          "groups": "groups",
+          "objectidentifier": "objectidentifier",
+          "given_name": "given_name",
+          "employeeid": "employeeid",
+          "logins_count": "logins_count",
+          "user_id": "user_id",
+          "displayname": "displayname",
+          "name": "name",
+          "nickname": "nickname",
+          "tenantid": "tenantid",
+          "family_name": "family_name",
+          "authenticationmethod": "authenticationmethod",
+          "email": "email",
+          "windowsaccountname": "windowsaccountname"
+        },
+        "contextUrl": "/users?per_page=100&page=0",
+        "pagingSize": 100,
+        "curlEnabled": false,
+        "header": {
+          "Accept": "application/json"
+        },
+        "operationType": "Account Aggregation"
+      }
+    ]
+  },
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "employeeid",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      },
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "email",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 2
+      }
+    ],
+    "id": "576133e69e13436799c7f01ff4fcec9d",
+    "name": "Auth0 Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

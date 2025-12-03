@@ -1,0 +1,215 @@
+{
+  "id": "059e4782857d42f484a4076e678fa1d8",
+  "name": "Dmitri Application Permissions",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "This source is so the Dmitri application permissions can be certified.",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c9180877f891589017f9e47d0ed2f8b",
+    "name": "Rich.Sabel"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "DISCOVER_SCHEMA",
+    "UNLOCK",
+    "DIRECT_PERMISSIONS",
+    "ENABLE",
+    "PROVISIONING",
+    "SYNC_PROVISIONING",
+    "GROUP_PROVISIONING"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "USER_NAME",
+      "displayAttribute": "USER_DESCRIP",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "USER_NAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "USER_DESCRIP",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ACCOUNT_STATUS",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "SETTING_NAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "9af818c704ce4b0889dda7c514c0dfe5",
+            "name": "SETTING_NAME"
+          },
+          "description": "SETTING_NAME",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "DESCRIPTION",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "82084299a38940478835f2ae06220b4c",
+      "name": "account",
+      "created": "2025-02-17T20:04:07.838Z",
+      "modified": "2025-02-20T04:10:25.353Z"
+    },
+    {
+      "nativeObjectType": "SETTING_NAME",
+      "identityAttribute": "SETTING_NAME",
+      "displayAttribute": "SETTING_NAME",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "SETTING_NAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "SETTING_NAME",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DESCRIPTION",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "DESCRIPTION",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "9af818c704ce4b0889dda7c514c0dfe5",
+      "name": "SETTING_NAME",
+      "created": "2025-02-17T20:09:09.627Z",
+      "modified": "2025-02-20T04:10:25.353Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "deltaAggregationEnabled": false,
+    "isAdvance": "false",
+    "useStoredProcedureGetObject": false,
+    "checkDeletedDisabled": false,
+    "connectionType": "direct",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "driverClass": "oracle.jdbc.driver.OracleDriver",
+    "SETTING_NAME.mergeRows": false,
+    "useExecuteQuery": false,
+    "indexColumns": [
+      "USER_NAME"
+    ],
+    "SETTING_NAME.isPermissionEnabled": false,
+    "SETTING_NAME.url": "jdbc:oracle:thin:@10.1.2.231:1561:prod",
+    "sourceConnected": true,
+    "connectorFileUploadHistory": {
+      "ojdbc8.jar": "2025-02-17T20:17:11.806716Z"
+    },
+    "isPermissionEnabled": false,
+    "disableOrderingCheck": true,
+    "SETTING_NAME.useStoredProcedureGetObject": false,
+    "labels": [
+      "standard"
+    ],
+    "SQL": "select u.user_name,u.user_descrip,d.account_status,acr.setting_name,a.description from rsg.rsg_users u, dba_users d,rsg_Global_0_2.web_user_acr_setting_values acr , rsg_global_0_2.acr_app_settings a\nwhere a.setting_name in (\n'Web_Element47','Web_Policy_Program','DiaryCanAdd','Web_Element47','Web_Can_Manage_Codes','Cognos_Web_Enable','Web_Admin_Pages','Web_Can_Import_Data','Web_Can_Import_History',\n'AllowAdvisen','Email_NavBar','Web_Admin_News','Web_Can_Manage_Permissions','Web_Can_Manage_PickLists','Rpt_Distrib_Def_Edit','Web_Can_Manage_RLS_Roles','Web_Can_Manage_User_Groups',\n'Web_Can_Manage_Users','Discoverer_Web_Enable','WEB_OSHA_ELECTRONIC_SUBMISSION','Dmitri Element 26 (RiskTech Web)','Reports_NavBar','Web Reports'\n) and acr.setting_value != '0' and u.client_cd = 'RSG'\nand u.user_name = d.username\nand u.user_name = acr.user_name\nand a.setting_id = acr.setting_id\nand a.client_cd = acr.client_cd\nand u.active_flag = 'Y'\nOrder By u.user_name ASC",
+    "cloudCacheUpdate": 1764047034994,
+    "connectorName": "JDBC",
+    "SETTING_NAME.driverClass": "oracle.jdbc.driver.OracleDriver",
+    "status": "SOURCE_STATE_HEALTHY",
+    "since": "2025-11-15T17:03:07.653Z",
+    "mergeColumns": [
+      "SETTING_NAME"
+    ],
+    "supportsDeltaAgg": "true",
+    "SETTING_NAME.useExecuteQuery": false,
+    "useStoredProcedureTestConn": false,
+    "group.mergeRows": false,
+    "mergeRows": true,
+    "SETTING_NAME.useStoredProcedureSqlStmt": false,
+    "jdbcExceptionBucketing": true,
+    "hasFullAggregationCompleted": true,
+    "connector_files": "ojdbc8.jar",
+    "useQuery": false,
+    "testConnSQL": "select 1 from dual",
+    "SETTING_NAME.SQL": "select u.user_name,u.user_descrip,d.account_status,acr.setting_name,a.description from rsg.rsg_users u, dba_users d,rsg_Global_0_2.web_user_acr_setting_values acr , rsg_global_0_2.acr_app_settings a\nwhere a.setting_name in (\n'Web_Element47','Web_Policy_Program','DiaryCanAdd','Web_Element47','Web_Can_Manage_Codes','Cognos_Web_Enable','Web_Admin_Pages','Web_Can_Import_Data','Web_Can_Import_History',\n'AllowAdvisen','Email_NavBar','Web_Admin_News','Web_Can_Manage_Permissions','Web_Can_Manage_PickLists','Rpt_Distrib_Def_Edit','Web_Can_Manage_RLS_Roles','Web_Can_Manage_User_Groups',\n'Web_Can_Manage_Users','Discoverer_Web_Enable','WEB_OSHA_ELECTRONIC_SUBMISSION','Dmitri Element 26 (RiskTech Web)','Reports_NavBar','Web Reports'\n) and acr.setting_value != '0' and u.client_cd = 'RSG'\nand u.user_name = d.username\nand u.user_name = acr.user_name\nand a.setting_id = acr.setting_id\nand a.client_cd = acr.client_cd\nand u.active_flag = 'Y'\nOrder By u.user_name ASC",
+    "SETTING_NAME.user": "SA_CAM",
+    "deleteThresholdPercentage": 10,
+    "url": "jdbc:oracle:thin:@10.1.2.231:1561:prod",
+    "templateApplication": "JDBC Template",
+    "group.isPermissionEnabled": false,
+    "encrypted": "password,group.password,SETTING_NAME.password",
+    "healthy": true,
+    "cloudDisplayName": "Dmitri Application Permissions",
+    "useStoredProcedureSqlStmt": false,
+    "user": "SA_CAM"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "correlatedAdUsername",
+        "operation": "EQ",
+        "value": "USER_NAME",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "b1cba3cdc9c948c6a157e95c10fd23bb",
+    "name": "Dmitri Application Permissions Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

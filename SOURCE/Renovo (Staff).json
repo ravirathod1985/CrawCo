@@ -1,0 +1,213 @@
+{
+  "id": "a4247f6a7cf24a3abf85cd78554fd0e6",
+  "name": "Renovo (Staff)",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "Renovo (Staff)",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "DISCOVER_SCHEMA",
+    "UNLOCK",
+    "DIRECT_PERMISSIONS",
+    "ENABLE",
+    "SYNC_PROVISIONING"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "UserName",
+      "displayAttribute": "UserName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "UserName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FirstName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LastName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EmployeeNumber",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Email",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Status",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "RoleName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Role Name",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": false
+        },
+        {
+          "name": "MenuName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "3965b83f6f6849709a0f0ec981a53c80",
+      "name": "account",
+      "created": "2023-10-26T18:43:20.929Z",
+      "modified": "2025-09-02T10:07:20.575Z"
+    },
+    {
+      "nativeObjectType": "Role Name",
+      "identityAttribute": "Role Name",
+      "displayAttribute": "Role Name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Role Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Role Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "03deac56cf6f4d6784fb51429430d657",
+      "name": "Role Name",
+      "created": "2023-11-07T06:00:16.289Z",
+      "modified": "2025-09-02T10:07:20.575Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "supportsDeltaAgg": "true",
+    "Role Name.mergeRows": false,
+    "deltaAggregationEnabled": false,
+    "useStoredProcedureTestConn": false,
+    "group.mergeRows": false,
+    "isAdvance": "false",
+    "mergeRows": false,
+    "Role Name.SQL": "Select UserName,FirstName,LastName,EmployeeNumber,Email,au.Status,RoleName,MenuName from applicationuser as AU\njoin userrolemapping as URM on au.applicationuserID = urm.applicationuserID\njoin [dbo].[Role] as R on urm.roleID = r.roleid\njoin menupermission as MP on mp.roleID = r.roleid\njoin menu as m on mp.menuID = m.menuID and m.IsActive = 1\njoin UserPermission up on m.MenuId = up.MenuId and up.ApplicationUserId = au.ApplicationUserID\nwhere au.status = 1  and up.isactive = 1 and mp.IsActive = 1\norder by",
+    "useStoredProcedureGetObject": false,
+    "Role Name.isPermissionEnabled": false,
+    "Role Name.useExecuteQuery": false,
+    "connectionType": "direct",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "jdbcExceptionBucketing": true,
+    "hasFullAggregationCompleted": true,
+    "useExecuteQuery": false,
+    "connector_files": "sqljdbc42.jar",
+    "useQuery": false,
+    "testConnSQL": "select 1",
+    "sourceConnected": true,
+    "isPermissionEnabled": false,
+    "Role Name.user": "sa_cam_cat",
+    "deleteThresholdPercentage": 10,
+    "Role Name.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "url": "jdbc:sqlserver://renovousdb01.c05mko8oywra.us-east-1.rds.amazonaws.com:1433;databasename=CATConnection_Prod",
+    "Role Name.useStoredProcedureSqlStmt": false,
+    "SQL": "Select UserName,FirstName,LastName,EmployeeNumber,Email,au.Status,RoleName,MenuName from applicationuser as AU\njoin userrolemapping as URM on au.applicationuserID = urm.applicationuserID\njoin [dbo].[Role] as R on urm.roleID = r.roleid\njoin menupermission as MP on mp.roleID = r.roleid\njoin menu as m on mp.menuID = m.menuID and m.IsActive = 1\njoin UserPermission up on m.MenuId = up.MenuId and up.ApplicationUserId = au.ApplicationUserID\nwhere au.status = 1  and up.isactive = 1 and mp.IsActive = 1\norder by\nUserName ASC,\nMenuName ASC",
+    "Role Name.useStoredProcedureGetObject": false,
+    "cloudCacheUpdate": 1764580198539,
+    "templateApplication": "JDBC Template",
+    "group.isPermissionEnabled": false,
+    "encrypted": "password,group.password,Role Name.password",
+    "Role Name.url": "jdbc:sqlserver://renovousdb01.c05mko8oywra.us-east-1.rds.amazonaws.com:1433;databasename=CATConnection_Prod",
+    "healthy": true,
+    "cloudDisplayName": "Renovo (Staff)",
+    "connectorName": "JDBC",
+    "useStoredProcedureSqlStmt": false,
+    "user": "sa_cam_cat",
+    "status": "SOURCE_STATE_HEALTHY",
+    "since": "2025-10-20T22:17:23.816Z"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "EmployeeNumber",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "b14d178bd78d4d1f88a71770921671d7",
+    "name": "Renovo (Staff) Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

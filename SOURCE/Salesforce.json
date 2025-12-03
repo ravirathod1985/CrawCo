@@ -1,0 +1,1283 @@
+{
+  "id": "abb10229da2d4569826a5703a78926f9",
+  "name": "Salesforce",
+  "type": "Salesforce",
+  "connectorClass": "sailpoint.connector.ForceConnector",
+  "connectorScriptName": "salesforce-angularsc",
+  "description": "Salesforce",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "SYNC_PROVISIONING",
+    "DIRECT_PERMISSIONS",
+    "PROVISIONING",
+    "PASSWORD",
+    "NO_GROUP_PERMISSIONS_PROVISIONING",
+    "ENABLE"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "User",
+      "identityAttribute": "Id",
+      "displayAttribute": "Username",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Alias",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "City",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "CommunityNickname",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "CompanyName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "CallCenterId",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Country",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Department",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Email",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Division",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EmployeeNumber",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Extension",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Street",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Fax",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "IsActive",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "IsFrozen",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": "Flag that indicates if the user is frozen in Salesforce.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Username",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FirstName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LastName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EmailEncodingKey",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserPermissionsMarketingUser",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserPermissionsOfflineUser",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserPermissionsSFContentUser",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Phone",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ProfileId",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "758844f4eeae486e8cac08c2375df2a3",
+            "name": "group"
+          },
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "ProfileName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "PublicGroups",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "c859e7e39cae45d8adeceafa8779dd49",
+            "name": "PublicGroups"
+          },
+          "description": null,
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "QueueNames",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Queues assigned to the user.",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": false
+        },
+        {
+          "name": "ReceivesAdminInfoEmails",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Role",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "f3ccdaf0eebc4fffb9fc74dfae721764",
+            "name": "Role"
+          },
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "UserType",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "This is user type of salesforce user i.e Standard, Partner, AutomatedProcess.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "State",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FederationIdentifier",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserPermissionsInteractionUser",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "TimeZoneSidKey",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LocaleSidKey",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LanguageLocaleKey",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LastLoginDate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Title",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ReceivesInfoEmails",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "PermissionSet",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "6db792368379471d96deacbdbeb8a376",
+            "name": "PermissionSet"
+          },
+          "description": null,
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "ManagerId",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "PermissionSetGroup",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "00e589902a344600b55efc27babee9cc",
+            "name": "PermissionSetGroup"
+          },
+          "description": null,
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "PermissionSetLicense",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "036aa48301a541cf96674dee1176e2f1",
+            "name": "PermissionSetLicense"
+          },
+          "description": null,
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "ManagedPackage",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "ee4db7e7895f445fa459aa71f8674e7d",
+            "name": "ManagedPackage"
+          },
+          "description": "Managed Package assigned to a user.",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "CollaborationGroup",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "6432810f6f034643a00e459a4bebe0b0",
+            "name": "CollaborationGroup"
+          },
+          "description": "Collaboration Group Id assigned to a user.",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "DelegateGroup",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "76d47b09c33542398c4e9b35a0a26d73",
+            "name": "DelegateGroup"
+          },
+          "description": "The ID of the Delegate Group assigned to the user",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        }
+      ],
+      "id": "b9212881563c4eefbd920c0f7507f242",
+      "name": "account",
+      "created": "2025-09-18T15:18:40.723Z",
+      "modified": "2025-09-18T15:18:40.723Z"
+    },
+    {
+      "nativeObjectType": "Profile",
+      "identityAttribute": "Id",
+      "displayAttribute": "Name",
+      "hierarchyAttribute": null,
+      "includePermissions": true,
+      "features": [
+        "NO_PERMISSIONS_PROVISIONING"
+      ],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserType",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "758844f4eeae486e8cac08c2375df2a3",
+      "name": "group",
+      "created": "2025-09-18T15:18:40.723Z",
+      "modified": "2025-09-18T15:18:41.080Z"
+    },
+    {
+      "nativeObjectType": "Role",
+      "identityAttribute": "Id",
+      "displayAttribute": "Name",
+      "hierarchyAttribute": "ParentRoleId",
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The Role's unique identifier",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The Role's name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "CaseAccessForAccountOwner",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The case access level for the account owner",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ContactAccessForAccountOwner",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The contact access level for the account owner",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "OpportunityAccessForAccountOwner",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The opportunity access level for the account owner",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ParentRoleId",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Unique identifier for the Role's parent Role",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "f3ccdaf0eebc4fffb9fc74dfae721764",
+      "name": "Role",
+      "created": "2025-09-18T15:18:40.723Z",
+      "modified": "2025-09-18T15:18:40.723Z"
+    },
+    {
+      "nativeObjectType": "PublicGroups",
+      "identityAttribute": "Id",
+      "displayAttribute": "Name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DeveloperName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DoesIncludeBosses",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "OwnerId",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "c859e7e39cae45d8adeceafa8779dd49",
+      "name": "PublicGroups",
+      "created": "2025-09-18T15:18:40.723Z",
+      "modified": "2025-09-18T15:18:40.723Z"
+    },
+    {
+      "nativeObjectType": "PermissionSet",
+      "identityAttribute": "Name",
+      "displayAttribute": "Name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "descriptionAttribute": "Description"
+      },
+      "attributes": [
+        {
+          "name": "Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Label",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "6db792368379471d96deacbdbeb8a376",
+      "name": "PermissionSet",
+      "created": "2025-09-18T15:18:40.723Z",
+      "modified": "2025-09-18T15:18:40.723Z"
+    },
+    {
+      "nativeObjectType": "PermissionSetGroup",
+      "identityAttribute": "Id",
+      "displayAttribute": "MasterLabel",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "descriptionAttribute": "Description"
+      },
+      "attributes": [
+        {
+          "name": "Id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "MasterLabel",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "00e589902a344600b55efc27babee9cc",
+      "name": "PermissionSetGroup",
+      "created": "2025-09-18T15:18:40.723Z",
+      "modified": "2025-09-18T15:18:40.723Z"
+    },
+    {
+      "nativeObjectType": "PermissionSetLicense",
+      "identityAttribute": "Id",
+      "displayAttribute": "MasterLabel",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "MasterLabel",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "036aa48301a541cf96674dee1176e2f1",
+      "name": "PermissionSetLicense",
+      "created": "2025-09-18T15:18:40.723Z",
+      "modified": "2025-09-18T15:18:40.723Z"
+    },
+    {
+      "nativeObjectType": "ManagedPackage",
+      "identityAttribute": "Id",
+      "displayAttribute": "NamespacePrefix",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Managed Package Id.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "NamespacePrefix",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Managed Package NamespacePrefix.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "ee4db7e7895f445fa459aa71f8674e7d",
+      "name": "ManagedPackage",
+      "created": "2025-09-18T15:18:40.723Z",
+      "modified": "2025-09-18T15:18:40.723Z"
+    },
+    {
+      "nativeObjectType": "CollaborationGroup",
+      "identityAttribute": "Id",
+      "displayAttribute": "Name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Collaboration Group Id.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Collaboration Group Name.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "CollaborationType",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Collaboration Group Type.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "6432810f6f034643a00e459a4bebe0b0",
+      "name": "CollaborationGroup",
+      "created": "2025-09-18T15:18:40.723Z",
+      "modified": "2025-09-18T15:18:40.723Z"
+    },
+    {
+      "nativeObjectType": "DelegateGroup",
+      "identityAttribute": "Id",
+      "displayAttribute": "Name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The Delegate Group's unique identifier",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DeveloperName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The unique developer name for the delegate group",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "IsLoginAccessEnabled",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": "Indicates if login access is enabled for the developer group",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The developer group's unique label",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "76d47b09c33542398c4e9b35a0a26d73",
+      "name": "DelegateGroup",
+      "created": "2025-09-18T15:18:40.723Z",
+      "modified": "2025-09-18T15:18:40.723Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "customTimeOut": "1",
+    "nativeChangeDetectionAttributeScope": "entitlements",
+    "isActive": false,
+    "connectionType": "direct",
+    "disableUserCreationEmail": false,
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "grant_type": "Password",
+    "serverUrl": "https://crawco--uat.sandbox.my.salesforce.com/services/Soap/u/61.0/00DWD000008BcOj",
+    "OAuth2TokenURL": "https://crawco--uat.sandbox.my.salesforce.com/services/oauth2/token",
+    "sourceConnected": true,
+    "clientId": "3MVG9Ya9prPrtlpsdU5DZkym8.lKMMwskBlT6tMsutgOAWg_F7BbtacjDhytR3L27zYfMWvirLi6LJ.MDNZMa",
+    "sysDescriptions": {},
+    "nativeChangeDetectionEnabled": false,
+    "deleteThresholdPercentage": 10,
+    "sessionId": "00DWD000008BcOj!AQEAQEo09FbMh06r29yQLZihjuz3Ij5PEYUv30P3BeXQ.SsV8x_h29hmRQK1ETYBCBYRrzv2tjhvz3UyrFz8_czNj.nvsReG",
+    "isOAuth2ConfigEnabled": "true",
+    "cloudCacheUpdate": 1764684607953,
+    "templateApplication": "Salesforce Template",
+    "encrypted": "clientSecret, private_key, privateKeyPassword, refreshToken",
+    "healthy": true,
+    "cloudDisplayName": "Salesforce",
+    "connectorName": "SalesForce",
+    "excludeFrozen": false,
+    "user": "integration_user@us.crawco.com.uat",
+    "since": "2025-10-29T12:42:44.389Z",
+    "status": "SOURCE_STATE_HEALTHY"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "Email",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      },
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "EmployeeNumber",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 2
+      }
+    ],
+    "id": "4af31db092144e2ebcc36eb47b50ad0c",
+    "name": "Salesforce [source] Account Correlation"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [
+    {
+      "name": "account",
+      "description": null,
+      "usageType": "CREATE",
+      "fields": [
+        {
+          "name": "Alias",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "firstname"
+            }
+          },
+          "attributes": {
+            "cloudRequired": "true"
+          },
+          "isRequired": true,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "IsActive",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "boolean",
+          "isMultiValued": false
+        },
+        {
+          "name": "Username",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "email"
+            }
+          },
+          "attributes": {
+            "cloudRequired": "true"
+          },
+          "isRequired": true,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Email",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "email"
+            }
+          },
+          "attributes": {
+            "cloudRequired": "true"
+          },
+          "isRequired": true,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "FirstName",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "firstname"
+            }
+          },
+          "attributes": {
+            "cloudRequired": "true"
+          },
+          "isRequired": true,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "LastName",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "lastname"
+            }
+          },
+          "attributes": {
+            "cloudRequired": "true"
+          },
+          "isRequired": true,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "CommunityNickname",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "displayName"
+            }
+          },
+          "attributes": {
+            "cloudRequired": "true"
+          },
+          "isRequired": true,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "TimeZoneSidKey",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "LocaleSidKey",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "LanguageLocaleKey",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "EmailEncodingKey",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "UserType",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "AccountName",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "FederationIdentifier",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Title",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Department",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "EmployeeNumber",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "CompanyName",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "Division",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        }
+      ]
+    }
+  ],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

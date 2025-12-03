@@ -1,0 +1,744 @@
+{
+  "id": "82577bcb9ed64d74a50e4e1628a2598e",
+  "name": "Xactimate",
+  "type": "DelimitedFile",
+  "connectorClass": "sailpoint.connector.delimitedfile.DelimitedFileConnector",
+  "connectorScriptName": "delimited-file-angularsc",
+  "description": "Xactimate",
+  "deleteThreshold": 10,
+  "provisionAsCsv": true,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "DISCOVER_SCHEMA",
+    "NO_RANDOM_ACCESS",
+    "DIRECT_PERMISSIONS"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "User",
+      "identityAttribute": "Code",
+      "displayAttribute": "Name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "XID Login",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Email",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Instance Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Instance ID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Xactnet Address",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "User Created",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Added By",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Last Login",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Security Groups",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "ec7e59d842ca4fa8b3519c676cb6cbbf",
+            "name": "Security Groups"
+          },
+          "description": "Security Groups",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "Code",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "License Type",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Platform",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Has XactContents",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Has Time and Materials",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Is Admin",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Is Admin",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": false
+        }
+      ],
+      "id": "4b15e722530a436f95b5074c95eb46bc",
+      "name": "account",
+      "created": "2023-11-03T05:00:24.625Z",
+      "modified": "2025-02-21T17:45:53.550Z"
+    },
+    {
+      "nativeObjectType": "Security Groups",
+      "identityAttribute": "Security Groups",
+      "displayAttribute": "Security Groups",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "XID Login",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Email",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Instance Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Instance ID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Xactnet Address",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "User Created",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Added By",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Last Login",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Security Groups",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Security Groups",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": false
+        },
+        {
+          "name": "Code",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "License Type",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Platform",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Has XactContents",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Has Time and Materials",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Is Admin",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "ec7e59d842ca4fa8b3519c676cb6cbbf",
+      "name": "Security Groups",
+      "created": "2025-02-07T23:04:20.031Z",
+      "modified": "2025-02-07T23:05:43.042Z"
+    },
+    {
+      "nativeObjectType": "IsAdmin",
+      "identityAttribute": "Is Admin",
+      "displayAttribute": "Is Admin",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "XID Login",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Email",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Instance Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Instance ID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Xactnet Address",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "User Created",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Added By",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Last Login",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Security Groups",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Code",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "License Type",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Platform",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Has XactContents",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Has Time and Materials",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Is Admin",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Is Admin",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": false
+        }
+      ],
+      "id": "e117dfdc189c43dcb75efdc462c436fe",
+      "name": "IsAdmin",
+      "created": "2025-02-07T23:05:54.425Z",
+      "modified": "2025-02-07T23:09:10.672Z"
+    }
+  ],
+  "connectorAttributes": {
+    "group.mergeRows": true,
+    "group.delimiter": ",",
+    "mergeRows": false,
+    "group.filetransport": "local",
+    "partitionMode": "disabled",
+    "checkDeletedDisabled": false,
+    "connectionType": "file",
+    "group.host": "local",
+    "IsAdmin.mergeRows": false,
+    "group.indexColumn": "id",
+    "IsAdmin.columnNames": [
+      "XID Login",
+      "Name",
+      "Email",
+      "Instance Name",
+      "Instance ID",
+      "Xactnet Address",
+      "User Created",
+      "Added By",
+      "Last Login",
+      "Security Groups",
+      "Code",
+      "License Type",
+      "Platform",
+      "Has XactContents",
+      "Has Time and Materials",
+      "Is Admin"
+    ],
+    "delimiter": ",",
+    "host": "local",
+    "commentCharacter": "#",
+    "group.mergeColumns": [
+      "entitlements",
+      "groups",
+      "permissions"
+    ],
+    "hasHeader": true,
+    "filterEmptyRecords": true,
+    "filetransport": "local",
+    "group.filterEmptyRecords": true,
+    "deleteThresholdPercentage": 10,
+    "group.hasHeader": true,
+    "group.partitionMode": "disabled",
+    "group.columnNames": [
+      "id",
+      "name",
+      "displayName",
+      "created",
+      "description",
+      "modified",
+      "entitlements",
+      "groups",
+      "permissions"
+    ],
+    "templateApplication": "DelimitedFile Template",
+    "Security Groups.columnNames": [
+      "XID Login",
+      "Name",
+      "Email",
+      "Instance Name",
+      "Instance ID",
+      "Xactnet Address",
+      "User Created",
+      "Added By",
+      "Last Login",
+      "Security Groups",
+      "Code",
+      "License Type",
+      "Platform",
+      "Has XactContents",
+      "Has Time and Materials",
+      "Is Admin"
+    ],
+    "healthy": true,
+    "cloudDisplayName": "Xactimate",
+    "connectorName": "Delimited File",
+    "Security Groups.mergeRows": false,
+    "numberOfLinesToSkip": "0",
+    "since": "2025-10-03T21:52:52.540Z",
+    "status": "SOURCE_STATE_HEALTHY",
+    "cloudOriginalApplicationType": "Delimited File"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "correlatedAdUsername",
+        "operation": "EQ",
+        "value": "Code",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      },
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "Email",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 2
+      }
+    ],
+    "id": "cdf5cce091ce4b27897b7396a94f704a",
+    "name": "Xactimate Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [
+    {
+      "name": "Create Policy",
+      "description": "Create Policy",
+      "usageType": "CREATE",
+      "fields": [
+        {
+          "name": "id",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "name",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "givenName",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "familyName",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "e-mail",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "location",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "manager",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "groups",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        }
+      ]
+    }
+  ],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

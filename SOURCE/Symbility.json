@@ -1,0 +1,356 @@
+{
+  "id": "b6ba0bdcdde444f298bbc4106856dd6d",
+  "name": "Symbility",
+  "type": "DelimitedFile",
+  "connectorClass": "sailpoint.connector.delimitedfile.DelimitedFileConnector",
+  "connectorScriptName": "delimited-file-angularsc",
+  "description": "Symbility",
+  "deleteThreshold": 10,
+  "provisionAsCsv": true,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "DISCOVER_SCHEMA",
+    "DIRECT_PERMISSIONS",
+    "NO_RANDOM_ACCESS"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "User",
+      "identityAttribute": "Username",
+      "displayAttribute": "Username",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Username",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Username",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Last Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Last Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "First Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "First Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Email",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Email",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Phone",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Phone",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Status",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Status",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "User Group",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User Group",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": false
+        },
+        {
+          "name": "Role",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Role",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": false
+        },
+        {
+          "name": "Expires",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Expires",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Creation Date",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Creation Date",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Company Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Company Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "User Region",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User Region",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "User Area",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User Area",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Licenses",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Licenses",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "8efbe91b405d4db7a98c62f1014614be",
+      "name": "account",
+      "created": "2023-12-11T20:34:20.887Z",
+      "modified": "2025-01-22T23:04:38.220Z"
+    }
+  ],
+  "connectorAttributes": {
+    "group.mergeRows": false,
+    "group.delimiter": ",",
+    "Group Name.columnNames": [
+      "Username",
+      "Last Name",
+      "First Name",
+      "Email",
+      "Phone",
+      "Status",
+      "User Group",
+      "Role",
+      "Expires",
+      "Creation Date",
+      "Company Name",
+      "User Region",
+      "User Area",
+      "Licenses"
+    ],
+    "mergeRows": false,
+    "group.filetransport": "local",
+    "partitionMode": "disabled",
+    "checkDeletedDisabled": false,
+    "connectionType": "file",
+    "group.host": "local",
+    "Role.file": "/app/tmp/7cbec4a7b9aa455b9f793d993329121a.csv",
+    "delimiter": ",",
+    "host": "local",
+    "commentCharacter": "#",
+    "User Group.mergeRows": false,
+    "hasHeader": true,
+    "filterEmptyRecords": true,
+    "filetransport": "local",
+    "User Group.columnNames": [
+      "Username",
+      "Last Name",
+      "First Name",
+      "Email",
+      "Phone",
+      "Status",
+      "User Group",
+      "Role",
+      "Expires",
+      "Creation Date",
+      "Company Name",
+      "User Region",
+      "User Area",
+      "Licenses"
+    ],
+    "group.filterEmptyRecords": true,
+    "deleteThresholdPercentage": 10,
+    "Group Name.mergeRows": false,
+    "User Group.file": "/app/tmp/10530d029cad4f0ba79a35bd56b77a83.csv",
+    "group.hasHeader": true,
+    "group.partitionMode": "disabled",
+    "Role.columnNames": [
+      "Username",
+      "Last Name",
+      "First Name",
+      "Email",
+      "Phone",
+      "Status",
+      "User Group",
+      "Role",
+      "Expires",
+      "Creation Date",
+      "Company Name",
+      "User Region",
+      "User Area",
+      "Licenses"
+    ],
+    "Role.mergeRows": false,
+    "group.columnNames": [
+      "User Group"
+    ],
+    "templateApplication": "DelimitedFile Template",
+    "healthy": true,
+    "cloudDisplayName": "Symbility",
+    "connectorName": "Delimited File",
+    "since": "2024-05-14T21:01:49.984Z",
+    "status": "SOURCE_STATE_HEALTHY",
+    "cloudOriginalApplicationType": "Delimited File"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "correlatedAdUsername",
+        "operation": "EQ",
+        "value": "Username",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "ea14c157b0194709906df45c8ebe1636",
+    "name": "Symbility Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [
+    {
+      "name": "Create Policy",
+      "description": "Create Policy",
+      "usageType": "CREATE",
+      "fields": [
+        {
+          "name": "id",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "name",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "givenName",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "familyName",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "e-mail",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "location",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "manager",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "groups",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        }
+      ]
+    }
+  ],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

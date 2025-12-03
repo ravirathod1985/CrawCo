@@ -1,0 +1,165 @@
+{
+  "id": "cae344deb43e450da61d2ca85c402f66",
+  "name": "Pay Pilot",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "Pay Pilot",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "ENABLE",
+    "UNLOCK",
+    "DIRECT_PERMISSIONS",
+    "SYNC_PROVISIONING",
+    "DISCOVER_SCHEMA"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "ACCOUNTID",
+      "displayAttribute": "ADDITIONAL_INFO",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "ACCOUNTID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ADDITIONAL_INFO",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "APPROLE",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "APPROLE",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": false
+        }
+      ],
+      "id": "cfd5c81b24c9448fb1be0a8fd4a28f27",
+      "name": "account",
+      "created": "2023-12-11T17:25:35.881Z",
+      "modified": "2025-09-02T09:05:37.843Z"
+    },
+    {
+      "nativeObjectType": "APPROLE",
+      "identityAttribute": "APPROLE",
+      "displayAttribute": "APPROLE",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "APPROLE",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "APPROLKE",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "0ac9e71ccc7647dc826c246b916a78a8",
+      "name": "APPROLE",
+      "created": "2023-12-11T17:35:28.372Z",
+      "modified": "2025-09-02T09:05:37.843Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 60,
+    "supportsDeltaAgg": "true",
+    "APPROLE.getObjectSQL": "select distinct ID as ACCOUNTID, NAM as ADDITIONAL_INFO, PROID as APPROLE\nfrom PayPilot8.dbo.opr",
+    "deltaAggregationEnabled": false,
+    "useStoredProcedureTestConn": false,
+    "group.mergeRows": false,
+    "APPROLE.isPermissionEnabled": false,
+    "isAdvance": "false",
+    "mergeRows": false,
+    "APPROLE.useExecuteQuery": false,
+    "useStoredProcedureGetObject": false,
+    "connectionType": "direct",
+    "timeout": 60,
+    "APPROLE.SQL": "select 1",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "jdbcExceptionBucketing": true,
+    "hasFullAggregationCompleted": true,
+    "useExecuteQuery": false,
+    "connector_files": "sqljdbc42.jar",
+    "APPROLE.useStoredProcedureGetObject": false,
+    "useQuery": false,
+    "testConnSQL": "select 1",
+    "APPROLE.url": "jdbc:sqlserver://10.1.17.131:1433;databasename= PayPilot8",
+    "APPROLE.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "sourceConnected": true,
+    "isPermissionEnabled": false,
+    "APPROLE.user": "Aveksa_PayPilot_Reader",
+    "deleteThresholdPercentage": 10,
+    "APPROLE.useStoredProcedureSqlStmt": false,
+    "url": "jdbc:sqlserver://10.1.17.131:1433;databasename= PayPilot8",
+    "SQL": "select distinct ID as ACCOUNTID, NAM as ADDITIONAL_INFO, PROID as APPROLE\nfrom PayPilot8.dbo.opr",
+    "cloudCacheUpdate": 1764580199338,
+    "templateApplication": "JDBC Template",
+    "group.isPermissionEnabled": false,
+    "APPROLE.mergeRows": false,
+    "encrypted": "password,group.password,APPROLE.password",
+    "healthy": true,
+    "cloudDisplayName": "Pay Pilot",
+    "connectorName": "JDBC",
+    "useStoredProcedureSqlStmt": false,
+    "user": "Aveksa_PayPilot_Reader",
+    "status": "SOURCE_STATE_HEALTHY",
+    "since": "2025-08-14T10:12:19.606Z"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "correlatedAdUsername",
+        "operation": "EQ",
+        "value": "ACCOUNTID",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "7d5c801ec00f466b8d4fb43d599999cf",
+    "name": "Pay Pilot Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

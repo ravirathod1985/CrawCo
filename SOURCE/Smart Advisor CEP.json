@@ -1,0 +1,370 @@
+{
+  "id": "f62feeac75e846758b223cf9d568516a",
+  "name": "Smart Advisor CEP",
+  "type": "DelimitedFile",
+  "connectorClass": "sailpoint.connector.delimitedfile.DelimitedFileConnector",
+  "connectorScriptName": "delimited-file-angularsc",
+  "description": "Smart Advisor CEP",
+  "deleteThreshold": 10,
+  "provisionAsCsv": true,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "DISCOVER_SCHEMA",
+    "DIRECT_PERMISSIONS",
+    "NO_RANDOM_ACCESS"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "User",
+      "identityAttribute": "ACCOUNTID",
+      "displayAttribute": "ACCOUNTID",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "ACCOUNTID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FIRST_NAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LAST_NAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ADDITIONAL_INFO",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EMPLOYEE",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ACCESS_RIGHTS",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "ACCESS_RIGHTS",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": false
+        },
+        {
+          "name": "UserRole",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "UserRole",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": false
+        }
+      ],
+      "id": "19ebc92d5fe14b518b45ef4510f3eb2d",
+      "name": "account",
+      "created": "2023-12-22T17:09:53.957Z",
+      "modified": "2023-12-22T17:16:09.412Z"
+    },
+    {
+      "nativeObjectType": "Group",
+      "identityAttribute": "id",
+      "displayAttribute": "displayName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Unique ID for Group",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The name of the account - typically groupname etc.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "displayName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The preferred display name for the account",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "created",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Date/Time when the group was created (utime)",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Multi-purpose field used to capture a description or comments",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "modified",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Date/Time when the group was modified (utime)",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "entitlements",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The access rights, entitlements etc. that the account has access to.",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": false
+        },
+        {
+          "name": "groups",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The groups, roles etc. that reference to account group objects",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "permissions",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The permissions associated with the account",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "60c8ffcf3d9d404b8689980dc7759dbb",
+      "name": "group",
+      "created": "2023-12-22T17:09:53.957Z",
+      "modified": "2023-12-22T17:09:53.957Z"
+    }
+  ],
+  "connectorAttributes": {
+    "mergeColumns": [
+      "ACCESS_RIGHTS"
+    ],
+    "group.mergeRows": true,
+    "group.delimiter": ",",
+    "mergeRows": true,
+    "group.filetransport": "local",
+    "partitionMode": "disabled",
+    "checkDeletedDisabled": false,
+    "connectionType": "file",
+    "group.host": "local",
+    "group.indexColumn": "id",
+    "delimiter": ",",
+    "host": "local",
+    "indexColumns": [
+      "ACCOUNTID"
+    ],
+    "commentCharacter": "#",
+    "group.mergeColumns": [
+      "entitlements",
+      "groups",
+      "permissions"
+    ],
+    "hasHeader": true,
+    "filterEmptyRecords": true,
+    "filetransport": "local",
+    "deleteThresholdPercentage": 10,
+    "group.filterEmptyRecords": true,
+    "group.hasHeader": true,
+    "group.partitionMode": "disabled",
+    "group.columnNames": [
+      "id",
+      "name",
+      "displayName",
+      "created",
+      "description",
+      "modified",
+      "entitlements",
+      "groups",
+      "permissions"
+    ],
+    "templateApplication": "DelimitedFile Template",
+    "indexColumn": "ACCOUNTID",
+    "healthy": true,
+    "cloudDisplayName": "Smart Advisor CEP",
+    "connectorName": "Delimited File",
+    "numberOfLinesToSkip": "0",
+    "cloudOriginalApplicationType": "Delimited File",
+    "since": "2024-05-24T22:33:27.376Z",
+    "status": "SOURCE_STATE_HEALTHY"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "EMPLOYEE",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      },
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "ADDITIONAL_INFO",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 2
+      }
+    ],
+    "id": "076f9699327746d29cdbfd7b19f85eea",
+    "name": "Smart Advisor CEP Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [
+    {
+      "name": "Create Policy",
+      "description": "Create Policy",
+      "usageType": "CREATE",
+      "fields": [
+        {
+          "name": "id",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "name",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "givenName",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "familyName",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "e-mail",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "location",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "manager",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "groups",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        }
+      ]
+    }
+  ],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

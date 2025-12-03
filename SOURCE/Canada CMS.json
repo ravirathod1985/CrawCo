@@ -1,0 +1,959 @@
+{
+  "id": "efd1a4df565e47e4beb00bbf2b1b3782",
+  "name": "Canada CMS",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "Canada CMS",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "ENABLE",
+    "DISCOVER_SCHEMA",
+    "SYNC_PROVISIONING",
+    "DIRECT_PERMISSIONS",
+    "UNLOCK"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "ID",
+      "displayAttribute": "EmailAddress",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "ID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EmployeeNumber",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserTypeCode",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Salutation",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FirstName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "MiddleInitial",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LastName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Designations",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Sex",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "BirthDate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Company",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Title",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Address1",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Address2",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Address3",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "City",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Province",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "PostalCode",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Country",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EmailAddress",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FlatRate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "HourlyRate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "BlendedRate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "BonusDate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Language",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "AccessAllBranches",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "AccessAllTrustAccounts",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Inactive",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EmployeeGroupClassCode",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EmployeeCatStatus",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "CreatedDate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "CreatedBy",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "CreatedByNetworkID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LastChangedDate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LastChangedBy",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LastChangedByNetworkID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DeltaUser",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "NetworkID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LockedOutDate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "VendorCode",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserKey",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EMailSignature",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Comment",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "InactiveDate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UTCBirthDate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UTCBonusDate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UTCCreatedDate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UTCLastChangedDate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UTCLockedOutDate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UTCInactiveDate",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DefaultProfile",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DomesticLicenceLevelCode",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "CommercialLicenceLevelCode",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ServiceLineCode",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ApplicationID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Feature",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "191a8fd4ba484bab8815703d1359c861",
+            "name": "feature"
+          },
+          "description": "Feature",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "HomeBranch",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "b750ff70bb6e4a588e7fdabef590e781",
+            "name": "home branch"
+          },
+          "description": "Home Branch",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "UserType",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "b5b7b37d80264f3099ee33d89dae8a54",
+            "name": "user type"
+          },
+          "description": "User Type",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "Role",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "49a83a8f7cd74db4b60c77d0098b00f4",
+            "name": "role"
+          },
+          "description": "Role",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "ApprovalThreshold",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "787080354cf94067aca6467fd952e22e",
+            "name": "approval threshold"
+          },
+          "description": "Approval Threshold",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        }
+      ],
+      "id": "82fc9a0d86114f778441b0d764b6bd54",
+      "name": "account",
+      "created": "2023-04-26T17:06:03.918Z",
+      "modified": "2025-08-04T23:25:39.697Z"
+    },
+    {
+      "nativeObjectType": "role",
+      "identityAttribute": "name",
+      "displayAttribute": "name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "49a83a8f7cd74db4b60c77d0098b00f4",
+      "name": "role",
+      "created": "2023-05-08T16:05:03.675Z",
+      "modified": "2025-08-04T23:25:39.697Z"
+    },
+    {
+      "nativeObjectType": "feature",
+      "identityAttribute": "name",
+      "displayAttribute": "name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "191a8fd4ba484bab8815703d1359c861",
+      "name": "feature",
+      "created": "2023-05-08T16:05:10.266Z",
+      "modified": "2025-08-04T23:25:39.697Z"
+    },
+    {
+      "nativeObjectType": "user type",
+      "identityAttribute": "name",
+      "displayAttribute": "name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "b5b7b37d80264f3099ee33d89dae8a54",
+      "name": "user type",
+      "created": "2023-05-08T16:05:17.891Z",
+      "modified": "2025-08-04T23:25:39.697Z"
+    },
+    {
+      "nativeObjectType": "approval threshold",
+      "identityAttribute": "name",
+      "displayAttribute": "name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "787080354cf94067aca6467fd952e22e",
+      "name": "approval threshold",
+      "created": "2023-05-08T16:05:30.600Z",
+      "modified": "2025-08-04T23:25:39.697Z"
+    },
+    {
+      "nativeObjectType": "home branch",
+      "identityAttribute": "id",
+      "displayAttribute": "id",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "b750ff70bb6e4a588e7fdabef590e781",
+      "name": "home branch",
+      "created": "2023-05-09T13:18:03.824Z",
+      "modified": "2025-08-04T23:25:39.697Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 60,
+    "feature.url": "jdbc:sqlserver://10.170.8.195:1433;databasename=CMS;;Encrypt=False;TrustServerCertificate=True;",
+    "deltaAggregationEnabled": false,
+    "isAdvance": "false",
+    "group.url": "jdbc:sqlserver://HEADS250.cacrawco.local:1433;databasename=CMS",
+    "useStoredProcedureGetObject": false,
+    "connectionType": "direct",
+    "checkDeletedDisabled": false,
+    "feature.isPermissionEnabled": false,
+    "feature.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "user type.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "feature.useStoredProcedureSqlStmt": false,
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "role.user": "sa_sailpointro",
+    "role.useExecuteQuery": false,
+    "home branch.isPermissionEnabled": false,
+    "useExecuteQuery": false,
+    "group.useExecuteQuery": false,
+    "indexColumns": [
+      "ID"
+    ],
+    "home branch.SQL": "SELECT DISTINCT bm.id\n\t,bm.name\nFROM [user] AS u\nLEFT JOIN userbranch AS ub ON u.id = ub.userid\n\tAND homebranch = 1\nLEFT JOIN branch bm ON bm.id = ub.branchid\n\tAND ub.homebranch = 1\nWHERE u.inactive = 0\n\tAND u.usertypecode IN (\n\t\t'A'\n\t\t,'C'\n\t\t,'X'\n\t\t)",
+    "sourceConnected": true,
+    "feature.user": "sa_sailpointro",
+    "role.useStoredProcedureSqlStmt": false,
+    "approval threshold.SQL": "SELECT DISTINCT name = CONCAT (\n\t\tb.Name\n\t\t,' - '\n\t\t,ub.ApprovalThreshold\n\t\t)\nFROM [dbo].[User] u\nINNER JOIN [dbo].[UserBranch] ub ON u.ID = ub.UserID\nINNER JOIN [dbo].[Branch] b ON ub.BranchID = b.ID\nLEFT OUTER JOIN [dbo].[UserTypeCode] utc ON u.UserTypeCode = utc.Code\nLEFT OUTER JOIN [dbo].[EmployeeGroupClass] egc ON u.EmployeeGroupClassCode = egc.Code\nLEFT OUTER JOIN [dbo].[User] u2 ON b.ManagerID = u2.ID\nWHERE u.Inactive = 0\n\tAND ub.Inactive = 0\n\tAND b.Inactive = 0",
+    "isPermissionEnabled": false,
+    "connectorFileUploadHistory": {
+      "mssql-jdbc-12.10.1.jre11.jar": "2025-09-23T21:55:05.794953Z"
+    },
+    "role.isPermissionEnabled": false,
+    "user type.mergeRows": false,
+    "user type.useExecuteQuery": false,
+    "home branch.useStoredProcedureGetObject": false,
+    "SQL": "SELECT       \n\tu.*\n\t,f.ApplicationID\n\t,Feature = f.code\n\t,HomeBranch = hb.branchid\n\t,UserType = utc.description\n\t,Role = ur.code\n\t,CONCAT (b.Name, ' - ', ub.ApprovalThreshold) as [ApprovalThreshold]\nFROM [user] AS u\n--User Type\nLEFT JOIN UserTypeCode AS utc ON u.usertypecode = utc.code\n--Feature\nLEFT JOIN userfeature AS uf ON u.id = uf.userid\nLEFT JOIN feature AS f ON uf.featureid = f.id\n--Home Branch\nLEFT JOIN userbranch AS hb ON u.id = hb.userid\n\tAND homebranch = 1\nLEFT JOIN branch bm ON bm.id = hb.branchid\n\tAND hb.homebranch = 1\n--LEFT JOIN [user] bmu ON bmu.id = bm.managerid\n--Role\nLEFT JOIN userroleuser AS uru ON u.id = uru.userid\nLEFT JOIN userrole AS ur ON uru.userroleid = ur.id\n--Approval Threshold\nINNER JOIN [dbo].[UserBranch] ub ON u.ID = ub.UserID\nINNER JOIN [dbo].[Branch] b ON ub.BranchID = b.ID\nWHERE u.inactive = 0\n\tAND u.UserTypeCode IN (\n\t\t'A'\n\t\t,'C'\n\t\t,'X'\n\t\t)\nORDER BY u.ID\n\t,f.applicationid\n\t,f.id\n\t,ur.code\n\t,ApprovalThreshold",
+    "group.useStoredProcedureGetObject": false,
+    "cloudCacheUpdate": 1764580200354,
+    "user type.useStoredProcedureSqlStmt": false,
+    "approval threshold.useStoredProcedureGetObject": false,
+    "approval threshold.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "connectorName": "JDBC",
+    "user type.url": "jdbc:sqlserver://10.170.8.195:1433;databasename=CMS;;Encrypt=False;TrustServerCertificate=True;",
+    "home branch.user": "sa_sailpointro",
+    "role.SQL": "SELECT DISTINCT name = ur.code\n\t,Description\nFROM userroleuser AS uru\nLEFT JOIN userrole AS ur ON uru.userroleid = ur.id\nLEFT JOIN [user] as u on u.id = uru. userid\nWHERE\n\tu.inactive = 0\n   and u.UserTypeCode in ('A','C','X')",
+    "group.useStoredProcedureDirectPermission": false,
+    "status": "SOURCE_STATE_HEALTHY",
+    "since": "2025-11-12T06:14:09.880Z",
+    "mergeColumns": [
+      "Feature",
+      "Role",
+      "ApprovalThreshold"
+    ],
+    "approval threshold.isPermissionEnabled": false,
+    "approval threshold.mergeRows": false,
+    "supportsDeltaAgg": "true",
+    "feature.SQL": "SELECT DISTINCT name = f.code\n\t,Description\nFROM [user] AS u\nLEFT JOIN userfeature AS uf ON u.id = uf.userid\nLEFT JOIN feature AS f ON uf.featureid = f.id\nWHERE\n\tu.inactive = 0\n   and u.UserTypeCode in ('A','C','X')",
+    "feature.useExecuteQuery": false,
+    "home branch.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "group.mergeRows": false,
+    "useStoredProcedureTestConn": false,
+    "mergeRows": true,
+    "home branch.mergeRows": false,
+    "user type.useStoredProcedureGetObject": false,
+    "role.useStoredProcedureGetObject": false,
+    "timeout": 60,
+    "role.mergeRows": false,
+    "approval threshold.user": "sa_sailpointro",
+    "role.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "jdbcExceptionBucketing": true,
+    "hasFullAggregationCompleted": true,
+    "connector_files": "mssql-jdbc-12.10.1.jre11-sources.jar,mssql-jdbc-12.10.1.jre11.jar",
+    "useQuery": false,
+    "approval threshold.useStoredProcedureSqlStmt": false,
+    "testConnSQL": "SELECT top 1 *\n  FROM [CMS].[dbo].[User]\n  WHERE inactive = '0'\n  and UserTypeCode in('A','C','X')",
+    "home branch.url": "jdbc:sqlserver://10.170.8.195:1433;databasename=CMS;;Encrypt=False;TrustServerCertificate=True;",
+    "approval threshold.url": "jdbc:sqlserver://10.170.8.195:1433;databasename=CMS;;Encrypt=False;TrustServerCertificate=True;",
+    "group.user": "sa_sailpointro",
+    "user type.SQL": "SELECT DISTINCT name = utc.description\n\t,Description\nFROM [user] AS u\nLEFT JOIN usertypecode AS utc ON u.UserTypeCode = utc.Code\nWHERE\n\tu.inactive = 0\n   and u.UserTypeCode in ('A','C','X')",
+    "deleteThresholdPercentage": 10,
+    "home branch.useExecuteQuery": false,
+    "group.useStoredProcedureSqlStmt": false,
+    "home branch.useStoredProcedureSqlStmt": false,
+    "url": "jdbc:sqlserver://10.170.8.195:1433;databasename=CMS;;Encrypt=False;TrustServerCertificate=True;",
+    "user type.isPermissionEnabled": false,
+    "user type.user": "sa_sailpointro",
+    "templateApplication": "JDBC Template",
+    "group.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "group.isPermissionEnabled": false,
+    "encrypted": "password,group.password,role.password,feature.password,user type.password,approval threshold.password,home branch.password",
+    "healthy": true,
+    "feature.useStoredProcedureGetObject": false,
+    "cloudDisplayName": "Canada CMS",
+    "feature.mergeRows": false,
+    "useStoredProcedureSqlStmt": false,
+    "role.url": "jdbc:sqlserver://10.170.8.195:1433;databasename=CMS;;Encrypt=False;TrustServerCertificate=True;",
+    "user": "sa_sailpointro",
+    "approval threshold.useExecuteQuery": false
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "EmployeeNumber",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "cc8b13fe27ca4a6a9cdb8a3b65795aa3",
+    "name": "Canada CMS Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

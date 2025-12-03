@@ -1,0 +1,444 @@
+{
+  "id": "e1a46002830e438da2ed4f03857b7a1f",
+  "name": "PeopleHub",
+  "type": "Oracle Fusion HCM Accounts",
+  "connectorClass": "sailpoint.connector.OpenConnectorAdapter",
+  "connectorScriptName": "oracle-fusion-hcm-accounts",
+  "description": "PeopleHub Users used for certifications",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "ENABLE",
+    "SEARCH",
+    "PASSWORD",
+    "PROVISIONING",
+    "SYNC_PROVISIONING"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "User",
+      "identityAttribute": "id",
+      "displayAttribute": "userName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "ID of the user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "userName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User name of the user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "accountType",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Account type of the user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "active",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Account status of the user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "businessUnit",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Business unit name of the user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "department",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Department name of the user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "displayName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Display name of the user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "emails.work.primary.value",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Work email of the user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "job",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Job name of the user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "manager",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Manager name of the user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "name.familyName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Family name of the user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "name.givenName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Given name of the user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "partyNumber",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Party number of the user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "partyUsage",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Party usage of the user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "personNumber",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Person number to which user account is linked",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "roles",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "b0be21c0a30f46e98e6cad023a1b01ae",
+            "name": "roles"
+          },
+          "description": "Roles associated with the user",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "userCategory",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Category of the user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "branchCode",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "branchCode",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "a857ab223feb40cc944ab79f5a11155c",
+      "name": "account",
+      "created": "2025-01-15T16:22:08.254Z",
+      "modified": "2025-07-11T17:26:54.213Z"
+    },
+    {
+      "nativeObjectType": "roles",
+      "identityAttribute": "id",
+      "displayAttribute": "name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "ID of the role",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Name of the role",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "displayName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Display name of the role",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description of the role",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "category",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Category of the role",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "b0be21c0a30f46e98e6cad023a1b01ae",
+      "name": "roles",
+      "created": "2025-01-15T16:22:08.255Z",
+      "modified": "2025-01-15T16:22:08.652Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 60,
+    "pageSize": "50",
+    "connectionType": "direct",
+    "connectorClass": "openconnector.connector.oraclefusionhcmaccounts.OracleFusionHCMAccountsConnector",
+    "timeout": 60,
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "host": "https://fa-esau-saasfaprod1.fa.ocs.oraclecloud.com/",
+    "possibleHttpErrorMessages": [
+      "Planned Outage"
+    ],
+    "authType": "Basic",
+    "sourceConnected": true,
+    "customTimeout": "2",
+    "lastAggregationDate_account": "2025-11-30 06:24:16.144",
+    "deleteThresholdPercentage": 10,
+    "jsonPathMapping": {
+      "businessUnit": "['urn:scim:schemas:extension:fa:2.0:faUser'].workerInformation.businessUnit",
+      "manager": "['urn:scim:schemas:extension:fa:2.0:faUser'].workerInformation.manager",
+      "displayName": "displayName",
+      "accountType": "['urn:scim:schemas:extension:fa:2.0:faUser'].accountType",
+      "roles": "roles[*].displayName",
+      "active": "active",
+      "personNumber": "['urn:scim:schemas:extension:fa:2.0:faUser'].workerInformation.personNumber",
+      "userName": "userName",
+      "branchCode": "['urn:scim:schemas:extension:fa:2.0:faUser'].branchCode",
+      "name.familyName": "name.familyName",
+      "RoleName": "roles[*].displayName",
+      "userCategory": "['urn:scim:schemas:extension:fa:2.0:faUser'].userCategory",
+      "name.givenName": "name.givenName",
+      "id": "id",
+      "department": "['urn:scim:schemas:extension:fa:2.0:faUser'].workerInformation.department",
+      "emails.work.primary.value": "emails[*][?(@.primary==true)][?(@.type=='W')].value",
+      "job": "['urn:scim:schemas:extension:fa:2.0:faUser'].workerInformation.job",
+      "partyNumber": "['urn:scim:schemas:extension:fa:2.0:faUser'].partyInformation.partyNumber",
+      "partyUsage": "['urn:scim:schemas:extension:fa:2.0:faUser'].partyInformation.partyUsage"
+    },
+    "lastAggregationDate_roles": "2025-07-11 04:51:16.275",
+    "cloudCacheUpdate": 1764484299297,
+    "templateApplication": "Oracle Fusion HCM Accounts",
+    "healthy": true,
+    "relaxConfiguration": true,
+    "cloudDisplayName": "PeopleHub",
+    "connectorName": "Oracle Fusion HCM Accounts",
+    "user": "Peoplehub.Integration.SP.Certification",
+    "since": "2025-11-29T07:10:49.229Z",
+    "status": "SOURCE_STATE_HEALTHY"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "personNumber",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "9aa549fdbf514065ad11e23ab1ab2cb5",
+    "name": "PeopleHub Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [
+    {
+      "name": "account",
+      "description": null,
+      "usageType": "CREATE",
+      "fields": [
+        {
+          "name": "userName",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "uid"
+            }
+          },
+          "attributes": {
+            "cloudRequired": "true"
+          },
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "active",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "false"
+            }
+          },
+          "attributes": {
+            "cloudRequired": "true"
+          },
+          "isRequired": false,
+          "type": "boolean",
+          "isMultiValued": false
+        },
+        {
+          "name": "emails.work.primary.value",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "email"
+            }
+          },
+          "attributes": {
+            "cloudRequired": "true"
+          },
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "name.familyName",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "firstname"
+            }
+          },
+          "attributes": {
+            "cloudRequired": "true"
+          },
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "name.givenName",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "lastname"
+            }
+          },
+          "attributes": {
+            "cloudRequired": "true"
+          },
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        }
+      ]
+    }
+  ],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

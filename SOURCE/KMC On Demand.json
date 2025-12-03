@@ -1,0 +1,96 @@
+{
+  "id": "a475efb7f1134312ab5529b78073178c",
+  "name": "KMC On Demand",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "KMC On Demand",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "ENABLE",
+    "DISCOVER_SCHEMA",
+    "SYNC_PROVISIONING",
+    "PROVISIONING",
+    "GROUP_PROVISIONING",
+    "DIRECT_PERMISSIONS",
+    "UNLOCK",
+    "DELETE"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "",
+      "displayAttribute": "",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [],
+      "id": "b4857ba899154882b3c08991a1a01a66",
+      "name": "account",
+      "created": "2025-11-05T20:26:51.791Z",
+      "modified": "2025-11-05T20:26:51.791Z"
+    },
+    {
+      "nativeObjectType": "group",
+      "identityAttribute": "",
+      "displayAttribute": "",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [
+        "PROVISIONING"
+      ],
+      "configuration": {},
+      "attributes": [],
+      "id": "d83aeb20ff4d40b29b9714f599b42ed2",
+      "name": "group",
+      "created": "2025-11-05T20:26:51.791Z",
+      "modified": "2025-11-05T20:26:51.844Z"
+    }
+  ],
+  "connectorAttributes": {
+    "supportsDeltaAgg": "true",
+    "group.mergeRows": false,
+    "connectorFileUploadHistory": {
+      "mssql-jdbc-12.10.1.jre11-sources.jar": "2025-11-05T20:27:55.189434Z"
+    },
+    "isPermissionEnabled": false,
+    "isAdvance": "false",
+    "mergeRows": "false",
+    "deleteThresholdPercentage": 10,
+    "connectionType": "direct",
+    "labels": [
+      "standard"
+    ],
+    "enableProvisioningFeature": true,
+    "cloudCacheUpdate": 1764047037625,
+    "templateApplication": "JDBC Template",
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "group.isPermissionEnabled": false,
+    "jdbcExceptionBucketing": true,
+    "healthy": false,
+    "cloudDisplayName": "KMC On Demand",
+    "connectorName": "JDBC",
+    "since": "2025-11-05T21:12:31.869Z",
+    "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": null,
+    "id": null,
+    "name": null
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

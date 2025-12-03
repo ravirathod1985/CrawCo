@@ -1,0 +1,361 @@
+{
+  "id": "c81cbb38189c4be2916ceab9e55b2d8e",
+  "name": "Proclaim",
+  "type": "Microsoft Azure SQL Database",
+  "connectorClass": "sailpoint.connector.MSAzureSQLDatabaseConnector",
+  "connectorScriptName": "microsoft-azure-sql-database-angularsc",
+  "description": "Proclaim",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "UNLOCK",
+    "DIRECT_PERMISSIONS",
+    "PROVISIONING",
+    "PASSWORD",
+    "DELETE",
+    "SYNC_PROVISIONING",
+    "ENABLE",
+    "GROUP_PROVISIONING",
+    "SEARCH"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "name",
+      "displayAttribute": "name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Login account name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "principal_id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "ID of server principal",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "type_desc",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description type of the login",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "create_date",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Creation date of the login",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "modify_date",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Last modification date of the login",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "server_name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Server name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DBUsers",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Database users which are associated to the login",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "roles",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "8afd0b7d83124a979ff7caada700ba84",
+            "name": "group"
+          },
+          "description": "Server and database roles assigned to the login and its mapped database users",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        }
+      ],
+      "id": "96129eebbfc3495b857355758104371f",
+      "name": "account",
+      "created": "2025-09-23T14:55:29.301Z",
+      "modified": "2025-09-23T14:55:29.301Z"
+    },
+    {
+      "nativeObjectType": "group",
+      "identityAttribute": "native_identity",
+      "displayAttribute": "native_identity",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [
+        "PROVISIONING"
+      ],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "native_identity",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Native identity represented by default as groupName or groupName@databaseName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Group name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "database_name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Database name in which group exists",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "database_id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Database ID in which group exists",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "principal_id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Id of database principal",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "roles",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Roles assigned to the group",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "server_name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Server name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "type_desc",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description type of the group",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "is_fixed_role",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "If the value is 1, then this row represents an entry for one of the fixed server or database roles",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "8afd0b7d83124a979ff7caada700ba84",
+      "name": "group",
+      "created": "2025-09-23T14:55:29.301Z",
+      "modified": "2025-09-23T14:55:29.412Z"
+    }
+  ],
+  "connectorAttributes": {
+    "aggregateFixedDbRolesFromMaster": true,
+    "deleteThresholdPercentage": 10,
+    "aggregateDbUsersWithoutRoles": false,
+    "pageSize": "1000",
+    "connectionType": "direct",
+    "cloudCacheUpdate": 1764047038111,
+    "enableProvisioningFeature": true,
+    "templateApplication": "Microsoft Azure SQL Database Template",
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "healthy": false,
+    "cloudDisplayName": "Proclaim",
+    "connectorName": "Microsoft Azure SQL Database",
+    "since": "2025-09-23T15:09:02.060Z",
+    "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "name",
+        "operation": "EQ",
+        "value": "name",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "683311872d3d4474a4b97c86d8cf758f",
+    "name": "Proclaim Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [
+    {
+      "name": "account",
+      "description": null,
+      "usageType": "CREATE",
+      "fields": [
+        {
+          "name": "name",
+          "transform": {
+            "type": "rule",
+            "attributes": {
+              "name": "Create Unique Account ID"
+            }
+          },
+          "attributes": {
+            "template": "$(firstname).$(lastname)$(uniqueCounter)",
+            "cloudMaxUniqueChecks": "50",
+            "cloudMaxSize": "20",
+            "cloudRequired": "true"
+          },
+          "isRequired": true,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "password",
+          "transform": {
+            "type": "rule",
+            "attributes": {
+              "name": "Create Password"
+            }
+          },
+          "attributes": {
+            "cloudRequired": "true"
+          },
+          "isRequired": true,
+          "type": "secret",
+          "isMultiValued": false
+        },
+        {
+          "name": "type_desc",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "SQL_Login"
+            }
+          },
+          "attributes": {
+            "cloudRequired": "true"
+          },
+          "isRequired": true,
+          "type": "string",
+          "isMultiValued": false
+        }
+      ]
+    },
+    {
+      "name": "create group",
+      "description": null,
+      "usageType": "CREATE_GROUP",
+      "fields": [
+        {
+          "name": "native_identity",
+          "transform": null,
+          "attributes": {},
+          "isRequired": true,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "type_desc",
+          "transform": null,
+          "attributes": {},
+          "isRequired": true,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "password",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "secret",
+          "isMultiValued": false
+        }
+      ]
+    }
+  ],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

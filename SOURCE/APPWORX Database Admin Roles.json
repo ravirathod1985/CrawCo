@@ -1,0 +1,174 @@
+{
+  "id": "648d309f606c4ad1aff221f8da8c3220",
+  "name": "APPWORX Database Admin Roles",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "APPWORX Database Admin Roles",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "ENABLE",
+    "DISCOVER_SCHEMA",
+    "SYNC_PROVISIONING",
+    "DIRECT_PERMISSIONS",
+    "UNLOCK"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "SO_USER_NAME",
+      "displayAttribute": "SO_USER_NAME",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "SO_USER_NAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "SO_ROLE_NAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "a22c0585da724a3587b12b57159b13e7",
+            "name": "SO_ROLE_NAME"
+          },
+          "description": "SO_ROLE_NAME",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        }
+      ],
+      "id": "ac481c8659cd42cabba0be21775473a3",
+      "name": "account",
+      "created": "2024-06-13T18:05:03.826Z",
+      "modified": "2025-02-27T22:04:07.462Z"
+    },
+    {
+      "nativeObjectType": "SO_ROLE_NAME",
+      "identityAttribute": "SO_ROLE_NAME",
+      "displayAttribute": "SO_ROLE_NAME",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "SO_ROLE_NAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "SO_ROLE_NAME",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "a22c0585da724a3587b12b57159b13e7",
+      "name": "SO_ROLE_NAME",
+      "created": "2025-02-27T22:03:32.383Z",
+      "modified": "2025-02-27T22:03:47.021Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "deltaAggregationEnabled": false,
+    "isAdvance": "false",
+    "ROLE.SQL": "select distinct SO_USER_NAME, SO_ROLE_NAME\nfrom appworx.so_role_master c, appworx.so_role_detail b,appworx.so_user_table a\nwhere c.so_role_seq = b.so_role_seq\n  and b.so_role_object = a.so_user_seq\n  and a.so_user_seq <> 0\n  and a.so_active_flag = 'Y'\nOrder by SO_USER_NAME",
+    "useStoredProcedureGetObject": false,
+    "checkDeletedDisabled": false,
+    "connectionType": "direct",
+    "ROLE.driverClass": "oracle.jdbc.driver.OracleDriver",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "driverClass": "oracle.jdbc.driver.OracleDriver",
+    "useExecuteQuery": false,
+    "ROLE.useExecuteQuery": false,
+    "indexColumns": [
+      "SO_USER_NAME"
+    ],
+    "sourceConnected": true,
+    "connectorFileUploadHistory": {
+      "ojdbc6.jar": "2024-06-13T18:13:55.896721Z"
+    },
+    "isPermissionEnabled": false,
+    "labels": [
+      "standard"
+    ],
+    "SQL": "select distinct SO_USER_NAME, SO_ROLE_NAME\nfrom appworx.so_role_master c, appworx.so_role_detail b,appworx.so_user_table a\nwhere c.so_role_seq = b.so_role_seq\n  and b.so_role_object = a.so_user_seq\n  and a.so_user_seq <> 0\n  and a.so_active_flag = 'Y'\nOrder by SO_USER_NAME",
+    "cloudCacheUpdate": 1764580197095,
+    "connectorName": "JDBC",
+    "status": "SOURCE_STATE_HEALTHY",
+    "ROLE.mergeRows": false,
+    "ROLE.useStoredProcedureGetObject": false,
+    "since": "2025-11-15T17:10:34.030Z",
+    "mergeColumns": [
+      "SO_ROLE_NAME"
+    ],
+    "supportsDeltaAgg": "true",
+    "useStoredProcedureTestConn": false,
+    "group.mergeRows": false,
+    "ROLE.url": "jdbc:oracle:thin:@10.1.2.231:1562:appworx",
+    "mergeRows": true,
+    "ROLE.useStoredProcedureDirectPermission": false,
+    "jdbcExceptionBucketing": true,
+    "hasFullAggregationCompleted": true,
+    "connector_files": "ojdbc6.jar",
+    "useQuery": false,
+    "testConnSQL": "select 1 from dual",
+    "deleteThresholdPercentage": 10,
+    "SO_ROLE_NAME.mergeRows": false,
+    "ROLE.isPermissionEnabled": false,
+    "url": "jdbc:oracle:thin:@10.1.2.231:1562:appworx",
+    "templateApplication": "JDBC Template",
+    "group.isPermissionEnabled": false,
+    "ROLE.useStoredProcedureSqlStmt": false,
+    "encrypted": "password,group.password,ROLE.password,SO_ROLE_NAME.password",
+    "healthy": true,
+    "cloudDisplayName": "APPWORX Database Admin Roles",
+    "useStoredProcedureSqlStmt": false,
+    "ROLE.user": "SA_CAM",
+    "user": "SA_CAM"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "correlatedAdUsername",
+        "operation": "EQ",
+        "value": "SO_USER_NAME",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "47351540adbd4d1885d7e69c24b2c665",
+    "name": "APPWORX Database Admin Roles Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

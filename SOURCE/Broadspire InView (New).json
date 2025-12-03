@@ -1,0 +1,178 @@
+{
+  "id": "49f928cbbed3445282672f4de437e2a4",
+  "name": "Broadspire InView (New)",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "Broadspire InView (New)",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "SYNC_PROVISIONING",
+    "DISCOVER_SCHEMA",
+    "UNLOCK",
+    "GROUP_PROVISIONING",
+    "DIRECT_PERMISSIONS",
+    "ENABLE",
+    "PROVISIONING"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "USER_ID",
+      "displayAttribute": "USER_ID",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "USER_ID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ROLE_NAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "ROLE_NAME",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": false
+        },
+        {
+          "name": "ROLE_ID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "98e0697f23024e9e84066dbe8835675f",
+      "name": "account",
+      "created": "2024-06-27T20:20:09.297Z",
+      "modified": "2024-06-27T20:22:56.970Z"
+    },
+    {
+      "nativeObjectType": "Role Name",
+      "identityAttribute": "Role Name",
+      "displayAttribute": "Role Name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Role Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Role_Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "5b76086821404573a475f8cf5c33e09d",
+      "name": "Role Name",
+      "created": "2024-06-27T20:23:49.933Z",
+      "modified": "2024-06-27T20:24:13.003Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "mergeColumns": [
+      "ROLE_NAME"
+    ],
+    "supportsDeltaAgg": "true",
+    "Role Name.mergeRows": false,
+    "deltaAggregationEnabled": false,
+    "useStoredProcedureTestConn": false,
+    "group.mergeRows": false,
+    "isAdvance": "false",
+    "mergeRows": true,
+    "Role Name.SQL": "select  substr( user_id, 1, instr(user_id, '@')-1) User_ID, role_name, role_id\nfrom rtweb.rtw_user_roles_mv \nwhere substr( user_id, 1, instr(user_id, '@')-1) is not null\norder by user_ID",
+    "useStoredProcedureGetObject": false,
+    "Role Name.isPermissionEnabled": false,
+    "Role Name.useExecuteQuery": false,
+    "connectionType": "direct",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "driverClass": "oracle.jdbc.driver.OracleDriver",
+    "jdbcExceptionBucketing": true,
+    "hasFullAggregationCompleted": true,
+    "useExecuteQuery": false,
+    "connector_files": "ojdbc8.jar",
+    "indexColumns": [
+      "USER_ID"
+    ],
+    "useQuery": false,
+    "testConnSQL": "select 1 from dual",
+    "sourceConnected": true,
+    "connectorFileUploadHistory": {
+      "ojdbc8.jar": "2024-06-27T20:20:37.768101Z"
+    },
+    "isPermissionEnabled": false,
+    "Role Name.user": "aveksa",
+    "disableOrderingCheck": true,
+    "deleteThresholdPercentage": 10,
+    "Role Name.driverClass": "oracle.jdbc.driver.OracleDriver",
+    "url": "jdbc:oracle:thin:@10.1.30.209:1550:rtdp",
+    "Role Name.useStoredProcedureSqlStmt": false,
+    "labels": [
+      "standard"
+    ],
+    "SQL": "select  substr( user_id, 1, instr(user_id, '@')-1) User_ID, role_name, role_id\nfrom rtweb.rtw_user_roles_mv \nwhere substr( user_id, 1, instr(user_id, '@')-1) is not null\norder by user_ID",
+    "Role Name.useStoredProcedureGetObject": false,
+    "cloudCacheUpdate": 1764047036105,
+    "templateApplication": "JDBC Template",
+    "group.isPermissionEnabled": false,
+    "encrypted": "password,group.password,Role Name.password",
+    "Role Name.url": "jdbc:oracle:thin:@10.1.30.209:1550:rtdp",
+    "healthy": true,
+    "cloudDisplayName": "Broadspire InView (New)",
+    "connectorName": "JDBC",
+    "useStoredProcedureSqlStmt": false,
+    "user": "aveksa",
+    "status": "SOURCE_STATE_HEALTHY",
+    "since": "2025-10-29T11:06:27.314Z"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "correlatedAdUsername",
+        "operation": "EQ",
+        "value": "USER_ID",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "fe93f281ba9243f0affe54c5abdb0668",
+    "name": "Broadspire InView (New) Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

@@ -1,0 +1,184 @@
+{
+  "id": "a2c7ff3c305a47789264bdf8a655b53d",
+  "name": "Cont Conn Xactanalysis",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "Cont Conn Xactanalysis",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "SYNC_PROVISIONING",
+    "DISCOVER_SCHEMA",
+    "UNLOCK",
+    "DIRECT_PERMISSIONS",
+    "ENABLE"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "USERID",
+      "displayAttribute": "FULLNAME",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "USERID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FULLNAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EMPID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ENTITLEMENT",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "ENTITLEMENT",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": false
+        }
+      ],
+      "id": "0e9ad7b365974860b84cb98f38fdc63a",
+      "name": "account",
+      "created": "2023-12-07T21:52:50.405Z",
+      "modified": "2023-12-07T21:56:36.810Z"
+    },
+    {
+      "nativeObjectType": "Entitlement",
+      "identityAttribute": "Entitlement",
+      "displayAttribute": "Entitlement",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "description": "Entitlement"
+      },
+      "attributes": [
+        {
+          "name": "Entitlement",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Entitlement",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "fc2d38e912fc4bc3a74c04b841881de3",
+      "name": "Entitlement",
+      "created": "2023-12-07T21:58:02.430Z",
+      "modified": "2023-12-07T21:58:29.785Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 60,
+    "mergeColumns": [
+      "ENTITLEMENT"
+    ],
+    "supportsDeltaAgg": "true",
+    "deltaAggregationEnabled": false,
+    "useStoredProcedureTestConn": false,
+    "group.mergeRows": false,
+    "isAdvance": "false",
+    "Entitlement.useExecuteQuery": false,
+    "mergeRows": true,
+    "useStoredProcedureGetObject": false,
+    "checkDeletedDisabled": false,
+    "connectionType": "direct",
+    "timeout": 60,
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "driverClass": "oracle.jdbc.driver.OracleDriver",
+    "jdbcExceptionBucketing": true,
+    "hasFullAggregationCompleted": true,
+    "useExecuteQuery": false,
+    "connector_files": "ojdbc8.jar",
+    "indexColumns": [
+      "USERID"
+    ],
+    "useQuery": false,
+    "testConnSQL": "select 1 from dual",
+    "Entitlement.useStoredProcedureSqlStmt": false,
+    "sourceConnected": true,
+    "Entitlement.url": "jdbc:oracle:thin:@10.1.9.140:1560:c6dp",
+    "isPermissionEnabled": false,
+    "disableOrderingCheck": true,
+    "Entitlement.SQL": "select distinct trim(userid) as UserID, USER_NAME as fullname, EMP_NUM as EMPID,\n                         Trim(hieracrchy_rights)||' / '||access_rights as Entitlement\n                               from xact_cc_user\n                               Order By userid ASC",
+    "deleteThresholdPercentage": 10,
+    "Entitlement.user": "aveksa",
+    "url": "jdbc:oracle:thin:@10.1.9.140:1560:c6dp",
+    "SQL": "select distinct trim(userid) as UserID, USER_NAME as fullname, EMP_NUM as EMPID,\n                         Trim(hieracrchy_rights)||' / '||access_rights as Entitlement\n                               from xact_cc_user\n                               Order By userid ASC",
+    "cloudCacheUpdate": 1764580198388,
+    "templateApplication": "JDBC Template",
+    "Entitlement.mergeRows": false,
+    "group.isPermissionEnabled": false,
+    "encrypted": "password,group.password,Entitlement.password",
+    "healthy": true,
+    "cloudDisplayName": "Cont Conn Xactanalysis",
+    "connectorName": "JDBC",
+    "useStoredProcedureSqlStmt": false,
+    "Entitlement.driverClass": "oracle.jdbc.driver.OracleDriver",
+    "Entitlement.isPermissionEnabled": false,
+    "user": "aveksa",
+    "status": "SOURCE_STATE_HEALTHY",
+    "Entitlement.useStoredProcedureGetObject": false,
+    "since": "2025-09-20T17:07:41.869Z"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "EMPID",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "518d66d7f13644d28455d8238bf606fd",
+    "name": "Cont Conn Xactanalysis Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

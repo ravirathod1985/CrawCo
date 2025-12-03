@@ -1,0 +1,325 @@
+{
+  "id": "a4073441621d4bdfbad83099bf1c8b90",
+  "name": "SailPoint Admin Access",
+  "type": "3210ce85-1676-4196-808f-e1b0d020777d",
+  "connectorClass": "",
+  "connectorScriptName": "IdentitySecurityCloudGovernance-saas",
+  "description": "SailPoint Admin Access",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "PROVISIONING",
+    "PASSWORD",
+    "ENABLE"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "User",
+      "identityAttribute": "id",
+      "displayAttribute": "name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The Identity Security Cloud User ID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The Identity Security Cloud Display Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "uid",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The Identity Security Cloud User Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "firstName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The Identity Security Cloud User First Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "lastName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The Identity Security Cloud User Last Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "isManager",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": "Identifies Whether Account Is Manager Or Not ",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "email",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The Identity Security Cloud User Work Email",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "displayName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The Identity Security Cloud User Display Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Governance Groups",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "4a8eac0d6db4467d9af4bde773bd1be9",
+            "name": "Governance Groups"
+          },
+          "description": "Governance Group Assocaited With  Account ",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "UserLevels",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "7f229bd977a3457692d049e44e995469",
+            "name": "UserLevels"
+          },
+          "description": "Capablites  Associated With Account ",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        }
+      ],
+      "id": "669e09d0232149bbbe5fd3159600287c",
+      "name": "account",
+      "created": "2025-03-03T17:15:59.333Z",
+      "modified": "2025-03-03T17:15:59.333Z"
+    },
+    {
+      "nativeObjectType": "Group",
+      "identityAttribute": "id",
+      "displayAttribute": "name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Governance Group Id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Governance Group Name ",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Governance Group Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "4a8eac0d6db4467d9af4bde773bd1be9",
+      "name": "Governance Groups",
+      "created": "2025-03-03T17:15:59.333Z",
+      "modified": "2025-03-03T17:15:59.333Z"
+    },
+    {
+      "nativeObjectType": "Group",
+      "identityAttribute": "id",
+      "displayAttribute": "name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User Level Name ",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "id",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User Level Id",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User Levels Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "7f229bd977a3457692d049e44e995469",
+      "name": "UserLevels",
+      "created": "2025-03-03T17:15:59.333Z",
+      "modified": "2025-03-03T17:15:59.333Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 90,
+    "reassignAccessProfiles": true,
+    "reassignWorkflows": true,
+    "spConnectorSupportsCustomSchemas": true,
+    "supportsDeltaAgg": true,
+    "idnProxyType": "sp-connect",
+    "deltaAggregationEnabled": false,
+    "patId": "d57b4163289a4603b6a52ff951e4b371",
+    "reassignRoles": true,
+    "pageSize": 200,
+    "connectionType": "direct",
+    "spConnectorInstanceId": "d6e95de8-1e02-43be-aa1d-e601851698b5",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "hasFullAggregationCompleted": true,
+    "iscUrl": "https://crawco-sb.api.identitynow.com",
+    "connectionTimeout": "1",
+    "reassignGovGroups": true,
+    "sourceConnected": true,
+    "spConnectorSpecId": "3210ce85-1676-4196-808f-e1b0d020777d",
+    "deleteThresholdPercentage": 10,
+    "reassignCertifications": true,
+    "cloudCacheUpdate": 1764047037549,
+    "templateApplication": "Identity Security Cloud Governance",
+    "reassignSources": true,
+    "healthy": true,
+    "reassignAccessRequests": true,
+    "reassignEntitlements": true,
+    "cloudDisplayName": "SailPoint Admin Access",
+    "connectorName": "Identity Security Cloud Governance",
+    "grantType": "client_credentials",
+    "since": "2025-03-05T03:44:13.521Z",
+    "status": "SOURCE_STATE_HEALTHY"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "uid",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      },
+      {
+        "complex": false,
+        "property": "uid",
+        "operation": "EQ",
+        "value": "uid",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 2
+      }
+    ],
+    "id": "4d53d9fe402b4470b4d150698f3d8073",
+    "name": "SailPoint Admin Access Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [
+    {
+      "name": "Account",
+      "description": null,
+      "usageType": "CREATE",
+      "fields": [
+        {
+          "name": "id",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "uid"
+            }
+          },
+          "attributes": {},
+          "isRequired": true,
+          "type": "string",
+          "isMultiValued": false
+        }
+      ]
+    }
+  ],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

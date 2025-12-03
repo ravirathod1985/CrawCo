@@ -1,0 +1,329 @@
+{
+  "id": "8fb1a40ea2a44311a9b2d6d7b26a79ce",
+  "name": "Assignment Manager",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "Assignment Manager",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "ENABLE",
+    "DISCOVER_SCHEMA",
+    "PROVISIONING",
+    "SYNC_PROVISIONING",
+    "GROUP_PROVISIONING",
+    "DIRECT_PERMISSIONS",
+    "UNLOCK"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "UserName",
+      "displayAttribute": "Email",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "DeptName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "DeptName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FirstName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "FirstName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LastName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "LastName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Email",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Email",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "CrawfordEmployeeID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "CrawfordEmployeeID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "AccessName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "AccessName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FeatureName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "FeatureName",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FeatureID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "3453babd661d4907ad3a5e7e4c4745ae",
+            "name": "group"
+          },
+          "description": "FeatureID",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "AccessType",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "AccessType",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ManagerName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "TerminationFlag",
+          "nativeName": null,
+          "type": "INT",
+          "schema": null,
+          "description": "TerminationFlag",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "99dea6b293d143eeaa60b84692c7f6b0",
+      "name": "account",
+      "created": "2025-09-17T20:31:53.424Z",
+      "modified": "2025-09-18T15:52:13.911Z"
+    },
+    {
+      "nativeObjectType": "group",
+      "identityAttribute": "SecurityFeatureListID",
+      "displayAttribute": "ControlName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [
+        "PROVISIONING"
+      ],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "SecurityFeatureListID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "SecurityFeatureListID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ApplicationNameID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "ApplicationNameID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ControlName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "ControlName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "3453babd661d4907ad3a5e7e4c4745ae",
+      "name": "group",
+      "created": "2025-09-17T20:31:53.424Z",
+      "modified": "2025-09-18T13:57:27.936Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "deltaAggregationEnabled": false,
+    "isAdvance": "false",
+    "undefined.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "group.url": "jdbc:sqlserver://UKJAXSVRVDATA01.jaxcrawford.com;databasename=PrismData;;Encrypt=False;TrustServerCertificate=True;",
+    "useStoredProcedureGetObject": false,
+    "connectionType": "direct",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "undefined.SQL": "STP_UserAccesswithFeatures 0,1,'ALL'",
+    "driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "undefined.useStoredProcedureTestConn": false,
+    "useExecuteQuery": false,
+    "group.useExecuteQuery": false,
+    "undefined.isPermissionEnabled": false,
+    "indexColumns": [
+      "UserName"
+    ],
+    "sourceConnected": true,
+    "connectorFileUploadHistory": {
+      "sqljdbc42.jar": "2025-09-23T21:23:59.362828Z",
+      "mssql-jdbc-12.10.1.jre11.jar": "2025-09-23T21:23:59.664623Z",
+      "mssql-jdbc-12.10.1.jre11-sources.jar": "2025-09-23T21:17:12.956965Z"
+    },
+    "isPermissionEnabled": false,
+    "disableOrderingCheck": true,
+    "labels": [
+      "standard"
+    ],
+    "undefined.useStoredProcedureGetObject": false,
+    "SQL": "STP_UserAccesswithFeatures 0,1,'ALL'",
+    "group.useStoredProcedureGetObject": false,
+    "undefined.user": "Sailpoint",
+    "cloudCacheUpdate": 1764047037115,
+    "undefined.testConnSQL": "SELECT * FROM dbo.SecurityApplication;",
+    "group.SQL": "STP_ReadSecurityFeatureList  1",
+    "undefined.useExecuteQuery": false,
+    "undefined.deltaAggregationEnabled": false,
+    "connectorName": "JDBC",
+    "status": "SOURCE_STATE_HEALTHY",
+    "since": "2025-10-31T23:09:39.406Z",
+    "mergeColumns": [
+      "FeatureName",
+      "FeatureID"
+    ],
+    "supportsDeltaAgg": "true",
+    "useStoredProcedureTestConn": false,
+    "group.mergeRows": false,
+    "mergeRows": true,
+    "undefined.url": "jdbc:sqlserver://UKJAXSVRVDATA01.jaxcrawford.com;databasename=PrismData",
+    "jdbcExceptionBucketing": true,
+    "connector_files": "mssql-jdbc-12.10.1.jre11.jar,mssql-jdbc-12.10.1.jre11-sources.jar",
+    "useQuery": false,
+    "jdbcProvisionRule": "PrismData JDBC Provision",
+    "testConnSQL": "SELECT * FROM dbo.SecurityApplication;",
+    "group.user": "Sailpoint",
+    "undefined.useQuery": false,
+    "deleteThresholdPercentage": 10,
+    "group.useStoredProcedureSqlStmt": false,
+    "url": "jdbc:sqlserver://UKJAXSVRVDATA01.jaxcrawford.com;databasename=PrismData;;Encrypt=False;TrustServerCertificate=True;",
+    "templateApplication": "JDBC Template",
+    "group.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "group.isPermissionEnabled": false,
+    "encrypted": "password,group.password,undefined.password",
+    "healthy": true,
+    "cloudDisplayName": "Assignment Manager",
+    "useStoredProcedureSqlStmt": true,
+    "user": "Sailpoint",
+    "undefined.useStoredProcedureSqlStmt": true
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "CrawfordEmployeeID",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      },
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "Email",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 2
+      }
+    ],
+    "id": "008a1d54ab544cf983102840cb5103a9",
+    "name": "Assignment Manager [source] Account Correlation"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

@@ -1,0 +1,478 @@
+{
+  "id": "3c1ba5dbcc154a548f21d2ce96dd2ce3",
+  "name": "Claims Manager",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "Claims Manager",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "ENABLE",
+    "DISCOVER_SCHEMA",
+    "SYNC_PROVISIONING",
+    "DIRECT_PERMISSIONS"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "User ID",
+      "displayAttribute": "Email Address",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "User ID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Person ID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Employee Reference",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Forename",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Surname",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Country Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Email Address",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Internal / External",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "User Group ID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "User Group",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "bd686fb53c2a4786b75aa5bc0ddcbd3b",
+            "name": "group"
+          },
+          "description": "User Group",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "Filter Group ID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Filter Group",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "d4b9b54c44ab430691da5518aa33ef88",
+            "name": "Filter Group"
+          },
+          "description": "Filter Group",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "Role",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "9c2dc83995ef4edfa7155584f92dd577",
+            "name": "Role"
+          },
+          "description": "Role",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "Manager Person ID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Manager Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Manager Email Address",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "User Expiry Date Time",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Recorded UTC Date Time",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "e7c7efce346a4154b0f84d49b152097d",
+      "name": "account",
+      "created": "2023-04-05T19:04:05.085Z",
+      "modified": "2025-08-15T19:20:55.005Z"
+    },
+    {
+      "nativeObjectType": "group",
+      "identityAttribute": "Name",
+      "displayAttribute": "Name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [
+        "PROVISIONING"
+      ],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User Group",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserGroupID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User Group ID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "bd686fb53c2a4786b75aa5bc0ddcbd3b",
+      "name": "group",
+      "created": "2023-04-05T19:04:05.086Z",
+      "modified": "2025-08-15T19:20:55.005Z"
+    },
+    {
+      "nativeObjectType": "Filter Group",
+      "identityAttribute": "Name",
+      "displayAttribute": "Name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Filter Group",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "d4b9b54c44ab430691da5518aa33ef88",
+      "name": "Filter Group",
+      "created": "2025-08-15T17:04:08.493Z",
+      "modified": "2025-08-15T19:20:55.005Z"
+    },
+    {
+      "nativeObjectType": "Role",
+      "identityAttribute": "Name",
+      "displayAttribute": "Name",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Role Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "9c2dc83995ef4edfa7155584f92dd577",
+      "name": "Role",
+      "created": "2025-08-15T17:14:16.025Z",
+      "modified": "2025-08-15T19:20:55.005Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 60,
+    "isAdvance": "false",
+    "group.url": "jdbc:sqlserver://10.188.128.5:1433;databasename=Rubicon",
+    "checkDeletedDisabled": false,
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "undefined.SQL": "SELECT  distinct u.UserId AS [User ID],\n    p.PersonId AS [Person ID],\n    p.EmployeeReference AS [Employee Reference],\n    u.FirstName AS Forename,\n    u.LastName AS Surname,\n    u.Name AS Name,\n    c.Name AS [Country Name],\n    u.IsObsolete,\n    p.EmailAddress AS [Email Address],\n    CASE WHEN u.IsPreAuthenticated = 1 THEN 'Internal' ELSE 'External' END AS [Internal / External],\n    ug.UserGroupId AS [User Group ID],\n    ug.Name AS [User Group],\n    fg.FilterGroupId AS [Filter Group ID],\n    fg.Name AS [Filter Group],\n\tr.Name As [Role],\n   -- COALESCE(\n    --              SUBSTRING(\n    --                                                            (\n    --                                                               SELECT DISTINCT\n    --                                                                            CONCAT(N', ', r.Name) AS [text()]\n     --                                                              FROM Biz.PersonRole pr\n      --                                                                          LEFT JOIN Biz.Role r ON r.RoleId = pr.RoleId\n      --                                                             WHERE pr.PersonId = p.PersonId\n      --                                                             FOR XML PATH('')\n       --                                                         ), 3, 1000), ''\n                                                 -- ) AS Roles,\n    p.ManagerPersonId AS [Manager Person ID],\n    p2.Name AS [Manager Name],\n    p2.EmailAddress AS [Manager Email Address],\n    u.ExpiryDateTime AS [User Expiry Date Time],\n    GETUTCDATE() AS [Recorded UTC Date Time]\n  FROM App.[User] u\n    LEFT JOIN Biz.Person p ON u.UserId = p.UserId\n    LEFT JOIN Biz.Country c ON p.CountryId = c.CountryId\n    LEFT JOIN App.UserGroup ug ON u.UserGroupId = ug.UserGroupId\n    LEFT JOIN App.FilterGroup fg ON u.FilterGroupId = fg.FilterGroupId\n    LEFT JOIN Biz.Person p2 ON p.ManagerPersonId = p2.PersonId\n\tLeft join biz.PersonRole PR on PR.PersonId = P.PersonId\n\tleft join biz.[role] R on R.roleid = PR.roleId\n  WHERE u.IsObsolete = 0\n        --AND u.ExpiryDateTime > GETUTCDATE()\n\t\tOrder by [User ID];",
+    "Role.useStoredProcedureSqlStmt": false,
+    "driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "role.useExecuteQuery": false,
+    "useExecuteQuery": false,
+    "group.useExecuteQuery": false,
+    "undefined.isPermissionEnabled": false,
+    "sourceConnected": true,
+    "approval threshold.SQL": "SELECT DISTINCT ub.ApprovalThreshold AS [name]\nFROM [dbo].[User] u\nINNER JOIN [dbo].[UserBranch] ub ON u.ID = ub.UserID\nINNER JOIN [dbo].[Branch] b ON ub.BranchID = b.ID\nLEFT OUTER JOIN [dbo].[UserTypeCode] utc ON u.UserTypeCode = utc.Code\nLEFT OUTER JOIN [dbo].[EmployeeGroupClass] egc ON u.EmployeeGroupClassCode = egc.Code\nLEFT OUTER JOIN [dbo].[User] u2 ON b.ManagerID = u2.ID\nORDER BY ub.ApprovalThreshold",
+    "isPermissionEnabled": false,
+    "connectorFileUploadHistory": {
+      "sqljdbc42.jar": "2023-04-05T19:12:44.193120Z"
+    },
+    "user type.mergeRows": false,
+    "undefined.useStoredProcedureGetObject": false,
+    "Filter Group.url": "jdbc:sqlserver://10.188.128.5:1433;databasename=Rubicon",
+    "group.useStoredProcedureGetObject": false,
+    "undefined.user": "svcSailpoint",
+    "cloudCacheUpdate": 1764580196444,
+    "undefined.testConnSQL": "select top 1 * FROM App.[User] u",
+    "group.SQL": "Select * from App.UserGroup",
+    "Role.isPermissionEnabled": false,
+    "undefined.useExecuteQuery": false,
+    "undefined.deltaAggregationEnabled": false,
+    "Filter Group.useStoredProcedureSqlStmt": false,
+    "Filter Group.useExecuteQuery": false,
+    "role.SQL": "SELECT DISTINCT name = ur.code\n\t,Description\nFROM userroleuser AS uru\nLEFT JOIN userrole AS ur ON uru.userroleid = ur.id",
+    "status": "SOURCE_STATE_HEALTHY",
+    "mergeColumns": [
+      "Role"
+    ],
+    "supportsDeltaAgg": "true",
+    "useStoredProcedureTestConn": false,
+    "user type.useStoredProcedureGetObject": false,
+    "role.mergeRows": false,
+    "jdbcExceptionBucketing": true,
+    "connector_files": "mssql-jdbc-9.2.1.jre8.jar",
+    "testConnSQL": "select top 1 * FROM App.[User] u",
+    "group.user": "svcSailpoint",
+    "user type.SQL": "SELECT DISTINCT name = utc.description\n\t,Description\nFROM [user] AS u\nLEFT JOIN usertypecode AS utc ON u.UserTypeCode = utc.Code",
+    "undefined.useQuery": false,
+    "url": "jdbc:sqlserver://10.188.128.5:1433;databasename=Rubicon",
+    "user type.useStoredProcedureDirectPermission": false,
+    "templateApplication": "JDBC Template",
+    "group.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "group.isPermissionEnabled": false,
+    "feature.mergeRows": false,
+    "useStoredProcedureSqlStmt": false,
+    "undefined.useStoredProcedureSqlStmt": false,
+    "deltaAggregationEnabled": false,
+    "undefined.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "useStoredProcedureGetObject": false,
+    "connectionType": "direct",
+    "feature.isPermissionEnabled": false,
+    "feature.useStoredProcedureSqlStmt": false,
+    "undefined.useStoredProcedureTestConn": false,
+    "indexColumns": [
+      "User ID"
+    ],
+    "role.useStoredProcedureSqlStmt": false,
+    "disableOrderingCheck": true,
+    "Filter Group.isPermissionEnabled": false,
+    "role.isPermissionEnabled": false,
+    "user type.useExecuteQuery": false,
+    "SQL": "SELECT  u.UserId AS [User ID],\n    p.PersonId AS [Person ID],\n    p.EmployeeReference AS [Employee Reference],\n    u.FirstName AS Forename,\n    u.LastName AS Surname,\n    u.Name AS Name,\n    c.Name AS [Country Name],\n    u.IsObsolete,\n    p.EmailAddress AS [Email Address],\n    CASE WHEN u.IsPreAuthenticated = 1 THEN 'Internal' ELSE 'External' END AS [Internal / External],\n    ug.UserGroupId AS [User Group ID],\n    ug.Name AS [User Group],\n    fg.FilterGroupId AS [Filter Group ID],\n    fg.Name AS [Filter Group],\n\tr.Name As [Role],\n    COALESCE(\n                   SUBSTRING(\n                                                               (\n                                                                  SELECT DISTINCT\n                                                                                CONCAT(N', ', r.Name) AS [text()]\n                                                                    FROM Biz.PersonRole pr\n                                                                                 LEFT JOIN Biz.Role r ON r.RoleId = pr.RoleId\n                                                                   WHERE pr.PersonId = p.PersonId\n                                                                   FOR XML PATH('')\n                                                             ), 3, 1000), ''\n                                                  ) AS Roles,\n    p.ManagerPersonId AS [Manager Person ID],\n    p2.Name AS [Manager Name],\n    p2.EmailAddress AS [Manager Email Address],\n    u.ExpiryDateTime AS [User Expiry Date Time],\n    GETUTCDATE() AS [Recorded UTC Date Time]\n  FROM App.[User] u\n    LEFT JOIN Biz.Person p ON u.UserId = p.UserId\n    LEFT JOIN Biz.Country c ON p.CountryId = c.CountryId\n    LEFT JOIN App.UserGroup ug ON u.UserGroupId = ug.UserGroupId\n    LEFT JOIN App.FilterGroup fg ON u.FilterGroupId = fg.FilterGroupId\n    LEFT JOIN Biz.Person p2 ON p.ManagerPersonId = p2.PersonId\n\tLeft join biz.PersonRole PR on PR.PersonId = P.PersonId\n\tleft join biz.[role] R on R.roleid = PR.roleId\n  WHERE u.IsObsolete = 0\n        --AND u.ExpiryDateTime > GETUTCDATE()\n\t\tOrder by [User ID];",
+    "Role.SQL": "select * from biz.[role]",
+    "user type.useStoredProcedureSqlStmt": false,
+    "approval threshold.useStoredProcedureGetObject": false,
+    "connectorName": "JDBC",
+    "role.useStoredProcedureDirectPermission": false,
+    "since": "2025-11-08T14:05:15.419Z",
+    "approval threshold.isPermissionEnabled": false,
+    "approval threshold.mergeRows": false,
+    "feature.SQL": "SELECT DISTINCT name = f.code\n\t,Description\nFROM [user] AS u\nLEFT JOIN userfeature AS uf ON u.id = uf.userid\nLEFT JOIN feature AS f ON uf.featureid = f.id",
+    "feature.useExecuteQuery": false,
+    "group.mergeRows": false,
+    "mergeRows": true,
+    "Filter Group.user": "svcSailpoint",
+    "Filter Group.mergeRows": false,
+    "role.useStoredProcedureGetObject": false,
+    "timeout": 60,
+    "approval threshold.useStoredProcedureDirectPermission": false,
+    "undefined.url": "jdbc:sqlserver://10.188.128.5:1433;databasename=Rubicon",
+    "hasFullAggregationCompleted": true,
+    "useQuery": false,
+    "approval threshold.useStoredProcedureSqlStmt": false,
+    "Role.useStoredProcedureGetObject": false,
+    "Role.user": "svcSailpoint",
+    "deleteThresholdPercentage": 10,
+    "Role.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "Filter Group.useStoredProcedureGetObject": false,
+    "group.useStoredProcedureSqlStmt": false,
+    "Role.mergeRows": false,
+    "user type.isPermissionEnabled": false,
+    "Filter Group.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "Role.url": "jdbc:sqlserver://10.188.128.5:1433;databasename=Rubicon",
+    "encrypted": "password,group.password,role.password,feature.password,user type.password,approval threshold.password,Filter Group.password,Role.password,undefined.password",
+    "healthy": true,
+    "feature.useStoredProcedureGetObject": false,
+    "cloudDisplayName": "Claims Manager",
+    "feature.useStoredProcedureDirectPermission": false,
+    "Role.useExecuteQuery": false,
+    "user": "svcSailpoint",
+    "Filter Group.SQL": "select * from App.FilterGroup",
+    "approval threshold.useExecuteQuery": false
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "Email Address",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "5df03dd52402448e9b21c6102dbcccb6",
+    "name": "Claims Manager [source] Account Correlation"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

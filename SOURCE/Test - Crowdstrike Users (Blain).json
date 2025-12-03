@@ -1,0 +1,327 @@
+{
+  "id": "cb7f60ef9cef4e57b6e5972f587d5cf4",
+  "name": "Test - Crowdstrike Users (Blain)",
+  "type": "60ba0ec2-207a-42b6-898b-c0a7aae7d4b6",
+  "connectorClass": "",
+  "connectorScriptName": "web-services-saas",
+  "description": "Test for getting user/role data from Crowstrike",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "bd0530091e384b3c92fda26bf9b48a22",
+    "name": "Blain.Checkley"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "ENABLE",
+    "AUTHENTICATE",
+    "PROVISIONING",
+    "PASSWORD",
+    "UNLOCK",
+    "DELETE"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "User",
+      "identityAttribute": "UUID",
+      "displayAttribute": "UUID",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "UUID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The CS UUID for the User Object",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Status",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User Account Status",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "First Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User's First Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Last Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User's Last Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Users UID for CS (generally Email)",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "fe885d451b1a46d89f2769e607bc7cc6",
+      "name": "account",
+      "created": "2025-06-18T21:16:17.414Z",
+      "modified": "2025-06-27T00:28:50.575Z"
+    },
+    {
+      "nativeObjectType": "Group",
+      "identityAttribute": "UUID",
+      "displayAttribute": "UUID",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "UUID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "The internal UUID for the role/group",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Display Name",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Role Display Name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Description",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description of Role",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Global",
+          "nativeName": null,
+          "type": "BOOLEAN",
+          "schema": null,
+          "description": "Identifies whether group is global or not.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Type",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Identifies whether this is a built-in or custom role",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "fba6b92e36b94401afe39d791b2cfce9",
+      "name": "group",
+      "created": "2025-06-18T21:16:17.414Z",
+      "modified": "2025-06-27T00:28:50.575Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 90,
+    "spConnectorSupportsCustomSchemas": true,
+    "supportsDeltaAgg": true,
+    "idnProxyType": "sp-connect",
+    "deltaAggregationEnabled": false,
+    "checkDeletedDisabled": true,
+    "connectionType": "direct",
+    "client_id": "923675b6068c414a8a1281047a82a0e9",
+    "spConnectorInstanceId": "1fff92b6-1d7b-4307-87b1-b70bb1591e24",
+    "genericWebServiceBaseUrl": "https://api.crowdstrike.com",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"ServerTimeZone\",\"authenticationMethod\",\"beforeProvisioningRule\",\"cloudCacheUpdate\",\"cloudDisplayName\",\"cloudExternalId\",\"connectionTimeout\",\"connectionType\",\"connectorName\",\"dateEvalFormat\",\"deleteThresholdPercentage\",\"deltaAggregation\",\"deltaAggregationEnabled\",\"enableStatus\",\"formPath\",\"genericWebServiceBaseUrl\",\"grant_type\",\"healthCheckTimeout\",\"healthy\",\"idnProxyType\",\"lockStatus\",\"managementWorkgroup\",\"oauth_body_attrs_to_exclude\",\"oauth_headers_to_exclude\",\"possibleHttpErrorMessages\",\"saml_headers_to_exclude\",\"since\",\"sourceDescription\",\"spConnEnableStatefulCommands\",\"spConnectorInstanceId\",\"spConnectorSpecId\",\"spConnectorSupportsCustomSchemas\",\"status\",\"supportsDeltaAgg\",\"templateApplication\",\"updateAttrWithChangePassword\",\"skipGetObjectInCreate\",\"slpt-source-diagnostics\",\"objectNotFoundErrorMsg\",\"disableCookies\",\"createAccountWithEntReq\",\"addRemoveEntInSingleReq\",\"requestType\",\"spConnDebugLoggingEnabled\",\"category\",\"enableProvisioningFeature\"]}",
+    "connectionParameters": [
+      {
+        "contextUrl": "/user-management/queries/users/v1",
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "pagingSize": 50,
+        "requestType": "API",
+        "sequenceNumberForEndpoint": "1",
+        "uniqueNameForEndPoint": "Test Connection",
+        "operationType": "Test Connection",
+        "body": {},
+        "responseCode": [
+          "2**"
+        ]
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "requestType": "API",
+        "sequenceNumberForEndpoint": "2",
+        "uniqueNameForEndPoint": "Get User UUIDs",
+        "rootPath": "$.resources.*",
+        "body": {},
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "UUID": "$"
+        },
+        "contextUrl": "/user-management/queries/users/v1",
+        "pagingSize": 50,
+        "header": {
+          "Content-Type": "application/json"
+        },
+        "operationType": "Account Aggregation"
+      },
+      {
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "requestType": "API",
+        "sequenceNumberForEndpoint": "3",
+        "uniqueNameForEndPoint": "Get User Info By UUID",
+        "rootPath": "$response.UUID$",
+        "body": {
+          "jsonBody": "{\n  \"ids\": [\n       \"$response.UUID$.*\"\n   ]\n}",
+          "bodyFormat": "raw"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "Status": "$.status",
+          "UID": "$.uid",
+          "First Name": "$.first_name",
+          "Last Name": "$.last_name",
+          "UUID": "$.uuid"
+        },
+        "contextUrl": "/user-management/entities/users/GET/v1",
+        "pagingSize": 100,
+        "header": {
+          "Content-Type": "application/json"
+        },
+        "operationType": "Account Aggregation"
+      },
+      {
+        "httpMethodType": "GET",
+        "pagingInitialOffset": 0,
+        "requestType": "API",
+        "sequenceNumberForEndpoint": "4",
+        "uniqueNameForEndPoint": "Get Role IDs",
+        "rootPath": "$.resources.*",
+        "body": {},
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "UUID": "$"
+        },
+        "contextUrl": "/user-management/queries/roles/v1",
+        "pagingSize": 50,
+        "header": {
+          "Content-Type": "application/json"
+        },
+        "operationType": "Group Aggregation"
+      },
+      {
+        "httpMethodType": "POST",
+        "pagingInitialOffset": 0,
+        "requestType": "API",
+        "sequenceNumberForEndpoint": "5",
+        "uniqueNameForEndPoint": "Get Role Info by UUID",
+        "body": {
+          "bodyFormData": {
+            "ids": "$response.UUID$"
+          },
+          "bodyFormat": "formData"
+        },
+        "responseCode": [
+          "2**"
+        ],
+        "resMappingObj": {
+          "Display Name": "resources[*].display_name",
+          "Type": "resources.[*].type",
+          "Description": "resources[*].description",
+          "UUID": "resources[*].id",
+          "Global": "resources[*].is_global"
+        },
+        "contextUrl": "/user-management/entities/roles/v1",
+        "pagingSize": 100,
+        "header": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "operationType": "Group Aggregation",
+        "parentEndpointName": "Get Role IDs"
+      }
+    ],
+    "grant_type": "CLIENT_CREDENTIALS",
+    "hasFullAggregationCompleted": true,
+    "possibleHttpErrorMessages": {},
+    "connectionTimeout": "60",
+    "token_url": "https://api.crowdstrike.com/oauth2/token",
+    "sourceConnected": true,
+    "spConnectorSpecId": "60ba0ec2-207a-42b6-898b-c0a7aae7d4b6",
+    "deleteThresholdPercentage": 10,
+    "cloudCacheUpdate": 1764069148435,
+    "templateApplication": "Web Services SaaS",
+    "authenticationMethod": "OAuth2Login",
+    "healthy": true,
+    "cloudDisplayName": "Test - Crowdstrike Users (Blain)",
+    "connectorName": "Web Services SaaS",
+    "enableStatus": "Status = active",
+    "since": "2025-06-19T13:14:02.496Z",
+    "status": "SOURCE_STATE_HEALTHY"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "UID",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "b00f8841a42f41de84cf5b396352ba72",
+    "name": "Test - Crowdstrike Users (Blain) Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

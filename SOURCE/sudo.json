@@ -1,0 +1,282 @@
+{
+  "id": "599dd7c6122146ffa7622eddaca08834",
+  "name": "sudo",
+  "type": "DelimitedFile",
+  "connectorClass": "sailpoint.connector.delimitedfile.DelimitedFileConnector",
+  "connectorScriptName": "delimited-file-angularsc",
+  "description": "sudo",
+  "deleteThreshold": 10,
+  "provisionAsCsv": true,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "DISCOVER_SCHEMA",
+    "DIRECT_PERMISSIONS",
+    "NO_RANDOM_ACCESS"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "User",
+      "identityAttribute": "UserID",
+      "displayAttribute": "FullName",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Server",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "170a84f65ca34af49ad590e98bfa9f47",
+            "name": "Server"
+          },
+          "description": "Server",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "UserID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "UserID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FullName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "FullName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "85f4aafc1c6d41af9aa15a1e7bde50ba",
+      "name": "account",
+      "created": "2023-12-11T19:33:36.579Z",
+      "modified": "2025-02-25T22:21:01.292Z"
+    },
+    {
+      "nativeObjectType": "Server",
+      "identityAttribute": "Server",
+      "displayAttribute": "Server",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {
+        "cloudGoverned": false
+      },
+      "attributes": [
+        {
+          "name": "Server",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Server",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "UserID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FullName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "FullName",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "170a84f65ca34af49ad590e98bfa9f47",
+      "name": "Server",
+      "created": "2025-02-20T16:49:47.275Z",
+      "modified": "2025-02-26T17:29:02.438Z"
+    }
+  ],
+  "connectorAttributes": {
+    "mergeColumns": [
+      "Server"
+    ],
+    "group.mergeRows": true,
+    "group.delimiter": ",",
+    "mergeRows": true,
+    "group.filetransport": "local",
+    "partitionMode": "disabled",
+    "checkDeletedDisabled": false,
+    "connectionType": "file",
+    "group.host": "local",
+    "group.indexColumn": "id",
+    "Server.indexColumn": "Server",
+    "delimiter": ",",
+    "host": "local",
+    "group.indexColumns": [
+      "id"
+    ],
+    "indexColumns": [
+      "UserID"
+    ],
+    "commentCharacter": "#",
+    "Server.file": "/app/tmp/b684f7d1d4ba41aa90046788807bdbbb.csv",
+    "group.mergeColumns": [
+      "groups",
+      "permissions"
+    ],
+    "Server.mergeColumns": [
+      "Server"
+    ],
+    "hasHeader": true,
+    "filterEmptyRecords": true,
+    "filetransport": "local",
+    "group.filterEmptyRecords": true,
+    "deleteThresholdPercentage": 10,
+    "Server.indexColumns": [
+      "Server"
+    ],
+    "group.hasHeader": true,
+    "group.partitionMode": "disabled",
+    "group.columnNames": [
+      "id",
+      "name",
+      "displayName",
+      "created",
+      "description",
+      "modified",
+      "entitlements",
+      "groups",
+      "permissions"
+    ],
+    "templateApplication": "DelimitedFile Template",
+    "Server.columnNames": [
+      "Server",
+      "UserID",
+      "FullName"
+    ],
+    "indexColumn": "UserID",
+    "healthy": true,
+    "Server.mergeRows": true,
+    "cloudDisplayName": "sudo",
+    "connectorName": "Delimited File",
+    "numberOfLinesToSkip": "0",
+    "since": "2024-02-13T21:33:34.446Z",
+    "status": "SOURCE_STATE_HEALTHY",
+    "cloudOriginalApplicationType": "Delimited File"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "correlatedAdUsername",
+        "operation": "EQ",
+        "value": "UserID",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "124008fa9c604bb2a69ca66e1b0218f1",
+    "name": "sudo Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [
+    {
+      "name": "Create Policy",
+      "description": "Create Policy",
+      "usageType": "CREATE",
+      "fields": [
+        {
+          "name": "id",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "name",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "givenName",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "familyName",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "e-mail",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "location",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "manager",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        },
+        {
+          "name": "groups",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": null,
+          "isMultiValued": false
+        }
+      ]
+    }
+  ],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

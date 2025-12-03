@@ -1,0 +1,174 @@
+{
+  "id": "c58c9055f3cc4508b7dd92176fb3484a",
+  "name": "vTech",
+  "type": "JDBC",
+  "connectorClass": "sailpoint.connector.JDBCConnector",
+  "connectorScriptName": "jdbc-angularsc",
+  "description": "vTech",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "SYNC_PROVISIONING",
+    "DISCOVER_SCHEMA",
+    "UNLOCK",
+    "DIRECT_PERMISSIONS",
+    "ENABLE"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "account",
+      "identityAttribute": "Login",
+      "displayAttribute": "Login",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Login",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FirstName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LastName",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Role",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Role",
+          "isMulti": false,
+          "isEntitlement": true,
+          "isGroup": false
+        }
+      ],
+      "id": "4572d093b847475abdae718f874b4d67",
+      "name": "account",
+      "created": "2023-12-11T21:25:13.942Z",
+      "modified": "2023-12-11T21:34:15.547Z"
+    },
+    {
+      "nativeObjectType": "Role",
+      "identityAttribute": "Role",
+      "displayAttribute": "Role",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "Role",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Role",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "448666747ba64909a66916e5c5fecd91",
+      "name": "Role",
+      "created": "2023-12-11T21:35:43.069Z",
+      "modified": "2023-12-11T21:35:56.936Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "supportsDeltaAgg": "true",
+    "deltaAggregationEnabled": false,
+    "useStoredProcedureTestConn": false,
+    "group.mergeRows": false,
+    "isAdvance": "false",
+    "mergeRows": false,
+    "useStoredProcedureGetObject": false,
+    "checkDeletedDisabled": false,
+    "connectionType": "direct",
+    "enableProvisioningFeature": true,
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "Role.useStoredProcedureSqlStmt": false,
+    "driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "jdbcExceptionBucketing": true,
+    "hasFullAggregationCompleted": true,
+    "useExecuteQuery": false,
+    "connector_files": "sqljdbc42.jar",
+    "useQuery": false,
+    "testConnSQL": "select 1",
+    "sourceConnected": true,
+    "Role.useStoredProcedureGetObject": false,
+    "isPermissionEnabled": false,
+    "Role.user": "Aveksa",
+    "deleteThresholdPercentage": 10,
+    "Role.driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "Role.mergeRows": false,
+    "url": "jdbc:sqlserver://10.1.8.238:1433;databasename=ClaimHubProd",
+    "SQL": "SELECT \nUsers.Login, Users.FirstName, Users.LastName, CrawfordRole.Description As Role\nFROM ClaimHubProd.dbo.Users \nLEFT JOIN  ClaimHubProd.dbo.CrawfordRole  ON Users.CrawfordRoleID = CrawfordRole.ID \nWHERE\nUsers.CompanyGUID = '48A1EDA7-04B0-4E9F-A97C-14F4E71E6587'\nAND\nUsers.Disabled = 0\nAND\nUsers.IsDeleted = 0",
+    "cloudCacheUpdate": 1764580199182,
+    "templateApplication": "JDBC Template",
+    "Role.SQL": "SELECT \nUsers.Login, Users.FirstName, Users.LastName, CrawfordRole.Description As Role\nFROM ClaimHubProd.dbo.Users \nLEFT JOIN  ClaimHubProd.dbo.CrawfordRole  ON Users.CrawfordRoleID = CrawfordRole.ID \nWHERE\nUsers.CompanyGUID = '48A1EDA7-04B0-4E9F-A97C-14F4E71E6587'\nAND\nUsers.Disabled = 0\nAND\nUsers.IsDeleted = 0",
+    "Role.url": "jdbc:sqlserver://10.1.8.238:1433:databasename=ClaimHubProd",
+    "group.isPermissionEnabled": false,
+    "encrypted": "password,group.password,Role.password",
+    "Role.isPermissionEnabled": false,
+    "healthy": true,
+    "cloudDisplayName": "vTech",
+    "connectorName": "JDBC",
+    "useStoredProcedureSqlStmt": false,
+    "Role.useExecuteQuery": false,
+    "user": "Aveksa",
+    "status": "SOURCE_STATE_HEALTHY",
+    "since": "2025-08-14T10:12:18.809Z"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "correlatedAdUsername",
+        "operation": "EQ",
+        "value": "Login",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "43fba44e3c7047918c083fec9d7b91de",
+    "name": "vTech Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

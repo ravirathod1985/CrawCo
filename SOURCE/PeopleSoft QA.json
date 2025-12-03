@@ -1,0 +1,952 @@
+{
+  "id": "42f0760db2864b2eb460b8c5ea65109f",
+  "name": "PeopleSoft QA",
+  "type": "PeopleSoft - Direct",
+  "connectorClass": "sailpoint.connector.OpenConnectorAdapter",
+  "connectorScriptName": "peoplesoft-angularsc",
+  "description": "PeopleSoft QA",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "ENABLE",
+    "PASSWORD",
+    "SYNC_PROVISIONING",
+    "DISCOVER_SCHEMA"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": null,
+      "identityAttribute": "UserID",
+      "displayAttribute": "UserID",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "AccountLocked",
+          "nativeName": null,
+          "type": "INT",
+          "schema": null,
+          "description": "Used to deactivate a user profile.The user cannot sign in until you have deselected this option.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "AllowSwitchUser",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Indicate that the individual user is permitted to change identities within a PeopleSoft session.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "AlternateUserID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": " Alternate role user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "CurrencyCode",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Currency code",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DefaultMobilePage",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Default mobile page that appear after users sign in to their mobile device.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EffectiveDateFrom",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Workflow attribute - from date",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EffectiveDateTo",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Workflow attribute to date",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EmailAddresses",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Email addresses of the user",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EmailUser",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Routing preferences - email user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Encrypted",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Encrypted",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ExpertEntry",
+          "nativeName": null,
+          "type": "INT",
+          "schema": null,
+          "description": "Select to specify that some users, such as expert or power users, can defer all processing of the data that they enter.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "FailedLogins",
+          "nativeName": null,
+          "type": "INT",
+          "schema": null,
+          "description": "Maximum number of failed sign in attempts to allow",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "IDTypes",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User ID types and values",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LanguageCode",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Language code",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LastUpdateDateTime",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Last update date/time",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LastUpdateUserID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Last update user ID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "MultiLanguageEnabled",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Multi-language enabled",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "NavigatorHomePermissionList",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Default navigator home page permission list",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Opertype",
+          "nativeName": null,
+          "type": "INT",
+          "schema": null,
+          "description": "Use external authentication",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "PasswordExpired",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Enable the PeopleSoft password expiration. ",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "PrimaryEmailAddress",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Primary email address associated with user profile",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "PrimaryPermissionList",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Primary permission list require to grant data permissions to user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ProcessProfilePermissionList",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Contains the permissions that a user requires for running batch processes through PeopleSoft Process Scheduler.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ReassignWork",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Use to reassign pending work for this role user if positions change or a user is temporarily out.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ReassignUserID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User to whom work is reassigned",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Roles",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Roles and Roles along with Routecontrols assigned to the user - detailed",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "roleNames",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "28e3e4c710cc4a6b9e70bc877a48d876",
+            "name": "group"
+          },
+          "description": "Roles and Roles along with Routecontrols assigned to the user profile",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "RowSecurityPermissionList",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Row security permission list to grant data permissions to user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "SupervisingUserID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User ID of the user’s supervisor ",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "SymbolicID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Use to retrieve the appropriate encrypted access ID and access password.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserDescription",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description about user profile",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User ID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "UserIDAlias",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Fully qualified email ID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "WorkListEntriesCount",
+          "nativeName": null,
+          "type": "LONG",
+          "schema": null,
+          "description": "Worklist items that require a user's attention.",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "WorklistUser",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Routing preferences - worklist user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EMPLID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "EMPLID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DESCR254",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "DESCR254",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "cee3799422ec47348fc12e1715a24ef4",
+      "name": "account",
+      "created": "2023-11-03T14:57:16.210Z",
+      "modified": "2024-06-17T23:54:08.723Z"
+    },
+    {
+      "nativeObjectType": null,
+      "identityAttribute": "ROLENAME",
+      "displayAttribute": "ROLENAME",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "ALLOWNOTIFY",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Workflow routing - allow notifications",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ALLOWLOOKUP",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Workflow routing - allow recipient lookup",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DESCR",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DESCRLONG",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Long description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LASTUPDDTTM",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Last update date/time",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LASTUPDOPERID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Last update user ID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "RolePermissionLists",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Permission lists for the role",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ROLENAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Roles and Roles along with Routecontrols",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ROLETYPE",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Role type",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "RouteControl",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Route Control name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "RouteControlDescription",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Route Control description",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Roles that can be granted",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Roles that can be granted by this role",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "Roles that can grant",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Roles that can grant this role",
+          "isMulti": true,
+          "isEntitlement": false,
+          "isGroup": false
+        }
+      ],
+      "id": "28e3e4c710cc4a6b9e70bc877a48d876",
+      "name": "group",
+      "created": "2023-11-03T14:57:16.210Z",
+      "modified": "2023-11-03T14:57:16.210Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 90,
+    "sourceConnected": true,
+    "connectorFileUploadHistory": {
+      "SailpointPeopleSoftCI.jar": "2025-10-14T21:19:18.675107Z",
+      "psjoa.jar": "2025-10-14T21:19:08.903541Z"
+    },
+    "deleteThresholdPercentage": 10,
+    "connectionType": "direct",
+    "connectorClass": "openconnector.connector.PeopleSoftConnector",
+    "domainPassMode": false,
+    "timeout": 90,
+    "componentInterface": "SAILPOINT_USERS",
+    "enableProvisioningFeature": true,
+    "cloudCacheUpdate": 1764580196503,
+    "templateApplication": "PeopleSoft Template",
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "encrypted": "domainConnPassword",
+    "port": "6010",
+    "healthy": false,
+    "connector_files": "psjoa.jar,SailpointPeopleSoftCI.jar",
+    "host": "erpqa.crawco.com",
+    "cloudDisplayName": "PeopleSoft QA",
+    "connectorName": "PeopleSoft",
+    "group.componentInterface": "SAILPOINT_ROLES",
+    "user": "sailpoint",
+    "since": "2025-10-28T17:24:22.337Z",
+    "status": "SOURCE_STATE_FAILURE_SOURCE"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "identificationNumber",
+        "operation": "EQ",
+        "value": "EMPLID",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      },
+      {
+        "complex": false,
+        "property": "email",
+        "operation": "EQ",
+        "value": "PrimaryEmailAddress",
+        "ignoreCase": true,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 2
+      }
+    ],
+    "id": "c001ddf50a3e44be8152e57ee607e4a2",
+    "name": "PeopleSoft QA Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [
+    {
+      "name": "account",
+      "description": null,
+      "usageType": "CREATE",
+      "fields": [
+        {
+          "name": "UserID",
+          "transform": {
+            "type": "rule",
+            "attributes": {
+              "name": "Create Unique Account ID"
+            }
+          },
+          "attributes": {
+            "template": "$(firstname).$(lastname)$(uniqueCounter)",
+            "cloudMaxUniqueChecks": "50",
+            "cloudMaxSize": "20",
+            "cloudRequired": "true"
+          },
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "UserDescription",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "displayName"
+            }
+          },
+          "attributes": {
+            "cloudRequired": "true"
+          },
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "SymbolicID",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": ""
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "password",
+          "transform": {
+            "type": "rule",
+            "attributes": {
+              "name": "Create Password"
+            }
+          },
+          "attributes": {
+            "cloudRequired": "true"
+          },
+          "isRequired": false,
+          "type": "secret",
+          "isMultiValued": false
+        },
+        {
+          "name": "PasswordExpired",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "false"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "boolean",
+          "isMultiValued": false
+        },
+        {
+          "name": "IDTypes_NON",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "true"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "boolean",
+          "isMultiValued": false
+        },
+        {
+          "name": "IDTypes_EMP_Empl ID",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "IDTypes_CST_SetID",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "IDTypes_CNT_SetID",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "IDTypes_VND_SetID",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "IDTypes_VND_Vendor ID",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "EmailAddresses_BUS",
+          "transform": {
+            "type": "identityAttribute",
+            "attributes": {
+              "name": "email"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "EmailAddresses_BUS_primary",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "true"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "boolean",
+          "isMultiValued": false
+        },
+        {
+          "name": "EmailAddresses_HOME",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "EmailAddresses_HOME_primary",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "false"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "boolean",
+          "isMultiValued": false
+        },
+        {
+          "name": "LanguageCode",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "ENG"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "CurrencyCode",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "USD"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "ExpertEntry",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "false"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "boolean",
+          "isMultiValued": false
+        },
+        {
+          "name": "DefaultMobilePage",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "NavigatorHomePermissionList",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "PrimaryPermissionList",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "ProcessProfilePermissionList",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "RowSecurityPermissionList",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "AlternateUserID",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "EffectiveDateFrom",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "date",
+          "isMultiValued": false
+        },
+        {
+          "name": "EffectiveDateTo",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "date",
+          "isMultiValued": false
+        },
+        {
+          "name": "ReassignWork",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "false"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "boolean",
+          "isMultiValued": false
+        },
+        {
+          "name": "ReassignUserID",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "WorklistUser",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "true"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "boolean",
+          "isMultiValued": false
+        },
+        {
+          "name": "EmailUser",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "true"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "boolean",
+          "isMultiValued": false
+        }
+      ]
+    }
+  ],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}

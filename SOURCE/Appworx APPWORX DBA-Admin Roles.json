@@ -1,0 +1,552 @@
+{
+  "id": "0cc4fd4c31ed43ba8c876ec49109b4f9",
+  "name": "Appworx APPWORX DBA-Admin Roles",
+  "type": "Oracle Database - Direct",
+  "connectorClass": "sailpoint.connector.OracleDBConnector",
+  "connectorScriptName": "oracle-database-angularsc",
+  "description": "Appworx APPWORX DBA-Admin Roles",
+  "deleteThreshold": 10,
+  "provisionAsCsv": false,
+  "owner": {
+    "type": "IDENTITY",
+    "id": "2c918085818c1aeb0181acd4c67718fb",
+    "name": "39178"
+  },
+  "accountCorrelationRule": null,
+  "managerCorrelationRule": null,
+  "beforeProvisioningRule": null,
+  "features": [
+    "ENABLE",
+    "DISCOVER_SCHEMA",
+    "AUTHENTICATE",
+    "SEARCH",
+    "SYNC_PROVISIONING",
+    "PROVISIONING",
+    "GROUP_PROVISIONING",
+    "DIRECT_PERMISSIONS",
+    "PASSWORD"
+  ],
+  "schemas": [
+    {
+      "nativeObjectType": "DBA_USERS",
+      "identityAttribute": "USERNAME",
+      "displayAttribute": "USERNAME",
+      "hierarchyAttribute": null,
+      "includePermissions": false,
+      "features": [],
+      "configuration": {},
+      "attributes": [
+        {
+          "name": "USERNAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "USER_ID",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "User ID",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "PASSWORD",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ACCOUNT_STATUS",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Account status",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LOCK_DATE",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EXPIRY_DATE",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DEFAULT_TABLESPACE",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Default tablespace",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "TEMPORARY_TABLESPACE",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Temporary tablespace",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LOCAL_TEMP_TABLESPACE",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "CREATED",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "PROFILE",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Profiles assigned to the user",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "INITIAL_RSRC_CONSUMER_GROUP",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EXTERNAL_NAME",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "PASSWORD_VERSIONS",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "EDITIONS_ENABLED",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "AUTHENTICATION_TYPE",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Authentication type",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "PROXY_ONLY_CONNECT",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "COMMON",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "LAST_LOGIN",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ORACLE_MAINTAINED",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "INHERITED",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "DEFAULT_COLLATION",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "IMPLICIT",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ALL_SHARD",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "PASSWORD_CHANGE_DATE",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": null,
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ROLES",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": {
+            "type": "CONNECTOR_SCHEMA",
+            "id": "b06f9175501e459cbc3441d48fff5c6a",
+            "name": "group"
+          },
+          "description": "Roles assigned to the user",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": true
+        },
+        {
+          "name": "SYSTEM_PRIVILEGES",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "System privileges assigned to the user",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": false
+        }
+      ],
+      "id": "c9ad63d5fe574783b7e021079bcce46e",
+      "name": "account",
+      "created": "2024-06-13T18:48:11.310Z",
+      "modified": "2025-01-09T17:45:46.736Z"
+    },
+    {
+      "nativeObjectType": "DBA_ROLES",
+      "identityAttribute": "ROLE",
+      "displayAttribute": "ROLE",
+      "hierarchyAttribute": "ROLES",
+      "includePermissions": false,
+      "features": [
+        "PROVISIONING"
+      ],
+      "configuration": {
+        "childHierarchy": "true"
+      },
+      "attributes": [
+        {
+          "name": "ROLE",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Role name",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "PASSWORD_REQUIRED",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Password is required or not",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "AUTHENTICATION_TYPE",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Authentication type",
+          "isMulti": false,
+          "isEntitlement": false,
+          "isGroup": false
+        },
+        {
+          "name": "ROLES",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "Roles assigned to the role",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": false
+        },
+        {
+          "name": "SYSTEM_PRIVILEGES",
+          "nativeName": null,
+          "type": "STRING",
+          "schema": null,
+          "description": "System privileges assigned to the role",
+          "isMulti": true,
+          "isEntitlement": true,
+          "isGroup": false
+        }
+      ],
+      "id": "b06f9175501e459cbc3441d48fff5c6a",
+      "name": "group",
+      "created": "2024-06-13T18:48:11.310Z",
+      "modified": "2024-06-13T18:48:11.380Z"
+    }
+  ],
+  "connectorAttributes": {
+    "healthCheckTimeout": 30,
+    "sourceConnected": true,
+    "chunkToFetch": 1000,
+    "connectorFileUploadHistory": {
+      "ojdbc6.jar": "2024-06-13T18:56:24.355784Z"
+    },
+    "deleteThresholdPercentage": 10,
+    "connectionType": "direct",
+    "url": "jdbc:oracle:thin:@10.1.2.231:1562:appworx",
+    "enableProvisioningFeature": true,
+    "enforceRequiredPermission": true,
+    "cloudCacheUpdate": 1764047035104,
+    "templateApplication": "Oracle Template",
+    "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+    "driverClass": "oracle.jdbc.driver.OracleDriver",
+    "healthy": true,
+    "connector_files": "ojdbc6.jar",
+    "useExecuteQuery": true,
+    "cloudDisplayName": "Appworx APPWORX DBA-Admin Roles",
+    "connectorName": "Oracle Database",
+    "user": "SA_CAM",
+    "since": "2025-11-15T17:03:08.626Z",
+    "status": "SOURCE_STATE_HEALTHY"
+  },
+  "crossTenantConnectorAttributes": {},
+  "correlationConfigDetails": {
+    "attributeAssignments": [
+      {
+        "complex": false,
+        "property": "correlatedAdUsername",
+        "operation": "EQ",
+        "value": "USERNAME",
+        "ignoreCase": false,
+        "matchMode": null,
+        "filterString": null,
+        "sequence": 1
+      }
+    ],
+    "id": "dfd1e3d66c03473db44e90c5ccfb8b20",
+    "name": "Appworx APPWORX DBA-Admin Roles Account Correlation Config"
+  },
+  "managerCorrelationMapping": null,
+  "provisioningPolicies": [
+    {
+      "name": "Create User",
+      "description": null,
+      "usageType": "CREATE",
+      "fields": [
+        {
+          "name": "USERNAME",
+          "transform": {
+            "type": "rule",
+            "attributes": {
+              "name": "Create Unique Account ID"
+            }
+          },
+          "attributes": {
+            "template": "$(firstname).$(lastname)$(uniqueCounter)",
+            "cloudMaxUniqueChecks": "50",
+            "cloudRequired": "true"
+          },
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "password",
+          "transform": {
+            "type": "rule",
+            "attributes": {
+              "name": "Create Password"
+            }
+          },
+          "attributes": {
+            "cloudRequired": "true"
+          },
+          "isRequired": false,
+          "type": "secret",
+          "isMultiValued": false
+        },
+        {
+          "name": "DEFAULT_TABLESPACE",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "SYSTEM"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "TEMPORARY_TABLESPACE",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "TEMP"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        },
+        {
+          "name": "PROFILE",
+          "transform": {
+            "type": "static",
+            "attributes": {
+              "value": "DEFAULT"
+            }
+          },
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": false
+        }
+      ]
+    },
+    {
+      "name": "Create Group",
+      "description": null,
+      "usageType": "CREATE_GROUP",
+      "fields": [
+        {
+          "name": "ROLE",
+          "transform": null,
+          "attributes": {},
+          "isRequired": true,
+          "type": "string",
+          "isMultiValued": false
+        }
+      ]
+    },
+    {
+      "name": "Update Group",
+      "description": null,
+      "usageType": "UPDATE_GROUP",
+      "fields": [
+        {
+          "name": "ROLES",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": true
+        },
+        {
+          "name": "SYSTEM_PRIVILEGES",
+          "transform": null,
+          "attributes": {},
+          "isRequired": false,
+          "type": "string",
+          "isMultiValued": true
+        }
+      ]
+    }
+  ],
+  "managementWorkgroup": null,
+  "passwordPolicies": null
+}
